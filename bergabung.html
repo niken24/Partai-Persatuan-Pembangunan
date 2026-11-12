@@ -1,158 +1,830 @@
-<!doctype html>
-<html lang="id">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="PPP – Ruang Bersama. Mock-up akademik untuk tugas website Public Relations Digital.">
-  <title>Bergabung | PPP – Ruang Bersama</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link
-  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
-  rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Bergabung dan berkontribusi melalui gagasan kepedulian, pendidikan, dan lingkungan dalam prototipe akademik website PPP.">
+
+  <title>Bergabung | PPP Ruang Bersama</title>
+
+  <!-- =====================================
+       GOOGLE FONTS: POPPINS DAN INTER
+  ===================================== -->
+
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- BOOTSTRAP 5 -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+  <!-- BOOTSTRAP ICONS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    rel="stylesheet">
+
+  <!-- CSS UTAMA WEBSITE -->
   <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-  <!-- NAVBAR PPP - DESKTOP FIGMA REVISI -->
+
+<!-- ==========================================
+     HEADER DAN NAVBAR PPP
+========================================== -->
+
 <header class="ppp-site-header">
-  <!-- Bar hijau atas -->
+
+  <!-- TOP BAR -->
   <div class="ppp-head-top">
+
     <div class="container ppp-head-top-inner">
-      <span>KELOMPOK 8 · MATA KULIAH DIGIPR</span>
-      <span class="d-none d-sm-inline">PROTOTIPE AKADEMIK · BUKAN SITUS RESMI PPP</span>
+
+      <span>
+        KELOMPOK 8 · MATA KULIAH DIGIPR
+      </span>
+
+      <span class="d-none d-sm-inline">
+        INFORMASI UNTUK PUBLIK, RUANG UNTUK BERDIALOG.
+      </span>
+
     </div>
+
   </div>
 
-  <!-- Logo + nama partai + tagline -->
+
+  <!-- LOGO DAN IDENTITAS -->
   <div class="ppp-head-main">
+
     <div class="container ppp-head-main-inner">
-      <a href="index.html" class="ppp-head-brand" aria-label="Partai Persatuan Pembangunan - Beranda">
-        <img src="assets/images/logo-ppp-navbar.png"
-             alt="Logo PPP"
-             class="ppp-head-logo">
+
+      <a href="index.html"
+         class="ppp-head-brand">
+
+        <img
+          src="assets/images/logo-ppp-navbar.png"
+          alt="Logo Partai Persatuan Pembangunan"
+          class="ppp-head-logo">
+
         <span class="ppp-head-name">
+
           <strong>PARTAI</strong>
           <strong>PERSATUAN</strong>
           <strong>PEMBANGUNAN</strong>
+
         </span>
+
       </a>
-      <p class="ppp-head-tagline">Aspirasi Didengar, Informasi Terbuka, Aksi Terasa.</p>
+
+      <p class="ppp-head-tagline">
+        Berakar pada Nilai, Bergerak untuk Rakyat.
+      </p>
+
     </div>
+
   </div>
 
-  <!-- Menu + pencarian -->
-  <nav class="navbar navbar-expand-xl ppp-head-nav" aria-label="Navigasi utama">
+
+  <!-- ======================================
+       NAVBAR
+  ====================================== -->
+
+  <nav class="navbar navbar-expand-xl ppp-head-nav"
+       aria-label="Navigasi utama">
+
     <div class="container ppp-head-nav-inner">
-      <button class="navbar-toggler ppp-head-toggler" type="button"
-              data-bs-toggle="collapse" data-bs-target="#pppNavMenu"
-              aria-controls="pppNavMenu" aria-expanded="false"
-              aria-label="Buka menu navigasi">
+
+      <!-- HAMBURGER UNTUK HP -->
+      <button
+        class="navbar-toggler ppp-head-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#pppNavMenu"
+        aria-controls="pppNavMenu"
+        aria-expanded="false"
+        aria-label="Buka navigasi">
+
         <span class="navbar-toggler-icon"></span>
+
       </button>
-      <div class="collapse navbar-collapse" id="pppNavMenu">
+
+
+      <div class="collapse navbar-collapse"
+           id="pppNavMenu">
+
         <ul class="navbar-nav ppp-head-menu">
-          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-          <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang PPP</a></li>
-          <li class="nav-item"><a class="nav-link" href="program.html">Program &amp; Aksi</a></li>
-          <li class="nav-item"><a class="nav-link" href="aspirasi.html">Aspirasi Rakyat</a></li>
-          <li class="nav-item"><a class="nav-link" href="kabar.html">Kabar PPP</a></li>
-          <li class="nav-item"><a class="nav-link" href="pernyataan.html">Pernyataan Resmi</a></li>
-          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ &amp; Kontak</a></li>
-          <li class="nav-item"><a class="nav-link" href="bergabung.html">Bergabung</a></li>
+
+          <!-- BERANDA -->
+          <li class="nav-item">
+
+            <a class="nav-link"
+               href="index.html">
+              Beranda
+            </a>
+
+          </li>
+
+
+          <!-- DROPDOWN TENTANG PPP -->
+          <li class="nav-item dropdown ppp-about-dropdown">
+
+            <a class="nav-link ppp-about-link"
+               href="tentang.html">
+              Tentang PPP
+            </a>
+
+            <button
+              class="ppp-about-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              aria-label="Buka submenu Tentang PPP">
+
+              <i class="bi bi-chevron-down"></i>
+
+            </button>
+
+            <ul class="dropdown-menu ppp-about-menu">
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#identitas-ppp">
+                  Profil PPP
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#sejarah-ppp">
+                  Sejarah PPP
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#visi-misi-ppp">
+                  Visi &amp; Misi
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#ideologi-ppp">
+                  Ideologi &amp; Nilai Dasar
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#lima-khidmat">
+                  Lima Khidmat PPP
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#enam-prinsip">
+                  Enam Prinsip Perjuangan
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#struktur-organisasi">
+                  Struktur Organisasi
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#tokoh-kepemimpinan">
+                  Tokoh &amp; Kepemimpinan
+                </a>
+              </li>
+
+            </ul>
+
+          </li>
+
+
+          <!-- PROGRAM & AKSI -->
+          <li class="nav-item">
+
+            <a class="nav-link"
+               href="program.html">
+              Program &amp; Aksi
+            </a>
+
+          </li>
+
+
+          <!-- ASPIRASI -->
+          <li class="nav-item">
+
+            <a class="nav-link"
+               href="aspirasi.html">
+              Aspirasi Rakyat
+            </a>
+
+          </li>
+
+
+          <!-- KABAR PPP -->
+          <li class="nav-item">
+
+            <a class="nav-link"
+               href="kabar.html">
+              Kabar PPP
+            </a>
+
+          </li>
+
+
+          <!-- PERNYATAAN RESMI -->
+          <li class="nav-item">
+
+            <a class="nav-link"
+               href="pernyataan.html">
+              Pernyataan Resmi
+            </a>
+
+          </li>
+
+
+          <!-- FAQ -->
+          <li class="nav-item">
+
+            <a class="nav-link"
+               href="faq.html">
+              FAQ &amp; Kontak
+            </a>
+
+          </li>
+
+
+          <!-- BERGABUNG -->
+          <li class="nav-item">
+
+            <a class="nav-link active"
+               href="bergabung.html"
+               aria-current="page">
+              Bergabung
+            </a>
+
+          </li>
+
         </ul>
 
-        <!-- Pencarian halaman dan topik website (front-end) -->
-        <form class="ppp-head-search" id="pppSiteSearch" role="search" autocomplete="off">
-          <button type="submit" aria-label="Cari"><i class="bi bi-search"></i></button>
-          <input type="search" id="pppSearchInput" aria-label="Cari halaman atau topik"
-                 placeholder="Cari di situs PPP..." />
-          <div class="ppp-head-results" id="pppSearchResults" aria-live="polite" hidden></div>
+
+        <!-- SEARCH GLOBAL -->
+        <form
+          class="ppp-head-search"
+          id="pppSiteSearch"
+          role="search"
+          autocomplete="off">
+
+          <button type="submit"
+                  aria-label="Cari di website">
+            <i class="bi bi-search"></i>
+          </button>
+
+          <input
+            id="pppSearchInput"
+            type="search"
+            placeholder="Cari di situs PPP..."
+            aria-label="Cari informasi website">
+
+          <div
+            id="pppSearchResults"
+            class="ppp-head-results"
+            aria-live="polite"
+            hidden>
+          </div>
+
         </form>
+
       </div>
+
     </div>
+
   </nav>
+
 </header>
-<!-- AKHIR NAVBAR PPP -->
 
 
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <div class="eyebrow eyebrow-light">BERGABUNG</div>
-        <h1>Kenali ruang untuk<br>berpartisipasi.</h1>
-        <p>Halaman informasi contoh mengenai partisipasi dan keterlibatan publik.</p>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <div class="row g-5">
-          <div class="col-lg-6">
-            <div class="eyebrow">RUANG PARTISIPASI</div>
-            <h2 class="section-heading">Mulai dengan mencari informasi yang tepat.</h2>
-            <p class="body-copy">Setiap bentuk keterlibatan memiliki ketentuan dan proses masing-masing. Pastikan informasi mengenai persyaratan, hak, dan kewajiban diperoleh melalui kanal resmi sebelum mengambil keputusan.</p>
-            <ol class="steps-list">
-              <li><strong>Pelajari informasi</strong><span>Baca informasi organisasi dari sumber yang dapat diverifikasi.</span></li>
-              <li><strong>Pahami ketentuan</strong><span>Periksa persyaratan dan prosedur yang berlaku.</span></li>
-              <li><strong>Gunakan kanal resmi</strong><span>Hubungi pihak terkait melalui kontak resmi yang terverifikasi.</span></li>
-            </ol>
-          </div>
-          <div class="col-lg-6">
-            <div class="form-panel">
-              <div class="eyebrow">CATATAN MOCK-UP</div>
-              <h2>Informasi pendaftaran</h2>
-              <p class="body-copy">Formulir pendaftaran resmi tidak tersedia pada bahan desain yang diberikan. Untuk menghindari informasi yang keliru, halaman ini tidak mengumpulkan data pribadi.</p>
-              <div class="contact-placeholder"><i class="bi bi-shield-check"></i><span>Periksa prosedur dan kontak melalui situs atau kanal resmi PPP.</span></div>
-              <a class="btn btn-green mt-4" href="https://ppp.or.id/" target="_blank" rel="noopener">Buka situs PPP <i class="bi bi-box-arrow-up-right"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+<!-- ==========================================
+     MAIN HALAMAN BERGABUNG
+========================================== -->
 
-  <section class="footer-cta">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
-      <h2>Kebersamaan punya banyak bentuk.</h2>
-      <a class="btn btn-outline-light" href="bergabung.html">Kenali cara bergabung <i class="bi bi-arrow-up-right"></i></a>
-    </div>
-  </section>
-  <footer class="site-footer">
+<main class="join-page">
+
+  <!-- ======================================
+       SECTION 1 - HERO BERGABUNG
+  ====================================== -->
+
+  <section class="join-hero"
+           id="bergabung">
+
     <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-5">
-          <a class="footer-brand" href="index.html">PPP – Ruang Bersama</a>
-          <p class="footer-tagline">Aspirasi Didengar, Informasi Terbuka, Aksi Terasa.</p>
-          <p class="footer-small">Rujukan sumber: ppp.or.id · Mock-up akademik</p>
-        </div>
-        <div class="col-6 col-lg-2">
-          <h6>Jelajahi</h6>
-          <a href="index.html">Beranda</a>
-          <a href="tentang.html">Tentang PPP</a>
-          <a href="program.html">Program &amp; Aksi</a>
-          <a href="aspirasi.html">Aspirasi Rakyat</a>
-        </div>
-        <div class="col-6 col-lg-2">
-          <h6>Informasi</h6>
-          <a href="kabar.html">Kabar PPP</a>
-          <a href="pernyataan.html">Pernyataan Resmi</a>
-          <a href="faq.html">FAQ &amp; Kontak</a>
-          <a href="bergabung.html">Bergabung</a>
-        </div>
-        <div class="col-lg-3">
-          <h6>Catatan</h6>
-          <p class="footer-small">Website ini merupakan rancangan untuk kebutuhan akademik. Konten, program, dan formulir di dalamnya bersifat simulasi, bukan publikasi atau layanan resmi.</p>
-        </div>
+
+      <p class="join-label">
+        BERGABUNG &amp; BERKONTRIBUSI
+      </p>
+
+      <h1 class="join-hero-title">
+        Ambil peran. Mulai dari<br>
+        kepedulian.
+      </h1>
+
+      <p class="join-hero-description">
+        Setiap perubahan dimulai dari langkah
+        sederhana. Temukan berbagai kesempatan
+        untuk berbagi pengetahuan, menjaga
+        lingkungan, dan memperkuat kepedulian
+        sosial melalui kolaborasi dan
+        semangat kebersamaan.
+      </p>
+
+
+      <!-- GAMBAR BERGABUNG -->
+      <div class="join-hero-image-wrapper">
+
+        <img
+          src="assets/images/bergabung-ppp.jpg"
+          alt="Dokumentasi kelompok anggota Partai Persatuan Pembangunan"
+          class="join-hero-image"
+          fetchpriority="high">
+
       </div>
-      <div class="footer-bottom d-flex flex-column flex-sm-row justify-content-between gap-2">
-        <span>© 2026 PPP – Ruang Bersama. Mock-up akademik.</span>
-        <span>Desain untuk tugas Public Relations Digital</span>
-      </div>
+
     </div>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/main.js"></script>
+
+  </section>
+
+
+  <!-- ======================================
+       SECTION 2 - BENTUK KONTRIBUSI
+  ====================================== -->
+
+  <section class="join-contribution"
+           id="bentuk-kontribusi">
+
+    <div class="container">
+
+      <p class="join-label">
+        BERSAMA MEMBANGUN PERUBAHAN
+      </p>
+
+      <h2 class="join-section-title">
+        Setiap kontribusi memiliki arti.
+      </h2>
+
+
+      <div class="row g-3 g-lg-4">
+
+        <!-- ==================================
+             KARTU 1 - PENGETAHUAN
+        ================================== -->
+
+        <div class="col-lg-4 col-md-6">
+
+          <article class="join-contribution-card">
+
+            <i class="bi bi-book"
+               aria-hidden="true"></i>
+
+            <h3>
+              Berbagi pengetahuan
+            </h3>
+
+            <p>
+              Berbagi ilmu dan keterampilan
+              melalui kegiatan pendampingan belajar,
+              literasi digital, serta edukasi masyarakat
+              untuk memperluas kesempatan belajar
+              dan mengembangkan potensi bersama.
+            </p>
+
+          </article>
+
+        </div>
+
+
+        <!-- ==================================
+             KARTU 2 - LINGKUNGAN
+        ================================== -->
+
+        <div class="col-lg-4 col-md-6">
+
+          <article class="join-contribution-card">
+
+            <i class="bi bi-flower1"
+               aria-hidden="true"></i>
+
+            <h3>
+              Merawat lingkungan
+            </h3>
+
+            <p>
+              Mendorong kepedulian terhadap
+              lingkungan melalui kegiatan penghijauan,
+              pengelolaan sampah, serta aksi kebersihan
+              untuk menciptakan lingkungan yang
+              lebih sehat dan berkelanjutan.
+            </p>
+
+          </article>
+
+        </div>
+
+
+        <!-- ==================================
+             KARTU 3 - KEPEDULIAN
+        ================================== -->
+
+        <div class="col-lg-4 col-md-12">
+
+          <article class="join-contribution-card">
+
+            <i class="bi bi-heart"
+               aria-hidden="true"></i>
+
+            <h3>
+              Menguatkan kepedulian
+            </h3>
+
+            <p>
+              Memperkuat solidaritas melalui kegiatan
+              sosial, bantuan kemanusiaan, dan kolaborasi
+              masyarakat untuk membantu sesama
+              serta membangun kehidupan yang
+              lebih sejahtera.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ======================================
+       SECTION 3 - PANDUAN PARTISIPASI
+  ====================================== -->
+
+  <section class="join-guide"
+           id="panduan-partisipasi">
+
+    <div class="container">
+
+      <div class="row g-4 g-lg-5">
+
+        <!-- ==================================
+             KOLOM KIRI
+        ================================== -->
+
+        <div class="col-lg-6">
+
+          <p class="join-label">
+            PANDUAN PARTISIPASI
+          </p>
+
+          <h2 class="join-guide-title">
+            Langkah sederhana untuk<br>
+            berkontribusi.
+          </h2>
+
+          <p class="join-guide-description">
+            Setiap bentuk partisipasi membutuhkan
+            komitmen, kerja sama, dan tanggung jawab.
+            Dengan memahami kebutuhan kegiatan serta
+            kemampuan diri, masyarakat dapat
+            berkontribusi secara tepat dan memberikan
+            manfaat bagi lingkungan maupun sesama.
+          </p>
+
+        </div>
+
+
+        <!-- ==================================
+             KOLOM KANAN
+        ================================== -->
+
+        <div class="col-lg-6">
+
+          <!-- LANGKAH 1 -->
+          <article class="join-guide-item">
+
+            <h3>
+              Kenali Minat dan Kemampuan
+            </h3>
+
+            <p>
+              Pilih bidang kegiatan yang sesuai
+              dengan minat, keterampilan, dan waktu
+              yang tersedia agar kontribusi dapat
+              dilakukan secara optimal.
+            </p>
+
+          </article>
+
+
+          <!-- LANGKAH 2 -->
+          <article class="join-guide-item">
+
+            <h3>
+              Pahami Informasi Kegiatan
+            </h3>
+
+            <p>
+              Pelajari tujuan, persyaratan, jadwal,
+              lokasi, dan ketentuan kegiatan melalui
+              informasi yang disediakan oleh
+              penyelenggara.
+            </p>
+
+          </article>
+
+
+          <!-- LANGKAH 3 -->
+          <article class="join-guide-item">
+
+            <h3>
+              Utamakan Keselamatan dan Kerja Sama
+            </h3>
+
+            <p>
+              Ikuti arahan penyelenggara, jaga
+              keselamatan selama kegiatan, serta
+              bangun kerja sama yang baik dengan
+              relawan dan masyarakat.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ======================================
+       SECTION 4 - LANGKAH BERIKUTNYA
+  ====================================== -->
+
+  <section class="join-next"
+           id="langkah-berikutnya">
+
+    <div class="container">
+
+      <p class="join-label join-label-light">
+        LANGKAH BERIKUTNYA
+      </p>
+
+      <h2>
+        Bersama, kita bisa membawa perubahan.
+      </h2>
+
+      <p class="join-next-description">
+        Temukan informasi mengenai kegiatan,
+        kesempatan berkontribusi, dan berbagai
+        program yang mendorong kepedulian
+        serta partisipasi masyarakat.
+      </p>
+
+      <!-- TOMBOL MENUJU PROGRAM -->
+      <a
+        href="program.html"
+        class="join-next-button">
+
+        Jelajahi Program &amp; Aksi
+
+        <i class="bi bi-arrow-up-right"
+           aria-hidden="true"></i>
+
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<!-- ==========================================
+     FOOTER PPP TERBARU - REVISI 06
+========================================== -->
+
+<footer class="ppp-footer-v2">
+
+  <div class="container">
+
+    <div class="row g-4">
+
+      <!-- KOLOM 1 - IDENTITAS -->
+      <div class="col-lg-3 col-md-6">
+
+        <a href="index.html"
+           class="ppp-footer-brand">
+
+          PPP — Ruang Bersama
+
+        </a>
+
+        <p class="ppp-footer-description">
+          Partai Persatuan Pembangunan.
+          Ruang informasi dan dialog publik
+          dalam sebuah prototipe akademik.
+        </p>
+
+        <p class="ppp-footer-motto">
+          Merawat Persatuan dengan Pembangunan.
+        </p>
+
+      </div>
+
+
+      <!-- KOLOM 2 - QUICK LINKS -->
+      <div class="col-lg-3 col-md-6">
+
+        <h3>Quick Links</h3>
+
+        <ul class="ppp-footer-list">
+
+          <li>
+            <a href="index.html">Beranda</a>
+          </li>
+
+          <li>
+            <a href="tentang.html">Tentang PPP</a>
+          </li>
+
+          <li>
+            <a href="tentang.html#struktur-organisasi">
+              Organisasi
+            </a>
+          </li>
+
+          <li>
+            <a href="program.html">Program &amp; Aksi</a>
+          </li>
+
+          <li>
+            <a href="aspirasi.html">Aspirasi Rakyat</a>
+          </li>
+
+          <li>
+            <a href="kabar.html">Berita</a>
+          </li>
+
+          <li>
+            <a href="pernyataan.html">
+              Pernyataan Resmi
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- KOLOM 3 - INFORMATION -->
+      <div class="col-lg-3 col-md-6">
+
+        <h3>Information</h3>
+
+        <ul class="ppp-footer-list">
+
+          <li>
+            <a href="faq.html">
+              FAQ &amp; Kontak
+            </a>
+          </li>
+
+          <li>
+            <a href="kabar.html#daftar-artikel">
+              Opini
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- KOLOM 4 - SOCIAL -->
+      <div class="col-lg-3 col-md-6">
+
+        <h3>Social</h3>
+
+        <ul class="ppp-footer-list">
+
+          <!-- INSTAGRAM -->
+          <li>
+            <a
+              href="https://www.instagram.com/ppp.peduli?srtk=ODE5c3A2bmkzeGVz&amp;utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <i class="bi bi-instagram"></i>
+              Instagram · @ppp.peduli
+
+            </a>
+          </li>
+
+
+          <!-- TIKTOK -->
+          <li>
+            <a
+              href="https://www.tiktok.com/@ppp.peduli?_r=1&amp;_t=ZS-9BHOIDImUGy"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <i class="bi bi-tiktok"></i>
+              TikTok · @ppp.peduli
+
+            </a>
+          </li>
+
+
+          <!-- YOUTUBE -->
+          <li>
+            <a
+              href="https://youtube.com/@partaipersatuanpembangunandpp?si=k4i02ifY6VN0bI6U"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <i class="bi bi-youtube"></i>
+              YouTube · PPP DPP
+
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <!-- DISCLAIMER -->
+    <div class="ppp-footer-disclaimer">
+
+      Website ini merupakan prototipe akademik
+      yang dikembangkan untuk keperluan pembelajaran
+      Digital Public Relations. Website ini bukan
+      situs resmi Partai Persatuan Pembangunan (PPP).
+      Seluruh program simulasi dan fitur interaktif
+      yang ditampilkan tidak mewakili kegiatan
+      atau layanan resmi organisasi.
+
+    </div>
+
+
+    <!-- COPYRIGHT -->
+    <div class="ppp-footer-copyright">
+
+      © 2026 PPP — Ruang Bersama ·
+      Prototipe akademik Digital Public Relations
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- ==========================================
+     JAVASCRIPT
+========================================== -->
+
+<!-- BOOTSTRAP 5 BUNDLE -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JAVASCRIPT GLOBAL WEBSITE -->
+<script src="assets/js/main.js"></script>
+
 </body>
 </html>
