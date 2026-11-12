@@ -1,141 +1,1235 @@
-<!doctype html>
-<html lang="id">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="PPP – Ruang Bersama. Mock-up akademik untuk tugas website Public Relations Digital.">
-  <title>Pernyataan Resmi | PPP – Ruang Bersama</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link
-  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
-  rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Arsip contoh pernyataan dan informasi organisasi PPP untuk prototipe akademik.">
+
+  <title>Pernyataan Resmi | PPP Ruang Bersama</title>
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- BOOTSTRAP 5 -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+  <!-- BOOTSTRAP ICONS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    rel="stylesheet">
+
+  <!-- CSS UTAMA -->
   <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-  <!-- NAVBAR PPP - DESKTOP FIGMA REVISI -->
+
+<!-- ==========================================
+     HEADER DAN NAVBAR PPP
+========================================== -->
+
 <header class="ppp-site-header">
-  <!-- Bar hijau atas -->
+
+  <!-- TOP BAR -->
   <div class="ppp-head-top">
     <div class="container ppp-head-top-inner">
-      <span>KELOMPOK 8 · MATA KULIAH DIGIPR</span>
-      <span class="d-none d-sm-inline">PROTOTIPE AKADEMIK · BUKAN SITUS RESMI PPP</span>
+
+      <span>
+        KELOMPOK 8 · MATA KULIAH DIGIPR
+      </span>
+
+      <span class="d-none d-sm-inline">
+        PROTOTIPE AKADEMIK · BUKAN SITUS RESMI PPP
+      </span>
+
     </div>
   </div>
 
-  <!-- Logo + nama partai + tagline -->
+
+  <!-- LOGO DAN IDENTITAS -->
   <div class="ppp-head-main">
     <div class="container ppp-head-main-inner">
-      <a href="index.html" class="ppp-head-brand" aria-label="Partai Persatuan Pembangunan - Beranda">
-        <img src="assets/images/logo-ppp-navbar.png"
-             alt="Logo PPP"
-             class="ppp-head-logo">
+
+      <a href="index.html" class="ppp-head-brand">
+
+        <img
+          src="assets/images/logo-ppp-navbar.png"
+          class="ppp-head-logo"
+          alt="Logo Partai Persatuan Pembangunan">
+
         <span class="ppp-head-name">
           <strong>PARTAI</strong>
           <strong>PERSATUAN</strong>
           <strong>PEMBANGUNAN</strong>
         </span>
+
       </a>
-      <p class="ppp-head-tagline">Aspirasi Didengar, Informasi Terbuka, Aksi Terasa.</p>
+
+      <p class="ppp-head-tagline">
+        Berakar pada Nilai, Bergerak untuk Rakyat.
+      </p>
+
     </div>
   </div>
 
-  <!-- Menu + pencarian -->
-  <nav class="navbar navbar-expand-xl ppp-head-nav" aria-label="Navigasi utama">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-xl ppp-head-nav"
+       aria-label="Navigasi utama">
+
     <div class="container ppp-head-nav-inner">
-      <button class="navbar-toggler ppp-head-toggler" type="button"
-              data-bs-toggle="collapse" data-bs-target="#pppNavMenu"
-              aria-controls="pppNavMenu" aria-expanded="false"
-              aria-label="Buka menu navigasi">
+
+      <!-- TOMBOL MOBILE -->
+      <button
+        class="navbar-toggler ppp-head-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#pppNavMenu"
+        aria-controls="pppNavMenu"
+        aria-expanded="false"
+        aria-label="Buka menu">
+
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="pppNavMenu">
+
+
+      <div class="collapse navbar-collapse"
+           id="pppNavMenu">
+
         <ul class="navbar-nav ppp-head-menu">
-          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-          <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang PPP</a></li>
-          <li class="nav-item"><a class="nav-link" href="program.html">Program &amp; Aksi</a></li>
-          <li class="nav-item"><a class="nav-link" href="aspirasi.html">Aspirasi Rakyat</a></li>
-          <li class="nav-item"><a class="nav-link" href="kabar.html">Kabar PPP</a></li>
-          <li class="nav-item"><a class="nav-link" href="pernyataan.html">Pernyataan Resmi</a></li>
-          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ &amp; Kontak</a></li>
-          <li class="nav-item"><a class="nav-link" href="bergabung.html">Bergabung</a></li>
+
+          <!-- BERANDA -->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              Beranda
+            </a>
+          </li>
+
+
+          <!-- DROPDOWN TENTANG PPP -->
+          <li class="nav-item dropdown ppp-about-dropdown">
+
+            <a class="nav-link ppp-about-link"
+               href="tentang.html">
+              Tentang PPP
+            </a>
+
+            <button
+              class="ppp-about-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              aria-label="Buka submenu Tentang PPP">
+
+              <i class="bi bi-chevron-down"></i>
+            </button>
+
+            <ul class="dropdown-menu ppp-about-menu">
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#identitas-ppp">
+                  Profil PPP
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#sejarah-ppp">
+                  Sejarah PPP
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#visi-misi-ppp">
+                  Visi &amp; Misi
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#ideologi-ppp">
+                  Ideologi &amp; Nilai Dasar
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#lima-khidmat">
+                  Lima Khidmat PPP
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#enam-prinsip">
+                  Enam Prinsip Perjuangan
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#struktur-organisasi">
+                  Struktur Organisasi
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#tokoh-kepemimpinan">
+                  Tokoh &amp; Kepemimpinan
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+
+          <!-- PROGRAM -->
+          <li class="nav-item">
+            <a class="nav-link" href="program.html">
+              Program &amp; Aksi
+            </a>
+          </li>
+
+
+          <!-- ASPIRASI -->
+          <li class="nav-item">
+            <a class="nav-link" href="aspirasi.html">
+              Aspirasi Rakyat
+            </a>
+          </li>
+
+
+          <!-- KABAR -->
+          <li class="nav-item">
+            <a class="nav-link" href="kabar.html">
+              Kabar PPP
+            </a>
+          </li>
+
+
+          <!-- PERNYATAAN RESMI -->
+          <li class="nav-item">
+            <a class="nav-link active"
+               href="pernyataan.html"
+               aria-current="page">
+              Pernyataan Resmi
+            </a>
+          </li>
+
+
+          <!-- FAQ -->
+          <li class="nav-item">
+            <a class="nav-link" href="faq.html">
+              FAQ &amp; Kontak
+            </a>
+          </li>
+
+
+          <!-- BERGABUNG -->
+          <li class="nav-item">
+            <a class="nav-link" href="bergabung.html">
+              Bergabung
+            </a>
+          </li>
+
         </ul>
 
-        <!-- Pencarian halaman dan topik website (front-end) -->
-        <form class="ppp-head-search" id="pppSiteSearch" role="search" autocomplete="off">
-          <button type="submit" aria-label="Cari"><i class="bi bi-search"></i></button>
-          <input type="search" id="pppSearchInput" aria-label="Cari halaman atau topik"
-                 placeholder="Cari di situs PPP..." />
-          <div class="ppp-head-results" id="pppSearchResults" aria-live="polite" hidden></div>
+
+        <!-- SEARCH GLOBAL -->
+        <form
+          class="ppp-head-search"
+          id="pppSiteSearch"
+          role="search"
+          autocomplete="off">
+
+          <button type="submit" aria-label="Cari">
+            <i class="bi bi-search"></i>
+          </button>
+
+          <input
+            id="pppSearchInput"
+            type="search"
+            placeholder="Cari di situs PPP..."
+            aria-label="Cari informasi website">
+
+          <div
+            id="pppSearchResults"
+            class="ppp-head-results"
+            aria-live="polite"
+            hidden>
+          </div>
+
         </form>
+
       </div>
+
     </div>
   </nav>
+
 </header>
-<!-- AKHIR NAVBAR PPP -->
 
 
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <div class="eyebrow eyebrow-light">PERNYATAAN RESMI</div>
-        <h1>Jelas sumbernya.<br>Utuh konteksnya.</h1>
-        <p>Halaman arsip contoh untuk memperlihatkan susunan informasi, tanggal, kategori, dan keterangan sumber.</p>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <div class="notice-box mb-4"><i class="bi bi-exclamation-circle"></i><div><strong>Catatan penting</strong><p>Daftar di bawah ini merupakan konten simulasi. Tidak ada pernyataan yang diklaim sebagai pernyataan resmi PPP.</p></div></div>
-        <a class="statement-link statement-page-link" href="#"><small>06 November 2026 · Informasi publik · Mock-up akademik</small><span>Mengenali batasan situs mock-up akademik <i class="bi bi-arrow-right"></i></span><em>Contoh keterangan — bukan pernyataan resmi PPP</em></a>
-        <a class="statement-link statement-page-link" href="#"><small>03 November 2026 · Klarifikasi · Mock-up akademik</small><span>Membedakan rancangan program dan kegiatan nyata <i class="bi bi-arrow-right"></i></span><em>Contoh keterangan — bukan pernyataan resmi PPP</em></a>
-        <a class="statement-link statement-page-link" href="#"><small>01 November 2026 · Informasi website · Mock-up akademik</small><span>Bagaimana membaca informasi dalam ruang digital <i class="bi bi-arrow-right"></i></span><em>Contoh keterangan — bukan pernyataan resmi PPP</em></a>
-      </div>
-    </section>
-  </main>
+<!-- ==========================================
+     MAIN PERNYATAAN RESMI
+========================================== -->
 
-  <section class="footer-cta">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
-      <h2>Kebersamaan punya banyak bentuk.</h2>
-      <a class="btn btn-outline-light" href="bergabung.html">Kenali cara bergabung <i class="bi bi-arrow-up-right"></i></a>
-    </div>
-  </section>
-  <footer class="site-footer">
+<main class="pr-page">
+
+  <!-- ======================================
+       1. HERO PERNYATAAN RESMI
+  ====================================== -->
+
+  <section class="pr-hero">
+
     <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-5">
-          <a class="footer-brand" href="index.html">PPP – Ruang Bersama</a>
-          <p class="footer-tagline">Aspirasi Didengar, Informasi Terbuka, Aksi Terasa.</p>
-          <p class="footer-small">Rujukan sumber: ppp.or.id · Mock-up akademik</p>
-        </div>
-        <div class="col-6 col-lg-2">
-          <h6>Jelajahi</h6>
-          <a href="index.html">Beranda</a>
-          <a href="tentang.html">Tentang PPP</a>
-          <a href="program.html">Program &amp; Aksi</a>
-          <a href="aspirasi.html">Aspirasi Rakyat</a>
-        </div>
-        <div class="col-6 col-lg-2">
-          <h6>Informasi</h6>
-          <a href="kabar.html">Kabar PPP</a>
-          <a href="pernyataan.html">Pernyataan Resmi</a>
-          <a href="faq.html">FAQ &amp; Kontak</a>
-          <a href="bergabung.html">Bergabung</a>
-        </div>
-        <div class="col-lg-3">
-          <h6>Catatan</h6>
-          <p class="footer-small">Website ini merupakan rancangan untuk kebutuhan akademik. Konten, program, dan formulir di dalamnya bersifat simulasi, bukan publikasi atau layanan resmi.</p>
-        </div>
-      </div>
-      <div class="footer-bottom d-flex flex-column flex-sm-row justify-content-between gap-2">
-        <span>© 2026 PPP – Ruang Bersama. Mock-up akademik.</span>
-        <span>Desain untuk tugas Public Relations Digital</span>
-      </div>
+
+      <p class="pr-label">
+        PERNYATAAN RESMI
+      </p>
+
+      <h1>
+        Keterangan yang jelas<br>
+        Konteks yang utuh
+      </h1>
+
+      <p class="pr-hero-description">
+        Temukan berbagai pernyataan, klarifikasi,
+        dan sikap politik Partai Persatuan
+        Pembangunan (PPP) yang disampaikan
+        kepada publik. Setiap informasi dilengkapi
+        tanggal, konteks, serta rujukan sumber
+        yang dapat ditelusuri.
+      </p>
+
     </div>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/main.js"></script>
+
+  </section>
+
+
+  <!-- ======================================
+       2. TRANSPARANSI INFORMASI
+  ====================================== -->
+
+  <section class="pr-information">
+
+    <div class="container">
+
+      <div class="pr-information-box">
+
+        <h2>
+          TRANSPARANSI INFORMASI DAN SUMBER
+        </h2>
+
+        <p>
+          Informasi yang disajikan menampilkan
+          ringkasan pernyataan pengurus, keputusan
+          organisasi, dan pandangan tokoh PPP
+          yang diberitakan melalui media massa
+          selama 2026.
+        </p>
+
+        <p>
+          Setiap artikel seharusnya mencantumkan
+          sumber pemberitaan untuk memastikan
+          informasi dapat diverifikasi.
+          Website ini merupakan prototipe akademik
+          dan bukan kanal resmi DPP PPP.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ======================================
+       3. FILTER DAN DAFTAR PERNYATAAN
+  ====================================== -->
+
+  <section class="pr-list-section"
+           id="daftar-pernyataan">
+
+    <div class="container">
+
+      <!-- FILTER KATEGORI -->
+      <div class="pr-filter-buttons"
+           role="group"
+           aria-label="Filter kategori pernyataan">
+
+        <button
+          type="button"
+          class="pr-filter-btn active"
+          data-filter="semua"
+          aria-pressed="true">
+          Semua
+        </button>
+
+        <button
+          type="button"
+          class="pr-filter-btn"
+          data-filter="organisasi"
+          aria-pressed="false">
+          Pernyataan organisasi
+        </button>
+
+        <button
+          type="button"
+          class="pr-filter-btn"
+          data-filter="klarifikasi"
+          aria-pressed="false">
+          Klarifikasi
+        </button>
+
+        <button
+          type="button"
+          class="pr-filter-btn"
+          data-filter="politik"
+          aria-pressed="false">
+          Sikap Politik
+        </button>
+
+      </div>
+
+
+      <!-- JUMLAH DAN CATATAN -->
+      <div class="pr-toolbar">
+
+        <span id="prResultCount"
+              aria-live="polite">
+          4 PERNYATAAN · ARSIP CONTOH
+        </span>
+
+        <span class="pr-toolbar-note">
+          Seluruh tanggal ilustratif
+        </span>
+
+      </div>
+
+
+      <!-- ==================================
+           PERNYATAAN 1
+      ================================== -->
+      <article class="pr-statement"
+               data-category="klarifikasi">
+
+        <div class="row g-3 g-lg-4">
+
+          <!-- KIRI -->
+          <div class="col-lg-3">
+
+            <p class="pr-statement-date">
+              02 November 2026
+            </p>
+
+            <p class="pr-statement-type">
+              KLARIFIKASI KEPENGURUSAN
+            </p>
+
+          </div>
+
+
+          <!-- KANAN -->
+          <div class="col-lg-9">
+
+            <p class="pr-statement-meta">
+              2 November 2026 · Klarifikasi Kepengurusan
+            </p>
+
+            <h2>
+              Mardiono Tegaskan Penataan Kepengurusan
+              PPP sebagai Langkah Restrukturisasi
+            </h2>
+
+            <p class="pr-statement-description">
+              Ketua Umum PPP Muhamad Mardiono
+              menjelaskan bahwa perubahan sejumlah
+              posisi kepengurusan merupakan bagian
+              dari restrukturisasi organisasi untuk
+              meningkatkan efektivitas kerja partai.
+              Mardiono menegaskan bahwa langkah
+              tersebut merupakan proses politik
+              internal, bukan pencabutan
+              keanggotaan partai.
+            </p>
+
+            <button
+              type="button"
+              class="pr-readmore"
+              data-bs-toggle="modal"
+              data-bs-target="#prDetailModal"
+              data-statement="restrukturisasi">
+
+              Baca contoh pernyataan
+              <i class="bi bi-arrow-right"></i>
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- ==================================
+           PERNYATAAN 2
+      ================================== -->
+      <article class="pr-statement"
+               data-category="organisasi">
+
+        <div class="row g-3 g-lg-4">
+
+          <!-- KIRI -->
+          <div class="col-lg-3">
+
+            <p class="pr-statement-date">
+              09 November 2026
+            </p>
+
+            <p class="pr-statement-type">
+              SERUAN PERSATUAN
+            </p>
+
+          </div>
+
+
+          <!-- KANAN -->
+          <div class="col-lg-9">
+
+            <p class="pr-statement-meta">
+              09 November 2026 · Seruan Persatuan
+            </p>
+
+            <h2>
+              Senior PPP Serukan Persatuan dan
+              Penyelesaian Konflik Internal
+            </h2>
+
+            <p class="pr-statement-description">
+              Sejumlah tokoh senior PPP yang tergabung
+              dalam Kesatuan Aksi Menyelamatkan PPP
+              (KAM PPP) mengimbau seluruh pihak
+              agar menahan diri dan menjaga
+              keutuhan partai. Mereka mendorong
+              penyelesaian konflik internal demi
+              keberlangsungan organisasi serta
+              kesiapan PPP menghadapi Pemilu 2029.
+            </p>
+
+            <button
+              type="button"
+              class="pr-readmore"
+              data-bs-toggle="modal"
+              data-bs-target="#prDetailModal"
+              data-statement="persatuan">
+
+              Baca contoh pernyataan
+              <i class="bi bi-arrow-right"></i>
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- ==================================
+           PERNYATAAN 3
+      ================================== -->
+      <article class="pr-statement"
+               data-category="organisasi">
+
+        <div class="row g-3 g-lg-4">
+
+          <!-- KIRI -->
+          <div class="col-lg-3">
+
+            <p class="pr-statement-date">
+              28 Oktober 2026
+            </p>
+
+            <p class="pr-statement-type">
+              PERNYATAAN ORGANISASI
+            </p>
+
+          </div>
+
+
+          <!-- KANAN -->
+          <div class="col-lg-9">
+
+            <p class="pr-statement-meta">
+              28 Oktober 2026 · Pernyataan Organisasi
+            </p>
+
+            <h2>
+              PPP Tegaskan Dukungan terhadap
+              Penguatan Ekonomi dan
+              Kesejahteraan Rakyat
+            </h2>
+
+            <p class="pr-statement-description">
+              Melalui Rakornas III, PPP menyatakan
+              dukungan terhadap pelaksanaan
+              Pasal 33 dan 34 UUD 1945.
+              Dukungan tersebut menekankan
+              pentingnya kedaulatan ekonomi,
+              pengelolaan sumber daya alam
+              untuk kepentingan nasional,
+              serta peningkatan
+              kesejahteraan rakyat.
+            </p>
+
+            <button
+              type="button"
+              class="pr-readmore"
+              data-bs-toggle="modal"
+              data-bs-target="#prDetailModal"
+              data-statement="ekonomi">
+
+              Baca contoh pernyataan
+              <i class="bi bi-arrow-right"></i>
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- ==================================
+           PERNYATAAN 4
+      ================================== -->
+      <article class="pr-statement"
+               data-category="politik">
+
+        <div class="row g-3 g-lg-4">
+
+          <!-- KIRI -->
+          <div class="col-lg-3">
+
+            <p class="pr-statement-date">
+              16 September 2026
+            </p>
+
+            <p class="pr-statement-type">
+              SIKAP POLITIK
+            </p>
+
+          </div>
+
+
+          <!-- KANAN -->
+          <div class="col-lg-9">
+
+            <p class="pr-statement-meta">
+              16 September 2026 · Sikap Politik
+            </p>
+
+            <h2>
+              PPP Nyatakan Kesiapan Menghadapi
+              Perubahan Ambang Batas Parlemen
+            </h2>
+
+            <p class="pr-statement-description">
+              Wakil Sekretaris Jenderal PPP Jabbar Idris
+              menyampaikan bahwa PPP siap menghadapi
+              besaran ambang batas parlemen yang
+              disepakati dalam revisi Undang-Undang Pemilu.
+              PPP juga menjadikan hasil Pemilu 2024
+              sebagai bahan evaluasi untuk memperkuat
+              organisasi menghadapi
+              pemilu mendatang.
+            </p>
+
+            <button
+              type="button"
+              class="pr-readmore"
+              data-bs-toggle="modal"
+              data-bs-target="#prDetailModal"
+              data-statement="parlemen">
+
+              Baca contoh pernyataan
+              <i class="bi bi-arrow-right"></i>
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- PESAN JIKA KATEGORI KOSONG -->
+      <div class="pr-empty"
+           id="prEmptyState"
+           hidden>
+
+        <i class="bi bi-journal-text"></i>
+
+        <h3>
+          Tidak ada pernyataan
+        </h3>
+
+        <p>
+          Belum terdapat contoh pernyataan
+          pada kategori yang dipilih.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ======================================
+       4. PERIKSA SUMBER
+  ====================================== -->
+
+  <section class="pr-source-section">
+
+    <div class="container">
+
+      <h2>
+        Periksa sumber sebelum membagikan.
+      </h2>
+
+      <p>
+        Informasi yang akurat membutuhkan sumber
+        yang jelas dan konteks yang lengkap.
+        Pastikan setiap pernyataan telah
+        diverifikasi melalui rujukan pemberitaan
+        atau kanal resmi Partai Persatuan
+        Pembangunan sebelum dibagikan kepada publik.
+      </p>
+
+      <a href="faq.html"
+         class="pr-source-button">
+
+        Pertanyaan? FAQ &amp; Kontak
+        <i class="bi bi-arrow-up-right"></i>
+
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<!-- ==========================================
+     5. POPUP DETAIL PERNYATAAN
+========================================== -->
+
+<div class="modal fade pr-detail-modal"
+     id="prDetailModal"
+     tabindex="-1"
+     aria-labelledby="prModalTitle"
+     aria-hidden="true">
+
+  <div class="modal-dialog modal-lg
+              modal-dialog-centered
+              modal-dialog-scrollable">
+
+    <div class="modal-content">
+
+      <!-- HEADER POPUP -->
+      <div class="modal-header">
+
+        <span class="pr-modal-label">
+          ARSIP CONTOH · PROTOTIPE AKADEMIK
+        </span>
+
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Tutup">
+        </button>
+
+      </div>
+
+
+      <!-- ISI POPUP -->
+      <div class="modal-body">
+
+        <p class="pr-modal-meta"
+           id="prModalMeta">
+        </p>
+
+        <h2 id="prModalTitle"></h2>
+
+        <div id="prModalContent"></div>
+
+        <div class="pr-modal-disclaimer">
+
+          <strong>Catatan verifikasi</strong>
+
+          <p>
+            Konten ini merupakan contoh ringkasan
+            berdasarkan mockup akademik.
+            Tanggal, kutipan, dan informasi
+            yang ditampilkan belum diverifikasi
+            terhadap dokumen pernyataan asli.
+            Jangan menganggapnya sebagai
+            pernyataan resmi organisasi.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- TOMBOL POPUP -->
+      <div class="modal-footer">
+
+        <a
+          href="https://ppp.or.id/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="pr-modal-official-link">
+
+          Kunjungi Website PPP
+          <i class="bi bi-box-arrow-up-right"></i>
+
+        </a>
+
+        <button
+          type="button"
+          class="pr-modal-close"
+          data-bs-dismiss="modal">
+
+          Tutup
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- ==========================================
+     6. FOOTER TERBARU
+========================================== -->
+
+<footer class="ppp-footer-v2">
+
+  <div class="container">
+
+    <div class="row g-4">
+
+      <!-- KOLOM 1 -->
+      <div class="col-lg-3 col-md-6">
+
+        <a href="index.html"
+           class="ppp-footer-brand">
+          PPP — Ruang Bersama
+        </a>
+
+        <p class="ppp-footer-description">
+          Partai Persatuan Pembangunan.
+          Ruang informasi dan dialog publik
+          dalam sebuah prototipe akademik.
+        </p>
+
+        <p class="ppp-footer-motto">
+          Merawat Persatuan dengan Pembangunan.
+        </p>
+
+      </div>
+
+
+      <!-- KOLOM 2 -->
+      <div class="col-lg-3 col-md-6">
+
+        <h3>Quick Links</h3>
+
+        <ul class="ppp-footer-list">
+
+          <li>
+            <a href="index.html">Beranda</a>
+          </li>
+
+          <li>
+            <a href="tentang.html">Tentang PPP</a>
+          </li>
+
+          <li>
+            <a href="tentang.html#struktur-organisasi">
+              Organisasi
+            </a>
+          </li>
+
+          <li>
+            <a href="program.html">Program &amp; Aksi</a>
+          </li>
+
+          <li>
+            <a href="aspirasi.html">Aspirasi Rakyat</a>
+          </li>
+
+          <li>
+            <a href="kabar.html">Berita</a>
+          </li>
+
+          <li>
+            <a href="pernyataan.html">Pernyataan Resmi</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- KOLOM 3 -->
+      <div class="col-lg-3 col-md-6">
+
+        <h3>Information</h3>
+
+        <ul class="ppp-footer-list">
+
+          <li>
+            <a href="faq.html">FAQ &amp; Kontak</a>
+          </li>
+
+          <li>
+            <a href="kabar.html#daftar-artikel">
+              Opini
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- KOLOM 4 -->
+      <div class="col-lg-3 col-md-6">
+
+        <h3>Social</h3>
+
+        <ul class="ppp-footer-list">
+
+          <!-- INSTAGRAM -->
+          <li>
+            <a
+              href="https://www.instagram.com/ppp.peduli?srtk=ODE5c3A2bmkzeGVz&amp;utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <i class="bi bi-instagram"></i>
+              Instagram · @ppp.peduli
+
+            </a>
+          </li>
+
+
+          <!-- TIKTOK -->
+          <li>
+            <a
+              href="https://www.tiktok.com/@ppp.peduli?_r=1&amp;_t=ZS-9BHOIDImUGy"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <i class="bi bi-tiktok"></i>
+              TikTok · @ppp.peduli
+
+            </a>
+          </li>
+
+
+          <!-- YOUTUBE -->
+          <li>
+            <a
+              href="https://youtube.com/@partaipersatuanpembangunandpp?si=k4i02ifY6VN0bI6U"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <i class="bi bi-youtube"></i>
+              YouTube · PPP DPP
+
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <!-- DISCLAIMER -->
+    <div class="ppp-footer-disclaimer">
+
+      Website ini merupakan prototipe akademik yang
+      dikembangkan untuk keperluan pembelajaran
+      Digital Public Relations. Website ini bukan
+      situs resmi Partai Persatuan Pembangunan (PPP).
+      Seluruh program simulasi dan fitur interaktif
+      yang ditampilkan tidak mewakili kegiatan
+      atau layanan resmi organisasi.
+
+    </div>
+
+
+    <!-- COPYRIGHT -->
+    <div class="ppp-footer-copyright">
+
+      © 2026 PPP — Ruang Bersama ·
+      Prototipe akademik Digital Public Relations
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- ==========================================
+     JAVASCRIPT
+========================================== -->
+
+<!-- BOOTSTRAP -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<!-- JAVASCRIPT GLOBAL -->
+<script src="assets/js/main.js"></script>
+
+
+<!-- JAVASCRIPT HALAMAN PERNYATAAN -->
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* ======================================
+     1. FILTER KATEGORI
+  ====================================== */
+
+  const filterButtons =
+    document.querySelectorAll(".pr-filter-btn");
+
+  const statements =
+    document.querySelectorAll(".pr-statement");
+
+  const resultCount =
+    document.getElementById("prResultCount");
+
+  const emptyState =
+    document.getElementById("prEmptyState");
+
+
+  filterButtons.forEach(function(button) {
+
+    button.addEventListener("click", function() {
+
+      const selectedCategory =
+        button.dataset.filter;
+
+      let visibleCount = 0;
+
+
+      // Ubah tampilan tombol aktif
+      filterButtons.forEach(function(btn) {
+
+        const isActive = btn === button;
+
+        btn.classList.toggle("active", isActive);
+
+        btn.setAttribute(
+          "aria-pressed",
+          isActive ? "true" : "false"
+        );
+
+      });
+
+
+      // Filter pernyataan
+      statements.forEach(function(statement) {
+
+        const matches =
+          selectedCategory === "semua" ||
+          statement.dataset.category === selectedCategory;
+
+        statement.hidden = !matches;
+
+        if (matches) {
+          visibleCount++;
+        }
+
+      });
+
+
+      // Update jumlah pernyataan
+      resultCount.textContent =
+        visibleCount +
+        " PERNYATAAN · ARSIP CONTOH";
+
+      emptyState.hidden = visibleCount !== 0;
+
+    });
+
+  });
+
+
+  /* ======================================
+     2. DATA DETAIL PERNYATAAN
+  ====================================== */
+
+  const statementData = {
+
+    restrukturisasi: {
+      meta: "02 NOVEMBER 2026 · KLARIFIKASI KEPENGURUSAN",
+
+      title:
+        "Mardiono Tegaskan Penataan Kepengurusan PPP sebagai Langkah Restrukturisasi",
+
+      paragraphs: [
+        "Dalam ringkasan contoh pada prototipe ini, penataan posisi kepengurusan dijelaskan sebagai bagian dari restrukturisasi organisasi untuk meningkatkan efektivitas kerja.",
+
+        "Perubahan struktur organisasi dapat dipahami sebagai upaya menyesuaikan pembagian tugas, koordinasi, serta kebutuhan organisasi dalam menjalankan aktivitasnya.",
+
+        "Ringkasan ini tidak menggantikan dokumen pernyataan asli. Informasi mengenai jabatan, keputusan, dan pernyataan tokoh perlu diperiksa melalui sumber yang dapat diverifikasi."
+      ]
+    },
+
+    persatuan: {
+      meta: "09 NOVEMBER 2026 · SERUAN PERSATUAN",
+
+      title:
+        "Senior PPP Serukan Persatuan dan Penyelesaian Konflik Internal",
+
+      paragraphs: [
+        "Contoh pernyataan ini membahas pentingnya menjaga persatuan organisasi di tengah perbedaan pandangan dan dinamika kepengurusan.",
+
+        "Komunikasi dan penyelesaian persoalan secara terbuka menjadi salah satu tema yang ditekankan dalam ringkasan pada mockup.",
+
+        "Untuk mengetahui sikap atau pernyataan yang benar-benar disampaikan oleh tokoh organisasi, pengunjung perlu membaca sumber pemberitaan atau dokumen resmi yang dapat ditelusuri."
+      ]
+    },
+
+    ekonomi: {
+      meta: "28 OKTOBER 2026 · PERNYATAAN ORGANISASI",
+
+      title:
+        "PPP Tegaskan Dukungan terhadap Penguatan Ekonomi dan Kesejahteraan Rakyat",
+
+      paragraphs: [
+        "Ringkasan akademik ini menyoroti tema penguatan ekonomi masyarakat dan kesejahteraan rakyat dalam pembahasan kebijakan publik.",
+
+        "Pasal 33 dan Pasal 34 UUD 1945 dijadikan konteks untuk menjelaskan isu pengelolaan perekonomian serta tanggung jawab negara dalam bidang kesejahteraan sosial.",
+
+        "Pernyataan atau keputusan spesifik organisasi harus diperiksa berdasarkan dokumen sumber sebelum dipublikasikan sebagai sikap resmi."
+      ]
+    },
+
+    parlemen: {
+      meta: "16 SEPTEMBER 2026 · SIKAP POLITIK",
+
+      title:
+        "PPP Nyatakan Kesiapan Menghadapi Perubahan Ambang Batas Parlemen",
+
+      paragraphs: [
+        "Contoh artikel ini mengangkat isu ambang batas parlemen dan persiapan organisasi politik dalam menghadapi perubahan ketentuan pemilihan umum.",
+
+        "Evaluasi hasil pemilu, konsolidasi internal, dan penyesuaian strategi organisasi merupakan beberapa konteks pembahasan yang ditampilkan dalam rancangan artikel.",
+
+        "Isi tersebut hanya simulasi editorial. Sikap resmi partai dan perkembangan ketentuan pemilu perlu diperiksa melalui pernyataan dan sumber hukum yang berlaku."
+      ]
+    }
+
+  };
+
+
+  /* ======================================
+     3. MEMBUKA POPUP DETAIL
+  ====================================== */
+
+  const modalElement =
+    document.getElementById("prDetailModal");
+
+  modalElement.addEventListener(
+    "show.bs.modal",
+    function(event) {
+
+      const trigger = event.relatedTarget;
+
+      if (!trigger) return;
+
+      const statementId =
+        trigger.dataset.statement;
+
+      const data =
+        statementData[statementId];
+
+      if (!data) return;
+
+
+      // Tampilkan metadata
+      document.getElementById("prModalMeta")
+        .textContent = data.meta;
+
+
+      // Tampilkan judul
+      document.getElementById("prModalTitle")
+        .textContent = data.title;
+
+
+      // Tampilkan paragraf
+      const content =
+        document.getElementById("prModalContent");
+
+      content.replaceChildren();
+
+      data.paragraphs.forEach(function(text) {
+
+        const paragraph =
+          document.createElement("p");
+
+        paragraph.textContent = text;
+
+        content.appendChild(paragraph);
+
+      });
+
+    }
+  );
+
+});
+
+</script>
+
 </body>
 </html>
