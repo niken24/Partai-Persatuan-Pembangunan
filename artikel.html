@@ -1,146 +1,1101 @@
-<!doctype html>
-<html lang="id">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="PPP – Ruang Bersama. Mock-up akademik untuk tugas website Public Relations Digital.">
-  <title>Artikel | PPP – Ruang Bersama</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link
-  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
-  rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Detail Artikel | PPP Ruang Bersama</title>
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- BOOTSTRAP 5 -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+  <!-- BOOTSTRAP ICONS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    rel="stylesheet">
+
+  <!-- CSS UTAMA WEBSITE -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <!-- NAVBAR PPP - DESKTOP FIGMA REVISI -->
+
+<!-- =========================================
+     NAVBAR PPP
+========================================= -->
+
 <header class="ppp-site-header">
-  <!-- Bar hijau atas -->
+
   <div class="ppp-head-top">
     <div class="container ppp-head-top-inner">
       <span>KELOMPOK 8 · MATA KULIAH DIGIPR</span>
-      <span class="d-none d-sm-inline">PROTOTIPE AKADEMIK · BUKAN SITUS RESMI PPP</span>
+      <span class="d-none d-sm-inline">
+        PROTOTIPE AKADEMIK · BUKAN SITUS RESMI PPP
+      </span>
     </div>
   </div>
 
-  <!-- Logo + nama partai + tagline -->
   <div class="ppp-head-main">
     <div class="container ppp-head-main-inner">
-      <a href="index.html" class="ppp-head-brand" aria-label="Partai Persatuan Pembangunan - Beranda">
-        <img src="assets/images/logo-ppp-navbar.png"
-             alt="Logo PPP"
-             class="ppp-head-logo">
+
+      <a href="index.html" class="ppp-head-brand">
+        <img
+          src="assets/images/logo-ppp-navbar.png"
+          alt="Logo Partai Persatuan Pembangunan"
+          class="ppp-head-logo">
+
         <span class="ppp-head-name">
           <strong>PARTAI</strong>
           <strong>PERSATUAN</strong>
           <strong>PEMBANGUNAN</strong>
         </span>
       </a>
-      <p class="ppp-head-tagline">Aspirasi Didengar, Informasi Terbuka, Aksi Terasa.</p>
+
+      <p class="ppp-head-tagline">
+        Aspirasi Didengar, Informasi Terbuka,
+        Aksi Terasa.
+      </p>
+
     </div>
   </div>
 
-  <!-- Menu + pencarian -->
-  <nav class="navbar navbar-expand-xl ppp-head-nav" aria-label="Navigasi utama">
+  <nav class="navbar navbar-expand-xl ppp-head-nav">
     <div class="container ppp-head-nav-inner">
-      <button class="navbar-toggler ppp-head-toggler" type="button"
-              data-bs-toggle="collapse" data-bs-target="#pppNavMenu"
-              aria-controls="pppNavMenu" aria-expanded="false"
-              aria-label="Buka menu navigasi">
+
+      <button
+        class="navbar-toggler ppp-head-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#pppNavMenu"
+        aria-controls="pppNavMenu"
+        aria-expanded="false"
+        aria-label="Buka menu navigasi">
+
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="pppNavMenu">
+
+      <div class="collapse navbar-collapse"
+           id="pppNavMenu">
+
         <ul class="navbar-nav ppp-head-menu">
-          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-          <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang PPP</a></li>
-          <li class="nav-item"><a class="nav-link" href="program.html">Program &amp; Aksi</a></li>
-          <li class="nav-item"><a class="nav-link" href="aspirasi.html">Aspirasi Rakyat</a></li>
-          <li class="nav-item"><a class="nav-link" href="kabar.html">Kabar PPP</a></li>
-          <li class="nav-item"><a class="nav-link" href="pernyataan.html">Pernyataan Resmi</a></li>
-          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ &amp; Kontak</a></li>
-          <li class="nav-item"><a class="nav-link" href="bergabung.html">Bergabung</a></li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              Beranda
+            </a>
+          </li>
+
+          <!-- DROPDOWN TENTANG PPP -->
+          <li class="nav-item dropdown ppp-about-dropdown">
+
+            <a class="nav-link ppp-about-link"
+               href="tentang.html">
+              Tentang PPP
+            </a>
+
+            <button
+              class="ppp-about-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              aria-label="Buka submenu Tentang PPP">
+              <i class="bi bi-chevron-down"></i>
+            </button>
+
+            <ul class="dropdown-menu ppp-about-menu">
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#identitas-ppp">
+                  Profil PPP
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#sejarah-ppp">
+                  Sejarah PPP
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#visi-misi-ppp">
+                  Visi &amp; Misi
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#ideologi-ppp">
+                  Ideologi &amp; Nilai Dasar
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#lima-khidmat">
+                  Lima Khidmat PPP
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#enam-prinsip">
+                  Enam Prinsip Perjuangan
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#struktur-organisasi">
+                  Struktur Organisasi
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#tokoh-kepemimpinan">
+                  Tokoh &amp; Kepemimpinan
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="program.html">
+              Program &amp; Aksi
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="aspirasi.html">
+              Aspirasi Rakyat
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active"
+               href="kabar.html"
+               aria-current="page">
+              Kabar PPP
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="pernyataan.html">
+              Pernyataan Resmi
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="faq.html">
+              FAQ &amp; Kontak
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="bergabung.html">
+              Bergabung
+            </a>
+          </li>
+
         </ul>
 
-        <!-- Pencarian halaman dan topik website (front-end) -->
-        <form class="ppp-head-search" id="pppSiteSearch" role="search" autocomplete="off">
-          <button type="submit" aria-label="Cari"><i class="bi bi-search"></i></button>
-          <input type="search" id="pppSearchInput" aria-label="Cari halaman atau topik"
-                 placeholder="Cari di situs PPP..." />
-          <div class="ppp-head-results" id="pppSearchResults" aria-live="polite" hidden></div>
+        <!-- SEARCH NAVBAR -->
+        <form id="pppSiteSearch"
+              class="ppp-head-search"
+              role="search">
+
+          <button type="submit" aria-label="Cari">
+            <i class="bi bi-search"></i>
+          </button>
+
+          <input
+            type="search"
+            id="pppSearchInput"
+            placeholder="Cari di situs PPP..."
+            aria-label="Cari informasi website">
+
+          <div id="pppSearchResults"
+               class="ppp-head-results"
+               aria-live="polite"
+               hidden>
+          </div>
+
         </form>
+
       </div>
     </div>
   </nav>
+
 </header>
-<!-- AKHIR NAVBAR PPP -->
 
 
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <div class="eyebrow eyebrow-light">KABAR PPP · ARTIKEL CONTOH</div>
-        <h1>Ruang belajar yang tumbuh bersama warga.</h1>
-        <p>06 November 2026 · Pendidikan · Contoh konten akademik</p>
-      </div>
-    </section>
-    <article class="section">
-      <div class="container article-container">
-        <img class="article-cover" src="assets/images/kabar-belajar.jpg" alt="Ilustrasi warga belajar bersama">
-        <p class="article-lead">Ruang belajar tidak selalu harus dimulai dari gedung besar. Ia dapat tumbuh dari lingkungan yang menyediakan kesempatan untuk bertanya, berbagi, dan belajar bersama.</p>
-        <h2>Belajar dekat dengan kehidupan sehari-hari</h2>
-        <p>Setiap warga memiliki pengalaman dan kebutuhan belajar yang berbeda. Karena itu, kegiatan belajar bersama dapat dirancang dengan memperhatikan akses, waktu, dan konteks lingkungan setempat.</p>
-        <p>Contoh kegiatan dapat berupa kelompok belajar, berbagi keterampilan, pendampingan informasi pendidikan, atau diskusi bersama. Hal terpenting adalah menjaga ruang belajar tetap aman, terbuka, dan menghargai setiap peserta.</p>
-        <h2>Kolaborasi sebagai langkah awal</h2>
-        <p>Kolaborasi antara warga, komunitas, pendidik, dan berbagai pihak dapat membantu memperluas akses pengetahuan. Gagasan ini ditampilkan sebagai contoh tema editorial dalam mock-up akademik, bukan laporan kegiatan yang benar-benar berlangsung.</p>
-        <div class="disclaimer mt-4"><i class="bi bi-info-circle"></i> Artikel ini adalah contoh konten akademik dan bukan berita resmi PPP.</div>
-        <a class="btn btn-outline-green mt-4" href="kabar.html"><i class="bi bi-arrow-left"></i> Kembali ke Kabar PPP</a>
-      </div>
-    </article>
-  </main>
+<!-- =========================================
+     HALAMAN DETAIL ARTIKEL
+========================================= -->
 
-  <section class="footer-cta">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
-      <h2>Kebersamaan punya banyak bentuk.</h2>
-      <a class="btn btn-outline-light" href="bergabung.html">Kenali cara bergabung <i class="bi bi-arrow-up-right"></i></a>
+<main class="ka-page">
+
+  <!-- HERO ARTIKEL -->
+  <section class="ka-hero">
+
+    <div class="container">
+
+      <!-- BREADCRUMB -->
+      <nav class="ka-breadcrumb"
+           aria-label="Breadcrumb">
+
+        <a href="index.html">Beranda</a>
+
+        <span>/</span>
+
+        <a href="kabar.html">Kabar PPP</a>
+
+        <span>/</span>
+
+        <span id="kaBreadcrumbCategory">
+          Pendidikan
+        </span>
+
+      </nav>
+
+      <!-- KATEGORI -->
+      <p class="ka-category" id="kaCategory">
+        PENDIDIKAN
+      </p>
+
+      <!-- JUDUL ARTIKEL -->
+      <h1 class="ka-title" id="kaTitle">
+        Judul Artikel
+      </h1>
+
+      <!-- DESKRIPSI -->
+      <p class="ka-description" id="kaDescription">
+        Deskripsi singkat artikel.
+      </p>
+
+      <!-- TANGGAL -->
+      <p class="ka-date" id="kaDate">
+        06 November 2026
+      </p>
+
+      <!-- GAMBAR UTAMA -->
+      <img
+        src="assets/images/kabar-ruang-belajar.jpg"
+        alt="Gambar artikel PPP"
+        id="kaImage"
+        class="ka-main-image">
+
     </div>
   </section>
-  <footer class="site-footer">
+
+
+  <!-- ISI ARTIKEL DAN SIDEBAR -->
+  <section class="ka-content-section">
+
     <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-5">
-          <a class="footer-brand" href="index.html">PPP – Ruang Bersama</a>
-          <p class="footer-tagline">Aspirasi Didengar, Informasi Terbuka, Aksi Terasa.</p>
-          <p class="footer-small">Rujukan sumber: ppp.or.id · Mock-up akademik</p>
+
+      <div class="row g-4 g-lg-5 align-items-start">
+
+        <!-- KONTEN UTAMA -->
+        <div class="col-lg-8">
+
+          <article class="ka-article-body"
+                   id="kaArticleBody">
+
+            <!-- Isi artikel dihasilkan JavaScript -->
+
+          </article>
+
+          <div class="ka-back-wrapper">
+            <a href="kabar.html"
+               class="ka-back-link">
+              <i class="bi bi-arrow-left"></i>
+              Kembali ke Kabar PPP
+            </a>
+          </div>
+
         </div>
-        <div class="col-6 col-lg-2">
-          <h6>Jelajahi</h6>
-          <a href="index.html">Beranda</a>
-          <a href="tentang.html">Tentang PPP</a>
-          <a href="program.html">Program &amp; Aksi</a>
-          <a href="aspirasi.html">Aspirasi Rakyat</a>
+
+
+        <!-- SIDEBAR -->
+        <div class="col-lg-4">
+
+          <aside class="ka-sidebar">
+
+            <p class="ka-sidebar-label">
+              DALAM ARTIKEL INI
+            </p>
+
+            <!-- NAVIGASI JUDUL ARTIKEL -->
+            <nav id="kaTableOfContents"
+                 class="ka-toc"
+                 aria-label="Daftar isi artikel">
+            </nav>
+
+            <div class="ka-sidebar-related">
+
+              <h2>Baca konsep terkait</h2>
+
+              <p id="kaRelatedDescription">
+                Temukan rancangan program sosial,
+                pendidikan, dan lingkungan pada
+                halaman Program &amp; Aksi.
+              </p>
+
+              <a href="program.html"
+                 id="kaRelatedLink"
+                 class="ka-related-button">
+                Ke Program &amp; Aksi
+                <i class="bi bi-arrow-up-right"></i>
+              </a>
+
+            </div>
+
+          </aside>
+
         </div>
-        <div class="col-6 col-lg-2">
-          <h6>Informasi</h6>
-          <a href="kabar.html">Kabar PPP</a>
-          <a href="pernyataan.html">Pernyataan Resmi</a>
-          <a href="faq.html">FAQ &amp; Kontak</a>
-          <a href="bergabung.html">Bergabung</a>
-        </div>
-        <div class="col-lg-3">
-          <h6>Catatan</h6>
-          <p class="footer-small">Website ini merupakan rancangan untuk kebutuhan akademik. Konten, program, dan formulir di dalamnya bersifat simulasi, bukan publikasi atau layanan resmi.</p>
-        </div>
+
       </div>
-      <div class="footer-bottom d-flex flex-column flex-sm-row justify-content-between gap-2">
-        <span>© 2026 PPP – Ruang Bersama. Mock-up akademik.</span>
-        <span>Desain untuk tugas Public Relations Digital</span>
-      </div>
+
     </div>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/main.js"></script>
+
+  </section>
+
+</main>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<section class="footer-cta">
+  <div class="container d-flex flex-column flex-md-row
+              justify-content-between align-items-md-center gap-3">
+
+    <h2>Kebersamaan punya banyak bentuk.</h2>
+
+    <a href="bergabung.html"
+       class="btn btn-outline-green">
+      Kenali cara bergabung
+      <i class="bi bi-arrow-up-right"></i>
+    </a>
+
+  </div>
+</section>
+
+
+<!-- ==========================================
+     FOOTER PPP - REVISI 06
+     GUNAKAN DI SEMUA HALAMAN
+========================================== -->
+
+<footer class="ppp-footer-v2">
+
+  <div class="container">
+
+    <div class="row g-4">
+
+      <!-- ==================================
+           KOLOM 1 - IDENTITAS WEBSITE
+      ================================== -->
+      <div class="col-lg-3 col-md-6">
+
+        <a
+          href="index.html"
+          class="ppp-footer-brand">
+          PPP — Ruang Bersama
+        </a>
+
+        <p class="ppp-footer-description">
+          Partai Persatuan Pembangunan.
+          Ruang informasi dan dialog publik
+          dalam sebuah prototipe akademik.
+        </p>
+
+        <p class="ppp-footer-motto">
+          Merawat Persatuan dengan Pembangunan.
+        </p>
+
+      </div>
+
+
+      <!-- ==================================
+           KOLOM 2 - QUICK LINKS
+      ================================== -->
+      <div class="col-lg-3 col-md-6">
+
+        <h3>Quick Links</h3>
+
+        <ul class="ppp-footer-list">
+
+          <li>
+            <a href="index.html">
+              Beranda
+            </a>
+          </li>
+
+          <li>
+            <a href="tentang.html">
+              Tentang PPP
+            </a>
+          </li>
+
+          <li>
+            <a href="tentang.html#struktur-organisasi">
+              Organisasi
+            </a>
+          </li>
+
+          <li>
+            <a href="program.html">
+              Program &amp; Aksi
+            </a>
+          </li>
+
+          <li>
+            <a href="aspirasi.html">
+              Aspirasi Rakyat
+            </a>
+          </li>
+
+          <li>
+            <a href="kabar.html">
+              Berita
+            </a>
+          </li>
+
+          <li>
+            <a href="pernyataan.html">
+              Pernyataan Resmi
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- ==================================
+           KOLOM 3 - INFORMATION
+      ================================== -->
+      <div class="col-lg-3 col-md-6">
+
+        <h3>Information</h3>
+
+        <ul class="ppp-footer-list">
+
+          <li>
+            <a href="faq.html">
+              FAQ &amp; Kontak
+            </a>
+          </li>
+
+          <li>
+            <a href="kabar.html#daftar-artikel">
+              Opini
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- ==================================
+           KOLOM 4 - MEDIA SOSIAL
+      ================================== -->
+      <div class="col-lg-3 col-md-6">
+
+        <h3>Social</h3>
+
+        <ul class="ppp-footer-list">
+
+          <!-- INSTAGRAM -->
+          <li>
+            <a
+              href="https://www.instagram.com/ppp.peduli?srtk=ODE5c3A2bmkzeGVz&amp;utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <i class="bi bi-instagram"></i>
+              Instagram · @ppp.peduli
+
+            </a>
+          </li>
+
+
+          <!-- TIKTOK -->
+          <li>
+            <a
+              href="https://www.tiktok.com/@ppp.peduli?_r=1&amp;_t=ZS-9BHOIDImUGy"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <i class="bi bi-tiktok"></i>
+              TikTok · @ppp.peduli
+
+            </a>
+          </li>
+
+
+          <!-- YOUTUBE -->
+          <li>
+            <a
+              href="https://youtube.com/@partaipersatuanpembangunandpp?si=k4i02ifY6VN0bI6U"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <i class="bi bi-youtube"></i>
+              YouTube · PPP DPP
+
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <!-- ==================================
+         DISCLAIMER
+    ================================== -->
+    <div class="ppp-footer-disclaimer">
+
+      Website ini merupakan prototipe akademik yang
+      dikembangkan untuk keperluan pembelajaran
+      Digital Public Relations. Website ini bukan
+      situs resmi Partai Persatuan Pembangunan (PPP).
+      Seluruh program simulasi dan fitur interaktif
+      yang ditampilkan tidak mewakili kegiatan
+      atau layanan resmi organisasi.
+
+    </div>
+
+
+    <!-- ==================================
+         COPYRIGHT
+    ================================== -->
+    <div class="ppp-footer-copyright">
+
+      © 2026 PPP — Ruang Bersama ·
+      Prototipe akademik Digital Public Relations
+
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- END FOOTER -->
+
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/js/main.js"></script>
+
+<!-- DATA DAN FUNGSI DETAIL ARTIKEL -->
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* =====================================
+     DATA 6 ARTIKEL
+  ===================================== */
+
+  const articles = {
+
+    /* ARTIKEL 1 - PENDIDIKAN */
+    "belajar-warga": {
+
+      category: "Pendidikan",
+      date: "06 November 2026",
+
+      title:
+        "Ruang Belajar Bersama, Ketika Pengetahuan Tumbuh dari Warga",
+
+      description:
+        "Belajar tidak selalu membutuhkan ruang kelas yang besar. Dari sudut permukiman hingga balai warga, semangat berbagi pengetahuan dapat membuka kesempatan baru bagi masyarakat.",
+
+      image: "assets/images/kabar-ruang-belajar.jpg",
+
+      intro: [
+        "Pendidikan sering kali dikaitkan dengan sekolah, buku pelajaran, dan ruang kelas. Namun, proses belajar sesungguhnya juga dapat berlangsung di tengah kehidupan masyarakat. Sebuah ruang sederhana, beberapa buku, dan kemauan untuk berbagi pengetahuan bisa menjadi awal terciptanya lingkungan belajar yang lebih terbuka.",
+
+        "Gagasan inilah yang mendasari pentingnya ruang belajar berbasis komunitas. Ketika masyarakat terlibat sebagai penggerak, kegiatan belajar tidak lagi terbatas pada hubungan antara guru dan murid, tetapi berkembang menjadi proses saling berbagi pengalaman dan keterampilan."
+      ],
+
+      sections: [
+        {
+          heading: "Belajar dari Lingkungan Terdekat",
+
+          paragraphs: [
+            "Ruang belajar masyarakat dapat diwujudkan melalui berbagai kegiatan, seperti membaca bersama, pendampingan tugas sekolah, pelatihan literasi digital, hingga diskusi mengenai persoalan sehari-hari.",
+
+            "Anak-anak dapat memperoleh pendampingan belajar, sementara remaja dan orang dewasa memiliki kesempatan untuk berbagi kemampuan yang mereka miliki. Kegiatan sederhana ini juga dapat memperkuat hubungan antarwarga.",
+
+            "Namun, membangun ruang belajar tidak cukup hanya dengan menyediakan buku dan tempat berkumpul. Keberlanjutan kegiatan membutuhkan pendamping, bahan pembelajaran yang relevan, dan keterlibatan masyarakat secara konsisten."
+          ]
+        },
+
+        {
+          heading: "Pengetahuan yang Terus Berkembang",
+
+          paragraphs: [
+            "Ruang belajar komunitas juga dapat menjadi sarana memperluas kesempatan pendidikan bagi masyarakat yang memiliki keterbatasan akses terhadap fasilitas belajar.",
+
+            "Melalui kolaborasi antara warga, relawan, dan komunitas pendidikan, kegiatan pembelajaran dapat disesuaikan dengan kebutuhan masing-masing lingkungan.",
+
+            "Pada akhirnya, keberhasilan ruang belajar tidak hanya diukur dari banyaknya buku yang tersedia atau jumlah peserta yang hadir, tetapi juga dari meningkatnya kesempatan masyarakat untuk memperoleh pengetahuan. Sebab, ketika satu orang bersedia berbagi ilmu, kesempatan belajar bagi orang lain ikut terbuka."
+          ]
+        }
+      ],
+
+      related:
+        "Beasiswa Pendidikan Pemuda merupakan rancangan program akademik untuk memperluas kesempatan pendidikan. Tidak ada pendaftaran aktif atau penerima beasiswa nyata.",
+
+      relatedUrl: "program.html#beasiswa"
+
+    },
+
+
+    /* ARTIKEL 2 - LINGKUNGAN */
+    "merawat-bumi": {
+
+      category: "Lingkungan",
+      date: "04 November 2026",
+
+      title:
+        "Perubahan Dimulai dari Rumah: Langkah Kecil Merawat Bumi",
+
+      description:
+        "Menjaga lingkungan tidak harus dimulai dengan gerakan besar. Kebiasaan sederhana di rumah justru dapat menjadi langkah awal membangun kepedulian bersama.",
+
+      image: "assets/images/kabar-merawat-bumi.jpg",
+
+      intro: [
+        "Sampah plastik yang menumpuk, penggunaan barang sekali pakai, dan kurangnya ruang hijau merupakan persoalan lingkungan yang dekat dengan kehidupan sehari-hari. Di tengah berbagai tantangan tersebut, perubahan dapat dimulai melalui kebiasaan kecil yang dilakukan secara konsisten.",
+
+        "Membawa tas belanja sendiri, memilah sampah, mengurangi penggunaan plastik, hingga menanam tanaman di halaman rumah merupakan beberapa langkah yang dapat diterapkan masyarakat.",
+
+        "Meski terlihat sederhana, kebiasaan tersebut menjadi bagian penting dalam membangun pola hidup yang lebih bertanggung jawab terhadap lingkungan."
+      ],
+
+      sections: [
+        {
+          heading: "Dari Kebiasaan Pribadi Menjadi Gerakan Bersama",
+
+          paragraphs: [
+            "Upaya menjaga lingkungan akan lebih kuat apabila dilakukan secara kolektif. Kegiatan kerja bakti, pengelolaan bank sampah, dan penghijauan lingkungan dapat menjadi ruang partisipasi masyarakat.",
+
+            "Misalnya, warga dapat menyepakati jadwal kebersihan lingkungan, menyediakan tempat pemilahan sampah, atau memanfaatkan lahan kosong untuk tanaman produktif.",
+
+            "Langkah-langkah tersebut tidak hanya membantu menjaga kebersihan, tetapi juga mendorong kerja sama dan rasa tanggung jawab terhadap fasilitas bersama."
+          ]
+        },
+
+        {
+          heading: "Kepedulian yang Berkelanjutan",
+
+          paragraphs: [
+            "Tantangan terbesar dalam gerakan lingkungan bukan hanya mengajak masyarakat memulai perubahan, tetapi juga menjaga konsistensinya.",
+
+            "Edukasi mengenai pengelolaan sampah, pengurangan limbah, dan pemanfaatan ruang hijau perlu dilakukan secara berkelanjutan agar kebiasaan baik dapat menjadi bagian dari kehidupan sehari-hari.",
+
+            "Dukungan komunitas, sekolah, dan berbagai organisasi masyarakat juga dapat memperluas jangkauan kegiatan tersebut.",
+
+            "Merawat bumi bukan semata tentang melakukan aksi besar dalam satu hari, melainkan membangun kebiasaan baik yang terus dilakukan. Karena lingkungan yang lebih sehat berawal dari keputusan sederhana yang kita ambil setiap hari."
+          ]
+        }
+      ],
+
+      related:
+        "PPP Peduli Bumi dan Kemanusiaan merupakan rancangan program kepedulian lingkungan dan sosial yang ditampilkan dalam prototipe akademik.",
+
+      relatedUrl: "program.html#peduli-bumi"
+
+    },
+
+
+    /* ARTIKEL 3 - SOSIAL */
+    "kepedulian": {
+
+      category: "Sosial dan Kemanusiaan",
+      date: "02 November 2026",
+
+      title:
+        "Bukan Sekadar Bantuan, Kepedulian yang Menjaga Martabat",
+
+      description:
+        "Di balik setiap bantuan, terdapat manusia dengan cerita, kebutuhan, dan harapan yang berbeda. Kepedulian sosial seharusnya tidak hanya berfokus pada apa yang diberikan, tetapi juga bagaimana bantuan disampaikan.",
+
+      image: "assets/images/kabar-kepedulian.jpg",
+
+      intro: [
+        "Bantuan sosial kerap digambarkan melalui penyerahan paket kebutuhan pokok, penggalangan donasi, atau kegiatan relawan. Namun, terdapat aspek penting yang tidak boleh diabaikan dalam setiap kegiatan kemanusiaan, yaitu penghormatan terhadap martabat penerima bantuan.",
+
+        "Memberikan bantuan bukan sekadar memenuhi kebutuhan material. Kegiatan sosial juga memerlukan empati, komunikasi yang baik, serta pemahaman terhadap kondisi masyarakat."
+      ],
+
+      sections: [
+        {
+          heading: "Mendengar Sebelum Membantu",
+
+          paragraphs: [
+            "Setiap individu atau keluarga memiliki kebutuhan yang berbeda. Ada yang membutuhkan bahan pangan, perlengkapan pendidikan, layanan kesehatan, atau sekadar akses terhadap informasi yang dapat membantu kehidupan sehari-hari.",
+
+            "Karena itu, kegiatan kemanusiaan sebaiknya diawali dengan identifikasi kebutuhan agar bantuan yang diberikan benar-benar sesuai dengan kondisi penerima.",
+
+            "Pendekatan ini juga dapat mengurangi risiko bantuan yang tidak tepat sasaran. Di sisi lain, proses penyaluran perlu menjaga kenyamanan dan privasi masyarakat. Dokumentasi kegiatan, misalnya, seharusnya dilakukan dengan persetujuan pihak yang bersangkutan dan tidak menampilkan penerima bantuan secara merendahkan."
+          ]
+        },
+
+        {
+          heading: "Membangun Solidaritas yang Bermakna",
+
+          paragraphs: [
+            "Kepedulian sosial dapat diwujudkan melalui berbagai bentuk, mulai dari pengumpulan kebutuhan pokok, pendampingan masyarakat, hingga kolaborasi dengan komunitas lokal.",
+
+            "Keterlibatan warga juga membantu menciptakan hubungan yang lebih setara antara pihak pemberi dan penerima bantuan.",
+
+            "Bantuan yang baik bukan hanya yang sampai kepada masyarakat, tetapi juga yang diberikan dengan cara menghormati hak, kebutuhan, dan pilihan penerimanya.",
+
+            "Pada akhirnya, kemanusiaan tidak diukur dari seberapa banyak bantuan yang terlihat, melainkan dari seberapa besar kepedulian mampu menghadirkan manfaat tanpa mengurangi martabat sesama."
+          ]
+        }
+      ],
+
+      related:
+        "PPP Peduli Bumi dan Kemanusiaan merupakan rancangan program lingkungan dan sosial. Informasi pelaksanaan nyata belum tersedia.",
+
+      relatedUrl: "program.html#peduli-bumi"
+
+    },
+
+
+    /* ARTIKEL 4 - EKONOMI */
+    "usaha-kecil": {
+
+      category: "Ekonomi Masyarakat",
+      date: "30 Oktober 2026",
+
+      title:
+        "Dari Usaha Kecil, Tumbuh Peluang Besar bagi Masyarakat",
+
+      description:
+        "Di balik warung sederhana dan usaha rumahan, terdapat kerja keras yang menggerakkan perekonomian masyarakat. Dengan pengetahuan dan dukungan yang tepat, usaha kecil memiliki kesempatan untuk terus berkembang.",
+
+      image: "assets/images/kabar-usaha-kecil.jpg",
+
+      intro: [
+        "Warung makan, usaha kerajinan, pedagang keliling, dan bisnis rumahan merupakan bagian dari kehidupan ekonomi masyarakat Indonesia. Meski beroperasi dalam skala kecil, kegiatan usaha tersebut dapat menjadi sumber penghasilan keluarga sekaligus membuka peluang pekerjaan di lingkungan sekitarnya.",
+
+        "Namun, menjalankan usaha kecil bukanlah perkara mudah. Persaingan pasar, keterbatasan modal, perubahan harga bahan baku, hingga kurangnya pengetahuan pemasaran menjadi tantangan yang kerap dihadapi pelaku usaha."
+      ],
+
+      sections: [
+        {
+          heading: "Pengetahuan sebagai Modal untuk Berkembang",
+
+          paragraphs: [
+            "Selain dukungan finansial, pelaku usaha juga membutuhkan akses terhadap informasi dan keterampilan yang relevan.",
+
+            "Pelatihan pencatatan keuangan sederhana, pengemasan produk, pemasaran digital, dan pelayanan pelanggan dapat membantu pelaku usaha mengelola bisnis secara lebih terarah.",
+
+            "Pemanfaatan teknologi digital juga membuka kesempatan untuk memperkenalkan produk kepada pasar yang lebih luas. Melalui media sosial dan platform perdagangan elektronik, pelaku usaha dapat menjangkau konsumen di luar lingkungan tempat tinggalnya.",
+
+            "Meski demikian, penerapan teknologi perlu disesuaikan dengan kemampuan dan kebutuhan masing-masing pelaku usaha."
+          ]
+        },
+
+        {
+          heading: "Kolaborasi Memperkuat Ekonomi Lokal",
+
+          paragraphs: [
+            "Penguatan ekonomi masyarakat tidak harus dilakukan secara individual. Kerja sama antarpelaku usaha, komunitas, dan lembaga pendamping dapat membuka kesempatan untuk berbagi pengalaman, memperluas jaringan, serta memasarkan produk bersama.",
+
+            "Kegiatan seperti bazar komunitas, pelatihan kewirausahaan, dan forum diskusi usaha menjadi contoh ruang kolaborasi yang dapat dikembangkan.",
+
+            "Ketika pelaku usaha memperoleh akses terhadap pengetahuan dan kesempatan yang lebih luas, manfaatnya berpotensi dirasakan bukan hanya oleh pemilik usaha, tetapi juga masyarakat sekitarnya.",
+
+            "Sebab, usaha yang kecil dalam ukuran belum tentu kecil dalam kontribusinya bagi kehidupan banyak orang."
+          ]
+        }
+      ],
+
+      related:
+        "Jelajahi Program & Aksi untuk melihat gagasan dan rancangan kegiatan sosial serta pemberdayaan masyarakat dalam prototipe website ini.",
+
+      relatedUrl: "program.html"
+
+    },
+
+
+    /* ARTIKEL 5 - PENDIDIKAN */
+    "belajar-tanpa-batas": {
+
+      category: "Pendidikan",
+      date: "28 Oktober 2026",
+
+      title:
+        "Belajar Tanpa Batas: Kesempatan yang Layak untuk Semua",
+
+      description:
+        "Setiap orang berhak memperoleh kesempatan belajar. Namun, perbedaan kondisi ekonomi, fasilitas, dan lingkungan membuat akses pendidikan belum selalu dirasakan secara setara.",
+
+      image:
+        "assets/images/kabar-belajar-tanpa-batas.jpg",
+
+      intro: [
+        "Bagi sebagian orang, belajar merupakan kegiatan yang dapat dilakukan dengan mudah melalui sekolah, buku, dan perangkat digital. Namun, bagi sebagian lainnya, keterbatasan biaya, fasilitas, atau pendampingan dapat menjadi hambatan untuk mengembangkan kemampuan.",
+
+        "Kondisi tersebut menunjukkan bahwa pemerataan pendidikan bukan hanya persoalan menyediakan tempat belajar, tetapi juga memastikan setiap individu memiliki kesempatan untuk memanfaatkannya."
+      ],
+
+      sections: [
+        {
+          heading: "Setiap Anak Memiliki Kebutuhan Berbeda",
+
+          paragraphs: [
+            "Sebagian pelajar membutuhkan akses buku dan perlengkapan sekolah, sementara yang lain memerlukan pendampingan untuk memahami pelajaran atau mengembangkan keterampilan tertentu.",
+
+            "Karena itu, pendekatan pendidikan sebaiknya mempertimbangkan kebutuhan peserta didik, bukan menerapkan satu bentuk bantuan untuk semua keadaan.",
+
+            "Kegiatan pendampingan belajar, kelas literasi, pelatihan keterampilan, hingga dukungan pendidikan dapat menjadi alternatif dalam memperluas kesempatan belajar.",
+
+            "Partisipasi masyarakat juga memiliki peran penting. Komunitas pendidikan, mahasiswa, relawan, dan warga dapat saling berkolaborasi untuk menghadirkan lingkungan belajar yang lebih mendukung."
+          ]
+        },
+
+        {
+          heading: "Belajar Tidak Mengenal Batas Ruang",
+
+          paragraphs: [
+            "Perkembangan teknologi memungkinkan masyarakat memperoleh pengetahuan melalui berbagai media. Namun, akses digital juga memerlukan perangkat, koneksi internet, serta kemampuan menggunakan teknologi secara tepat.",
+
+            "Oleh karena itu, peningkatan literasi digital perlu berjalan beriringan dengan upaya memperluas akses pendidikan.",
+
+            "Kesempatan belajar yang setara bukan berarti semua orang mendapatkan bantuan yang sama, melainkan memperoleh dukungan sesuai kebutuhan agar mampu berkembang.",
+
+            "Pendidikan yang inklusif memberi ruang bagi setiap individu untuk belajar tanpa merasa tertinggal.",
+
+            "Karena masa depan yang lebih baik seharusnya tidak ditentukan oleh seberapa banyak kesempatan yang dimiliki seseorang sejak awal."
+          ]
+        }
+      ],
+
+      related:
+        "Beasiswa Pendidikan Pemuda merupakan rancangan program akademik. Tidak ada pendaftaran aktif atau penerima beasiswa nyata.",
+
+      relatedUrl: "program.html#beasiswa"
+
+    },
+
+
+    /* ARTIKEL 6 - LINGKUNGAN */
+    "ruang-hijau": {
+
+      category: "Lingkungan",
+      date: "26 Oktober 2026",
+
+      title:
+        "Lebih dari Sekadar Taman, Ruang Hijau yang Menyatukan Warga",
+
+      description:
+        "Ruang hijau bukan hanya tempat tumbuhnya pepohonan. Di tengah kehidupan masyarakat, taman dan kebun komunitas juga dapat menjadi ruang bertemu, belajar, dan membangun kebersamaan.",
+
+      image: "assets/images/kabar-ruang-hijau.jpg",
+
+      intro: [
+        "Di tengah permukiman yang semakin padat, keberadaan ruang terbuka hijau memiliki arti penting bagi kehidupan masyarakat. Pepohonan, taman lingkungan, dan kebun komunitas tidak hanya memperindah kawasan, tetapi juga menyediakan tempat bagi warga untuk melakukan berbagai aktivitas.",
+
+        "Mulai dari anak-anak yang bermain, warga yang berolahraga, hingga kegiatan berkebun bersama, ruang hijau dapat menghadirkan kesempatan interaksi sosial yang sederhana tetapi bermakna."
+      ],
+
+      sections: [
+        {
+          heading: "Ketika Lahan Kosong Menjadi Ruang Bersama",
+
+          paragraphs: [
+            "Lahan yang sebelumnya tidak dimanfaatkan dapat dikembangkan menjadi kebun komunitas melalui kesepakatan dan kerja sama warga.",
+
+            "Penanaman tanaman sayur, penyediaan tempat duduk, serta pengaturan jalur berjalan kaki merupakan beberapa bentuk pengembangan yang dapat dipertimbangkan sesuai kondisi lingkungan.",
+
+            "Kegiatan berkebun juga dapat menjadi sarana pembelajaran. Anak-anak dapat mengenal proses pertumbuhan tanaman, sementara masyarakat memperoleh kesempatan berbagi pengetahuan mengenai perawatan lingkungan.",
+
+            "Namun, pengembangan ruang hijau tetap membutuhkan perencanaan yang memperhatikan kepemilikan lahan, kebutuhan warga, aksesibilitas, dan keberlanjutan perawatan."
+          ]
+        },
+
+        {
+          heading: "Menumbuhkan Rasa Memiliki",
+
+          paragraphs: [
+            "Salah satu tantangan ruang publik adalah menjaga fasilitas agar tetap dapat digunakan dalam jangka panjang.",
+
+            "Keterlibatan masyarakat dalam proses perencanaan dan pemeliharaan dapat membantu menumbuhkan rasa tanggung jawab bersama.",
+
+            "Melalui jadwal perawatan, kegiatan kebersihan, dan diskusi warga, ruang hijau dapat berkembang menjadi tempat yang bukan hanya nyaman secara fisik, tetapi juga memperkuat hubungan sosial.",
+
+            "Ruang hijau yang baik bukan semata-mata dinilai dari luas tanah atau banyaknya tanaman. Nilainya juga terlihat dari seberapa besar ruang tersebut mampu memberikan manfaat bagi kehidupan masyarakat.",
+
+            "Karena terkadang, kebersamaan dapat tumbuh dari tempat yang sesederhana taman kecil di tengah permukiman."
+          ]
+        }
+      ],
+
+      related:
+        "PPP Peduli Bumi dan Kemanusiaan merupakan rancangan program kepedulian lingkungan dan sosial yang belum menjadi layanan aktif.",
+
+      relatedUrl: "program.html#peduli-bumi"
+
+    }
+
+  };
+
+
+  /* =====================================
+     MEMBACA ID ARTIKEL DARI URL
+  ===================================== */
+
+  const params = new URLSearchParams(
+    window.location.search
+  );
+
+  const articleId = params.get("id");
+
+  // Artikel pertama menjadi tampilan default
+  // apabila URL tidak memiliki parameter id.
+  const article = articleId
+    ? articles[articleId]
+    : articles["belajar-warga"];
+
+  if (!article) {
+    window.location.replace("kabar.html");
+    return;
+  }
+
+
+  /* =====================================
+     MENAMPILKAN DATA ARTIKEL
+  ===================================== */
+
+  document.title =
+    article.title + " | Kabar PPP";
+
+  document.getElementById("kaCategory")
+    .textContent = article.category.toUpperCase();
+
+  document.getElementById("kaBreadcrumbCategory")
+    .textContent = article.category;
+
+  document.getElementById("kaTitle")
+    .textContent = article.title;
+
+  document.getElementById("kaDescription")
+    .textContent = article.description;
+
+  document.getElementById("kaDate")
+    .textContent = article.date;
+
+  const mainImage =
+    document.getElementById("kaImage");
+
+  mainImage.src = article.image;
+  mainImage.alt = article.title;
+
+  document.getElementById("kaRelatedDescription")
+    .textContent = article.related;
+
+  document.getElementById("kaRelatedLink")
+    .href = article.relatedUrl;
+
+
+  /* =====================================
+     MEMBUAT PARAGRAF DAN SUBJUDUL
+  ===================================== */
+
+  const articleBody =
+    document.getElementById("kaArticleBody");
+
+  const tableOfContents =
+    document.getElementById("kaTableOfContents");
+
+  // Menampilkan paragraf pembuka
+  article.intro.forEach(function(text) {
+
+    const paragraph =
+      document.createElement("p");
+
+    paragraph.textContent = text;
+
+    articleBody.appendChild(paragraph);
+
+  });
+
+  // Menampilkan setiap subjudul dan isinya
+  article.sections.forEach(function(section, index) {
+
+    const sectionId = "bagian-" + (index + 1);
+
+    const heading =
+      document.createElement("h2");
+
+    heading.id = sectionId;
+    heading.textContent = section.heading;
+
+    articleBody.appendChild(heading);
+
+    // Membuat link navigasi di sidebar
+    const tocLink =
+      document.createElement("a");
+
+    tocLink.href = "#" + sectionId;
+    tocLink.textContent = section.heading;
+
+    tableOfContents.appendChild(tocLink);
+
+    // Membuat paragraf pada section
+    section.paragraphs.forEach(function(text) {
+
+      const paragraph =
+        document.createElement("p");
+
+      paragraph.textContent = text;
+
+      articleBody.appendChild(paragraph);
+
+    });
+
+  });
+
+});
+</script>
+
 </body>
 </html>
