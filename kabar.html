@@ -1,142 +1,1397 @@
-<!doctype html>
-<html lang="id">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="PPP – Ruang Bersama. Mock-up akademik untuk tugas website Public Relations Digital.">
-  <title>Kabar PPP | PPP – Ruang Bersama</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link
-  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
-  rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Kabar PPP | PPP Ruang Bersama</title>
+
+  <!-- GOOGLE FONTS: POPPINS & INTER -->
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- BOOTSTRAP 5 -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+  <!-- BOOTSTRAP ICONS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    rel="stylesheet">
+
+  <!-- CSS UTAMA -->
   <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-  <!-- NAVBAR PPP - DESKTOP FIGMA REVISI -->
+
+<!-- ==========================================
+     HEADER & NAVBAR PPP
+========================================== -->
+
 <header class="ppp-site-header">
-  <!-- Bar hijau atas -->
+
+  <!-- TOP BAR -->
   <div class="ppp-head-top">
+
     <div class="container ppp-head-top-inner">
-      <span>KELOMPOK 8 · MATA KULIAH DIGIPR</span>
-      <span class="d-none d-sm-inline">PROTOTIPE AKADEMIK · BUKAN SITUS RESMI PPP</span>
+
+      <span>
+        KELOMPOK 8 · MATA KULIAH DIGIPR
+      </span>
+
+      <span class="d-none d-sm-inline">
+        PROTOTIPE AKADEMIK · BUKAN SITUS RESMI PPP
+      </span>
+
     </div>
+
   </div>
 
-  <!-- Logo + nama partai + tagline -->
+
+  <!-- LOGO DAN NAMA PARTAI -->
   <div class="ppp-head-main">
+
     <div class="container ppp-head-main-inner">
-      <a href="index.html" class="ppp-head-brand" aria-label="Partai Persatuan Pembangunan - Beranda">
-        <img src="assets/images/logo-ppp-navbar.png"
-             alt="Logo PPP"
-             class="ppp-head-logo">
+
+      <a href="index.html" class="ppp-head-brand">
+
+        <img
+          src="assets/images/logo-ppp-navbar.png"
+          alt="Logo Partai Persatuan Pembangunan"
+          class="ppp-head-logo">
+
         <span class="ppp-head-name">
           <strong>PARTAI</strong>
           <strong>PERSATUAN</strong>
           <strong>PEMBANGUNAN</strong>
         </span>
+
       </a>
-      <p class="ppp-head-tagline">Aspirasi Didengar, Informasi Terbuka, Aksi Terasa.</p>
+
+      <p class="ppp-head-tagline">
+        Aspirasi Didengar, Informasi Terbuka,
+        Aksi Terasa.
+      </p>
+
     </div>
+
   </div>
 
-  <!-- Menu + pencarian -->
-  <nav class="navbar navbar-expand-xl ppp-head-nav" aria-label="Navigasi utama">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-xl ppp-head-nav">
+
     <div class="container ppp-head-nav-inner">
-      <button class="navbar-toggler ppp-head-toggler" type="button"
-              data-bs-toggle="collapse" data-bs-target="#pppNavMenu"
-              aria-controls="pppNavMenu" aria-expanded="false"
-              aria-label="Buka menu navigasi">
+
+      <!-- HAMBURGER MOBILE -->
+      <button
+        class="navbar-toggler ppp-head-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#pppNavMenu"
+        aria-controls="pppNavMenu"
+        aria-expanded="false"
+        aria-label="Buka menu navigasi">
+
         <span class="navbar-toggler-icon"></span>
+
       </button>
-      <div class="collapse navbar-collapse" id="pppNavMenu">
+
+
+      <div class="collapse navbar-collapse"
+           id="pppNavMenu">
+
         <ul class="navbar-nav ppp-head-menu">
-          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-          <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang PPP</a></li>
-          <li class="nav-item"><a class="nav-link" href="program.html">Program &amp; Aksi</a></li>
-          <li class="nav-item"><a class="nav-link" href="aspirasi.html">Aspirasi Rakyat</a></li>
-          <li class="nav-item"><a class="nav-link" href="kabar.html">Kabar PPP</a></li>
-          <li class="nav-item"><a class="nav-link" href="pernyataan.html">Pernyataan Resmi</a></li>
-          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ &amp; Kontak</a></li>
-          <li class="nav-item"><a class="nav-link" href="bergabung.html">Bergabung</a></li>
+
+          <!-- BERANDA -->
+          <li class="nav-item">
+
+            <a class="nav-link"
+               href="index.html">
+              Beranda
+            </a>
+
+          </li>
+
+
+          <!-- DROPDOWN TENTANG PPP -->
+          <li class="nav-item dropdown ppp-about-dropdown">
+
+            <a class="nav-link ppp-about-link"
+               href="tentang.html">
+              Tentang PPP
+            </a>
+
+            
+
+            <ul class="dropdown-menu ppp-about-menu">
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#identitas-ppp">
+                  Profil PPP
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#sejarah-ppp">
+                  Sejarah PPP
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#visi-misi-ppp">
+                  Visi &amp; Misi
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#ideologi-ppp">
+                  Ideologi &amp; Nilai Dasar
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#lima-khidmat">
+                  Lima Khidmat PPP
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#enam-prinsip">
+                  Enam Prinsip Perjuangan
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#struktur-organisasi">
+                  Struktur Organisasi
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#tokoh-kepemimpinan">
+                  Tokoh &amp; Kepemimpinan
+                </a>
+              </li>
+
+            </ul>
+
+          </li>
+
+
+          <!-- PROGRAM & AKSI -->
+          <li class="nav-item">
+
+            <a class="nav-link"
+               href="program.html">
+              Program &amp; Aksi
+            </a>
+
+          </li>
+
+
+          <!-- ASPIRASI RAKYAT -->
+          <li class="nav-item">
+
+            <a class="nav-link"
+               href="aspirasi.html">
+              Aspirasi Rakyat
+            </a>
+
+          </li>
+
+
+          <!-- KABAR PPP -->
+          <li class="nav-item">
+
+            <a class="nav-link active"
+               href="kabar.html"
+               aria-current="page">
+              Kabar PPP
+            </a>
+
+          </li>
+
+
+          <!-- PERNYATAAN RESMI -->
+          <li class="nav-item">
+
+            <a class="nav-link"
+               href="pernyataan.html">
+              Pernyataan Resmi
+            </a>
+
+          </li>
+
+
+          <!-- FAQ & KONTAK -->
+          <li class="nav-item">
+
+            <a class="nav-link"
+               href="faq.html">
+              FAQ &amp; Kontak
+            </a>
+
+          </li>
+
+
+          <!-- BERGABUNG -->
+          <li class="nav-item">
+
+            <a class="nav-link"
+               href="bergabung.html">
+              Bergabung
+            </a>
+
+          </li>
+
         </ul>
 
-        <!-- Pencarian halaman dan topik website (front-end) -->
-        <form class="ppp-head-search" id="pppSiteSearch" role="search" autocomplete="off">
-          <button type="submit" aria-label="Cari"><i class="bi bi-search"></i></button>
-          <input type="search" id="pppSearchInput" aria-label="Cari halaman atau topik"
-                 placeholder="Cari di situs PPP..." />
-          <div class="ppp-head-results" id="pppSearchResults" aria-live="polite" hidden></div>
+
+        <!-- SEARCH GLOBAL -->
+        <form
+          id="pppSiteSearch"
+          class="ppp-head-search"
+          role="search"
+          autocomplete="off">
+
+          <button type="submit"
+                  aria-label="Cari di website">
+
+            <i class="bi bi-search"></i>
+
+          </button>
+
+          <input
+            type="search"
+            id="pppSearchInput"
+            placeholder="Cari di situs PPP..."
+            aria-label="Cari halaman website">
+
+          <div
+            id="pppSearchResults"
+            class="ppp-head-results"
+            aria-live="polite"
+            hidden>
+          </div>
+
         </form>
+
       </div>
+
     </div>
+
   </nav>
+
 </header>
-<!-- AKHIR NAVBAR PPP -->
 
 
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <div class="eyebrow eyebrow-light">KABAR PPP · RUANG EDITORIAL</div>
-        <h1>Cerita yang dekat<br>dengan kita.</h1>
-        <p>Arsip artikel contoh dalam rancangan website. Seluruh tulisan merupakan konten simulasi akademik.</p>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <div class="row g-4">
-          <div class="col-md-4"><article class="news-card news-card-page"><a href="artikel.html"><img src="assets/images/kabar-belajar.jpg" alt="Ilustrasi warga belajar bersama"></a><div class="eyebrow mt-3">PENDIDIKAN · 06 NOVEMBER 2026</div><div class="mini-label">Contoh konten akademik</div><h3><a href="artikel.html">Ruang belajar yang tumbuh bersama warga</a></h3><p>Mengapa akses belajar perlu dimulai dari ruang yang aman, terbuka, dan dekat dengan rumah.</p><a class="card-link" href="artikel.html">Baca artikel <i class="bi bi-arrow-right"></i></a></article></div>
-          <div class="col-md-4"><article class="news-card news-card-page"><a href="artikel.html"><img src="assets/images/kabar-lingkungan.jpg" alt="Ilustrasi kegiatan kebun komunitas"></a><div class="eyebrow mt-3">LINGKUNGAN · 04 NOVEMBER 2026</div><div class="mini-label">Contoh konten akademik</div><h3><a href="artikel.html">Merawat bumi dari kebiasaan sehari-hari</a></h3><p>Berbagi pengetahuan dan menumbuhkan kepedulian melalui langkah kecil di lingkungan sekitar.</p><a class="card-link" href="artikel.html">Baca artikel <i class="bi bi-arrow-right"></i></a></article></div>
-          <div class="col-md-4"><article class="news-card news-card-page"><a href="artikel.html"><img src="assets/images/kabar-kepedulian.jpg" alt="Ilustrasi kegiatan sosial"></a><div class="eyebrow mt-3">SOSIAL DAN KEMANUSIAAN · 02 NOVEMBER 2026</div><div class="mini-label">Contoh konten akademik</div><h3><a href="artikel.html">Kepedulian sosial yang menjaga martabat</a></h3><p>Mendengar kebutuhan dan menempatkan warga sebagai mitra yang setara.</p><a class="card-link" href="artikel.html">Baca artikel <i class="bi bi-arrow-right"></i></a></article></div>
-        </div>
-      </div>
-    </section>
-  </main>
+<!-- ==========================================
+     MAIN KABAR PPP
+========================================== -->
 
-  <section class="footer-cta">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
-      <h2>Kebersamaan punya banyak bentuk.</h2>
-      <a class="btn btn-outline-light" href="bergabung.html">Kenali cara bergabung <i class="bi bi-arrow-up-right"></i></a>
-    </div>
-  </section>
-  <footer class="site-footer">
+<main class="kb-page">
+
+  <!-- ======================================
+       1. HERO KABAR PPP
+  ====================================== -->
+
+  <section class="kb-hero">
+
     <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-5">
-          <a class="footer-brand" href="index.html">PPP – Ruang Bersama</a>
-          <p class="footer-tagline">Aspirasi Didengar, Informasi Terbuka, Aksi Terasa.</p>
-          <p class="footer-small">Rujukan sumber: ppp.or.id · Mock-up akademik</p>
-        </div>
-        <div class="col-6 col-lg-2">
-          <h6>Jelajahi</h6>
-          <a href="index.html">Beranda</a>
-          <a href="tentang.html">Tentang PPP</a>
-          <a href="program.html">Program &amp; Aksi</a>
-          <a href="aspirasi.html">Aspirasi Rakyat</a>
-        </div>
-        <div class="col-6 col-lg-2">
-          <h6>Informasi</h6>
-          <a href="kabar.html">Kabar PPP</a>
-          <a href="pernyataan.html">Pernyataan Resmi</a>
-          <a href="faq.html">FAQ &amp; Kontak</a>
-          <a href="bergabung.html">Bergabung</a>
-        </div>
-        <div class="col-lg-3">
-          <h6>Catatan</h6>
-          <p class="footer-small">Website ini merupakan rancangan untuk kebutuhan akademik. Konten, program, dan formulir di dalamnya bersifat simulasi, bukan publikasi atau layanan resmi.</p>
-        </div>
-      </div>
-      <div class="footer-bottom d-flex flex-column flex-sm-row justify-content-between gap-2">
-        <span>© 2026 PPP – Ruang Bersama. Mock-up akademik.</span>
-        <span>Desain untuk tugas Public Relations Digital</span>
-      </div>
+
+      <p class="kb-eyebrow">
+        KABAR PPP / ARSIP EDITORIAL
+      </p>
+
+      <h1 class="kb-hero-title">
+        Membaca gagasan,<br>
+        memahami keseharian.
+      </h1>
+
+      <p class="kb-hero-description">
+        Arsip editorial tentang pendidikan, lingkungan,
+        kepedulian sosial, dan ekonomi masyarakat.
+        Seluruh artikel serta tanggal publikasi di sini
+        adalah contoh akademik, bukan laporan kegiatan PPP.
+      </p>
+
     </div>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/main.js"></script>
+
+  </section>
+
+
+  <!-- ======================================
+       2. PENCARIAN DAN FILTER
+  ====================================== -->
+
+  <section class="kb-filter-section">
+
+    <div class="container">
+
+      <!-- SEARCH ARTIKEL -->
+      <form class="kb-search-form"
+            id="kbSearchForm"
+            role="search">
+
+        <label for="kbSearchInput"
+               class="kb-search-label">
+
+          Cari artikel
+
+        </label>
+
+        <div class="kb-search-row">
+
+          <input
+            type="search"
+            class="kb-search-input"
+            id="kbSearchInput"
+            placeholder="Cari topik atau kata kunci"
+            autocomplete="off">
+
+          <button
+            type="submit"
+            class="kb-search-button">
+
+            Cari artikel
+            <i class="bi bi-arrow-up-right"></i>
+
+          </button>
+
+        </div>
+
+      </form>
+
+
+      <!-- FILTER KATEGORI -->
+      <div
+        class="kb-filter-buttons"
+        role="group"
+        aria-label="Filter kategori artikel">
+
+        <button
+          type="button"
+          class="kb-filter-btn active"
+          data-category="semua"
+          aria-pressed="true">
+
+          Semua
+
+        </button>
+
+
+        <button
+          type="button"
+          class="kb-filter-btn"
+          data-category="pendidikan"
+          aria-pressed="false">
+
+          Pendidikan
+
+        </button>
+
+
+        <button
+          type="button"
+          class="kb-filter-btn"
+          data-category="lingkungan"
+          aria-pressed="false">
+
+          Lingkungan
+
+        </button>
+
+
+        <button
+          type="button"
+          class="kb-filter-btn"
+          data-category="sosial"
+          aria-pressed="false">
+
+          Sosial dan Kemanusiaan
+
+        </button>
+
+
+        <button
+          type="button"
+          class="kb-filter-btn"
+          data-category="ekonomi"
+          aria-pressed="false">
+
+          Ekonomi Masyarakat
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ======================================
+       3. DAFTAR ARTIKEL
+  ====================================== -->
+
+  <section
+    class="kb-articles-section"
+    id="daftar-artikel">
+
+    <div class="container">
+
+      <!-- JUMLAH ARTIKEL DAN SORTING -->
+      <div class="kb-articles-toolbar">
+
+        <span id="kbResultInfo"
+              aria-live="polite">
+
+          6 artikel contoh · Semua kategori
+
+        </span>
+
+        <button
+          type="button"
+          class="kb-sort-button"
+          id="kbSortButton">
+
+          Terbaru dahulu
+          <i class="bi bi-arrow-down"></i>
+
+        </button>
+
+      </div>
+
+
+      <!-- GRID BERITA -->
+      <div
+        class="row g-4 kb-articles-grid"
+        id="kbArticlesGrid">
+
+
+        <!-- ==================================
+             ARTIKEL 1 - RUANG BELAJAR
+        ================================== -->
+
+        <div
+          class="col-lg-4 col-md-6 kb-item"
+          data-category="pendidikan"
+          data-date="2026-11-06"
+          data-search="ruang belajar bersama pengetahuan tumbuh dari warga pendidikan akses belajar komunitas">
+
+          <article class="kb-article-card">
+
+            <a href="artikel.html?id=belajar-warga">
+
+              <img
+                src="assets/images/kabar-ruang-belajar.jpg"
+                alt="Kegiatan anak-anak belajar bersama"
+                class="kb-article-image"
+                loading="lazy">
+
+            </a>
+
+            <p class="kb-article-meta">
+              PENDIDIKAN · 06 NOVEMBER 2026
+            </p>
+
+            <h2 class="kb-article-title">
+              Ruang Belajar Bersama,
+              Ketika Pengetahuan
+              Tumbuh dari Warga
+            </h2>
+
+            <p class="kb-article-description">
+              Membuka akses belajar lewat ruang aman,
+              bahan bacaan, dan kebiasaan saling
+              berbagi pengetahuan.
+            </p>
+
+            <a
+              href="artikel.html?id=belajar-warga"
+              class="kb-readmore">
+
+              Baca artikel
+              <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+          </article>
+
+        </div>
+
+
+        <!-- ==================================
+             ARTIKEL 2 - MERAWAT BUMI
+        ================================== -->
+
+        <div
+          class="col-lg-4 col-md-6 kb-item"
+          data-category="lingkungan"
+          data-date="2026-11-04"
+          data-search="perubahan dimulai dari rumah langkah kecil merawat bumi lingkungan sampah tanaman hijau">
+
+          <article class="kb-article-card">
+
+            <a href="artikel.html?id=merawat-bumi">
+
+              <img
+                src="assets/images/kabar-merawat-bumi.jpg"
+                alt="Bibit tanaman tumbuh di tanah"
+                class="kb-article-image"
+                loading="lazy">
+
+            </a>
+
+            <p class="kb-article-meta">
+              LINGKUNGAN · 04 NOVEMBER 2026
+            </p>
+
+            <h2 class="kb-article-title">
+              Perubahan Dimulai dari Rumah:
+              Langkah Kecil Merawat Bumi
+            </h2>
+
+            <p class="kb-article-description">
+              Langkah kecil yang bisa menjadi percakapan
+              bersama tentang sampah, air, dan ruang hijau.
+            </p>
+
+            <a
+              href="artikel.html?id=merawat-bumi"
+              class="kb-readmore">
+
+              Baca artikel
+              <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+          </article>
+
+        </div>
+
+
+        <!-- ==================================
+             ARTIKEL 3 - KEPEDULIAN SOSIAL
+        ================================== -->
+
+        <div
+          class="col-lg-4 col-md-6 kb-item"
+          data-category="sosial"
+          data-date="2026-11-02"
+          data-search="bukan sekadar bantuan kepedulian menjaga martabat sosial kemanusiaan donasi masyarakat">
+
+          <article class="kb-article-card">
+
+            <a href="artikel.html?id=kepedulian">
+
+              <img
+                src="assets/images/kabar-kepedulian.jpg"
+                alt="Kegiatan pemberian bantuan sosial"
+                class="kb-article-image"
+                loading="lazy">
+
+            </a>
+
+            <p class="kb-article-meta">
+              SOSIAL DAN KEMANUSIAAN · 02 NOVEMBER 2026
+            </p>
+
+            <h2 class="kb-article-title">
+              Bukan Sekadar Bantuan,
+              Kepedulian yang Menjaga Martabat
+            </h2>
+
+            <p class="kb-article-description">
+              Mengapa mendengar kebutuhan dan menjaga
+              pilihan warga penting dalam setiap
+              bentuk kepedulian.
+            </p>
+
+            <a
+              href="artikel.html?id=kepedulian"
+              class="kb-readmore">
+
+              Baca artikel
+              <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+          </article>
+
+        </div>
+
+
+        <!-- ==================================
+             ARTIKEL 4 - USAHA KECIL
+        ================================== -->
+
+        <div
+          class="col-lg-4 col-md-6 kb-item"
+          data-category="ekonomi"
+          data-date="2026-10-30"
+          data-search="dari usaha kecil tumbuh peluang besar bagi masyarakat ekonomi umkm pedagang usaha rumah">
+
+          <article class="kb-article-card">
+
+            <a href="artikel.html?id=usaha-kecil">
+
+              <img
+                src="assets/images/kabar-usaha-kecil.jpg"
+                alt="Pedagang kecil menjalankan usaha"
+                class="kb-article-image"
+                loading="lazy">
+
+            </a>
+
+            <p class="kb-article-meta">
+              EKONOMI MASYARAKAT · 30 OKTOBER 2026
+            </p>
+
+            <h2 class="kb-article-title">
+              Dari Usaha Kecil,
+              Tumbuh Peluang Besar
+              bagi Masyarakat
+            </h2>
+
+            <p class="kb-article-description">
+              Literasi usaha dan pertukaran pengalaman
+              sebagai gagasan penguatan ekonomi
+              di lingkungan sekitar.
+            </p>
+
+            <a
+              href="artikel.html?id=usaha-kecil"
+              class="kb-readmore">
+
+              Baca artikel
+              <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+          </article>
+
+        </div>
+
+
+        <!-- ==================================
+             ARTIKEL 5 - BELAJAR TANPA BATAS
+        ================================== -->
+
+        <div
+          class="col-lg-4 col-md-6 kb-item"
+          data-category="pendidikan"
+          data-date="2026-10-28"
+          data-search="belajar tanpa batas kesempatan yang layak untuk semua pendidikan inklusif sekolah anak">
+
+          <article class="kb-article-card">
+
+            <a href="artikel.html?id=belajar-tanpa-batas">
+
+              <img
+                src="assets/images/kabar-belajar-tanpa-batas.jpg"
+                alt="Guru mendampingi siswa saat belajar"
+                class="kb-article-image"
+                loading="lazy">
+
+            </a>
+
+            <p class="kb-article-meta">
+              PENDIDIKAN · 28 OKTOBER 2026
+            </p>
+
+            <h2 class="kb-article-title">
+              Belajar Tanpa Batas:
+              Kesempatan yang Layak
+              untuk Semua
+            </h2>
+
+            <p class="kb-article-description">
+              Memahami kebutuhan akses belajar yang beragam,
+              dari pilihan waktu hingga format materi
+              yang mudah dibaca.
+            </p>
+
+            <a
+              href="artikel.html?id=belajar-tanpa-batas"
+              class="kb-readmore">
+
+              Baca artikel
+              <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+          </article>
+
+        </div>
+
+
+        <!-- ==================================
+             ARTIKEL 6 - RUANG HIJAU
+        ================================== -->
+
+        <div
+          class="col-lg-4 col-md-6 kb-item"
+          data-category="lingkungan"
+          data-date="2026-10-26"
+          data-search="lebih dari sekadar taman ruang hijau yang menyatukan warga kebun komunitas lingkungan ruang perjumpaan">
+
+          <article class="kb-article-card">
+
+            <a href="artikel.html?id=ruang-hijau">
+
+              <img
+                src="assets/images/kabar-ruang-hijau.jpg"
+                alt="Kebun hijau di kawasan permukiman"
+                class="kb-article-image"
+                loading="lazy">
+
+            </a>
+
+            <p class="kb-article-meta">
+              LINGKUNGAN · 26 OKTOBER 2026
+            </p>
+
+            <h2 class="kb-article-title">
+              Lebih dari Sekadar Taman,
+              Ruang Hijau yang Menyatukan Warga
+            </h2>
+
+            <p class="kb-article-description">
+              Kebun komunitas dapat dibayangkan sebagai
+              tempat bertukar pengetahuan dan
+              merawat lingkungan.
+            </p>
+
+            <a
+              href="artikel.html?id=ruang-hijau"
+              class="kb-readmore">
+
+              Baca artikel
+              <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+
+      <!-- ======================================
+           4. HASIL PENCARIAN KOSONG
+      ====================================== -->
+
+      <div
+        class="kb-empty-state"
+        id="kbEmptyState"
+        hidden>
+
+        <i class="bi bi-search"></i>
+
+        <h3>Artikel tidak ditemukan</h3>
+
+        <p>
+          Coba gunakan kata kunci atau
+          kategori yang berbeda.
+        </p>
+
+        <button
+          type="button"
+          id="kbResetButton"
+          class="kb-reset-button">
+
+          Tampilkan semua artikel
+
+        </button>
+
+      </div>
+
+
+      <!-- ======================================
+           5. INFORMASI BAGIAN BAWAH
+      ====================================== -->
+
+      <div class="kb-pagination-info">
+
+        <span>
+          Halaman 1 dari 1
+        </span>
+
+        <span id="kbBottomInfo">
+          Seluruh contoh ditampilkan
+        </span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<!-- ==========================================
+     FOOTER CTA
+========================================== -->
+
+<section class="footer-cta">
+
+  <div class="container d-flex flex-column flex-md-row
+              justify-content-between align-items-md-center gap-3">
+
+    <h2>
+      Kebersamaan punya banyak bentuk.
+    </h2>
+
+    <a
+      href="bergabung.html"
+      class="btn btn-outline-green">
+
+      Kenali cara bergabung
+      <i class="bi bi-arrow-up-right"></i>
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ==========================================
+     FOOTER PPP
+========================================== -->
+
+
+<!-- ==========================================
+     FOOTER PPP - REVISI 06
+     GUNAKAN DI SEMUA HALAMAN
+========================================== -->
+
+<footer class="ppp-footer-v2">
+
+  <div class="container">
+
+    <div class="row g-4">
+
+      <!-- ==================================
+           KOLOM 1 - IDENTITAS WEBSITE
+      ================================== -->
+      <div class="col-lg-3 col-md-6">
+
+        <a
+          href="index.html"
+          class="ppp-footer-brand">
+          PPP — Ruang Bersama
+        </a>
+
+        <p class="ppp-footer-description">
+          Partai Persatuan Pembangunan.
+          Ruang informasi dan dialog publik
+          dalam sebuah prototipe akademik.
+        </p>
+
+        <p class="ppp-footer-motto">
+          Merawat Persatuan dengan Pembangunan.
+        </p>
+
+      </div>
+
+
+      <!-- ==================================
+           KOLOM 2 - QUICK LINKS
+      ================================== -->
+      <div class="col-lg-3 col-md-6">
+
+        <h3>Quick Links</h3>
+
+        <ul class="ppp-footer-list">
+
+          <li>
+            <a href="index.html">
+              Beranda
+            </a>
+          </li>
+
+          <li>
+            <a href="tentang.html">
+              Tentang PPP
+            </a>
+          </li>
+
+          <li>
+            <a href="tentang.html#struktur-organisasi">
+              Organisasi
+            </a>
+          </li>
+
+          <li>
+            <a href="program.html">
+              Program &amp; Aksi
+            </a>
+          </li>
+
+          <li>
+            <a href="aspirasi.html">
+              Aspirasi Rakyat
+            </a>
+          </li>
+
+          <li>
+            <a href="kabar.html">
+              Berita
+            </a>
+          </li>
+
+          <li>
+            <a href="pernyataan.html">
+              Pernyataan Resmi
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- ==================================
+           KOLOM 3 - INFORMATION
+      ================================== -->
+      <div class="col-lg-3 col-md-6">
+
+        <h3>Information</h3>
+
+        <ul class="ppp-footer-list">
+
+          <li>
+            <a href="faq.html">
+              FAQ &amp; Kontak
+            </a>
+          </li>
+
+          <li>
+            <a href="kabar.html#daftar-artikel">
+              Opini
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- ==================================
+           KOLOM 4 - MEDIA SOSIAL
+      ================================== -->
+      <div class="col-lg-3 col-md-6">
+
+        <h3>Social</h3>
+
+        <ul class="ppp-footer-list">
+
+          <!-- INSTAGRAM -->
+          <li>
+            <a
+              href="https://www.instagram.com/ppp.peduli?srtk=ODE5c3A2bmkzeGVz&amp;utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <i class="bi bi-instagram"></i>
+              Instagram · @ppp.peduli
+
+            </a>
+          </li>
+
+
+          <!-- TIKTOK -->
+          <li>
+            <a
+              href="https://www.tiktok.com/@ppp.peduli?_r=1&amp;_t=ZS-9BHOIDImUGy"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <i class="bi bi-tiktok"></i>
+              TikTok · @ppp.peduli
+
+            </a>
+          </li>
+
+
+          <!-- YOUTUBE -->
+          <li>
+            <a
+              href="https://youtube.com/@partaipersatuanpembangunandpp?si=k4i02ifY6VN0bI6U"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <i class="bi bi-youtube"></i>
+              YouTube · PPP DPP
+
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <!-- ==================================
+         DISCLAIMER
+    ================================== -->
+    <div class="ppp-footer-disclaimer">
+
+      Website ini merupakan prototipe akademik yang
+      dikembangkan untuk keperluan pembelajaran
+      Digital Public Relations. Website ini bukan
+      situs resmi Partai Persatuan Pembangunan (PPP).
+      Seluruh program simulasi dan fitur interaktif
+      yang ditampilkan tidak mewakili kegiatan
+      atau layanan resmi organisasi.
+
+    </div>
+
+
+    <!-- ==================================
+         COPYRIGHT
+    ================================== -->
+    <div class="ppp-footer-copyright">
+
+      © 2026 PPP — Ruang Bersama ·
+      Prototipe akademik Digital Public Relations
+
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- END FOOTER -->
+
+
+
+<!-- ==========================================
+     JAVASCRIPT
+========================================== -->
+
+<!-- BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JAVASCRIPT GLOBAL -->
+<script src="assets/js/main.js"></script>
+
+
+<!-- ==========================================
+     JAVASCRIPT SEARCH, FILTER DAN SORTING
+========================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  // ======================================
+  // MENGAMBIL ELEMEN HTML
+  // ======================================
+
+  const cards = Array.from(
+    document.querySelectorAll(".kb-item")
+  );
+
+  const grid =
+    document.getElementById("kbArticlesGrid");
+
+  const searchForm =
+    document.getElementById("kbSearchForm");
+
+  const searchInput =
+    document.getElementById("kbSearchInput");
+
+  const filterButtons =
+    document.querySelectorAll(".kb-filter-btn");
+
+  const resultInfo =
+    document.getElementById("kbResultInfo");
+
+  const bottomInfo =
+    document.getElementById("kbBottomInfo");
+
+  const emptyState =
+    document.getElementById("kbEmptyState");
+
+  const resetButton =
+    document.getElementById("kbResetButton");
+
+  const sortButton =
+    document.getElementById("kbSortButton");
+
+
+  // ======================================
+  // STATUS FILTER
+  // ======================================
+
+  let activeCategory = "semua";
+  let newestFirst = true;
+
+
+  // ======================================
+  // NAMA KATEGORI
+  // ======================================
+
+  const categoryNames = {
+    semua: "Semua kategori",
+    pendidikan: "Pendidikan",
+    lingkungan: "Lingkungan",
+    sosial: "Sosial dan Kemanusiaan",
+    ekonomi: "Ekonomi Masyarakat"
+  };
+
+
+  // ======================================
+  // FUNGSI MENAMPILKAN ARTIKEL
+  // ======================================
+
+  function updateArticles() {
+
+    const keyword = searchInput.value
+      .trim()
+      .toLocaleLowerCase("id-ID");
+
+    // Mengurutkan artikel berdasarkan tanggal
+    const sortedCards = [...cards].sort(function(a, b) {
+
+      const dateA = a.dataset.date;
+      const dateB = b.dataset.date;
+
+      if (newestFirst) {
+        return dateB.localeCompare(dateA);
+      }
+
+      return dateA.localeCompare(dateB);
+
+    });
+
+
+    // Mengatur posisi kartu
+    sortedCards.forEach(function(card) {
+      grid.appendChild(card);
+    });
+
+
+    let visibleCount = 0;
+
+
+    // Filter kategori dan kata kunci
+    cards.forEach(function(card) {
+
+      const categoryMatch =
+        activeCategory === "semua" ||
+        card.dataset.category === activeCategory;
+
+      // Mencari kata pada data dan teks artikel
+      const searchableText = (
+        card.dataset.search + " " +
+        card.textContent
+      ).toLocaleLowerCase("id-ID");
+
+      const searchMatch =
+        searchableText.includes(keyword);
+
+      const visible =
+        categoryMatch && searchMatch;
+
+
+      // Tampilkan atau sembunyikan
+      card.hidden = !visible;
+
+      if (visible) {
+        visibleCount++;
+      }
+
+    });
+
+
+    // Update jumlah hasil
+    resultInfo.textContent =
+      visibleCount +
+      " artikel contoh · " +
+      categoryNames[activeCategory];
+
+
+    // Update informasi bawah
+    if (visibleCount === cards.length) {
+
+      bottomInfo.textContent =
+        "Seluruh contoh ditampilkan";
+
+    } else {
+
+      bottomInfo.textContent =
+        "Menampilkan " +
+        visibleCount +
+        " dari " +
+        cards.length +
+        " artikel";
+
+    }
+
+
+    // Tampilkan pesan jika tidak ada hasil
+    emptyState.hidden = visibleCount !== 0;
+
+  }
+
+
+  // ======================================
+  // PENCARIAN ARTIKEL
+  // ======================================
+
+  searchForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    updateArticles();
+
+  });
+
+
+  // Pencarian langsung saat pengguna mengetik
+  searchInput.addEventListener("input", function() {
+
+    updateArticles();
+
+  });
+
+
+  // ======================================
+  // FILTER KATEGORI
+  // ======================================
+
+  filterButtons.forEach(function(button) {
+
+    button.addEventListener("click", function() {
+
+      activeCategory = button.dataset.category;
+
+      filterButtons.forEach(function(btn) {
+
+        const selected =
+          btn === button;
+
+        btn.classList.toggle(
+          "active",
+          selected
+        );
+
+        btn.setAttribute(
+          "aria-pressed",
+          selected ? "true" : "false"
+        );
+
+      });
+
+      updateArticles();
+
+    });
+
+  });
+
+
+  // ======================================
+  // SORTING BERDASARKAN TANGGAL
+  // ======================================
+
+  sortButton.addEventListener("click", function() {
+
+    newestFirst = !newestFirst;
+
+    if (newestFirst) {
+
+      sortButton.innerHTML =
+        'Terbaru dahulu <i class="bi bi-arrow-down"></i>';
+
+    } else {
+
+      sortButton.innerHTML =
+        'Terlama dahulu <i class="bi bi-arrow-up"></i>';
+
+    }
+
+    updateArticles();
+
+  });
+
+
+  // ======================================
+  // RESET SEMUA FILTER
+  // ======================================
+
+  resetButton.addEventListener("click", function() {
+
+    activeCategory = "semua";
+    newestFirst = true;
+
+    searchInput.value = "";
+
+    sortButton.innerHTML =
+      'Terbaru dahulu <i class="bi bi-arrow-down"></i>';
+
+
+    filterButtons.forEach(function(button) {
+
+      const selected =
+        button.dataset.category === "semua";
+
+      button.classList.toggle(
+        "active",
+        selected
+      );
+
+      button.setAttribute(
+        "aria-pressed",
+        selected ? "true" : "false"
+      );
+
+    });
+
+
+    updateArticles();
+
+  });
+
+
+  // ======================================
+  // MENAMPILKAN 6 ARTIKEL SAAT AWAL
+  // ======================================
+
+  updateArticles();
+
+});
+
+</script>
+
 </body>
 </html>
