@@ -1,158 +1,862 @@
-<!doctype html>
-<html lang="id">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="PPP – Ruang Bersama. Mock-up akademik untuk tugas website Public Relations Digital.">
-  <title>FAQ & Kontak | PPP – Ruang Bersama</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link
-  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
-  rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>FAQ & Kontak | PPP Ruang Bersama</title>
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- BOOTSTRAP 5 -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+  <!-- BOOTSTRAP ICONS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    rel="stylesheet">
+
+  <!-- CSS WEBSITE -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <!-- NAVBAR PPP - DESKTOP FIGMA REVISI -->
+
+<!-- ==========================================
+     HEADER DAN NAVBAR
+========================================== -->
+
 <header class="ppp-site-header">
-  <!-- Bar hijau atas -->
+
+  <!-- TOP BAR -->
   <div class="ppp-head-top">
     <div class="container ppp-head-top-inner">
+
       <span>KELOMPOK 8 · MATA KULIAH DIGIPR</span>
-      <span class="d-none d-sm-inline">PROTOTIPE AKADEMIK · BUKAN SITUS RESMI PPP</span>
+
+      <span class="d-none d-sm-inline">
+        PROTOTIPE AKADEMIK · BUKAN SITUS RESMI PPP
+      </span>
+
     </div>
   </div>
 
-  <!-- Logo + nama partai + tagline -->
+  <!-- LOGO PPP -->
   <div class="ppp-head-main">
     <div class="container ppp-head-main-inner">
-      <a href="index.html" class="ppp-head-brand" aria-label="Partai Persatuan Pembangunan - Beranda">
-        <img src="assets/images/logo-ppp-navbar.png"
-             alt="Logo PPP"
-             class="ppp-head-logo">
+
+      <a href="index.html" class="ppp-head-brand">
+
+        <img
+          src="assets/images/logo-ppp-navbar.png"
+          alt="Logo Partai Persatuan Pembangunan"
+          class="ppp-head-logo">
+
         <span class="ppp-head-name">
           <strong>PARTAI</strong>
           <strong>PERSATUAN</strong>
           <strong>PEMBANGUNAN</strong>
         </span>
+
       </a>
-      <p class="ppp-head-tagline">Aspirasi Didengar, Informasi Terbuka, Aksi Terasa.</p>
+
+      <p class="ppp-head-tagline">
+        Berakar pada Nilai, Bergerak untuk Rakyat.
+      </p>
+
     </div>
   </div>
 
-  <!-- Menu + pencarian -->
-  <nav class="navbar navbar-expand-xl ppp-head-nav" aria-label="Navigasi utama">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-xl ppp-head-nav">
     <div class="container ppp-head-nav-inner">
-      <button class="navbar-toggler ppp-head-toggler" type="button"
-              data-bs-toggle="collapse" data-bs-target="#pppNavMenu"
-              aria-controls="pppNavMenu" aria-expanded="false"
-              aria-label="Buka menu navigasi">
+
+      <button
+        class="navbar-toggler ppp-head-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#pppNavMenu"
+        aria-controls="pppNavMenu"
+        aria-expanded="false"
+        aria-label="Buka navigasi">
+
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="pppNavMenu">
+
+      <div class="collapse navbar-collapse"
+           id="pppNavMenu">
+
         <ul class="navbar-nav ppp-head-menu">
-          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-          <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang PPP</a></li>
-          <li class="nav-item"><a class="nav-link" href="program.html">Program &amp; Aksi</a></li>
-          <li class="nav-item"><a class="nav-link" href="aspirasi.html">Aspirasi Rakyat</a></li>
-          <li class="nav-item"><a class="nav-link" href="kabar.html">Kabar PPP</a></li>
-          <li class="nav-item"><a class="nav-link" href="pernyataan.html">Pernyataan Resmi</a></li>
-          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ &amp; Kontak</a></li>
-          <li class="nav-item"><a class="nav-link" href="bergabung.html">Bergabung</a></li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              Beranda
+            </a>
+          </li>
+
+          <!-- DROPDOWN TENTANG PPP -->
+          <li class="nav-item dropdown ppp-about-dropdown">
+
+            <a class="nav-link ppp-about-link"
+               href="tentang.html">
+              Tentang PPP
+            </a>
+
+            <button
+              class="ppp-about-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              aria-label="Buka submenu Tentang PPP">
+              <i class="bi bi-chevron-down"></i>
+            </button>
+
+            <ul class="dropdown-menu ppp-about-menu">
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#identitas-ppp">
+                  Profil PPP
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#sejarah-ppp">
+                  Sejarah PPP
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#visi-misi-ppp">
+                  Visi &amp; Misi
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#ideologi-ppp">
+                  Ideologi &amp; Nilai Dasar
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#lima-khidmat">
+                  Lima Khidmat PPP
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#enam-prinsip">
+                  Enam Prinsip Perjuangan
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#struktur-organisasi">
+                  Struktur Organisasi
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                   href="tentang.html#tokoh-kepemimpinan">
+                  Tokoh &amp; Kepemimpinan
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="program.html">
+              Program &amp; Aksi
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="aspirasi.html">
+              Aspirasi Rakyat
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="kabar.html">
+              Kabar PPP
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="pernyataan.html">
+              Pernyataan Resmi
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active"
+               href="faq.html"
+               aria-current="page">
+              FAQ &amp; Kontak
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="bergabung.html">
+              Bergabung
+            </a>
+          </li>
+
         </ul>
 
-        <!-- Pencarian halaman dan topik website (front-end) -->
-        <form class="ppp-head-search" id="pppSiteSearch" role="search" autocomplete="off">
-          <button type="submit" aria-label="Cari"><i class="bi bi-search"></i></button>
-          <input type="search" id="pppSearchInput" aria-label="Cari halaman atau topik"
-                 placeholder="Cari di situs PPP..." />
-          <div class="ppp-head-results" id="pppSearchResults" aria-live="polite" hidden></div>
+        <!-- SEARCH GLOBAL -->
+        <form
+          id="pppSiteSearch"
+          class="ppp-head-search"
+          role="search">
+
+          <button type="submit" aria-label="Cari">
+            <i class="bi bi-search"></i>
+          </button>
+
+          <input
+            type="search"
+            id="pppSearchInput"
+            placeholder="Cari di situs PPP..."
+            aria-label="Cari halaman website"
+            autocomplete="off">
+
+          <div
+            id="pppSearchResults"
+            class="ppp-head-results"
+            aria-live="polite"
+            hidden>
+          </div>
+
         </form>
+
       </div>
     </div>
   </nav>
+
 </header>
-<!-- AKHIR NAVBAR PPP -->
 
 
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <div class="eyebrow eyebrow-light">FAQ &amp; KONTAK</div>
-        <h1>Temukan jawaban<br>yang Anda perlukan.</h1>
-        <p>Informasi singkat mengenai penggunaan website mock-up akademik ini.</p>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <div class="row g-5">
-          <div class="col-lg-7">
-            <div class="eyebrow">PERTANYAAN UMUM</div>
-            <h2 class="section-heading mb-4">Hal yang sering ditanyakan.</h2>
-            <div class="accordion simple-accordion" id="faqAccordion">
-              <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">Apakah website ini merupakan situs resmi PPP?</button></h2><div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion"><div class="accordion-body">Bukan. Website ini adalah mock-up akademik untuk tugas perancangan website Public Relations Digital.</div></div></div>
-              <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">Apakah program yang ditampilkan benar-benar berjalan?</button></h2><div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Tidak ada klaim bahwa program tersebut sedang berjalan. Nama dan uraian program merupakan contoh konten untuk kebutuhan desain.</div></div></div>
-              <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Apakah formulir aspirasi mengirimkan data?</button></h2><div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Tidak. Formulir hanya menampilkan simulasi interaksi di browser dan tidak menyimpan atau mengirim data.</div></div></div>
-              <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">Di mana saya bisa memperoleh informasi resmi?</button></h2><div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Silakan merujuk langsung ke kanal resmi PPP. Mock-up ini tidak menggantikan informasi resmi organisasi.</div></div></div>
-            </div>
-          </div>
-          <div class="col-lg-5">
-            <div class="form-panel contact-panel">
-              <div class="eyebrow">KONTAK</div>
-              <h2>Informasi kontak</h2>
-              <p class="body-copy">Detail alamat, nomor telepon, dan email resmi belum dicantumkan dalam bahan mock-up yang diberikan.</p>
-              <div class="contact-placeholder"><i class="bi bi-info-circle"></i><span>Lengkapi bagian ini menggunakan informasi kontak yang telah diverifikasi dari sumber resmi.</span></div>
-              <a class="btn btn-green mt-3" href="https://ppp.or.id/" target="_blank" rel="noopener">Kunjungi situs PPP <i class="bi bi-box-arrow-up-right"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+<!-- ==========================================
+     MAIN FAQ & KONTAK
+========================================== -->
 
-  <section class="footer-cta">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
-      <h2>Kebersamaan punya banyak bentuk.</h2>
-      <a class="btn btn-outline-light" href="bergabung.html">Kenali cara bergabung <i class="bi bi-arrow-up-right"></i></a>
+<main class="faq-new-page">
+
+  <!-- ======================================
+       1. HERO FAQ
+  ====================================== -->
+  <section class="faq-new-hero">
+
+    <div class="container">
+
+      <p class="faq-new-label">
+        FAQ &amp; KONTAK
+      </p>
+
+      <h1>
+        Ada pertanyaan? Temukan jawabannya
+        di sini
+      </h1>
+
+      <p class="faq-new-description">
+        Dapatkan informasi mengenai Partai Persatuan
+        Pembangunan, program dan kegiatan, serta
+        berbagai layanan informasi yang tersedia.
+        Temukan jawaban atas pertanyaan umum atau
+        hubungi kanal komunikasi untuk memperoleh
+        informasi lebih lanjut.
+      </p>
+
     </div>
   </section>
-  <footer class="site-footer">
+
+
+  <!-- ======================================
+       2. KANAL INFORMASI
+  ====================================== -->
+  <section class="faq-new-content">
+
     <div class="container">
+
+      <p class="faq-new-label mb-4">
+        KANAL INFORMASI
+      </p>
+
       <div class="row g-4">
-        <div class="col-lg-5">
-          <a class="footer-brand" href="index.html">PPP – Ruang Bersama</a>
-          <p class="footer-tagline">Aspirasi Didengar, Informasi Terbuka, Aksi Terasa.</p>
-          <p class="footer-small">Rujukan sumber: ppp.or.id · Mock-up akademik</p>
+
+        <!-- WHATSAPP -->
+        <div class="col-lg-4 col-md-6">
+
+          <a
+            href="https://wa.me/6281938358425"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="faq-new-contact-card">
+
+            <i class="bi bi-chat"></i>
+
+            <h2>WhatsApp</h2>
+
+            <strong>081938358425</strong>
+
+            <p>
+              Hubungi layanan informasi untuk memperoleh
+              penjelasan mengenai kegiatan, program,
+              dan informasi organisasi.
+            </p>
+
+            <small class="faq-contact-note">
+              Kontak contoh pada mockup;
+              belum diverifikasi.
+            </small>
+
+          </a>
+
         </div>
-        <div class="col-6 col-lg-2">
-          <h6>Jelajahi</h6>
-          <a href="index.html">Beranda</a>
-          <a href="tentang.html">Tentang PPP</a>
-          <a href="program.html">Program &amp; Aksi</a>
-          <a href="aspirasi.html">Aspirasi Rakyat</a>
+
+
+        <!-- EMAIL -->
+        <div class="col-lg-4 col-md-6">
+
+          <a
+            href="mailto:PPP@gmail.com"
+            class="faq-new-contact-card">
+
+            <i class="bi bi-envelope"></i>
+
+            <h2>Email Resmi</h2>
+
+            <strong>PPP@gmail.com</strong>
+
+            <p>
+              Sampaikan pertanyaan, masukan, atau
+              kebutuhan informasi melalui layanan
+              korespondensi organisasi.
+            </p>
+
+            <small class="faq-contact-note">
+              Alamat contoh pada mockup;
+              belum diverifikasi.
+            </small>
+
+          </a>
+
         </div>
-        <div class="col-6 col-lg-2">
-          <h6>Informasi</h6>
-          <a href="kabar.html">Kabar PPP</a>
-          <a href="pernyataan.html">Pernyataan Resmi</a>
-          <a href="faq.html">FAQ &amp; Kontak</a>
-          <a href="bergabung.html">Bergabung</a>
+
+
+        <!-- WEBSITE RESMI -->
+        <div class="col-lg-4 col-md-12">
+
+          <a
+            href="https://ppp.or.id/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="faq-new-contact-card">
+
+            <i class="bi bi-globe"></i>
+
+            <h2>Website Resmi</h2>
+
+            <strong>ppp.or.id</strong>
+
+            <p>
+              Kunjungi website resmi PPP untuk mengetahui
+              informasi organisasi, berita, dan
+              perkembangan kegiatan terkini.
+            </p>
+
+          </a>
+
         </div>
-        <div class="col-lg-3">
-          <h6>Catatan</h6>
-          <p class="footer-small">Website ini merupakan rancangan untuk kebutuhan akademik. Konten, program, dan formulir di dalamnya bersifat simulasi, bukan publikasi atau layanan resmi.</p>
-        </div>
+
       </div>
-      <div class="footer-bottom d-flex flex-column flex-sm-row justify-content-between gap-2">
-        <span>© 2026 PPP – Ruang Bersama. Mock-up akademik.</span>
-        <span>Desain untuk tugas Public Relations Digital</span>
+
+
+      <!-- ======================================
+           3. MEDIA SOSIAL
+      ====================================== -->
+      <div class="faq-new-social-section">
+
+        <p class="faq-new-label">
+          MEDIA SOSIAL · TAUTAN AKUN
+        </p>
+
+        <div class="faq-new-social-links">
+
+          <!-- INSTAGRAM -->
+          <a
+            href="https://www.instagram.com/ppp.peduli?srtk=ODE5c3A2bmkzeGVz&amp;utm_source=qr"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="faq-new-social-card">
+
+            <strong>
+              <i class="bi bi-instagram"></i>
+              Instagram
+            </strong>
+
+            <span>@ppp.peduli</span>
+
+          </a>
+
+
+          <!-- TIKTOK -->
+          <a
+            href="https://www.tiktok.com/@ppp.peduli?_r=1&amp;_t=ZS-9BHOIDImUGy"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="faq-new-social-card">
+
+            <strong>
+              <i class="bi bi-tiktok"></i>
+              TikTok
+            </strong>
+
+            <span>@ppp.peduli</span>
+
+          </a>
+
+
+          <!-- YOUTUBE -->
+          <a
+            href="https://youtube.com/@partaipersatuanpembangunandpp?si=k4i02ifY6VN0bI6U"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="faq-new-social-card">
+
+            <strong>
+              <i class="bi bi-youtube"></i>
+              YouTube
+            </strong>
+
+            <span>@partaipersatuanpembangunandpp</span>
+
+          </a>
+
+        </div>
+
       </div>
+
+
+      <!-- ======================================
+           4. FORMULIR KONTAK
+      ====================================== -->
+      <div class="faq-new-form-section">
+
+        <div class="row g-4 g-lg-5">
+
+          <!-- PENJELASAN KIRI -->
+          <div class="col-lg-4">
+
+            <p class="faq-new-label">
+              FORMULIR KONTAK
+            </p>
+
+            <h2 class="faq-new-form-title">
+              Sampaikan pertanyaan dan masukan Anda.
+            </h2>
+
+            <p class="faq-new-form-description">
+              Kami menghargai setiap pertanyaan, saran,
+              dan masukan yang dapat mendukung komunikasi
+              lebih terbuka serta akses informasi yang
+              lebih baik.
+            </p>
+
+            <p class="faq-contact-note">
+              Form ini membuka aplikasi email.
+              Tidak ada data yang disimpan
+              dalam website.
+            </p>
+
+          </div>
+
+
+          <!-- FORM KANAN -->
+          <div class="col-lg-8">
+
+            <form id="faqContactForm">
+
+              <!-- NAMA DAN EMAIL -->
+              <div class="row g-3">
+
+                <div class="col-md-6">
+
+                  <label
+                    for="faqName"
+                    class="faq-new-form-label">
+                    Nama lengkap
+                  </label>
+
+                  <input
+                    type="text"
+                    id="faqName"
+                    class="faq-new-input"
+                    placeholder="Boleh dikosongkan"
+                    maxlength="100">
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                  <label
+                    for="faqEmail"
+                    class="faq-new-form-label">
+                    Email (opsional)
+                  </label>
+
+                  <input
+                    type="email"
+                    id="faqEmail"
+                    class="faq-new-input"
+                    placeholder="Boleh dikosongkan"
+                    maxlength="150">
+
+                </div>
+
+              </div>
+
+
+              <!-- SUBJEK -->
+              <div class="mt-3">
+
+                <label
+                  for="faqSubject"
+                  class="faq-new-form-label">
+                  Subjek
+                </label>
+
+                <input
+                  type="text"
+                  id="faqSubject"
+                  class="faq-new-input"
+                  placeholder="Contoh: informasi rancangan program"
+                  maxlength="150"
+                  required>
+
+              </div>
+
+
+              <!-- PESAN -->
+              <div class="mt-3">
+
+                <label
+                  for="faqMessage"
+                  class="faq-new-form-label">
+                  Pesan
+                </label>
+
+                <textarea
+                  id="faqMessage"
+                  class="faq-new-textarea"
+                  placeholder="Tulis pertanyaan contoh tanpa data pribadi sensitif."
+                  rows="6"
+                  maxlength="2000"
+                  required></textarea>
+
+              </div>
+
+
+              <!-- BUTTON KIRIM -->
+              <button
+                type="submit"
+                class="faq-new-submit">
+
+                Kirim pesan
+                <i class="bi bi-arrow-up-right"></i>
+
+              </button>
+
+              <p
+                id="faqFormStatus"
+                class="faq-new-status"
+                role="status"
+                aria-live="polite">
+              </p>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/main.js"></script>
+
+  </section>
+
+</main>
+
+
+<!-- ==========================================
+     FOOTER BARU
+========================================== -->
+
+<footer class="ppp-footer-v2">
+
+  <div class="container">
+
+    <div class="row g-4">
+
+      <!-- KOLOM 1 - IDENTITAS -->
+      <div class="col-lg-3 col-md-6">
+
+        <a
+          href="index.html"
+          class="ppp-footer-brand">
+          PPP — Ruang Bersama
+        </a>
+
+        <p class="ppp-footer-description">
+          Partai Persatuan Pembangunan.
+          Ruang informasi dan dialog publik
+          dalam sebuah prototipe akademik.
+        </p>
+
+        <p class="ppp-footer-motto">
+          Merawat Persatuan dengan Pembangunan.
+        </p>
+
+      </div>
+
+
+      <!-- KOLOM 2 - QUICK LINKS -->
+      <div class="col-lg-3 col-md-6">
+
+        <h3>Quick Links</h3>
+
+        <ul class="ppp-footer-list">
+
+          <li><a href="index.html">Beranda</a></li>
+
+          <li>
+            <a href="tentang.html">Tentang PPP</a>
+          </li>
+
+          <li>
+            <a href="tentang.html#struktur-organisasi">
+              Organisasi
+            </a>
+          </li>
+
+          <li>
+            <a href="program.html">Program &amp; Aksi</a>
+          </li>
+
+          <li>
+            <a href="aspirasi.html">Aspirasi Rakyat</a>
+          </li>
+
+          <li>
+            <a href="kabar.html">Berita</a>
+          </li>
+
+          <li>
+            <a href="pernyataan.html">
+              Pernyataan Resmi
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- KOLOM 3 - INFORMASI -->
+      <div class="col-lg-3 col-md-6">
+
+        <h3>Information</h3>
+
+        <ul class="ppp-footer-list">
+
+          <li>
+            <a href="faq.html">FAQ &amp; Kontak</a>
+          </li>
+
+          <li>
+            <a href="kabar.html#daftar-artikel">
+              Opini
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- KOLOM 4 - SOCIAL MEDIA -->
+      <div class="col-lg-3 col-md-6">
+
+        <h3>Social</h3>
+
+        <ul class="ppp-footer-list">
+
+          <!-- INSTAGRAM -->
+          <li>
+            <a
+              href="https://www.instagram.com/ppp.peduli?srtk=ODE5c3A2bmkzeGVz&amp;utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <i class="bi bi-instagram"></i>
+              Instagram · @ppp.peduli
+
+            </a>
+          </li>
+
+          <!-- TIKTOK -->
+          <li>
+            <a
+              href="https://www.tiktok.com/@ppp.peduli?_r=1&amp;_t=ZS-9BHOIDImUGy"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <i class="bi bi-tiktok"></i>
+              TikTok · @ppp.peduli
+
+            </a>
+          </li>
+
+          <!-- YOUTUBE -->
+          <li>
+            <a
+              href="https://youtube.com/@partaipersatuanpembangunandpp?si=k4i02ifY6VN0bI6U"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <i class="bi bi-youtube"></i>
+              YouTube · PPP DPP
+
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <!-- DISCLAIMER -->
+    <div class="ppp-footer-disclaimer">
+
+      Website ini merupakan prototipe akademik yang
+      dikembangkan untuk keperluan pembelajaran
+      Digital Public Relations. Website ini bukan
+      situs resmi Partai Persatuan Pembangunan (PPP).
+      Seluruh program simulasi dan fitur interaktif
+      yang ditampilkan tidak mewakili kegiatan
+      atau layanan resmi organisasi.
+
+    </div>
+
+
+    <!-- COPYRIGHT -->
+    <div class="ppp-footer-copyright">
+      © 2026 PPP — Ruang Bersama ·
+      Prototipe akademik Digital Public Relations
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- ==========================================
+     JAVASCRIPT
+========================================== -->
+
+<!-- BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JAVASCRIPT GLOBAL WEBSITE -->
+<script src="assets/js/main.js"></script>
+
+
+<!-- JAVASCRIPT FORM KONTAK -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const contactForm =
+    document.getElementById("faqContactForm");
+
+  const formStatus =
+    document.getElementById("faqFormStatus");
+
+  contactForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    if (!contactForm.reportValidity()) {
+      return;
+    }
+
+    // Ambil isi formulir
+    const name =
+      document.getElementById("faqName").value.trim();
+
+    const email =
+      document.getElementById("faqEmail").value.trim();
+
+    const subject =
+      document.getElementById("faqSubject").value.trim();
+
+    const message =
+      document.getElementById("faqMessage").value.trim();
+
+    // Pesan yang akan dibuka di aplikasi email
+    const emailBody =
+      "Nama: " + (name || "Tidak diisi") + "\n" +
+      "Email: " + (email || "Tidak diisi") + "\n\n" +
+      "Pesan:\n" + message + "\n\n" +
+      "Dikirim dari prototipe akademik website PPP.";
+
+    // Email pada mockup adalah contoh
+    // Ganti jika alamat resmi telah diverifikasi.
+    const destination = "PPP@gmail.com";
+
+    const mailtoLink =
+      "mailto:" + destination +
+      "?subject=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(emailBody);
+
+    formStatus.textContent =
+      "Aplikasi email akan dibuka. " +
+      "Periksa alamat tujuan dan isi pesan sebelum mengirim. " +
+      "Pesan belum otomatis terkirim.";
+
+    // Membuka aplikasi email pengguna
+    window.location.href = mailtoLink;
+
+  });
+
+});
+</script>
+
 </body>
 </html>
