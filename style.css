@@ -2027,3 +2027,3809 @@ a:hover {
   }
 }
 
+
+/* ==========================================
+   KABAR PPP - REVISI 02
+   SESUAI FIGMA TERBARU
+========================================== */
+
+/* WARNA DAN FONT */
+
+.kb-page {
+  --kb-dark: #174e3b;
+  --kb-paper: #f8f8f3;
+  --kb-soft: #e9f0e8;
+  --kb-gray: #758179;
+  --kb-border: #dbe3da;
+
+  background: var(--kb-paper);
+  color: var(--kb-dark);
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.kb-page h1,
+.kb-page h2,
+.kb-page h3 {
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+/* ==========================================
+   1. HERO
+========================================== */
+
+.kb-hero {
+  background: #f8f8f3;
+  padding: 65px 0 60px;
+}
+
+.kb-eyebrow {
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #174e3b;
+  margin-bottom: 22px;
+}
+
+.kb-hero-title {
+  color: #174e3b;
+  font-size: clamp(35px, 4.5vw, 60px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+  margin-bottom: 23px;
+}
+
+.kb-hero-description {
+  max-width: 910px;
+  color: #758179;
+  font-size: 14px;
+  line-height: 1.85;
+  margin: 0;
+}
+
+/* ==========================================
+   2. SEARCH DAN FILTER
+========================================== */
+
+.kb-filter-section {
+  background: #e9f0e8;
+  padding: 60px 0 58px;
+}
+
+.kb-search-form {
+  width: 100%;
+}
+
+.kb-search-label {
+  display: block;
+  color: #174e3b;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.kb-search-row {
+  display: flex;
+  align-items: stretch;
+  gap: 14px;
+}
+
+.kb-search-input {
+  flex: 1;
+  min-width: 0;
+  height: 48px;
+  background: white;
+  border: 1px solid #d7e0d6;
+  border-radius: 3px;
+  padding: 0 16px;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  color: #174e3b;
+  outline: none;
+}
+
+.kb-search-input::placeholder {
+  color: #8d9990;
+}
+
+.kb-search-input:focus {
+  border-color: #174e3b;
+  box-shadow: 0 0 0 3px rgba(23,78,59,.1);
+}
+
+.kb-search-button {
+  min-width: 135px;
+  height: 48px;
+  padding: 0 19px;
+  border: 1px solid #174e3b;
+  border-radius: 3px;
+  background: #174e3b;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: background-color .2s ease;
+}
+
+.kb-search-button:hover {
+  background: #0b3c2c;
+}
+
+.kb-filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.kb-filter-btn {
+  border: 1px solid #d1ded3;
+  background: #f8f8f3;
+  color: #315a47;
+  padding: 10px 14px;
+  border-radius: 2px;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color .2s, color .2s;
+}
+
+.kb-filter-btn:hover {
+  background: #dce8de;
+}
+
+.kb-filter-btn.active {
+  background: #174e3b;
+  border-color: #174e3b;
+  color: white;
+}
+
+.kb-filter-btn:focus-visible,
+.kb-search-button:focus-visible,
+.kb-sort-button:focus-visible,
+.kb-readmore:focus-visible {
+  outline: 2px solid #28785d;
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   3. DAFTAR ARTIKEL
+========================================== */
+
+.kb-articles-section {
+  background: #f8f8f3;
+  padding: 62px 0 58px;
+}
+
+.kb-articles-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 34px;
+}
+
+#kbResultInfo {
+  color: #174e3b;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.kb-sort-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: transparent;
+  border: none;
+  color: #78857b;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.kb-sort-button:hover {
+  color: #174e3b;
+}
+
+/* Grid artikel */
+
+.kb-articles-grid {
+  row-gap: 42px;
+}
+
+/* Menyembunyikan artikel saat difilter */
+
+.kb-item[hidden] {
+  display: none !important;
+}
+
+.kb-article-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+}
+
+/* Gambar */
+
+.kb-article-image {
+  width: 100%;
+  aspect-ratio: 247 / 152;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 3px;
+  margin-bottom: 17px;
+}
+
+/* Kategori dan tanggal */
+
+.kb-article-meta {
+  font-family: "Inter", sans-serif;
+  color: #174e3b;
+  font-size: 10px;
+  line-height: 1.6;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* Judul artikel */
+
+.kb-article-title {
+  font-family: "Poppins", Arial, sans-serif;
+  color: #174e3b;
+  font-size: clamp(17px, 1.7vw, 22px);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.4px;
+  margin-bottom: 13px;
+}
+
+/* Ringkasan artikel */
+
+.kb-article-description {
+  color: #758179;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+/* Baca artikel */
+
+.kb-readmore {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  margin-top: auto;
+  color: #174e3b;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.kb-readmore:hover {
+  color: #237a59;
+  text-decoration: underline;
+}
+
+.kb-readmore i {
+  transition: transform .2s ease;
+}
+
+.kb-readmore:hover i {
+  transform: translateX(4px);
+}
+
+/* ==========================================
+   4. HASIL PENCARIAN KOSONG
+========================================== */
+
+.kb-empty-state {
+  padding: 65px 20px;
+  text-align: center;
+  background: #e9f0e8;
+  border: 1px solid #dbe3da;
+  border-radius: 3px;
+  margin-top: 25px;
+}
+
+.kb-empty-state[hidden] {
+  display: none !important;
+}
+
+.kb-empty-state > i {
+  display: block;
+  font-size: 36px;
+  color: #6e9680;
+  margin-bottom: 15px;
+}
+
+.kb-empty-state h3 {
+  color: #174e3b;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.kb-empty-state p {
+  color: #758179;
+  font-size: 13px;
+}
+
+.kb-reset-button {
+  display: inline-block;
+  border: 1px solid #174e3b;
+  padding: 11px 17px;
+  background: #174e3b;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  border-radius: 3px;
+  margin-top: 12px;
+}
+
+.kb-reset-button:hover {
+  background: #0b3c2c;
+}
+
+/* ==========================================
+   5. INFORMASI BAWAH ARTIKEL
+========================================== */
+
+.kb-pagination-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  border-top: 1px solid #dce4db;
+  margin-top: 48px;
+  padding-top: 21px;
+  color: #809087;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+}
+
+/* ==========================================
+   6. POPUP DETAIL ARTIKEL
+========================================== */
+
+.kb-article-modal {
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.kb-article-modal .modal-content {
+  background: #f8f8f3;
+  border: none;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.kb-article-modal .modal-header {
+  padding: 20px 30px;
+  background: #e9f0e8;
+  border-bottom: 1px solid #d7e2d9;
+}
+
+.kb-modal-label {
+  color: #174e3b;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.kb-article-modal .modal-body {
+  padding: 34px 36px;
+}
+
+.kb-modal-meta {
+  color: #547766;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.kb-article-modal h2 {
+  color: #174e3b;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: clamp(23px, 3vw, 34px);
+  line-height: 1.25;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.kb-modal-image {
+  display: block;
+  width: 100%;
+  max-height: 320px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 3px;
+  margin-bottom: 25px;
+}
+
+.kb-modal-content p {
+  color: #617269;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  line-height: 1.95;
+  margin-bottom: 18px;
+}
+
+.kb-modal-disclaimer {
+  background: #e9f0e8;
+  border-left: 3px solid #719783;
+  color: #60796b;
+  padding: 13px 16px;
+  margin-top: 25px;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.kb-article-modal .modal-footer {
+  padding: 16px 36px 25px;
+  border-top: 1px solid #dce4db;
+}
+
+.kb-modal-close {
+  background: #174e3b;
+  border: 1px solid #174e3b;
+  border-radius: 3px;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 11px 18px;
+}
+
+.kb-modal-close:hover {
+  background: #0c3e2e;
+}
+
+/* ==========================================
+   7. RESPONSIVE TABLET
+========================================== */
+
+@media (max-width: 991.98px) {
+
+  .kb-hero {
+    padding: 55px 0;
+  }
+
+  .kb-filter-section {
+    padding: 45px 0;
+  }
+
+  .kb-articles-section {
+    padding: 48px 0;
+  }
+
+  .kb-article-title {
+    font-size: 20px;
+  }
+
+  .kb-articles-grid {
+    row-gap: 34px;
+  }
+
+}
+
+/* ==========================================
+   8. RESPONSIVE HP
+========================================== */
+
+@media (max-width: 767.98px) {
+
+  .kb-hero {
+    padding: 42px 0;
+  }
+
+  .kb-hero-title {
+    font-size: 34px;
+    letter-spacing: -0.7px;
+  }
+
+  .kb-hero-description {
+    font-size: 12px;
+  }
+
+  .kb-filter-section {
+    padding: 35px 0;
+  }
+
+  .kb-search-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .kb-search-input {
+    flex: auto;
+    width: 100%;
+  }
+
+  .kb-search-button {
+    width: 100%;
+  }
+
+  .kb-filter-buttons {
+    gap: 7px;
+    margin-top: 20px;
+  }
+
+  .kb-filter-btn {
+    font-size: 10px;
+    padding: 9px 11px;
+  }
+
+  .kb-articles-section {
+    padding: 38px 0;
+  }
+
+  .kb-articles-toolbar {
+    align-items: flex-start;
+  }
+
+  .kb-article-image {
+    aspect-ratio: 16 / 9;
+  }
+
+  .kb-article-title {
+    font-size: 21px;
+  }
+
+  .kb-article-description {
+    font-size: 12px;
+  }
+
+  .kb-articles-grid {
+    row-gap: 32px;
+  }
+
+  .kb-pagination-info {
+    font-size: 10px;
+    flex-wrap: wrap;
+  }
+
+  .kb-article-modal .modal-body {
+    padding: 23px 20px;
+  }
+
+  .kb-article-modal .modal-header {
+    padding: 16px 20px;
+  }
+
+  .kb-article-modal .modal-footer {
+    padding: 15px 20px 20px;
+  }
+
+}
+
+/* ==========================================
+   9. AKSESIBILITAS
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .kb-readmore i {
+    transition: none;
+  }
+
+}
+
+
+/* ==========================================
+   DETAIL ARTIKEL PPP - REVISI 03
+   BERLAKU UNTUK 6 ARTIKEL
+========================================== */
+
+/* WARNA DAN FONT */
+
+.ka-page {
+  --ka-green: #174e3b;
+  --ka-paper: #f8f8f3;
+  --ka-soft: #e9f0e8;
+  --ka-gray: #748179;
+
+  background: var(--ka-paper);
+  color: var(--ka-green);
+  font-family: "Inter", Arial, sans-serif;
+}
+
+/* ==========================================
+   1. HERO ARTIKEL
+========================================== */
+
+.ka-hero {
+  background: var(--ka-paper);
+  padding: 55px 0 20px;
+}
+
+/* Breadcrumb */
+
+.ka-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 42px;
+
+  color: #7a887e;
+  font-size: 11px;
+  font-family: "Inter", sans-serif;
+}
+
+.ka-breadcrumb a {
+  color: #6e8074;
+  text-decoration: none;
+}
+
+.ka-breadcrumb a:hover {
+  color: var(--ka-green);
+  text-decoration: underline;
+}
+
+/* Kategori */
+
+.ka-category {
+  color: var(--ka-green);
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+/* Judul utama */
+
+.ka-title {
+  max-width: 1120px;
+  color: var(--ka-green);
+  font-family: "Poppins", Arial, sans-serif !important;
+  font-size: clamp(32px, 4.3vw, 57px);
+  font-weight: 700;
+  letter-spacing: -1.4px;
+  line-height: 1.16;
+  margin: 0 0 23px;
+}
+
+/* Deskripsi artikel */
+
+.ka-description {
+  max-width: 1100px;
+  color: var(--ka-gray);
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  line-height: 1.9;
+  margin: 0 0 20px;
+}
+
+/* Tanggal */
+
+.ka-date {
+  color: #849188;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  margin-bottom: 30px;
+}
+
+/* Foto utama */
+
+.ka-main-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.85;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4px;
+}
+
+/* ==========================================
+   2. ISI ARTIKEL
+========================================== */
+
+.ka-content-section {
+  background: var(--ka-paper);
+  padding: 90px 0 100px;
+}
+
+.ka-article-body {
+  max-width: 790px;
+}
+
+/* Paragraf */
+
+.ka-article-body p {
+  color: #738078;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.95;
+  margin-bottom: 24px;
+}
+
+/* Subjudul artikel */
+
+.ka-article-body h2 {
+  color: var(--ka-green);
+  font-family: "Poppins", Arial, sans-serif !important;
+  font-size: clamp(20px, 2.2vw, 27px);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.4px;
+  margin: 35px 0 14px;
+
+  scroll-margin-top: 30px;
+}
+
+/* ==========================================
+   3. SIDEBAR ARTIKEL
+========================================== */
+
+.ka-sidebar {
+  background: #e9f0e8;
+  padding: 25px 24px 28px;
+  border-radius: 2px;
+  position: sticky;
+  top: 25px;
+}
+
+/* Label */
+
+.ka-sidebar-label {
+  color: var(--ka-green);
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  margin-bottom: 18px;
+}
+
+/* Link daftar isi */
+
+.ka-toc {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-bottom: 32px;
+}
+
+.ka-toc a {
+  color: #315c48;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.ka-toc a:hover {
+  color: #147b50;
+  text-decoration: underline;
+}
+
+/* Baca konsep terkait */
+
+.ka-sidebar-related {
+  padding-top: 4px;
+}
+
+.ka-sidebar-related h2 {
+  color: var(--ka-green);
+  font-family: "Poppins", sans-serif !important;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.ka-sidebar-related p {
+  color: #718077;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  line-height: 1.8;
+  margin-bottom: 17px;
+}
+
+.ka-related-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  color: var(--ka-green);
+  border: 1px solid #67927b;
+  background: transparent;
+  padding: 10px 13px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: 0.2s ease;
+}
+
+.ka-related-button:hover {
+  background: var(--ka-green);
+  color: white;
+}
+
+/* ==========================================
+   4. TOMBOL KEMBALI
+========================================== */
+
+.ka-back-wrapper {
+  margin-top: 45px;
+  padding-top: 22px;
+  border-top: 1px solid #dce5dc;
+}
+
+.ka-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--ka-green);
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.ka-back-link:hover {
+  color: #23805b;
+  text-decoration: underline;
+}
+
+/* ==========================================
+   5. RESPONSIVE TABLET
+========================================== */
+
+@media (max-width: 991.98px) {
+
+  .ka-hero {
+    padding: 45px 0 15px;
+  }
+
+  .ka-breadcrumb {
+    margin-bottom: 30px;
+  }
+
+  .ka-title {
+    font-size: clamp(32px, 5vw, 45px);
+  }
+
+  .ka-content-section {
+    padding: 55px 0 70px;
+  }
+
+  .ka-sidebar {
+    position: static;
+    top: auto;
+  }
+
+  .ka-article-body {
+    max-width: 100%;
+  }
+
+}
+
+/* ==========================================
+   6. RESPONSIVE HP
+========================================== */
+
+@media (max-width: 767.98px) {
+
+  .ka-hero {
+    padding: 35px 0 12px;
+  }
+
+  .ka-breadcrumb {
+    font-size: 10px;
+    margin-bottom: 30px;
+  }
+
+  .ka-category {
+    font-size: 9px;
+    margin-bottom: 14px;
+  }
+
+  .ka-title {
+    font-size: 32px;
+    line-height: 1.2;
+    letter-spacing: -0.8px;
+  }
+
+  .ka-description {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .ka-main-image {
+    aspect-ratio: 16 / 10;
+  }
+
+  .ka-content-section {
+    padding: 40px 0 55px;
+  }
+
+  .ka-article-body p {
+    font-size: 13px;
+    line-height: 1.85;
+    margin-bottom: 19px;
+  }
+
+  .ka-article-body h2 {
+    font-size: 21px;
+    margin-top: 29px;
+  }
+
+  .ka-sidebar {
+    margin-top: 12px;
+    padding: 24px 20px;
+  }
+
+}
+
+/* ==========================================
+   7. AKSESIBILITAS
+========================================== */
+
+.ka-toc a:focus-visible,
+.ka-related-button:focus-visible,
+.ka-back-link:focus-visible {
+  outline: 2px solid #174e3b;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ka-related-button {
+    transition: none;
+  }
+}
+
+
+/* ==========================================
+   REVISI 06 - FAQ & KONTAK + FOOTER BARU
+   FONT: POPPINS & INTER
+========================================== */
+
+/* ==========================================
+   1. PENGATURAN HALAMAN FAQ
+========================================== */
+
+.faq-new-page {
+  --faq-green: #174e3b;
+  --faq-cream: #f8f8f3;
+  --faq-soft: #e9f0e8;
+  --faq-gray: #758179;
+  --faq-border: #d8e2d9;
+
+  font-family: "Inter", Arial, sans-serif;
+  background: var(--faq-cream);
+  color: var(--faq-green);
+}
+
+.faq-new-page h1,
+.faq-new-page h2,
+.faq-new-page h3 {
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+/* ==========================================
+   2. HERO FAQ
+========================================== */
+
+.faq-new-hero {
+  background: #f8f8f3;
+  padding: 75px 0 65px;
+}
+
+.faq-new-label {
+  color: #174e3b;
+  font-size: 10px;
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+
+.faq-new-hero h1 {
+  color: #174e3b;
+  font-size: clamp(34px, 4.3vw, 59px);
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: -1.4px;
+  max-width: 1250px;
+  margin-bottom: 25px;
+}
+
+.faq-new-description {
+  color: #758179;
+  font-size: 14px;
+  line-height: 1.85;
+  max-width: 1160px;
+  margin-bottom: 0;
+}
+
+/* ==========================================
+   3. KONTEN FAQ
+========================================== */
+
+.faq-new-content {
+  background: #e9f0e8;
+  padding: 65px 0 80px;
+}
+
+/* KARTU KONTAK */
+
+.faq-new-contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  height: 100%;
+  min-height: 225px;
+  padding: 25px 25px 23px;
+
+  background: #f8f8f3;
+  border: 1px solid rgba(23, 78, 59, 0.05);
+  border-radius: 2px;
+
+  color: #174e3b;
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.faq-new-contact-card:hover {
+  color: #174e3b;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 50, 35, 0.08);
+}
+
+.faq-new-contact-card > i {
+  font-size: 25px;
+  color: #315f4a;
+  line-height: 1;
+  margin-bottom: 23px;
+}
+
+.faq-new-contact-card h2 {
+  color: #174e3b;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 15px;
+}
+
+.faq-new-contact-card strong {
+  color: #174e3b;
+  font-size: 13px;
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.faq-new-contact-card p {
+  color: #758179;
+  font-size: 12px;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+.faq-contact-note {
+  display: block;
+  color: #87968b;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 10px;
+  line-height: 1.6;
+  margin-top: 12px;
+}
+
+/* ==========================================
+   4. MEDIA SOSIAL
+========================================== */
+
+.faq-new-social-section {
+  margin-top: 38px;
+}
+
+.faq-new-social-section .faq-new-label {
+  margin-bottom: 12px;
+}
+
+.faq-new-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.faq-new-social-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+
+  padding: 12px 17px;
+  min-height: 55px;
+
+  border: 1px solid #b7cdbd;
+  border-radius: 2px;
+  background: transparent;
+
+  color: #174e3b;
+  text-decoration: none;
+
+  transition: background-color 0.2s ease;
+}
+
+.faq-new-social-card:hover {
+  background: #174e3b;
+  color: white;
+}
+
+.faq-new-social-card strong {
+  color: inherit;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.faq-new-social-card strong i {
+  margin-right: 6px;
+}
+
+.faq-new-social-card span {
+  color: #73857b;
+  font-size: 10px;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.faq-new-social-card:hover span {
+  color: #e1eae3;
+}
+
+/* ==========================================
+   5. FORMULIR KONTAK
+========================================== */
+
+.faq-new-form-section {
+  margin-top: 115px;
+}
+
+.faq-new-form-title {
+  color: #174e3b;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: clamp(27px, 3vw, 40px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.7px;
+  margin-bottom: 25px;
+  max-width: 390px;
+}
+
+.faq-new-form-description {
+  color: #758179;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.85;
+  max-width: 390px;
+}
+
+.faq-new-form-label {
+  display: block;
+  color: #334d40;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.faq-new-input,
+.faq-new-textarea {
+  display: block;
+  width: 100%;
+
+  background: #ffffff;
+  border: 1px solid #d8e0d8;
+  border-radius: 3px;
+
+  color: #174e3b;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 13px;
+
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.faq-new-input {
+  height: 49px;
+  padding: 0 15px;
+}
+
+.faq-new-textarea {
+  min-height: 155px;
+  padding: 15px;
+  resize: vertical;
+}
+
+.faq-new-input::placeholder,
+.faq-new-textarea::placeholder {
+  color: #8e9a92;
+}
+
+.faq-new-input:focus,
+.faq-new-textarea:focus {
+  border-color: #427961;
+  box-shadow: 0 0 0 3px rgba(23, 78, 59, 0.1);
+}
+
+.faq-new-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  margin-top: 20px;
+  min-height: 46px;
+  padding: 11px 20px;
+
+  background: #174e3b;
+  border: 1px solid #174e3b;
+  border-radius: 3px;
+
+  color: #ffffff;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.faq-new-submit:hover {
+  background: #0d3829;
+}
+
+.faq-new-status {
+  color: #315d49;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.7;
+  margin-top: 13px;
+  margin-bottom: 0;
+}
+
+/* ==========================================
+   6. FOOTER BARU - SELURUH HALAMAN
+========================================== */
+
+.ppp-footer-v2 {
+  background: #174e3b;
+  color: #e5eee6;
+  font-family: "Inter", Arial, sans-serif;
+  padding: 60px 0 28px;
+}
+
+/* NAMA WEBSITE */
+
+.ppp-footer-brand {
+  display: inline-block;
+  color: #ffffff;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+
+.ppp-footer-brand:hover {
+  color: #d1ac67;
+}
+
+/* DESKRIPSI */
+
+.ppp-footer-description {
+  color: #d4e1d8;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.85;
+  max-width: 280px;
+  margin-bottom: 15px;
+}
+
+/* MOTTO */
+
+.ppp-footer-motto {
+  color: #c7b783;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.7;
+  max-width: 260px;
+  margin-bottom: 0;
+}
+
+/* JUDUL KOLOM FOOTER */
+
+.ppp-footer-v2 h3 {
+  color: #d1bd81;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 6px 0 17px;
+}
+
+/* DAFTAR LINK */
+
+.ppp-footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ppp-footer-list li {
+  margin-bottom: 10px;
+}
+
+.ppp-footer-list a {
+  display: inline-block;
+  color: #d9e7dc;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.6;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.ppp-footer-list a:hover {
+  color: #e1bf78;
+  text-decoration: underline;
+}
+
+.ppp-footer-list i {
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+/* DISCLAIMER */
+
+.ppp-footer-disclaimer {
+  margin-top: 55px;
+  padding-top: 23px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+  color: #d1ded4;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+/* COPYRIGHT */
+
+.ppp-footer-copyright {
+  color: #a9c0ae;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 9px;
+  line-height: 1.7;
+  margin-top: 10px;
+}
+
+/* ==========================================
+   7. PERBAIKAN DROPDOWN NAVBAR
+========================================== */
+
+/* Panah tidak turun ke baris kedua di desktop */
+
+@media (min-width: 1200px) {
+
+  .ppp-head-nav .ppp-about-dropdown {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: relative;
+  }
+
+  .ppp-head-nav .ppp-about-toggle {
+    display: none !important;
+  }
+
+  .ppp-head-nav
+  .ppp-about-dropdown:hover
+  .ppp-about-menu {
+    display: block;
+  }
+
+}
+
+/* ==========================================
+   8. RESPONSIVE TABLET
+========================================== */
+
+@media (max-width: 991.98px) {
+
+  .faq-new-hero {
+    padding: 55px 0;
+  }
+
+  .faq-new-content {
+    padding: 50px 0 65px;
+  }
+
+  .faq-new-contact-card {
+    min-height: 205px;
+  }
+
+  .faq-new-form-section {
+    margin-top: 75px;
+  }
+
+  .faq-new-form-title {
+    max-width: 100%;
+  }
+
+  .ppp-footer-v2 {
+    padding: 50px 0 25px;
+  }
+
+  .ppp-footer-disclaimer {
+    margin-top: 35px;
+  }
+
+}
+
+/* ==========================================
+   9. RESPONSIVE HP
+========================================== */
+
+@media (max-width: 767.98px) {
+
+  .faq-new-hero {
+    padding: 43px 0 48px;
+  }
+
+  .faq-new-hero h1 {
+    font-size: 33px;
+    letter-spacing: -0.7px;
+  }
+
+  .faq-new-description {
+    font-size: 12px;
+  }
+
+  .faq-new-content {
+    padding: 38px 0 50px;
+  }
+
+  .faq-new-contact-card {
+    min-height: 0;
+    padding: 22px;
+  }
+
+  .faq-new-contact-card h2 {
+    font-size: 21px;
+  }
+
+  .faq-new-social-section {
+    margin-top: 30px;
+  }
+
+  .faq-new-social-links {
+    gap: 9px;
+  }
+
+  .faq-new-social-card {
+    max-width: 100%;
+    padding: 12px 14px;
+  }
+
+  .faq-new-form-section {
+    margin-top: 60px;
+  }
+
+  .faq-new-form-title {
+    font-size: 29px;
+  }
+
+  .faq-new-form-description {
+    font-size: 12px;
+  }
+
+  .faq-new-submit {
+    width: 100%;
+  }
+
+  .ppp-footer-v2 {
+    padding: 43px 0 25px;
+  }
+
+  .ppp-footer-brand {
+    font-size: 19px;
+  }
+
+  .ppp-footer-description,
+  .ppp-footer-motto,
+  .ppp-footer-list a {
+    font-size: 11px;
+  }
+
+  .ppp-footer-disclaimer {
+    font-size: 10px;
+    margin-top: 30px;
+  }
+
+}
+
+/* ==========================================
+   10. AKSESIBILITAS
+========================================== */
+
+.faq-new-contact-card:focus-visible,
+.faq-new-social-card:focus-visible,
+.faq-new-submit:focus-visible,
+.ppp-footer-list a:focus-visible {
+  outline: 2px solid #d1ac67;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .faq-new-contact-card,
+  .faq-new-social-card,
+  .faq-new-submit {
+    transition: none;
+  }
+
+}
+
+
+/* ==========================================
+   REVISI 07 - BERANDA PPP
+   FONT: POPPINS & INTER
+========================================== */
+
+.home-page {
+  --home-green: #174e3b;
+  --home-dark: #064c39;
+  --home-cream: #f8f8f3;
+  --home-soft: #e9f0e8;
+  --home-muted: #748078;
+  --home-gold: #d1b071;
+
+  font-family: "Inter", Arial, sans-serif;
+  color: var(--home-green);
+  background: var(--home-cream);
+}
+
+.home-page h1,
+.home-page h2,
+.home-page h3 {
+  font-family: "Poppins", Arial, sans-serif !important;
+}
+
+/* ==========================================
+   1. CAROUSEL UTAMA
+========================================== */
+
+.home-hero {
+  position: relative;
+  height: clamp(570px, 72vh, 760px);
+  background: #064c39;
+  overflow: hidden;
+  color: white;
+}
+
+/* Tinggi carousel */
+
+.home-hero .carousel-inner,
+.home-hero .carousel-item {
+  height: 100%;
+}
+
+.home-hero .carousel-item {
+  position: relative;
+}
+
+/* Foto background */
+
+.home-hero-image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Lapisan hijau transparan */
+
+.home-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(0, 61, 45, 0.99) 0%,
+    rgba(0, 61, 45, 0.96) 27%,
+    rgba(0, 61, 45, 0.72) 52%,
+    rgba(0, 61, 45, 0.35) 80%,
+    rgba(0, 61, 45, 0.18) 100%
+  );
+}
+
+/* Container teks */
+
+.home-hero-container {
+  position: relative;
+  z-index: 2;
+
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-bottom: 78px;
+}
+
+.home-hero-copy {
+  max-width: 720px;
+}
+
+/* Label atas */
+
+.home-hero-kicker {
+  color: #d7e9dd;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+  margin-bottom: 20px;
+}
+
+/* Judul slide */
+
+.home-hero h1,
+.home-hero h2 {
+  color: #ffffff;
+
+  font-size: clamp(35px, 4.4vw, 62px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -1.4px;
+
+  margin-bottom: 22px;
+}
+
+.home-hero h1 span,
+.home-hero h2 span {
+  color: var(--home-gold);
+}
+
+/* Tagline */
+
+.home-hero-tagline {
+  color: #f0f5ee;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+/* Deskripsi */
+
+.home-hero-description {
+  max-width: 580px;
+  color: #d6e5da;
+
+  font-size: 13px;
+  line-height: 1.9;
+
+  margin-bottom: 26px;
+}
+
+/* Tombol carousel */
+
+.home-hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.home-btn-gold,
+.home-btn-transparent {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  padding: 12px 18px;
+  min-height: 44px;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+
+  border-radius: 2px;
+  transition: background-color 0.2s ease;
+}
+
+.home-btn-gold {
+  background: var(--home-gold);
+  color: #174e3b;
+  border: 1px solid var(--home-gold);
+}
+
+.home-btn-gold:hover {
+  background: #ead19c;
+  color: #174e3b;
+}
+
+.home-btn-transparent {
+  background: rgba(255,255,255,0.07);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.7);
+}
+
+.home-btn-transparent:hover {
+  background: #ffffff;
+  color: #174e3b;
+}
+
+/* Caption foto */
+
+.home-hero-caption {
+  position: absolute;
+  z-index: 3;
+  bottom: 74px;
+  left: max(25px, calc((100% - 1320px) / 2));
+
+  color: rgba(255,255,255,0.75);
+  font-size: 9px;
+}
+
+/* Indikator carousel */
+
+.home-hero .home-hero-indicators {
+  position: absolute;
+  z-index: 5;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 17px;
+
+  top: auto;
+  bottom: 20px;
+
+  left: max(25px, calc((100% - 1320px) / 2));
+  right: 150px;
+
+  width: auto;
+  margin: 0;
+}
+
+.home-hero .home-hero-indicators button {
+  flex: 1 1 0;
+  max-width: 185px;
+  min-width: 0;
+
+  width: auto;
+  height: auto;
+  min-height: 36px;
+
+  margin: 0;
+  padding: 11px 0 0;
+
+  border: none;
+  border-top: 2px solid rgba(255,255,255,0.4);
+  border-radius: 0;
+
+  background: transparent;
+  color: #d9e7df;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  text-align: left;
+  text-indent: 0;
+  opacity: 0.75;
+
+  box-sizing: border-box;
+}
+
+.home-hero .home-hero-indicators button.active {
+  opacity: 1;
+  color: white;
+  border-top-color: var(--home-gold);
+}
+
+.home-hero .home-hero-indicators button span {
+  margin-left: 8px;
+}
+
+/* Tombol panah carousel */
+
+.home-hero .home-hero-prev,
+.home-hero .home-hero-next {
+  position: absolute;
+  z-index: 6;
+
+  top: auto;
+  bottom: 23px;
+  left: auto;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #ffffff;
+  background: rgba(0, 45, 33, 0.6);
+
+  border: 1px solid rgba(255,255,255,0.45);
+  border-radius: 50%;
+
+  opacity: 1;
+  font-size: 15px;
+}
+
+.home-hero .home-hero-prev {
+  right: 92px;
+}
+
+.home-hero .home-hero-next {
+  right: 44px;
+}
+
+.home-hero .home-hero-prev:hover,
+.home-hero .home-hero-next:hover {
+  background: #b99b66;
+}
+
+/* ==========================================
+   2. NILAI UTAMA
+========================================== */
+
+.home-values {
+  padding: 18px 0;
+  background: #e9f0e8;
+}
+
+.home-values span {
+  display: block;
+  color: #315d49;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* ==========================================
+   3. KOMPONEN UMUM SECTION
+========================================== */
+
+.home-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 25px;
+
+  margin-bottom: 30px;
+}
+
+.home-label {
+  color: var(--home-green);
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+
+  margin-bottom: 12px;
+}
+
+.home-section-heading h2 {
+  color: var(--home-green);
+
+  font-size: clamp(27px, 3vw, 37px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.7px;
+
+  margin-bottom: 12px;
+}
+
+.home-section-desc {
+  max-width: 850px;
+
+  color: var(--home-muted);
+  font-size: 12px;
+  line-height: 1.85;
+
+  margin-bottom: 0;
+}
+
+/* Tombol outline */
+
+.home-outline-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-shrink: 0;
+
+  padding: 10px 15px;
+  min-height: 40px;
+
+  color: var(--home-green);
+  background: transparent;
+  border: 1px solid #6c927f;
+  border-radius: 2px;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: background-color 0.2s ease;
+}
+
+.home-outline-button:hover {
+  color: white;
+  background: var(--home-green);
+}
+
+/* Link teks */
+
+.home-text-link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 7px;
+
+  color: var(--home-green);
+  font-family: "Inter", Arial, sans-serif;
+
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.home-text-link:hover {
+  color: #287858;
+  text-decoration: underline;
+}
+
+/* ==========================================
+   4. KABAR TERBARU
+========================================== */
+
+.home-news {
+  padding: 65px 0 72px;
+  background: #e9f0e8;
+}
+
+.home-news-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Foto berita */
+
+.home-news-card img {
+  display: block;
+
+  width: 100%;
+  aspect-ratio: 16 / 10;
+
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+/* Sumber foto */
+
+.home-photo-source {
+  color: #849389;
+
+  font-size: 9px;
+  line-height: 1.5;
+  margin: 8px 0 15px;
+}
+
+/* Kategori dan tanggal */
+
+.home-news-category {
+  color: #174e3b;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.9px;
+
+  line-height: 1.6;
+  margin-bottom: 7px;
+}
+
+.home-news-source {
+  color: #507763;
+  font-size: 10px;
+  margin-bottom: 8px;
+}
+
+/* Judul berita */
+
+.home-news-card h3 {
+  color: #174e3b;
+
+  font-size: clamp(18px, 1.7vw, 23px);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.4px;
+
+  margin-bottom: 12px;
+}
+
+/* Ringkasan */
+
+.home-news-description {
+  color: #748078;
+  font-size: 12px;
+  line-height: 1.7;
+
+  margin-bottom: 17px;
+}
+
+.home-news-card .home-text-link {
+  margin-top: auto;
+}
+
+/* ==========================================
+   5. PROGRAM & AKSI
+========================================== */
+
+.home-programs {
+  padding: 70px 0;
+  background: #f8f8f3;
+}
+
+.home-program-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Foto program */
+
+.home-program-card img {
+  display: block;
+
+  width: 100%;
+  aspect-ratio: 16 / 8.5;
+
+  object-fit: cover;
+  border-radius: 3px;
+  margin-bottom: 16px;
+}
+
+/* Kategori */
+
+.home-program-category {
+  color: #174e3b;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  margin-bottom: 10px;
+}
+
+/* Judul program */
+
+.home-program-card h3 {
+  color: #174e3b;
+
+  font-size: clamp(19px, 2vw, 25px);
+  font-weight: 700;
+  line-height: 1.35;
+
+  margin-bottom: 12px;
+}
+
+/* Deskripsi program */
+
+.home-program-card > p:not(.home-program-category) {
+  color: #748078;
+
+  font-size: 12px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.home-program-card .home-text-link {
+  margin-top: auto;
+}
+
+/* Tag kategori */
+
+.home-program-tags {
+  margin-top: 35px;
+  padding-top: 23px;
+  border-top: 1px solid #dce5da;
+}
+
+.home-program-tags p {
+  color: #174e3b;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+
+  margin-bottom: 14px;
+}
+
+.home-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.home-tag-list span {
+  display: inline-block;
+
+  padding: 7px 11px;
+
+  border: 1px solid #d5e0d5;
+  color: #527462;
+
+  font-size: 10px;
+}
+
+/* ==========================================
+   6. ASPIRASI RAKYAT
+========================================== */
+
+.home-aspiration {
+  background: #064c39;
+  color: white;
+  padding: 64px 0;
+}
+
+.home-label-light {
+  color: #c6decf;
+}
+
+.home-aspiration h2 {
+  color: white;
+
+  font-size: clamp(28px, 3.1vw, 39px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.home-aspiration .col-lg-8 > p:last-child {
+  color: #d6e6db;
+
+  font-size: 13px;
+  line-height: 1.85;
+
+  max-width: 850px;
+  margin-bottom: 0;
+}
+
+.home-aspiration-action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.home-light-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+
+  padding: 12px 18px;
+  min-height: 44px;
+
+  background: #f8f8f3;
+  color: #174e3b;
+  border: 1px solid #f8f8f3;
+  border-radius: 2px;
+
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.home-light-button:hover {
+  color: #174e3b;
+  background: #dce8dd;
+}
+
+.home-aspiration-note {
+  color: #bed7c8;
+  font-size: 10px;
+  margin: 15px 0 7px;
+}
+
+.home-aspiration-disclaimer {
+  color: #a6cbb7;
+  font-size: 10px;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* ==========================================
+   7. PERNYATAAN RESMI
+========================================== */
+
+.home-statements {
+  background: #f8f8f3;
+  padding: 70px 0 78px;
+}
+
+.home-statements h2 {
+  color: #174e3b;
+
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 700;
+  line-height: 1.2;
+
+  margin-bottom: 17px;
+}
+
+.home-statements .home-outline-button {
+  margin-top: 22px;
+}
+
+/* Kartu pernyataan */
+
+.home-statement-item {
+  padding: 17px 0 24px;
+  border-top: 1px solid #dce5da;
+}
+
+.home-statement-item + .home-statement-item {
+  margin-top: 15px;
+}
+
+.home-statement-date {
+  color: #839088;
+
+  font-size: 10px;
+  letter-spacing: 0.6px;
+  margin-bottom: 9px;
+}
+
+.home-statement-item h3 {
+  color: #174e3b;
+
+  font-size: clamp(18px, 1.8vw, 23px);
+  font-weight: 700;
+  line-height: 1.35;
+
+  margin-bottom: 9px;
+}
+
+.home-statement-item > p:not(.home-statement-date) {
+  color: #748078;
+  font-size: 12px;
+  line-height: 1.75;
+  margin-bottom: 10px;
+}
+
+/* ==========================================
+   8. AJAKAN BERGABUNG
+========================================== */
+
+.home-join {
+  background: #e9f0e8;
+  padding: 28px 0;
+}
+
+.home-join h2 {
+  color: #174e3b;
+
+  font-size: clamp(20px, 2.3vw, 28px);
+  font-weight: 700;
+  line-height: 1.3;
+
+  margin-bottom: 0;
+}
+
+/* ==========================================
+   9. PERBAIKAN NAVBAR DROPDOWN
+========================================== */
+
+/* Desktop - tanpa panah turun ke bawah */
+
+@media (min-width: 1200px) {
+
+  .ppp-head-nav .ppp-about-dropdown {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    position: relative;
+  }
+
+  .ppp-head-nav .ppp-about-toggle {
+    display: none !important;
+  }
+
+  .ppp-head-nav .ppp-about-dropdown:hover
+  .ppp-about-menu {
+    display: block;
+  }
+
+}
+
+/* ==========================================
+   10. RESPONSIVE TABLET
+========================================== */
+
+@media (max-width: 991.98px) {
+
+  .home-hero {
+    height: 610px;
+  }
+
+  .home-hero-container {
+    padding-bottom: 85px;
+  }
+
+  .home-hero-copy {
+    max-width: 610px;
+  }
+
+  .home-hero h1,
+  .home-hero h2 {
+    font-size: 43px;
+  }
+
+  .home-news,
+  .home-programs,
+  .home-statements {
+    padding: 50px 0;
+  }
+
+  .home-aspiration {
+    padding: 50px 0;
+  }
+
+  .home-section-heading {
+    gap: 17px;
+  }
+
+  .home-news-card h3 {
+    font-size: 20px;
+  }
+
+  .home-aspiration-action {
+    margin-top: 10px;
+  }
+
+}
+
+/* ==========================================
+   11. RESPONSIVE HP
+========================================== */
+
+@media (max-width: 767.98px) {
+
+  .home-hero {
+    height: 660px;
+  }
+
+  .home-hero-image {
+    object-position: 58% center;
+  }
+
+  .home-hero-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(0,61,45,0.97),
+      rgba(0,61,45,0.77)
+    );
+  }
+
+  .home-hero-container {
+    padding: 35px 12px 100px;
+  }
+
+  .home-hero-kicker {
+    font-size: 9px;
+    letter-spacing: 1.3px;
+  }
+
+  .home-hero h1,
+  .home-hero h2 {
+    font-size: clamp(29px, 7vw, 38px);
+    line-height: 1.2;
+    letter-spacing: -0.6px;
+  }
+
+  .home-hero-tagline {
+    font-size: 13px;
+  }
+
+  .home-hero-description {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .home-btn-gold,
+  .home-btn-transparent {
+    font-size: 10px;
+    padding: 11px 13px;
+  }
+
+  .home-hero-caption {
+    left: 20px;
+    bottom: 87px;
+  }
+
+  .home-hero .home-hero-indicators {
+    left: 20px;
+    right: 105px;
+    bottom: 24px;
+    gap: 9px;
+  }
+
+  .home-hero .home-hero-indicators button {
+    font-size: 10px;
+    min-height: 15px;
+    padding-top: 5px;
+  }
+
+  .home-hero .home-hero-indicators button span {
+    display: none;
+  }
+
+  .home-hero .home-hero-prev {
+    right: 65px;
+    bottom: 20px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .home-hero .home-hero-next {
+    right: 20px;
+    bottom: 20px;
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Section umum */
+
+  .home-section-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .home-section-heading h2 {
+    font-size: 27px;
+  }
+
+  .home-section-desc {
+    font-size: 12px;
+  }
+
+  /* Kabar */
+
+  .home-news {
+    padding: 42px 0 50px;
+  }
+
+  .home-news-card img {
+    aspect-ratio: 16 / 9;
+  }
+
+  .home-news-card h3 {
+    font-size: 20px;
+  }
+
+  /* Program */
+
+  .home-programs {
+    padding: 45px 0;
+  }
+
+  .home-program-card img {
+    aspect-ratio: 16 / 9;
+  }
+
+  .home-program-card h3 {
+    font-size: 21px;
+  }
+
+  /* Aspirasi */
+
+  .home-aspiration {
+    padding: 44px 0;
+  }
+
+  .home-aspiration h2 {
+    font-size: 28px;
+  }
+
+  /* Pernyataan resmi */
+
+  .home-statements {
+    padding: 45px 0;
+  }
+
+  .home-statements h2 {
+    font-size: 28px;
+  }
+
+  /* Bergabung */
+
+  .home-join {
+    padding: 25px 0;
+  }
+
+}
+
+/* ==========================================
+   12. AKSESIBILITAS
+========================================== */
+
+.home-page a:focus-visible,
+.home-hero button:focus-visible {
+  outline: 2px solid #d1b071;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .home-page *,
+  .home-page *::before,
+  .home-page *::after {
+    scroll-behavior: auto;
+    transition-duration: 0.01ms !important;
+  }
+
+}
+
+
+/* ==========================================
+   REVISI 08 - PERNYATAAN RESMI PPP
+   DESAIN SESUAI FIGMA
+   FONT POPPINS & INTER
+========================================== */
+
+/* ==========================================
+   1. PENGATURAN DASAR
+========================================== */
+
+.pr-page {
+  --pr-green: #174e3b;
+  --pr-cream: #f8f8f3;
+  --pr-soft: #e9f0e8;
+  --pr-gray: #758179;
+  --pr-border: #dce4dc;
+
+  background: var(--pr-cream);
+  color: var(--pr-green);
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.pr-page h1,
+.pr-page h2,
+.pr-page h3 {
+  font-family: "Poppins", Arial, sans-serif !important;
+}
+
+/* ==========================================
+   2. HERO PERNYATAAN RESMI
+========================================== */
+
+.pr-hero {
+  background: #f8f8f3;
+  padding: 65px 0 70px;
+}
+
+.pr-label {
+  color: #174e3b;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.pr-hero h1 {
+  max-width: 1050px;
+  color: #174e3b;
+  font-size: clamp(35px, 4.5vw, 60px);
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: -1.3px;
+  margin-bottom: 25px;
+}
+
+.pr-hero-description {
+  max-width: 950px;
+  color: #758179;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.9;
+  margin: 0;
+}
+
+/* ==========================================
+   3. TRANSPARANSI INFORMASI
+========================================== */
+
+.pr-information {
+  background: #e9f0e8;
+  padding: 65px 0;
+}
+
+.pr-information-box {
+  border-left: 2px solid #8aaf95;
+  padding: 6px 0 6px 17px;
+  max-width: 1100px;
+}
+
+.pr-information-box h2 {
+  color: #174e3b;
+  font-family: "Inter", Arial, sans-serif !important;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.pr-information-box p {
+  color: #758179;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.85;
+  margin-bottom: 9px;
+}
+
+.pr-information-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================
+   4. FILTER PERNYATAAN
+========================================== */
+
+.pr-list-section {
+  background: #f8f8f3;
+  padding: 55px 0 85px;
+}
+
+.pr-filter-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 42px;
+}
+
+.pr-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 15px;
+  min-height: 37px;
+
+  background: transparent;
+  color: #315b47;
+  border: 1px solid #d7e2d8;
+  border-radius: 2px;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.pr-filter-btn:hover {
+  background: #e9f0e8;
+}
+
+.pr-filter-btn.active {
+  background: #174e3b;
+  border-color: #174e3b;
+  color: #ffffff;
+}
+
+/* ==========================================
+   5. TOOLBAR JUMLAH PERNYATAAN
+========================================== */
+
+.pr-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  margin-bottom: 25px;
+}
+
+#prResultCount {
+  color: #174e3b;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+}
+
+.pr-toolbar-note {
+  color: #87948b;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+/* ==========================================
+   6. DAFTAR PERNYATAAN
+========================================== */
+
+.pr-statement {
+  padding: 28px 0 32px;
+  border-top: 1px solid #dce4dc;
+}
+
+.pr-statement:last-of-type {
+  border-bottom: 1px solid #dce4dc;
+}
+
+.pr-statement[hidden] {
+  display: none !important;
+}
+
+/* Tanggal sebelah kiri */
+
+.pr-statement-date {
+  color: #849188;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.6;
+  margin-bottom: 9px;
+}
+
+/* Jenis pernyataan sebelah kiri */
+
+.pr-statement-type {
+  color: #174e3b;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+/* Kategori dan tanggal sebelah kanan */
+
+.pr-statement-meta {
+  color: #174e3b;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 13px;
+}
+
+/* Judul pernyataan */
+
+.pr-statement h2 {
+  max-width: 940px;
+  color: #174e3b;
+
+  font-family: "Poppins", Arial, sans-serif !important;
+  font-size: clamp(19px, 2vw, 27px);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.4px;
+
+  margin-bottom: 13px;
+}
+
+/* Ringkasan pernyataan */
+
+.pr-statement-description {
+  max-width: 1000px;
+  color: #758179;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.9;
+
+  margin-bottom: 13px;
+}
+
+/* Tombol baca pernyataan */
+
+.pr-readmore {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 0;
+
+  color: #174e3b;
+  background: transparent;
+  border: 0;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.pr-readmore:hover {
+  color: #267c5b;
+  text-decoration: underline;
+}
+
+.pr-readmore i {
+  transition: transform 0.2s ease;
+}
+
+.pr-readmore:hover i {
+  transform: translateX(4px);
+}
+
+/* ==========================================
+   7. PESAN KATEGORI KOSONG
+========================================== */
+
+.pr-empty {
+  text-align: center;
+  padding: 55px 20px;
+
+  background: #e9f0e8;
+  border: 1px solid #d7e2d8;
+  border-radius: 3px;
+
+  margin-top: 20px;
+}
+
+.pr-empty[hidden] {
+  display: none !important;
+}
+
+.pr-empty > i {
+  display: block;
+  color: #678e79;
+  font-size: 35px;
+  margin-bottom: 12px;
+}
+
+.pr-empty h3 {
+  color: #174e3b;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.pr-empty p {
+  color: #758179;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+/* ==========================================
+   8. PERIKSA SUMBER
+========================================== */
+
+.pr-source-section {
+  background: #e9f0e8;
+  padding: 65px 0 70px;
+}
+
+.pr-source-section h2 {
+  color: #174e3b;
+  font-family: "Poppins", Arial, sans-serif !important;
+  font-size: clamp(25px, 3vw, 36px);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+  margin-bottom: 22px;
+}
+
+.pr-source-section p {
+  max-width: 1100px;
+  color: #758179;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.85;
+  margin-bottom: 25px;
+}
+
+.pr-source-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  min-height: 42px;
+  padding: 10px 17px;
+
+  background: transparent;
+  border: 1px solid #6b927d;
+  border-radius: 2px;
+
+  color: #174e3b;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: background-color 0.2s ease;
+}
+
+.pr-source-button:hover {
+  background: #174e3b;
+  color: white;
+}
+
+/* ==========================================
+   9. POPUP DETAIL PERNYATAAN
+========================================== */
+
+.pr-detail-modal {
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.pr-detail-modal .modal-content {
+  background: #f8f8f3;
+  border: none;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.pr-detail-modal .modal-header {
+  background: #e9f0e8;
+  padding: 20px 28px;
+  border-bottom: 1px solid #dce4dc;
+}
+
+.pr-modal-label {
+  color: #174e3b;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.pr-detail-modal .modal-body {
+  padding: 32px 35px;
+}
+
+.pr-modal-meta {
+  color: #678273;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  margin-bottom: 13px;
+}
+
+.pr-detail-modal .modal-body h2 {
+  color: #174e3b;
+  font-family: "Poppins", Arial, sans-serif !important;
+  font-size: clamp(23px, 3vw, 32px);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 25px;
+}
+
+#prModalContent p {
+  color: #697a70;
+  font-size: 13px;
+  line-height: 1.95;
+  margin-bottom: 18px;
+}
+
+/* Disclaimer popup */
+
+.pr-modal-disclaimer {
+  background: #e9f0e8;
+  border-left: 3px solid #8bae99;
+  padding: 15px 18px;
+  margin-top: 28px;
+}
+
+.pr-modal-disclaimer strong {
+  display: block;
+  color: #174e3b;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.pr-modal-disclaimer p {
+  color: #6d8072;
+  font-size: 11px;
+  line-height: 1.75;
+  margin-bottom: 0;
+}
+
+/* Footer popup */
+
+.pr-detail-modal .modal-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+
+  padding: 17px 35px 25px;
+  border-top: 1px solid #dce4dc;
+}
+
+.pr-modal-official-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #174e3b;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.pr-modal-official-link:hover {
+  color: #29835d;
+  text-decoration: underline;
+}
+
+.pr-modal-close {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 10px 20px;
+  min-height: 40px;
+
+  background: #174e3b;
+  color: #ffffff;
+  border: 1px solid #174e3b;
+  border-radius: 3px;
+
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pr-modal-close:hover {
+  background: #0c392a;
+}
+
+/* ==========================================
+   10. RESPONSIVE TABLET
+========================================== */
+
+@media (max-width: 991.98px) {
+
+  .pr-hero {
+    padding: 52px 0 58px;
+  }
+
+  .pr-information {
+    padding: 48px 0;
+  }
+
+  .pr-list-section {
+    padding: 48px 0 65px;
+  }
+
+  .pr-statement {
+    padding: 24px 0 28px;
+  }
+
+  .pr-statement h2 {
+    font-size: 23px;
+  }
+
+  .pr-source-section {
+    padding: 48px 0;
+  }
+
+}
+
+/* ==========================================
+   11. RESPONSIVE HP
+========================================== */
+
+@media (max-width: 767.98px) {
+
+  .pr-hero {
+    padding: 42px 0 48px;
+  }
+
+  .pr-hero h1 {
+    font-size: 34px;
+    line-height: 1.2;
+    letter-spacing: -0.7px;
+  }
+
+  .pr-hero-description {
+    font-size: 12px;
+  }
+
+  .pr-information {
+    padding: 38px 0;
+  }
+
+  .pr-information-box {
+    padding-left: 14px;
+  }
+
+  .pr-information-box p {
+    font-size: 11px;
+  }
+
+  .pr-list-section {
+    padding: 38px 0 55px;
+  }
+
+  .pr-filter-buttons {
+    gap: 7px;
+    margin-bottom: 30px;
+  }
+
+  .pr-filter-btn {
+    font-size: 10px;
+    padding: 9px 11px;
+  }
+
+  .pr-toolbar {
+    gap: 8px;
+  }
+
+  #prResultCount,
+  .pr-toolbar-note {
+    font-size: 10px;
+  }
+
+  .pr-statement {
+    padding: 25px 0;
+  }
+
+  .pr-statement-date {
+    font-size: 10px;
+  }
+
+  .pr-statement-type {
+    font-size: 9px;
+  }
+
+  .pr-statement-meta {
+    font-size: 10px;
+  }
+
+  .pr-statement h2 {
+    font-size: 21px;
+    line-height: 1.35;
+  }
+
+  .pr-statement-description {
+    font-size: 12px;
+  }
+
+  .pr-source-section {
+    padding: 42px 0;
+  }
+
+  .pr-source-section h2 {
+    font-size: 26px;
+  }
+
+  .pr-source-section p {
+    font-size: 12px;
+  }
+
+  .pr-detail-modal .modal-header {
+    padding: 16px 20px;
+  }
+
+  .pr-detail-modal .modal-body {
+    padding: 25px 20px;
+  }
+
+  .pr-detail-modal .modal-footer {
+    padding: 16px 20px 22px;
+  }
+
+}
+
+/* ==========================================
+   12. AKSESIBILITAS
+========================================== */
+
+.pr-filter-btn:focus-visible,
+.pr-readmore:focus-visible,
+.pr-source-button:focus-visible,
+.pr-modal-official-link:focus-visible,
+.pr-modal-close:focus-visible {
+  outline: 2px solid #174e3b;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .pr-filter-btn,
+  .pr-readmore i,
+  .pr-source-button {
+    transition: none;
+  }
+
+}
+
+
+/* ==========================================
+   REVISI 09 - HALAMAN BERGABUNG PPP
+   DESAIN SESUAI FIGMA
+   FONT: POPPINS DAN INTER
+========================================== */
+
+/* ==========================================
+   1. PENGATURAN DASAR
+========================================== */
+
+.join-page {
+  --join-green: #174e3b;
+  --join-dark: #174e3b;
+  --join-cream: #f8f8f3;
+  --join-soft: #e9f0e8;
+  --join-gray: #758179;
+  --join-border: #dce4dc;
+
+  background: var(--join-cream);
+  color: var(--join-green);
+
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.join-page h1,
+.join-page h2,
+.join-page h3 {
+  font-family: "Poppins", Arial, sans-serif !important;
+}
+
+/* Label kecil setiap section */
+
+.join-label {
+  color: #174e3b;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+/* ==========================================
+   2. HERO BERGABUNG
+========================================== */
+
+.join-hero {
+  background: #f8f8f3;
+  padding: 65px 0 56px;
+}
+
+/* Judul utama */
+
+.join-hero-title {
+  max-width: 1000px;
+
+  color: #174e3b;
+  font-size: clamp(36px, 4.4vw, 60px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+
+  margin-bottom: 23px;
+}
+
+/* Deskripsi */
+
+.join-hero-description {
+  max-width: 1050px;
+
+  color: #758179;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.85;
+
+  margin-bottom: 27px;
+}
+
+/* Container gambar */
+
+.join-hero-image-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+/* Gambar utama */
+
+.join-hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  aspect-ratio: 873 / 330;
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 3px;
+}
+
+/* ==========================================
+   3. BENTUK KONTRIBUSI
+========================================== */
+
+.join-contribution {
+  background: #e9f0e8;
+  padding: 67px 0 75px;
+}
+
+/* Judul section */
+
+.join-section-title {
+  color: #174e3b;
+
+  font-size: clamp(27px, 3vw, 38px);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.8px;
+
+  margin-bottom: 28px;
+}
+
+/* Kartu kontribusi */
+
+.join-contribution-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+  height: 100%;
+  min-height: 245px;
+
+  padding: 25px 24px;
+
+  background: #f8f8f3;
+  border: 1px solid rgba(23, 78, 59, 0.04);
+  border-radius: 2px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Efek kartu ketika hover */
+
+.join-contribution-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 22px rgba(0, 50, 35, 0.06);
+}
+
+/* Ikon kartu */
+
+.join-contribution-card > i {
+  color: #45735e;
+  font-size: 25px;
+  line-height: 1;
+
+  margin-bottom: 25px;
+}
+
+/* Judul kartu */
+
+.join-contribution-card h3 {
+  color: #174e3b;
+
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: clamp(18px, 1.6vw, 22px);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.3px;
+
+  margin-bottom: 12px;
+}
+
+/* Deskripsi kartu */
+
+.join-contribution-card p {
+  color: #758179;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.85;
+
+  margin-bottom: 0;
+}
+
+/* ==========================================
+   4. PANDUAN PARTISIPASI
+========================================== */
+
+.join-guide {
+  background: #f8f8f3;
+  padding: 78px 0 85px;
+}
+
+/* Judul panduan */
+
+.join-guide-title {
+  max-width: 570px;
+
+  color: #174e3b;
+  font-size: clamp(27px, 3vw, 39px);
+  font-weight: 700;
+  line-height: 1.23;
+  letter-spacing: -0.8px;
+
+  margin-bottom: 23px;
+}
+
+/* Deskripsi kiri */
+
+.join-guide-description {
+  max-width: 520px;
+
+  color: #758179;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.9;
+
+  margin-bottom: 0;
+}
+
+/* Daftar panduan kanan */
+
+.join-guide-item {
+  padding: 0 0 24px;
+  margin-bottom: 25px;
+
+  border-bottom: 1px solid #dce4dc;
+}
+
+.join-guide-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Judul panduan */
+
+.join-guide-item h3 {
+  color: #174e3b;
+
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: clamp(18px, 1.7vw, 22px);
+  font-weight: 600;
+  line-height: 1.4;
+
+  margin-bottom: 11px;
+}
+
+/* Isi panduan */
+
+.join-guide-item p {
+  color: #758179;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.85;
+
+  margin-bottom: 0;
+}
+
+/* ==========================================
+   5. LANGKAH BERIKUTNYA
+========================================== */
+
+.join-next {
+  background: #174e3b;
+  color: #ffffff;
+
+  padding: 69px 0 65px;
+}
+
+/* Label */
+
+.join-label-light {
+  color: #c5dace;
+}
+
+/* Judul CTA */
+
+.join-next h2 {
+  color: #ffffff;
+
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: clamp(29px, 3.2vw, 41px);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.7px;
+
+  margin-bottom: 22px;
+}
+
+/* Deskripsi */
+
+.join-next-description {
+  max-width: 1050px;
+
+  color: #d5e5d9;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.9;
+
+  margin-bottom: 26px;
+}
+
+/* Tombol Jelajahi Program */
+
+.join-next-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+
+  min-height: 45px;
+  padding: 11px 19px;
+
+  background: #f8f8f3;
+  border: 1px solid #f8f8f3;
+  border-radius: 3px;
+
+  color: #174e3b;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.join-next-button:hover {
+  background: #e3ebe2;
+  border-color: #e3ebe2;
+  color: #174e3b;
+
+  transform: translateY(-2px);
+}
+
+.join-next-button i {
+  font-size: 13px;
+}
+
+/* ==========================================
+   6. SCROLL NAVIGASI
+========================================== */
+
+.join-page section[id] {
+  scroll-margin-top: 30px;
+}
+
+/* ==========================================
+   7. RESPONSIVE TABLET
+========================================== */
+
+@media (max-width: 991.98px) {
+
+  .join-hero {
+    padding: 50px 0;
+  }
+
+  .join-hero-title {
+    font-size: clamp(35px, 5vw, 48px);
+  }
+
+  .join-hero-description {
+    font-size: 13px;
+  }
+
+  .join-contribution {
+    padding: 52px 0 60px;
+  }
+
+  .join-contribution-card {
+    min-height: 220px;
+  }
+
+  .join-guide {
+    padding: 58px 0 65px;
+  }
+
+  .join-guide-title {
+    font-size: 31px;
+  }
+
+  .join-next {
+    padding: 55px 0;
+  }
+
+  .join-next h2 {
+    font-size: 33px;
+  }
+
+}
+
+/* ==========================================
+   8. RESPONSIVE HP
+========================================== */
+
+@media (max-width: 767.98px) {
+
+  .join-hero {
+    padding: 40px 0 45px;
+  }
+
+  .join-label {
+    font-size: 9px;
+    margin-bottom: 18px;
+  }
+
+  .join-hero-title {
+    font-size: 33px;
+    letter-spacing: -0.7px;
+    line-height: 1.2;
+  }
+
+  .join-hero-title br,
+  .join-guide-title br {
+    display: none;
+  }
+
+  .join-hero-description {
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 24px;
+  }
+
+  .join-hero-image {
+    aspect-ratio: 16 / 9;
+    object-position: center;
+  }
+
+  /* Kontribusi */
+
+  .join-contribution {
+    padding: 42px 0 50px;
+  }
+
+  .join-section-title {
+    font-size: 27px;
+  }
+
+  .join-contribution-card {
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .join-contribution-card > i {
+    margin-bottom: 18px;
+  }
+
+  .join-contribution-card h3 {
+    font-size: 20px;
+  }
+
+  .join-contribution-card p {
+    font-size: 12px;
+  }
+
+  /* Panduan */
+
+  .join-guide {
+    padding: 45px 0 53px;
+  }
+
+  .join-guide-title {
+    font-size: 28px;
+  }
+
+  .join-guide-description {
+    font-size: 12px;
+  }
+
+  .join-guide-item {
+    padding-bottom: 20px;
+    margin-bottom: 22px;
+  }
+
+  .join-guide-item h3 {
+    font-size: 19px;
+  }
+
+  .join-guide-item p {
+    font-size: 12px;
+  }
+
+  /* CTA */
+
+  .join-next {
+    padding: 47px 0 53px;
+  }
+
+  .join-next h2 {
+    font-size: 29px;
+  }
+
+  .join-next-description {
+    font-size: 12px;
+  }
+
+  .join-next-button {
+    max-width: 100%;
+    font-size: 11px;
+  }
+
+}
+
+/* ==========================================
+   9. AKSESIBILITAS
+========================================== */
+
+.join-next-button:focus-visible {
+  outline: 2px solid #d1ac67;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .join-contribution-card,
+  .join-next-button {
+    transition: none;
+  }
+
+}
