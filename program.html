@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PPP – Ruang Bersama. Mock-up akademik untuk tugas website Public Relations Digital.">
+  <title>Program & Aksi | PPP – Ruang Bersama</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+  rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- NAVBAR PPP - DESKTOP FIGMA REVISI -->
+<header class="ppp-site-header">
+  <!-- Bar hijau atas -->
+  <div class="ppp-head-top">
+    <div class="container ppp-head-top-inner">
+      <span>KELOMPOK 8 · MATA KULIAH DIGIPR</span>
+      <span class="d-none d-sm-inline">PROTOTIPE AKADEMIK · BUKAN SITUS RESMI PPP</span>
+    </div>
+  </div>
+
+  <!-- Logo + nama partai + tagline -->
+  <div class="ppp-head-main">
+    <div class="container ppp-head-main-inner">
+      <a href="index.html" class="ppp-head-brand" aria-label="Partai Persatuan Pembangunan - Beranda">
+        <img src="assets/images/logo-ppp-navbar.png"
+             alt="Logo PPP"
+             class="ppp-head-logo">
+        <span class="ppp-head-name">
+          <strong>PARTAI</strong>
+          <strong>PERSATUAN</strong>
+          <strong>PEMBANGUNAN</strong>
+        </span>
+      </a>
+      <p class="ppp-head-tagline">Aspirasi Didengar, Informasi Terbuka, Aksi Terasa.</p>
+    </div>
+  </div>
+
+  <!-- Menu + pencarian -->
+  <nav class="navbar navbar-expand-xl ppp-head-nav" aria-label="Navigasi utama">
+    <div class="container ppp-head-nav-inner">
+      <button class="navbar-toggler ppp-head-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#pppNavMenu"
+              aria-controls="pppNavMenu" aria-expanded="false"
+              aria-label="Buka menu navigasi">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="pppNavMenu">
+        <ul class="navbar-nav ppp-head-menu">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang PPP</a></li>
+          <li class="nav-item"><a class="nav-link" href="program.html">Program &amp; Aksi</a></li>
+          <li class="nav-item"><a class="nav-link" href="aspirasi.html">Aspirasi Rakyat</a></li>
+          <li class="nav-item"><a class="nav-link" href="kabar.html">Kabar PPP</a></li>
+          <li class="nav-item"><a class="nav-link" href="pernyataan.html">Pernyataan Resmi</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ &amp; Kontak</a></li>
+          <li class="nav-item"><a class="nav-link" href="bergabung.html">Bergabung</a></li>
+        </ul>
+
+        <!-- Pencarian halaman dan topik website (front-end) -->
+        <form class="ppp-head-search" id="pppSiteSearch" role="search" autocomplete="off">
+          <button type="submit" aria-label="Cari"><i class="bi bi-search"></i></button>
+          <input type="search" id="pppSearchInput" aria-label="Cari halaman atau topik"
+                 placeholder="Cari di situs PPP..." />
+          <div class="ppp-head-results" id="pppSearchResults" aria-live="polite" hidden></div>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- AKHIR NAVBAR PPP -->
+
+
+  <main id="daftar-program">
+  <!-- DAFTAR PROGRAM & AKSI -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="eyebrow eyebrow-light">PROGRAM &amp; AKSI</div>
+      <h1>Gagasan yang berpihak pada<br>kehidupan bersama.</h1>
+      <p>Kenali dua rancangan program kepedulian sosial dan pendidikan dalam mock-up akademik ini. Seluruh informasi masih berupa usulan, bukan kegiatan yang telah dilaksanakan.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Daftar program">
+    <div class="container">
+      <div class="eyebrow">BIDANG KEPEDULIAN</div>
+      <div class="topic-row pb-topics mb-4 mt-1">
+        <span class="visually-hidden">Pilihan bidang kepedulian</span>
+        <a href="#beasiswa">Pendidikan</a>
+        <a href="#peduli-bumi">Lingkungan</a>
+        <a href="#peduli-bumi">Sosial dan Kemanusiaan</a>
+      </div>
+      <h2 class="section-heading mb-2">Dari kepedulian, menjadi gagasan.</h2>
+      <p class="section-subtitle mb-4">Pilih program untuk melihat penjelasan lebih lengkap pada halaman yang sama.</p>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <article class="detail-feature">
+            <a href="#peduli-bumi" aria-label="Lihat detail PPP Peduli Bumi dan Kemanusiaan">
+              <img src="assets/images/peduli-bumi-utama.jpg" alt="Ilustrasi kegiatan sosial dan lingkungan">
+            </a>
+            <div class="eyebrow mt-4">LINGKUNGAN · SOSIAL DAN KEMANUSIAAN</div>
+            <div class="mini-label">Rancangan Program — Mock-up Akademik</div>
+            <h3 class="pb-preview-name">PPP Peduli Bumi dan Kemanusiaan</h3>
+            <p>Merawat lingkungan dan memperkuat kepedulian sosial melalui kegiatan penghijauan, kerja bersama, dan dukungan kemanusiaan.</p>
+            <a class="btn btn-outline-green mt-2" href="#peduli-bumi">Jelajahi Program <i class="bi bi-arrow-down"></i></a>
+          </article>
+        </div>
+        <div class="col-lg-6">
+          <article class="detail-feature">
+            <a href="#beasiswa" aria-label="Lihat detail Beasiswa Pendidikan Pemuda">
+              <img src="assets/images/beasiswa-utama.jpg" alt="Ilustrasi kegiatan belajar bersama">
+            </a>
+            <div class="eyebrow mt-4">PENDIDIKAN</div>
+            <div class="mini-label">Rancangan Program — Mock-up Akademik</div>
+            <h3 class="pb-preview-name">Beasiswa Pendidikan Pemuda</h3>
+            <p>Usulan dukungan pendidikan yang memadukan akses informasi, pendampingan belajar, dan pengembangan keterampilan untuk pemuda.</p>
+            <a class="btn btn-outline-green mt-2" href="#beasiswa">Jelajahi Program <i class="bi bi-arrow-down"></i></a>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAIL PPP PEDULI BUMI: MASIH DALAM FILE program.html -->
+<div class="pb-page" id="peduli-bumi">
+
+  <!-- 1. HERO DETAIL PROGRAM -->
+  <section class="pb-hero">
+    <div class="container">
+      <nav class="pb-breadcrumb" aria-label="Breadcrumb">
+        <a href="#daftar-program">Program &amp; Aksi</a>
+        <span aria-hidden="true">/</span>
+        <span>PPP Peduli Bumi dan Kemanusiaan</span>
+      </nav>
+      <div class="row align-items-center g-4 g-lg-5">
+        <div class="col-lg-6">
+          <p class="pb-label">LINGKUNGAN · SOSIAL DAN KEMANUSIAAN</p>
+          <h1>PPP Peduli Bumi<br class="d-none d-lg-block"> dan Kemanusiaan</h1>
+          <p class="pb-lead">Merawat lingkungan sekaligus memperkuat kepedulian terhadap sesama melalui kegiatan penghijauan, pemberdayaan masyarakat, dan aksi sosial bersama.</p>
+          <p class="pb-academic-note">Rancangan program · mock-up akademik, bukan informasi kegiatan yang telah berjalan.</p>
+        </div>
+        <div class="col-lg-6">
+          <img src="assets/images/peduli-bumi-utama.jpg"
+               alt="Foto kegiatan di area pertanian yang digunakan sebagai ilustrasi program"
+               class="pb-main-image" loading="eager">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. GAMBARAN PROGRAM + TUJUAN -->
+  <section class="pb-section pb-soft">
+    <div class="container">
+      <div class="row g-4 g-lg-5">
+        <div class="col-lg-6">
+          <p class="pb-label">GAMBARAN PROGRAM</p>
+          <h2>Dimulai dari kepedulian,<br>diwujudkan melalui kebersamaan.</h2>
+          <p>Dalam rancangan ini, PPP Peduli Bumi dan Kemanusiaan merupakan gagasan kegiatan sosial dan lingkungan yang mendorong partisipasi masyarakat dalam menciptakan kehidupan yang lebih bersih, sehat, dan berkelanjutan. Kolaborasi bersama relawan dan komunitas lokal diarahkan pada penghijauan, edukasi lingkungan, serta bantuan kemanusiaan bagi masyarakat yang membutuhkan.</p>
+        </div>
+        <div class="col-lg-6">
+          <p class="pb-label">TUJUAN PROGRAM</p>
+          <ol class="pb-objectives">
+            <li><span>01</span> Meningkatkan Kepedulian Lingkungan</li>
+            <li><span>02</span> Memperkuat Solidaritas Sosial</li>
+            <li><span>03</span> Mendorong Partisipasi Masyarakat</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. BENTUK KEGIATAN -->
+  <section class="pb-section pb-paper">
+    <div class="container">
+      <h2 class="pb-section-heading">Bentuk kegiatan.</h2>
+      <div class="row g-3 g-lg-4">
+        <div class="col-lg-4 col-md-6">
+          <article class="pb-info-card">
+            <h3>Aksi Bersih Lingkungan</h3>
+            <p>Kegiatan gotong royong membersihkan lingkungan permukiman, fasilitas umum, dan ruang publik untuk menciptakan kawasan yang lebih bersih dan nyaman.</p>
+          </article>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <article class="pb-info-card">
+            <h3>Penghijauan dan<br>Penanaman Pohon</h3>
+            <p>Kegiatan penanaman serta perawatan pohon bersama masyarakat untuk meningkatkan kualitas lingkungan dan memperluas ruang hijau.</p>
+          </article>
+        </div>
+        <div class="col-lg-4 col-md-12">
+          <article class="pb-info-card">
+            <h3>Bantuan Sosial dan Kemanusiaan</h3>
+            <p>Penyaluran bantuan kebutuhan pokok serta dukungan sosial bagi masyarakat yang membutuhkan melalui koordinasi bersama relawan dan komunitas setempat.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. TAHAPAN PELAKSANAAN -->
+  <section class="pb-section pb-dark">
+    <div class="container">
+      <h2 class="pb-section-heading">Tahapan Pelaksanaan</h2>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <article class="pb-step">
+            <span class="pb-step-number">01</span>
+            <h3>Identifikasi Kebutuhan</h3>
+            <p>Mengidentifikasi kondisi lingkungan dan kebutuhan sosial masyarakat melalui komunikasi dengan warga serta komunitas setempat.</p>
+          </article>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <article class="pb-step">
+            <span class="pb-step-number">02</span>
+            <h3>Koordinasi dan Persiapan</h3>
+            <p>Menyusun kegiatan, menentukan lokasi, serta mempersiapkan kebutuhan bersama relawan dan pihak terkait.</p>
+          </article>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <article class="pb-step">
+            <span class="pb-step-number">03</span>
+            <h3>Pelaksanaan Kegiatan</h3>
+            <p>Melaksanakan aksi lingkungan dan kegiatan kemanusiaan secara kolaboratif dengan melibatkan masyarakat.</p>
+          </article>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <article class="pb-step">
+            <span class="pb-step-number">04</span>
+            <h3>Evaluasi dan Tindak Lanjut</h3>
+            <p>Melakukan evaluasi kegiatan serta mengidentifikasi kebutuhan lanjutan untuk mendukung keberlanjutan program.</p>
+          </article>
+        </div>
+      </div>
+      <p class="pb-footnote">Jadwal, lokasi, biaya, dan penanggung jawab belum ditentukan. Pelaksanaan nyata memerlukan persetujuan organisasi dan penilaian kebutuhan.</p>
+    </div>
+  </section>
+
+  <!-- 5. GALERI KEGIATAN -->
+  <section class="pb-section pb-paper">
+    <div class="container">
+      <h2 class="pb-section-heading">Galeri Kegiatan</h2>
+      <p class="pb-gallery-intro">Melalui penghijauan, aksi lingkungan, dan kegiatan sosial, semangat gotong royong menjadi bagian penting dalam membangun masyarakat yang lebih peduli terhadap lingkungan dan sesama.</p>
+      <div class="row g-3 g-lg-4 pb-gallery">
+        <div class="col-md-6">
+          <img src="assets/images/peduli-bumi-galeri-1.jpg"
+               alt="Ilustrasi kegiatan penghijauan dan penanaman pohon" loading="lazy">
+        </div>
+        <div class="col-md-6">
+          <img src="assets/images/peduli-bumi-galeri-2.jpg"
+               alt="Ilustrasi kegiatan sosial bersama warga di area pertanian" loading="lazy">
+        </div>
+      </div>
+      <div class="pb-bottom-links">
+        <a class="pb-btn-outline" href="#daftar-program">Kembali ke Program &amp; Aksi <i class="bi bi-arrow-up-right"></i></a>
+        <a class="pb-btn-filled" href="faq.html">Pertanyaan? FAQ &amp; Kontak <i class="bi bi-arrow-up-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+  <!-- DETAIL BEASISWA PENDIDIKAN PEMUDA - MASIH DALAM program.html -->
+  <div class="pb-page beasiswa-page" id="beasiswa">
+
+    <!-- 1. HERO BEASISWA -->
+    <section class="pb-hero">
+      <div class="container">
+        <nav class="pb-breadcrumb" aria-label="Breadcrumb">
+          <a href="#daftar-program">Program &amp; Aksi</a>
+          <span aria-hidden="true">/</span>
+          <span>Beasiswa Pendidikan Pemuda</span>
+        </nav>
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-6">
+            <p class="pb-label">PENDIDIKAN</p>
+            <h2 class="beasiswa-title">Beasiswa<br class="d-none d-lg-block"> Pendidikan<br class="d-none d-lg-block"> Pemuda</h2>
+            <p class="pb-lead">Membuka kesempatan pendidikan yang lebih luas bagi generasi muda melalui dukungan biaya pendidikan, pendampingan belajar, dan pengembangan keterampilan untuk membangun masa depan yang lebih baik.</p>
+            <p class="pb-academic-note">Rancangan program akademik; belum merupakan pendaftaran beasiswa aktif.</p>
+          </div>
+          <div class="col-lg-6">
+            <img src="assets/images/beasiswa-utama.jpg" class="pb-main-image"
+                 alt="Ilustrasi tiga pemuda berdiskusi dan belajar di perpustakaan" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. GAMBARAN DAN TUJUAN -->
+    <section class="pb-section pb-soft">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-6">
+            <p class="pb-label">GAMBARAN PROGRAM</p>
+            <h2>Dimulai dari kesempatan, tumbuh bersama pendidikan.</h2>
+            <p>Beasiswa Pendidikan Pemuda merupakan rancangan program dukungan pendidikan yang berfokus pada peningkatan akses belajar bagi pelajar dan mahasiswa Indonesia. Melalui bantuan biaya pendidikan, pendampingan akademik, dan pengembangan keterampilan, program ini bertujuan membantu generasi muda mengembangkan potensi serta mempersiapkan masa depan yang lebih baik.</p>
+          </div>
+          <div class="col-lg-6">
+            <p class="pb-label">TUJUAN YANG DIUSULKAN</p>
+            <ol class="pb-objectives">
+              <li><span>01</span> Memperluas Akses Pendidikan</li>
+              <li><span>02</span> Mengembangkan Potensi Generasi Muda</li>
+              <li><span>03</span> Mempersiapkan Masa Depan yang Berdaya Saing</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. BENTUK DUKUNGAN -->
+    <section class="pb-section pb-paper">
+      <div class="container">
+        <h2 class="pb-section-heading">Dukungan pendidikan untuk masa depan yang lebih baik.</h2>
+        <div class="row g-3 g-lg-4">
+          <div class="col-lg-4 col-md-6">
+            <article class="pb-info-card">
+              <h3>Bantuan Biaya Pendidikan</h3>
+              <p>Pemberian bantuan pendidikan bagi pelajar dan mahasiswa untuk mendukung kebutuhan akademik, seperti perlengkapan belajar, buku, dan biaya pendidikan.</p>
+            </article>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <article class="pb-info-card">
+              <h3>Pendampingan Akademik dan Pengembangan Diri</h3>
+              <p>Kegiatan mentoring, pelatihan keterampilan, dan pembinaan untuk membantu peserta meningkatkan kemampuan akademik maupun nonakademik.</p>
+            </article>
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <article class="pb-info-card">
+              <h3>Pengembangan Karier dan Kepemimpinan</h3>
+              <p>Workshop persiapan karier, pengembangan kepemimpinan, serta pelatihan keterampilan yang mendukung kesiapan generasi muda menghadapi dunia kerja.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. TAHAPAN PELAKSANAAN -->
+    <section class="pb-section pb-dark">
+      <div class="container">
+        <p class="pb-label beasiswa-light-label">TAHAPAN PELAKSANAAN · SELURUHNYA USULAN</p>
+        <h2 class="pb-section-heading">Membangun kesempatan melalui proses yang terarah.</h2>
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <article class="pb-step">
+              <span class="pb-step-number">01</span>
+              <h3>Pendaftaran dan Seleksi Administrasi</h3>
+              <p>Calon peserta melakukan pendaftaran dengan melengkapi identitas, dokumen pendidikan, dan persyaratan administrasi yang ditentukan.</p>
+            </article>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <article class="pb-step">
+              <span class="pb-step-number">02</span>
+              <h3>Penilaian dan Wawancara</h3>
+              <p>Peserta mengikuti proses penilaian berdasarkan prestasi akademik, kondisi ekonomi, motivasi belajar, dan potensi pengembangan diri.</p>
+            </article>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <article class="pb-step">
+              <span class="pb-step-number">03</span>
+              <h3>Penyaluran Bantuan dan Pendampingan</h3>
+              <p>Penerima beasiswa memperoleh dukungan pendidikan serta mengikuti kegiatan mentoring, pelatihan, dan pengembangan keterampilan.</p>
+            </article>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <article class="pb-step">
+              <span class="pb-step-number">04</span>
+              <h3>Evaluasi dan Pengembangan Berkelanjutan</h3>
+              <p>Perkembangan penerima beasiswa dipantau melalui evaluasi akademik dan kegiatan pembinaan untuk mendukung keberhasilan pendidikan.</p>
+            </article>
+          </div>
+        </div>
+        <p class="pb-footnote">Seluruh tahapan di atas adalah rancangan simulasi, bukan prosedur pendaftaran resmi yang sudah dibuka.</p>
+      </div>
+    </section>
+
+    <!-- 5. GALERI PENDIDIKAN -->
+    <section class="pb-section pb-paper">
+      <div class="container">
+        <p class="pb-label">GALERI PENDIDIKAN</p>
+        <h2 class="pb-section-heading">Belajar bersama, berkembang untuk masa depan.</h2>
+        <p class="pb-gallery-intro">Pendidikan tidak hanya berlangsung di ruang kelas, tetapi juga melalui diskusi, pendampingan, dan kolaborasi. Berbagai kegiatan pengembangan diri menjadi bagian dari upaya membentuk generasi muda yang berpengetahuan, percaya diri, dan siap menghadapi tantangan masa depan.</p>
+        <div class="row g-3 g-lg-4 pb-gallery">
+          <div class="col-md-6">
+            <img src="assets/images/beasiswa-galeri-1.jpg" alt="Ilustrasi kelompok pemuda belajar bersama di ruang baca" loading="lazy">
+          </div>
+          <div class="col-md-6">
+            <img src="assets/images/beasiswa-galeri-2.jpg" alt="Ilustrasi diskusi kelompok pemuda di luar ruangan" loading="lazy">
+          </div>
+        </div>
+        <div class="pb-bottom-links">
+          <a class="pb-btn-outline" href="#daftar-program">Kembali ke Program &amp; Aksi <i class="bi bi-arrow-up-right"></i></a>
+          <a class="pb-btn-filled" href="faq.html">Pertanyaan? FAQ &amp; Kontak <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</main>
+
+  <section class="footer-cta">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+      <h2>Kebersamaan punya banyak bentuk.</h2>
+      <a class="btn btn-outline-light" href="bergabung.html">Kenali cara bergabung <i class="bi bi-arrow-up-right"></i></a>
+    </div>
+  </section>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <a class="footer-brand" href="index.html">PPP – Ruang Bersama</a>
+          <p class="footer-tagline">Aspirasi Didengar, Informasi Terbuka, Aksi Terasa.</p>
+          <p class="footer-small">Rujukan sumber: ppp.or.id · Mock-up akademik</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Jelajahi</h6>
+          <a href="index.html">Beranda</a>
+          <a href="tentang.html">Tentang PPP</a>
+          <a href="program.html">Program &amp; Aksi</a>
+          <a href="aspirasi.html">Aspirasi Rakyat</a>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Informasi</h6>
+          <a href="kabar.html">Kabar PPP</a>
+          <a href="pernyataan.html">Pernyataan Resmi</a>
+          <a href="faq.html">FAQ &amp; Kontak</a>
+          <a href="bergabung.html">Bergabung</a>
+        </div>
+        <div class="col-lg-3">
+          <h6>Catatan</h6>
+          <p class="footer-small">Website ini merupakan rancangan untuk kebutuhan akademik. Konten, program, dan formulir di dalamnya bersifat simulasi, bukan publikasi atau layanan resmi.</p>
+        </div>
+      </div>
+      <div class="footer-bottom d-flex flex-column flex-sm-row justify-content-between gap-2">
+        <span>© 2026 PPP – Ruang Bersama. Mock-up akademik.</span>
+        <span>Desain untuk tugas Public Relations Digital</span>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

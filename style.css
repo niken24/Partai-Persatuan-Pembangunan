@@ -1,0 +1,2029 @@
+
+/* ==========================================
+   WEBSITE PPP - STYLE.CSS LENGKAP
+   Bootstrap 5 - Responsive
+========================================== */
+
+/* ==========================================
+   1. GLOBAL
+========================================== */
+
+:root {
+  --green: #00513f;
+  --green-dark: #004b3b;
+  --green-deep: #003f32;
+  --green-soft: #eaf1e8;
+  --cream: #f8f8f2;
+  --paper: #fffefa;
+  --ink: #183c32;
+  --muted: #77847d;
+  --line: #dce4dc;
+  --gold: #d1ac67;
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "DM Sans", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--green);
+}
+
+/* ==========================================
+   2. KOMPONEN UMUM
+========================================== */
+
+.topline {
+  min-height: 23px;
+  padding: 4px 0;
+  background: var(--green-dark);
+  color: #dbe9df;
+  font-size: 9px;
+  letter-spacing: .06em;
+}
+
+.site-navbar {
+  min-height: 62px;
+  background: rgba(248, 248, 242, .97);
+  border-bottom: 1px solid var(--line);
+  z-index: 1000;
+}
+
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--green) !important;
+}
+
+.brand-mark {
+  font-family: var(--serif);
+  font-size: 29px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+  border-left: 1px solid #cfd9d0;
+  padding-left: 10px;
+}
+
+.brand-copy strong {
+  font-size: 10px;
+  letter-spacing: .09em;
+}
+
+.brand-copy small {
+  font-size: 8px;
+  color: var(--muted);
+}
+
+.navbar-nav {
+  gap: 2px;
+}
+
+.site-navbar .nav-link {
+  color: #52665d;
+  font-size: 11px;
+  padding: 12px 10px !important;
+  border-bottom: 2px solid transparent;
+}
+
+.site-navbar .nav-link:hover,
+.site-navbar .nav-link.active {
+  color: var(--green);
+  border-bottom-color: var(--green);
+}
+
+.navbar-toggler {
+  border: 1px solid var(--line);
+  padding: 5px 8px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* ==========================================
+   3. BUTTON & SECTION UMUM
+========================================== */
+
+.btn {
+  font-size: 11px;
+  border-radius: 2px;
+  padding: 10px 15px;
+  font-weight: 600;
+}
+
+.btn-cream {
+  background: var(--cream);
+  color: var(--green);
+  border: 1px solid var(--cream);
+}
+
+.btn-cream:hover {
+  background: #e9efe7;
+  color: var(--green-deep);
+}
+
+.btn-outline-green {
+  border: 1px solid #6c9687;
+  color: var(--green);
+  background: transparent;
+}
+
+.btn-outline-green:hover {
+  background: var(--green);
+  border-color: var(--green);
+  color: white;
+}
+
+.btn-green {
+  background: var(--green);
+  color: white;
+  border: 1px solid var(--green);
+}
+
+.btn-green:hover {
+  background: var(--green-deep);
+  color: white;
+}
+
+.btn i {
+  margin-left: 7px;
+}
+
+.eyebrow {
+  color: var(--green);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.eyebrow-light {
+  color: #b8d6c7;
+}
+
+.section {
+  padding: 64px 0;
+}
+
+.section-intro {
+  background: var(--cream);
+}
+
+.section-soft {
+  background: var(--green-soft);
+}
+
+.section-heading {
+  font-family: var(--serif);
+  color: var(--green);
+  font-size: clamp(25px, 3vw, 35px);
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -.025em;
+  margin: 0;
+}
+
+.section-heading-spaced {
+  margin-bottom: 25px;
+}
+
+.body-copy {
+  color: #718079;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.section-subtitle {
+  color: var(--muted);
+  font-size: 11px;
+  max-width: 750px;
+}
+
+.section-topline {
+  margin-bottom: 10px;
+}
+
+/* ==========================================
+   4. LANDING PAGE
+========================================== */
+
+.hero-section {
+  display: grid;
+  grid-template-columns: 1.03fr .97fr;
+  min-height: 390px;
+  background: var(--green-dark);
+  color: white;
+}
+
+.hero-copy {
+  padding: clamp(32px, 5vw, 72px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-copy h1,
+.page-hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(32px, 4vw, 49px);
+  line-height: 1.12;
+  letter-spacing: -.035em;
+  margin: 0 0 15px;
+  font-weight: 500;
+}
+
+.hero-lead {
+  font-size: 14px;
+  margin-bottom: 16px;
+  color: #e0eee6;
+}
+
+.hero-description {
+  max-width: 470px;
+  color: #c6d9cf;
+  font-size: 11px;
+  margin-bottom: 22px;
+}
+
+.hero-image-wrap {
+  min-height: 390px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image-wrap img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+}
+
+.image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 7px 14px;
+  font-size: 8px;
+  color: white;
+  background: rgba(0, 0, 0, .28);
+}
+
+.trust-strip {
+  background: var(--green-soft);
+  color: var(--green);
+  padding: 13px 0;
+  font-size: 10px;
+}
+
+/* Kartu informasi */
+
+.info-card {
+  display: block;
+  min-height: 150px;
+  padding: 20px;
+  background: rgba(255, 255, 255, .7);
+  border: 1px solid rgba(0, 81, 63, .04);
+  transition: transform .2s ease, background .2s ease;
+}
+
+.info-card:hover {
+  background: white;
+  transform: translateY(-3px);
+  color: var(--green);
+}
+
+.info-card > i {
+  font-size: 17px;
+  color: var(--green);
+}
+
+.info-card h3 {
+  font-family: var(--serif);
+  font-size: 18px;
+  margin: 10px 0 7px;
+  font-weight: 500;
+}
+
+.info-card p,
+.feature-card p,
+.news-card p {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.65;
+  margin-bottom: 9px;
+}
+
+.card-link {
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+.feature-card img {
+  width: 100%;
+  height: 185px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.feature-card h3,
+.news-card h3 {
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--green);
+  margin: 5px 0 8px;
+}
+
+.mini-label {
+  color: #a0aaa3;
+  font-size: 9px;
+  margin-top: 3px;
+}
+
+.topic-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  border-top: 1px solid var(--line);
+  margin-top: 26px;
+  padding-top: 16px;
+}
+
+.topic-row span {
+  width: 100%;
+  font-size: 9px;
+  letter-spacing: .1em;
+  font-weight: 700;
+}
+
+.topic-row a {
+  padding: 5px 10px;
+  border: 1px solid #d4e0d5;
+  color: #5d766b;
+  font-size: 9px;
+}
+
+.topic-row a:hover {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.news-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.news-card h3 {
+  font-size: 19px;
+}
+
+.aspiration-band {
+  background: var(--green-dark);
+  color: white;
+  padding: 38px 0;
+}
+
+.aspiration-band h2 {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 500;
+}
+
+.aspiration-band p {
+  color: #d1e2d8;
+  font-size: 11px;
+  max-width: 680px;
+}
+
+.aspiration-band .small-note {
+  font-size: 9px;
+  color: #b7d1c4;
+  margin-top: 12px;
+}
+
+/* ==========================================
+   5. CAROUSEL HERO PPP
+========================================== */
+
+.ppp-hero {
+  position: relative;
+  height: clamp(570px, 72vh, 760px);
+  background: #084b39;
+  color: white;
+  overflow: hidden;
+}
+
+.ppp-hero .carousel-inner,
+.ppp-hero .carousel-item {
+  height: 100%;
+}
+
+.ppp-hero .carousel-item {
+  position: relative;
+}
+
+.ppp-hero .ppp-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ppp-hero .ppp-hero-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 60, 44, .98) 0%,
+    rgba(0, 60, 44, .89) 33%,
+    rgba(0, 60, 44, .47) 70%,
+    rgba(0, 60, 44, .17) 100%
+  );
+}
+
+.ppp-hero .ppp-hero-layout {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  padding-bottom: 75px;
+}
+
+.ppp-hero .ppp-hero-content {
+  max-width: 690px;
+}
+
+.ppp-hero .ppp-hero-kicker {
+  color: #dae8dc;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 22px;
+}
+
+.ppp-hero h1,
+.ppp-hero h2 {
+  color: white;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: clamp(33px, 4.2vw, 66px);
+  line-height: 1.13;
+  letter-spacing: -1.5px;
+  margin-bottom: 20px;
+}
+
+.ppp-hero h1 span,
+.ppp-hero h2 span {
+  color: #d7b777;
+}
+
+.ppp-hero .ppp-hero-tagline {
+  color: #f4f5ef;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.ppp-hero .ppp-hero-description {
+  max-width: 570px;
+  color: #d6e5da;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 27px;
+}
+
+.ppp-hero .ppp-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.ppp-hero .ppp-hero-btn,
+.ppp-hero .ppp-hero-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  min-height: 42px;
+  padding: 11px 19px;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .2s, color .2s;
+}
+
+.ppp-hero .ppp-hero-btn {
+  background: #d7b777;
+  color: #173d30;
+  border: 1px solid #d7b777;
+}
+
+.ppp-hero .ppp-hero-btn:hover {
+  background: #edd09a;
+  color: #173d30;
+}
+
+.ppp-hero .ppp-hero-btn-outline {
+  color: white;
+  border: 1px solid rgba(255,255,255,.72);
+}
+
+.ppp-hero .ppp-hero-btn-outline:hover {
+  color: #173d30;
+  background: white;
+}
+
+.ppp-hero .ppp-hero-arrow {
+  position: absolute;
+  z-index: 4;
+  top: auto;
+  bottom: 100px;
+  left: auto;
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+  background: rgba(2,48,36,.6);
+  border: 1px solid rgba(255,255,255,.5);
+  border-radius: 50%;
+  font-size: 17px;
+}
+
+.ppp-hero .ppp-hero-arrow:hover {
+  background: #d7b777;
+}
+
+.ppp-hero .ppp-hero-prev {
+  right: 100px;
+}
+
+.ppp-hero .ppp-hero-next {
+  right: 48px;
+}
+
+.ppp-hero .ppp-hero-indicators {
+  position: absolute;
+  z-index: 3;
+  bottom: 23px;
+  left: 0;
+  right: 0;
+  width: calc(100% - 96px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 18px;
+}
+
+.ppp-hero .ppp-hero-indicators button {
+  width: 100%;
+  height: auto;
+  min-height: 40px;
+  margin: 0;
+  padding: 12px 0 0;
+  border: 0;
+  border-top: 2px solid rgba(255,255,255,.45);
+  border-radius: 0;
+  box-sizing: border-box;
+  background: transparent;
+  color: #eff4ed;
+  text-align: left;
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .9px;
+  text-indent: 0;
+  opacity: .8;
+}
+
+.ppp-hero .ppp-hero-indicators button.active {
+  border-top-color: #d7b777;
+  color: white;
+  opacity: 1;
+}
+
+/* ==========================================
+   6. NAVBAR PPP FIGMA REVISI
+========================================== */
+
+.ppp-site-header {
+  color: #174d3a;
+  font-family: var(--sans);
+}
+
+.ppp-head-top {
+  background: #174d3a;
+  color: #f3f5ed;
+  font-size: 10px;
+  letter-spacing: .07em;
+}
+
+.ppp-head-top-inner {
+  min-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ppp-head-main {
+  background: #f8f8f3;
+  border-bottom: 1px solid #d8dfd7;
+}
+
+.ppp-head-main-inner {
+  min-height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.ppp-head-brand {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  color: #174d3a;
+  text-decoration: none;
+}
+
+.ppp-head-logo {
+  width: 106px;
+  height: 106px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.ppp-head-name {
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+  border-left: 1px solid #d2b173;
+  font-size: clamp(18px, 2.1vw, 28px);
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: .06em;
+}
+
+.ppp-head-name strong {
+  font-weight: 700;
+}
+
+.ppp-head-tagline {
+  margin: 0;
+  color: #6c7972;
+  font-size: 12px;
+  text-align: right;
+}
+
+.ppp-head-nav {
+  background: #f8f8f3;
+  border-bottom: 1px solid #d7dfd7;
+  padding: 0;
+  position: relative;
+  z-index: 1100;
+}
+
+.ppp-head-nav-inner {
+  min-height: 44px;
+}
+
+.ppp-head-nav .navbar-collapse {
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ppp-head-menu {
+  flex: 1 1 auto;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.ppp-head-menu .nav-link {
+  color: #66736d;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 13px 0 12px !important;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+}
+
+.ppp-head-menu .nav-link:hover,
+.ppp-head-menu .nav-link.active {
+  color: #174d3a;
+  border-bottom-color: #174d3a;
+}
+
+.ppp-head-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 0 0 226px;
+  height: 35px;
+  margin-left: 14px;
+  border: 1px solid #bccbc1;
+  border-radius: 4px;
+  background: white;
+}
+
+.ppp-head-search:focus-within {
+  border-color: #174d3a;
+  box-shadow: 0 0 0 2px rgba(23,77,58,.1);
+}
+
+.ppp-head-search button {
+  color: #174d3a;
+  border: 0;
+  background: none;
+  padding: 0 11px;
+  font-size: 16px;
+}
+
+.ppp-head-search input {
+  min-width: 0;
+  width: 100%;
+  padding: 7px 8px 7px 0;
+  color: #284b3b;
+  font-size: 12px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+.ppp-head-search input::placeholder {
+  color: #7d8980;
+}
+
+.ppp-head-results {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #cad8cd;
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 1500;
+}
+
+.ppp-head-results[hidden] {
+  display: none;
+}
+
+.ppp-head-results a {
+  display: block;
+  color: #174d3a;
+  font-size: 12px;
+  padding: 9px 12px;
+  text-decoration: none;
+  border-bottom: 1px solid #edf1ec;
+}
+
+.ppp-head-results a:hover {
+  background: #e7eee6;
+}
+
+.ppp-no-results {
+  display: block;
+  padding: 12px;
+  color: #63736a;
+  font-size: 12px;
+}
+
+.ppp-head-toggler {
+  margin: 7px 0;
+  border: 1px solid #a6b9aa;
+}
+
+/* ==========================================
+   7. KABAR TERBARU PPP
+========================================== */
+
+.kabar-terbaru-section {
+  background: #e9f0e8;
+  padding: 65px 0 70px;
+  font-family: var(--sans);
+}
+
+.kabar-label {
+  color: #174e3b;
+  letter-spacing: 1.2px;
+  font-size: 10px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.kabar-heading {
+  color: #174e3b;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.kabar-subtitle {
+  color: #78877c;
+  font-size: 13px;
+}
+
+.kabar-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #547c67;
+  color: #174e3b;
+  padding: 10px 15px;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.kabar-button:hover {
+  background: #174e3b;
+  color: white;
+}
+
+.kabar-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.kabar-image {
+  width: 100%;
+  aspect-ratio: 219 / 135;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.kabar-image-source {
+  font-size: 9px;
+  color: #829187;
+  margin: 7px 0 13px;
+}
+
+.kabar-category {
+  font-size: 9px;
+  color: #17523e;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.kabar-source {
+  color: #557163;
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+.kabar-title {
+  color: #174e3b;
+  font-size: 23px;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.kabar-description {
+  color: #78877c;
+  font-size: 12px;
+  line-height: 1.6;
+  margin-bottom: 17px;
+}
+
+.kabar-readmore {
+  margin-top: auto;
+  display: inline-flex;
+  gap: 7px;
+  color: #174e3b;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.kabar-readmore:hover {
+  color: #247e5b;
+  text-decoration: underline;
+}
+
+/* ==========================================
+   8. TENTANG PPP
+========================================== */
+
+.tentang-page {
+  --tp-dark: #174e3b;
+  --tp-paper: #f8f8f3;
+  --tp-soft: #e9f0e8;
+  --tp-muted: #6e7a72;
+  --tp-border: #d5e0d5;
+  font-family: var(--sans);
+  color: var(--tp-dark);
+}
+
+.tentang-page .tp-cream {
+  background: var(--tp-paper);
+}
+
+.tentang-page .tp-soft {
+  background: var(--tp-soft);
+}
+
+.tentang-page .tp-section {
+  padding: 62px 0 65px;
+}
+
+.tentang-page .tp-kicker {
+  color: var(--tp-dark);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin: 0 0 18px;
+}
+
+.tentang-page h1,
+.tentang-page h2,
+.tentang-page h3 {
+  color: var(--tp-dark);
+}
+
+.tentang-page h2 {
+  font-weight: 700;
+  font-size: clamp(26px, 3vw, 35px);
+  line-height: 1.2;
+  letter-spacing: -.6px;
+  margin: 0 0 24px;
+}
+
+.tentang-page p {
+  font-size: 13px;
+  color: var(--tp-muted);
+  line-height: 1.85;
+}
+
+.tentang-page .tp-hero {
+  background: var(--tp-paper);
+  padding: 58px 0 56px;
+}
+
+.tentang-page .tp-hero h1 {
+  font-size: clamp(34px, 4.2vw, 54px);
+  line-height: 1.12;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  margin: 0 0 22px;
+}
+
+.tentang-page .tp-hero .tp-intro {
+  max-width: 850px;
+  font-size: 13px;
+}
+
+.tentang-page .tp-photo img {
+  width: 100%;
+  aspect-ratio: 1000 / 665;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.tentang-page .tp-photo figcaption {
+  color: #839189;
+  font-size: 10px;
+  margin-top: 8px;
+}
+
+.tentang-page .tp-wide-copy {
+  max-width: 1100px;
+  margin-bottom: 8px;
+}
+
+.tentang-page .tp-history-card {
+  min-height: 185px;
+  height: 100%;
+  border: 1px solid var(--tp-border);
+  padding: 20px 21px;
+}
+
+.tentang-page .tp-history-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 13px;
+}
+
+.tentang-page .tp-history-card p {
+  font-size: 12px;
+}
+
+.tentang-page .tp-vision-block {
+  margin-bottom: 36px;
+}
+
+.tentang-page .tp-vision-block h2,
+.tentang-page .tp-mission-block h2 {
+  margin-bottom: 15px;
+}
+
+.tentang-page .tp-mission-block ol {
+  color: var(--tp-muted);
+  font-size: 13px;
+  line-height: 1.95;
+  padding-left: 20px;
+}
+
+/* Lima Khidmat */
+
+.tentang-page .tp-section-title {
+  margin-bottom: 26px;
+}
+
+.tentang-page .tp-khidmat-card {
+  background: white;
+  border: 1px solid rgba(0,81,63,.06);
+  min-height: 205px;
+  height: 100%;
+  padding: 20px 21px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tentang-page .tp-khidmat-card > i {
+  color: #577f6e;
+  font-size: 18px;
+  margin-bottom: 19px;
+}
+
+.tentang-page .tp-khidmat-card h3 {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.tentang-page .tp-khidmat-card p {
+  font-size: 11px;
+  line-height: 1.7;
+  margin-bottom: 13px;
+}
+
+.tentang-page .tp-khidmat-card a {
+  color: var(--tp-dark);
+  font-size: 10px;
+  font-weight: 700;
+  margin-top: auto;
+}
+
+.tentang-page .tp-source-notice {
+  padding: 6px 0 7px 18px;
+  border-left: 2px solid #9db6a3;
+  margin-bottom: 25px;
+}
+
+.tentang-page .tp-source-notice strong {
+  font-size: 12px;
+}
+
+.tentang-page .tp-check-title {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.tentang-page .tp-outline-btn {
+  display: inline-flex;
+  gap: 15px;
+  align-items: center;
+  border: 1px solid #527d69;
+  padding: 10px 15px;
+  color: var(--tp-dark);
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.tentang-page .tp-outline-btn:hover {
+  background: var(--tp-dark);
+  color: white;
+}
+
+/* ==========================================
+   9. PROGRAM & AKSI
+========================================== */
+
+.page-hero {
+  background: var(--green-dark);
+  color: white;
+  padding: 55px 0 58px;
+}
+
+.page-hero h1 {
+  max-width: 780px;
+}
+
+.page-hero p {
+  color: #c8ddd2;
+  font-size: 13px;
+  max-width: 650px;
+}
+
+.detail-feature {
+  height: 100%;
+}
+
+.detail-feature img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.detail-feature h2 {
+  font-family: var(--serif);
+  color: var(--green);
+  font-size: 26px;
+}
+
+.detail-feature p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.detail-feature h3 {
+  color: var(--green);
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+#daftar-program,
+#peduli-bumi,
+#beasiswa {
+  scroll-margin-top: 22px;
+}
+
+.pb-preview-name {
+  font-family: var(--serif);
+  font-size: 25px;
+  font-weight: 500;
+  color: #174e3b;
+  margin: 8px 0;
+}
+
+#daftar-program .detail-feature img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ==========================================
+   10. DETAIL PPP PEDULI BUMI
+========================================== */
+
+.pb-page {
+  --pb-green: #174e3b;
+  --pb-gold: #d1ac67;
+  --pb-paper: #f8f8f3;
+  --pb-soft: #e9f0e8;
+  --pb-gray: #6c7970;
+  color: var(--pb-green);
+  font-family: var(--sans);
+}
+
+.pb-page .pb-hero {
+  background: var(--pb-paper);
+  padding: 54px 0 60px;
+}
+
+.pb-page .pb-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  color: #687970;
+  font-size: 11px;
+  margin-bottom: 42px;
+}
+
+.pb-page .pb-breadcrumb a:hover {
+  color: var(--pb-green);
+  text-decoration: underline;
+}
+
+.pb-page .pb-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.25px;
+  color: var(--pb-green);
+  margin: 0 0 19px;
+}
+
+.pb-page h1,
+.pb-page h2,
+.pb-page h3 {
+  font-family: var(--sans);
+  color: var(--pb-green);
+}
+
+.pb-page h1 {
+  font-size: clamp(35px, 4.2vw, 59px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+  margin-bottom: 22px;
+}
+
+.pb-page .pb-lead {
+  max-width: 540px;
+  color: var(--pb-gray);
+  font-size: 13px;
+  line-height: 1.85;
+  margin-bottom: 14px;
+}
+
+.pb-page .pb-academic-note {
+  font-size: 10px;
+  color: #79867d;
+}
+
+.pb-page .pb-main-image {
+  width: 100%;
+  aspect-ratio: 749 / 389;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.pb-page .pb-section {
+  padding: 66px 0;
+}
+
+.pb-page .pb-soft {
+  background: var(--pb-soft);
+}
+
+.pb-page .pb-paper {
+  background: var(--pb-paper);
+}
+
+.pb-page .pb-section h2 {
+  font-size: clamp(26px, 3.1vw, 36px);
+  font-weight: 700;
+  line-height: 1.18;
+  margin-bottom: 23px;
+}
+
+.pb-page .pb-section p {
+  color: var(--pb-gray);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+/* Tujuan Program */
+
+.pb-page .pb-objectives {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pb-page .pb-objectives li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 15px 0;
+  border-bottom: 1px solid #d5e0d6;
+  color: #697970;
+  font-size: 15px;
+}
+
+.pb-page .pb-objectives span {
+  min-width: 32px;
+  color: var(--pb-green);
+  font-size: 22px;
+  font-weight: 500;
+}
+
+/* Bentuk Kegiatan */
+
+.pb-page .pb-section-heading {
+  margin-bottom: 28px !important;
+}
+
+.pb-page .pb-info-card {
+  min-height: 196px;
+  height: 100%;
+  padding: 22px 20px;
+  border: 1px solid #d8dfd6;
+}
+
+.pb-page .pb-info-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.27;
+  margin-bottom: 13px;
+}
+
+.pb-page .pb-info-card p {
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* Tahapan Pelaksanaan */
+
+.pb-page .pb-dark {
+  background: var(--pb-green);
+}
+
+.pb-page .pb-dark h2,
+.pb-page .pb-dark h3 {
+  color: white;
+}
+
+.pb-page .pb-step {
+  height: 100%;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,.34);
+}
+
+.pb-page .pb-step-number {
+  display: block;
+  color: var(--pb-gold);
+  font-family: var(--serif);
+  font-size: 27px;
+  margin-bottom: 12px;
+}
+
+.pb-page .pb-step h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 14px;
+}
+
+.pb-page .pb-dark .pb-step p {
+  color: #d5e3d9;
+  font-size: 11px;
+  line-height: 1.75;
+}
+
+.pb-page .pb-dark .pb-footnote {
+  margin: 34px 0 0;
+  color: #c2d5ca;
+  font-size: 11px;
+}
+
+/* Galeri Kegiatan */
+
+.pb-page .pb-gallery-intro {
+  max-width: 1100px;
+  margin-bottom: 22px;
+}
+
+.pb-page .pb-gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.78;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.pb-page .pb-bottom-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.pb-page .pb-btn-outline,
+.pb-page .pb-btn-filled {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px 17px;
+  min-height: 42px;
+  border: 1px solid var(--pb-green);
+  border-radius: 2px;
+  color: var(--pb-green);
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: .2s;
+}
+
+.pb-page .pb-btn-outline:hover {
+  background: var(--pb-green);
+  color: white;
+}
+
+.pb-page .pb-btn-filled {
+  background: var(--pb-green);
+  color: white;
+}
+
+.pb-page .pb-btn-filled:hover {
+  background: #0c3a2c;
+  color: white;
+}
+
+/* ==========================================
+   11. BEASISWA PENDIDIKAN PEMUDA
+========================================== */
+
+.beasiswa-page .beasiswa-title {
+  font-family: var(--sans);
+  color: #174e3b;
+  font-size: clamp(36px, 4.2vw, 59px);
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  margin-bottom: 22px;
+}
+
+.beasiswa-page .pb-main-image {
+  aspect-ratio: 1264 / 848;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.beasiswa-page .pb-dark .beasiswa-light-label {
+  color: #c6dacc;
+}
+
+.beasiswa-page .pb-dark .pb-step h3 {
+  font-weight: 600;
+}
+
+.beasiswa-page .pb-dark .pb-step p {
+  color: #d5e3d9;
+}
+
+/* ==========================================
+   12. FORMULIR, FAQ, ARTIKEL
+========================================== */
+
+.form-panel {
+  background: white;
+  border: 1px solid var(--line);
+  padding: clamp(20px, 3vw, 32px);
+}
+
+.form-panel h2 {
+  font-family: var(--serif);
+  color: var(--green);
+  font-size: 27px;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  color: #425c50;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.form-control,
+.form-select {
+  border-radius: 2px;
+  border-color: #d8e1d9;
+  font-size: 12px;
+  padding: 10px 11px;
+  background-color: #fffefa;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #79a391;
+  box-shadow: 0 0 0 .15rem rgba(0,81,63,.1);
+}
+
+.form-check-label {
+  color: #6c7c73;
+  font-size: 10px;
+}
+
+.form-feedback {
+  margin-top: 10px;
+  font-size: 11px;
+  color: var(--green);
+}
+
+.steps-list {
+  list-style: none;
+  counter-reset: step;
+  padding: 0;
+  margin-top: 25px;
+}
+
+.steps-list li {
+  counter-increment: step;
+  position: relative;
+  padding: 0 0 20px 45px;
+  border-left: 1px solid #cbd9ce;
+  margin-left: 12px;
+}
+
+.steps-list li::before {
+  content: counter(step, decimal-leading-zero);
+  position: absolute;
+  left: -13px;
+  top: 0;
+  background: var(--green-soft);
+  color: var(--green);
+  font-size: 10px;
+  padding: 3px 5px;
+}
+
+.steps-list strong,
+.steps-list span {
+  display: block;
+}
+
+.steps-list strong {
+  color: var(--green);
+  font-size: 13px;
+}
+
+.steps-list span {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.article-container {
+  max-width: 850px;
+}
+
+.article-cover {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  margin-bottom: 25px;
+}
+
+.article-container p {
+  color: #66766e;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.article-container .article-lead {
+  font-family: var(--serif);
+  color: var(--green);
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.article-container h2 {
+  color: var(--green);
+  font-family: var(--serif);
+  font-size: 24px;
+  margin: 28px 0 10px;
+}
+
+.disclaimer {
+  padding: 12px 14px;
+  border-left: 3px solid #9cb6a8;
+  background: #f0f4ed;
+  color: #65776d;
+  font-size: 11px;
+}
+
+.notice-box,
+.contact-placeholder {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  background: var(--green-soft);
+  color: var(--green);
+  font-size: 11px;
+}
+
+.statement-section {
+  background: var(--cream);
+}
+
+.statement-link {
+  display: block;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+}
+
+.statement-link small {
+  display: block;
+  color: #89968e;
+  font-size: 9px;
+}
+
+.statement-link span {
+  display: block;
+  font-family: var(--serif);
+  font-size: 19px;
+  color: var(--green);
+}
+
+.statement-link em {
+  display: block;
+  font-size: 9px;
+  font-style: normal;
+  color: #98a29c;
+}
+
+.statement-link:hover span {
+  text-decoration: underline;
+}
+
+.simple-accordion .accordion-item {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+}
+
+.simple-accordion .accordion-button {
+  background: transparent;
+  color: var(--green);
+  font-family: var(--serif);
+  font-size: 17px;
+  padding: 18px 5px;
+  box-shadow: none;
+}
+
+.simple-accordion .accordion-button:not(.collapsed) {
+  color: var(--green);
+}
+
+.simple-accordion .accordion-body {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.contact-panel {
+  height: 100%;
+}
+
+/* ==========================================
+   13. FOOTER
+========================================== */
+
+.footer-cta {
+  padding: 20px 0;
+  background: var(--green-soft);
+}
+
+.footer-cta h2 {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--green);
+  margin: 0;
+  font-weight: 500;
+}
+
+.site-footer {
+  background: var(--green-dark);
+  color: #d9e8df;
+  padding: 42px 0 18px;
+}
+
+.footer-brand {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: white;
+}
+
+.footer-tagline {
+  font-size: 11px;
+  margin: 9px 0 6px;
+}
+
+.footer-small {
+  color: #a9c2b5;
+  font-size: 9px;
+  line-height: 1.7;
+  max-width: 320px;
+}
+
+.site-footer h6 {
+  color: white;
+  font-size: 10px;
+  margin-bottom: 13px;
+}
+
+.site-footer .col-6 a,
+.site-footer .col-lg-2 a {
+  display: block;
+  color: #c1d6cb;
+  font-size: 9px;
+  margin: 7px 0;
+}
+
+.site-footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.14);
+  margin-top: 26px;
+  padding-top: 13px;
+  color: #a9c2b5;
+  font-size: 8px;
+}
+
+/* ==========================================
+   14. RESPONSIVE DESKTOP - TABLET
+========================================== */
+
+@media (max-width: 1199.98px) {
+
+  .ppp-head-main-inner {
+    min-height: 115px;
+  }
+
+  .ppp-head-logo {
+    width: 85px;
+    height: 85px;
+  }
+
+  .ppp-head-name {
+    font-size: 20px;
+  }
+
+  .ppp-head-nav .navbar-collapse {
+    padding: 5px 0 17px;
+  }
+
+  .ppp-head-menu {
+    gap: 0;
+  }
+
+  .ppp-head-menu .nav-link {
+    padding: 10px 0 !important;
+    border-bottom: 1px solid #e2e8e0;
+  }
+
+  .ppp-head-search {
+    margin: 16px 0 0;
+    width: 100%;
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 991.98px) {
+
+  .hero-section {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-copy {
+    padding: 34px 28px;
+  }
+
+  .hero-image-wrap {
+    min-height: 340px;
+  }
+
+  .ppp-hero {
+    height: 610px;
+  }
+
+  .ppp-hero .ppp-hero-indicators {
+    width: calc(100% - 50px);
+    gap: 10px;
+  }
+
+  .tentang-page .tp-section {
+    padding: 50px 0;
+  }
+
+  .pb-page .pb-hero {
+    padding: 40px 0 48px;
+  }
+
+  .pb-page .pb-section {
+    padding: 48px 0;
+  }
+
+  .pb-page .pb-info-card {
+    min-height: 0;
+  }
+
+  .pb-page .pb-breadcrumb {
+    margin-bottom: 30px;
+  }
+}
+
+/* ==========================================
+   15. RESPONSIVE HP
+========================================== */
+
+@media (max-width: 767.98px) {
+
+  body {
+    font-size: 13px;
+  }
+
+  .section {
+    padding: 45px 0;
+  }
+
+  .hero-section {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    padding: 42px 24px;
+  }
+
+  .hero-image-wrap {
+    min-height: 260px;
+  }
+
+  .ppp-hero {
+    height: 630px;
+  }
+
+  .ppp-hero .ppp-hero-shade {
+    background: linear-gradient(
+      90deg,
+      rgba(0,60,44,.95),
+      rgba(0,60,44,.64)
+    );
+  }
+
+  .ppp-hero .ppp-hero-layout {
+    padding: 25px 22px 85px;
+  }
+
+  .ppp-hero h1,
+  .ppp-hero h2 {
+    font-size: clamp(28px,7vw,43px);
+    letter-spacing: -.7px;
+  }
+
+  .ppp-hero .ppp-hero-description {
+    font-size: 12px;
+  }
+
+  .ppp-hero .ppp-hero-arrow {
+    bottom: 72px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .ppp-hero .ppp-hero-prev {
+    right: 69px;
+  }
+
+  .ppp-hero .ppp-hero-next {
+    right: 24px;
+  }
+
+  .ppp-hero .ppp-hero-indicators {
+    bottom: 18px;
+    width: calc(100% - 40px);
+    gap: 8px;
+  }
+
+  .ppp-hero .ppp-hero-indicators button {
+    min-height: 12px;
+    padding-top: 0;
+    font-size: 0;
+  }
+
+  .ppp-hero .ppp-hero-indicators button span {
+    display: none;
+  }
+
+  .kabar-terbaru-section {
+    padding: 42px 0;
+  }
+
+  .kabar-heading {
+    font-size: 27px;
+  }
+
+  .tentang-page .tp-section {
+    padding: 38px 0 42px;
+  }
+
+  .pb-page .pb-section {
+    padding: 38px 0;
+  }
+
+  .pb-page .pb-gallery img {
+    aspect-ratio: 1.6;
+  }
+
+  .feature-card img {
+    height: 205px;
+  }
+
+  .news-card img {
+    height: 190px;
+  }
+}
+
+@media (max-width: 575.98px) {
+
+  .ppp-head-top {
+    font-size: 8px;
+  }
+
+  .ppp-head-main-inner {
+    min-height: 94px;
+    gap: 8px;
+  }
+
+  .ppp-head-logo {
+    width: 66px;
+    height: 66px;
+  }
+
+  .ppp-head-brand {
+    gap: 9px;
+  }
+
+  .ppp-head-name {
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: .03em;
+    padding-left: 8px;
+  }
+
+  .ppp-head-tagline {
+    display: none;
+  }
+
+  .pb-page h1 {
+    font-size: 35px;
+  }
+
+  .pb-page .pb-info-card {
+    padding: 18px;
+  }
+
+  .pb-page .pb-objectives li {
+    font-size: 13px;
+  }
+
+  .pb-page .pb-bottom-links a {
+    width: 100%;
+  }
+
+  .beasiswa-page .beasiswa-title {
+    font-size: 35px;
+    letter-spacing: -.7px;
+  }
+
+  .beasiswa-page .pb-main-image {
+    aspect-ratio: 1.55;
+  }
+}
+
+/* ==========================================
+   16. AKSESIBILITAS
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .ppp-hero .ppp-hero-btn,
+  .ppp-hero .ppp-hero-btn-outline {
+    transition: none;
+  }
+}
+
