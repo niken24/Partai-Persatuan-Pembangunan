@@ -3,860 +3,4699 @@
 <html lang="id">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>FAQ & Kontak | PPP Ruang Bersama</title>
+    <title>FAQ &amp; Kontak | PPP — Ruang Bersama</title>
 
-  <!-- GOOGLE FONTS -->
-  <link rel="preconnect"
-        href="https://fonts.googleapis.com">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
 
-  <link rel="preconnect"
-        href="https://fonts.gstatic.com" crossorigin>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet">
+    <!-- BOOTSTRAP ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+          rel="stylesheet">
 
-  <!-- BOOTSTRAP 5 -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet">
+    <!-- CSS UTAMA -->
+    <link rel="stylesheet" href="style.css">
 
-  <!-- BOOTSTRAP ICONS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    rel="stylesheet">
+    <style>
 
-  <!-- CSS WEBSITE -->
-  <link rel="stylesheet" href="style.css">
+        /* ========================================
+           GENERAL FAQ & KONTAK
+        ========================================= */
+
+        .ppp-faq {
+            --faq-green: #174c38;
+            --faq-gold: #c4a568;
+            --faq-paper: #f7f8f2;
+            --faq-sage: #e8eee5;
+            --faq-muted: #69746d;
+            --faq-border: #d6ded5;
+        }
+
+        .ppp-faq main {
+            background: var(--faq-paper);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .ppp-faq main section {
+            scroll-margin-top: 30px;
+        }
+
+        .ppp-faq .faq-section {
+            padding: 70px 0;
+        }
+
+        .ppp-faq .faq-section-sage {
+            background: var(--faq-sage);
+        }
+
+        .ppp-faq .faq-section-white {
+            background: #ffffff;
+        }
+
+        .ppp-faq .faq-label {
+            color: var(--faq-green);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.3px;
+            line-height: 1.7;
+            text-transform: uppercase;
+            margin: 0 0 23px;
+        }
+
+        .ppp-faq main h2 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--faq-green);
+            font-size: clamp(28px, 3vw, 42px);
+            font-weight: 700;
+            line-height: 1.3;
+            letter-spacing: -.7px;
+            margin: 0 0 20px;
+        }
+
+        .ppp-faq .faq-description {
+            color: var(--faq-muted);
+            font-size: 15px;
+            line-height: 1.85;
+            margin: 0 0 30px;
+        }
+
+        .ppp-faq .faq-note {
+            color: var(--faq-muted);
+            font-size: 12px;
+            line-height: 1.8;
+            margin-top: 20px;
+        }
+
+        .ppp-faq main [hidden] {
+            display: none !important;
+        }
+
+
+        /* ========================================
+           HERO FAQ & KONTAK
+        ========================================= */
+
+        .ppp-faq .faq-hero {
+            background: var(--faq-paper);
+            padding: 65px 0 70px;
+        }
+
+        .ppp-faq .faq-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(36px, 4.7vw, 64px);
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -1.5px;
+            color: var(--faq-green);
+            max-width: 1150px;
+            margin: 0 0 25px;
+        }
+
+        .ppp-faq .faq-hero-description {
+            color: var(--faq-muted);
+            font-size: 16px;
+            line-height: 1.85;
+            max-width: 1150px;
+            margin: 0;
+        }
+
+        .ppp-faq .faq-hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+
+        /* ========================================
+           BUTTON GLOBAL
+        ========================================= */
+
+        .ppp-faq .faq-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            min-height: 44px;
+            padding: 12px 20px;
+
+            background: var(--faq-green);
+            color: #ffffff;
+
+            border: 1px solid var(--faq-green);
+            border-radius: 4px;
+
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 1.6;
+
+            text-decoration: none;
+            cursor: pointer;
+
+            transition:
+                background .2s ease,
+                color .2s ease,
+                border-color .2s ease;
+        }
+
+        .ppp-faq .faq-button:hover {
+            background: var(--faq-gold);
+            border-color: var(--faq-gold);
+            color: var(--faq-green);
+        }
+
+        .ppp-faq .faq-button-outline {
+            background: transparent;
+            color: var(--faq-green);
+        }
+
+        .ppp-faq .faq-button-outline:hover {
+            background: var(--faq-green);
+            color: #ffffff;
+            border-color: var(--faq-green);
+        }
+
+
+        /* ========================================
+           BANK DATA FAQ
+        ========================================= */
+
+        .ppp-faq .faq-bank {
+            padding: 70px 0;
+            background: var(--faq-sage);
+        }
+
+        .ppp-faq .faq-bank-heading {
+            margin-bottom: 30px;
+        }
+
+        .ppp-faq .faq-bank-heading
+        .faq-description {
+            max-width: 900px;
+        }
+
+
+        /* ========================================
+           SEARCH DAN FILTER
+        ========================================= */
+
+        .ppp-faq .faq-filter-grid {
+            display: grid;
+            grid-template-columns:
+                minmax(0, 2fr)
+                minmax(0, 1fr);
+
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .ppp-faq .faq-search-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            background: #ffffff;
+            border: 1px solid var(--faq-border);
+            border-radius: 7px;
+            padding: 14px 18px;
+        }
+
+        .ppp-faq .faq-search-box i {
+            color: var(--faq-green);
+            font-size: 18px;
+        }
+
+        .ppp-faq .faq-search-box input {
+            width: 100%;
+            min-width: 0;
+            border: none;
+            outline: none;
+            background: transparent;
+            color: var(--faq-green);
+            font-size: 14px;
+        }
+
+        .ppp-faq .faq-search-box:focus-within {
+            outline: 2px solid var(--faq-green);
+        }
+
+        .ppp-faq .faq-category-select {
+            width: 100%;
+            min-height: 52px;
+            padding: 12px 16px;
+
+            background: #ffffff;
+            color: var(--faq-green);
+
+            border: 1px solid var(--faq-border);
+            border-radius: 7px;
+
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .ppp-faq .faq-category-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin-bottom: 25px;
+        }
+
+        .ppp-faq .faq-filter-button {
+            background: #ffffff;
+            color: var(--faq-green);
+            border: 1px solid var(--faq-border);
+            border-radius: 5px;
+            padding: 10px 14px;
+
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+
+            transition: background .2s ease;
+        }
+
+        .ppp-faq .faq-filter-button:hover {
+            background: #dce6dc;
+        }
+
+        .ppp-faq .faq-filter-button.active {
+            background: var(--faq-green);
+            border-color: var(--faq-green);
+            color: #ffffff;
+        }
+
+        .ppp-faq .faq-result-count {
+            color: var(--faq-muted);
+            font-size: 12px;
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
+
+
+        /* ========================================
+           LAYOUT BANK FAQ
+        ========================================= */
+
+        .ppp-faq .faq-bank-layout {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 2.7fr)
+                minmax(0, 1fr);
+
+            align-items: start;
+            gap: 25px;
+        }
+
+        .ppp-faq .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            min-width: 0;
+        }
+
+
+        /* ========================================
+           FAQ CARD / ACCORDION
+        ========================================= */
+
+        .ppp-faq .faq-item {
+            background: #ffffff;
+            border: 1px solid var(--faq-border);
+            border-radius: 12px;
+            padding: 24px;
+
+            scroll-margin-top: 30px;
+            transition: border-color .2s ease;
+        }
+
+        .ppp-faq .faq-item:hover {
+            border-color: #b5c7b8;
+        }
+
+        .ppp-faq .faq-item[open] {
+            border-color: #a5bfa9;
+        }
+
+        .ppp-faq .faq-item summary {
+            display: block;
+            cursor: pointer;
+            list-style: none;
+        }
+
+        .ppp-faq .faq-item
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .ppp-faq .faq-item-meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+
+        .ppp-faq .faq-item-number {
+            color: #947b4b;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .ppp-faq .faq-item-category {
+            color: var(--faq-green);
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: .3px;
+            text-transform: uppercase;
+        }
+
+        .ppp-faq .faq-question-row {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .ppp-faq .faq-question {
+            font-family: 'Poppins', sans-serif;
+            color: var(--faq-green);
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+
+        .ppp-faq .faq-question-row > i {
+            color: var(--faq-green);
+            font-size: 15px;
+            padding-top: 4px;
+            flex-shrink: 0;
+            transition: transform .2s ease;
+        }
+
+        .ppp-faq .faq-item[open]
+        .faq-question-row > i {
+            transform: rotate(180deg);
+        }
+
+        .ppp-faq .faq-open-text {
+            display: block;
+            color: var(--faq-green);
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 14px;
+        }
+
+        .ppp-faq .faq-item[open]
+        .faq-open-label {
+            display: none;
+        }
+
+        .ppp-faq .faq-item:not([open])
+        .faq-close-label {
+            display: none;
+        }
+
+
+        /* ========================================
+           ISI JAWABAN FAQ
+        ========================================= */
+
+        .ppp-faq .faq-answer {
+            margin-top: 22px;
+            padding-top: 22px;
+            border-top: 1px solid var(--faq-border);
+        }
+
+        .ppp-faq .faq-answer-label {
+            font-family: 'Poppins', sans-serif;
+            color: var(--faq-green);
+            font-weight: 600;
+            font-size: 17px;
+            margin-bottom: 16px;
+        }
+
+        .ppp-faq .faq-answer > p {
+            color: #536359;
+            font-size: 14px;
+            line-height: 1.9;
+            margin-bottom: 18px;
+        }
+
+        .ppp-faq .faq-verification {
+            background: var(--faq-paper);
+            border-left: 3px solid var(--faq-gold);
+            padding: 15px 18px;
+            margin: 20px 0;
+        }
+
+        .ppp-faq .faq-verification p {
+            color: var(--faq-muted);
+            font-size: 11px;
+            line-height: 1.8;
+            margin: 0 0 5px;
+        }
+
+        .ppp-faq .faq-verification p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* ========================================
+           KONTEN DAN TAUTAN PENDUKUNG
+        ========================================= */
+
+        .ppp-faq .faq-support {
+            background: var(--faq-sage);
+            border-radius: 6px;
+            padding: 18px;
+            margin-top: 20px;
+        }
+
+        .ppp-faq .faq-support h4 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--faq-green);
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .ppp-faq .faq-support p {
+            color: var(--faq-muted);
+            font-size: 12px;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .ppp-faq .faq-support-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+
+        .ppp-faq .faq-support-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            background: #ffffff;
+            color: var(--faq-green);
+
+            border: 1px solid #b7c8ba;
+            border-radius: 4px;
+
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.6;
+
+            padding: 10px 13px;
+
+            text-decoration: none;
+        }
+
+        .ppp-faq .faq-support-link:hover {
+            background: var(--faq-green);
+            color: #ffffff;
+        }
+
+
+        /* ========================================
+           BUTTON SALIN
+        ========================================= */
+
+        .ppp-faq .faq-copy-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .ppp-faq .faq-copy-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            background: transparent;
+            color: var(--faq-green);
+
+            border: 1px solid #b7c8ba;
+            border-radius: 4px;
+
+            padding: 9px 13px;
+
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .ppp-faq .faq-copy-button:hover {
+            background: var(--faq-green);
+            color: #ffffff;
+        }
+
+
+        /* ========================================
+           EMPTY STATE
+        ========================================= */
+
+        .ppp-faq .faq-empty {
+            background: #ffffff;
+            border: 1px solid var(--faq-border);
+            border-radius: 10px;
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--faq-muted);
+        }
+
+        .ppp-faq .faq-empty i {
+            display: block;
+            font-size: 30px;
+            color: var(--faq-green);
+            margin-bottom: 20px;
+        }
+
+
+        /* ========================================
+           SIDEBAR FAQ
+        ========================================= */
+
+        .ppp-faq .faq-sidebar {
+            background: #ffffff;
+            border: 1px solid var(--faq-border);
+            border-radius: 12px;
+            padding: 25px;
+        }
+
+        .ppp-faq .faq-sidebar h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--faq-green);
+            font-size: 23px;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+
+        .ppp-faq .faq-sidebar > p {
+            color: var(--faq-muted);
+            font-size: 13px;
+            line-height: 1.85;
+        }
+
+        .ppp-faq .faq-sidebar-stat {
+            background: var(--faq-sage);
+            padding: 18px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .ppp-faq .faq-sidebar-stat strong {
+            display: block;
+            color: var(--faq-green);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 1.4;
+        }
+
+        .ppp-faq .faq-sidebar-stat span {
+            color: var(--faq-muted);
+            font-size: 12px;
+        }
+
+        .ppp-faq .faq-sidebar hr {
+            border: 0;
+            border-top: 1px solid var(--faq-border);
+            opacity: 1;
+            margin: 25px 0;
+        }
+
+        .ppp-faq .faq-sidebar .faq-button {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .ppp-faq .faq-academic-note {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 20px;
+            margin-top: 25px;
+            background: #f7f8f2;
+            border: 1px solid var(--faq-border);
+            border-radius: 7px;
+            color: var(--faq-muted);
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        .ppp-faq .faq-academic-note i {
+            color: var(--faq-green);
+            flex-shrink: 0;
+        }
+
+
+        /* ========================================
+           ALUR TINDAK LANJUT ASPIRASI
+        ========================================= */
+
+        .ppp-faq .faq-flow-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(5, minmax(0, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .ppp-faq .faq-flow-card {
+            position: relative;
+            border: 1px solid var(--faq-border);
+            border-radius: 8px;
+            background: #ffffff;
+            padding: 22px;
+        }
+
+        .ppp-faq .faq-flow-number {
+            display: block;
+            font-family: 'Poppins', sans-serif;
+            color: #b4975e;
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .ppp-faq .faq-flow-card h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--faq-green);
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .ppp-faq .faq-flow-card p {
+            color: var(--faq-muted);
+            font-size: 12px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+
+        /* ========================================
+           KANAL INFORMASI
+        ========================================= */
+
+        .ppp-faq .contact-channel-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .ppp-faq .contact-channel-card {
+            background: var(--faq-paper);
+            padding: 26px;
+            min-width: 0;
+        }
+
+        .ppp-faq .contact-channel-card > i {
+            display: block;
+            color: var(--faq-green);
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .ppp-faq .contact-channel-card h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--faq-green);
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .ppp-faq .contact-channel-value {
+            display: block;
+            color: var(--faq-green);
+            font-size: 14px;
+            font-weight: 600;
+            overflow-wrap: anywhere;
+            margin-bottom: 15px;
+        }
+
+        .ppp-faq .contact-channel-card p {
+            color: var(--faq-muted);
+            font-size: 13px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+
+        /* ========================================
+           MEDIA SOSIAL
+        ========================================= */
+
+        .ppp-faq .contact-social {
+            margin-top: 40px;
+        }
+
+        .ppp-faq .contact-social-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .ppp-faq .contact-social-card {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            padding: 15px 20px;
+
+            border: 1px solid #b7c8ba;
+            color: var(--faq-green);
+            background: transparent;
+            text-decoration: none;
+        }
+
+        .ppp-faq .contact-social-card > i {
+            font-size: 22px;
+        }
+
+        .ppp-faq .contact-social-card strong {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .ppp-faq .contact-social-card small {
+            display: block;
+            color: var(--faq-muted);
+            font-size: 11px;
+            overflow-wrap: anywhere;
+            margin-top: 5px;
+        }
+
+        .ppp-faq .contact-social-card:hover {
+            background: #ffffff;
+        }
+
+
+        /* ========================================
+           FORMULIR KONTAK
+        ========================================= */
+
+        .ppp-faq .contact-form-section {
+            padding: 70px 0;
+            background: var(--faq-sage);
+        }
+
+        .ppp-faq .contact-form-grid {
+            display: grid;
+            grid-template-columns:
+                minmax(0, 1fr)
+                minmax(0, 1.7fr);
+
+            align-items: start;
+            gap: 65px;
+        }
+
+        .ppp-faq .contact-form-heading h2 {
+            font-weight: 800;
+        }
+
+        .ppp-faq .contact-form-heading p {
+            color: var(--faq-muted);
+            font-size: 15px;
+            line-height: 1.85;
+        }
+
+        .ppp-faq .contact-form {
+            min-width: 0;
+        }
+
+        .ppp-faq .contact-input-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .ppp-faq .contact-field {
+            margin-bottom: 20px;
+        }
+
+        .ppp-faq .contact-field label {
+            display: block;
+            color: #31463a;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .ppp-faq .contact-field input,
+        .ppp-faq .contact-field textarea,
+        .ppp-faq .contact-field select {
+            width: 100%;
+
+            padding: 14px 16px;
+
+            background: #ffffff;
+            border: 1px solid var(--faq-border);
+            border-radius: 4px;
+
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            line-height: 1.7;
+            color: var(--faq-green);
+        }
+
+        .ppp-faq .contact-field textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .ppp-faq .contact-field input:focus,
+        .ppp-faq .contact-field textarea:focus,
+        .ppp-faq .contact-field select:focus {
+            outline: 2px solid var(--faq-green);
+            outline-offset: 2px;
+        }
+
+        .ppp-faq .contact-form-status {
+            margin-top: 18px;
+            background: #ffffff;
+            border: 1px solid #b5c7b8;
+            border-radius: 5px;
+            padding: 15px;
+            color: var(--faq-green);
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+
+        /* ========================================
+           LOKASI KANTOR
+        ========================================= */
+
+        .ppp-faq .office-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+            align-items: stretch;
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        .ppp-faq .office-card {
+            display: flex;
+            flex-direction: column;
+            background: #ffffff;
+            border: 1px solid var(--faq-border);
+            min-width: 0;
+        }
+
+        .ppp-faq .office-map {
+            width: 100%;
+            background: var(--faq-sage);
+        }
+
+        .ppp-faq .office-map iframe {
+            display: block;
+            width: 100%;
+            height: 260px;
+            border: 0;
+        }
+
+        .ppp-faq .office-map-caption {
+            color: var(--faq-muted);
+            background: var(--faq-sage);
+            font-size: 11px;
+            line-height: 1.7;
+            padding: 10px 16px;
+            margin: 0;
+        }
+
+        .ppp-faq .office-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            flex: 1;
+            padding: 25px;
+        }
+
+        .ppp-faq .office-content h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--faq-green);
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 1.45;
+            margin-bottom: 22px;
+        }
+
+        .ppp-faq .office-content p {
+            color: var(--faq-muted);
+            font-size: 14px;
+            line-height: 1.85;
+            margin-bottom: 18px;
+        }
+
+        .ppp-faq .office-content .faq-button {
+            margin-top: auto;
+        }
+
+
+        /* ========================================
+           TOAST SALIN JAWABAN
+        ========================================= */
+
+        .ppp-faq .faq-toast {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 9999;
+
+            max-width: calc(100% - 50px);
+
+            background: var(--faq-green);
+            color: #ffffff;
+
+            padding: 15px 22px;
+
+            border-radius: 6px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, .15);
+
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .ppp-faq main button:focus-visible,
+        .ppp-faq main summary:focus-visible,
+        .ppp-faq main a:focus-visible {
+            outline: 3px solid var(--faq-gold);
+            outline-offset: 3px;
+        }
+
+
+        /* ========================================
+           RESPONSIVE TABLET
+        ========================================= */
+
+        @media (max-width: 991px) {
+
+            .ppp-faq .faq-section,
+            .ppp-faq .faq-bank,
+            .ppp-faq .contact-form-section {
+                padding: 50px 0;
+            }
+
+            .ppp-faq .faq-hero {
+                padding: 45px 0 55px;
+            }
+
+            .ppp-faq .faq-bank-layout {
+                grid-template-columns:
+                    minmax(0, 2fr)
+                    minmax(0, 1fr);
+                gap: 18px;
+            }
+
+            .ppp-faq .faq-item,
+            .ppp-faq .faq-sidebar {
+                padding: 20px;
+            }
+
+            .ppp-faq .contact-channel-grid {
+                gap: 15px;
+            }
+
+            .ppp-faq .contact-channel-card {
+                padding: 20px;
+            }
+
+            .ppp-faq .contact-form-grid {
+                gap: 30px;
+            }
+
+            .ppp-faq .faq-flow-grid {
+                grid-template-columns:
+                    repeat(3, minmax(0, 1fr));
+            }
+
+        }
+
+
+        /* ========================================
+           RESPONSIVE MOBILE
+        ========================================= */
+
+        @media (max-width: 767px) {
+
+            .ppp-faq .faq-section,
+            .ppp-faq .faq-bank,
+            .ppp-faq .contact-form-section {
+                padding: 42px 0;
+            }
+
+            .ppp-faq .faq-hero {
+                padding: 35px 0 45px;
+            }
+
+            .ppp-faq .faq-hero h1 {
+                font-size: 35px;
+                letter-spacing: -.6px;
+            }
+
+            .ppp-faq .faq-hero-description,
+            .ppp-faq .faq-description {
+                font-size: 14px;
+            }
+
+            .ppp-faq .faq-filter-grid,
+            .ppp-faq .faq-bank-layout,
+            .ppp-faq .contact-channel-grid,
+            .ppp-faq .contact-form-grid,
+            .ppp-faq .contact-input-grid,
+            .ppp-faq .office-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .ppp-faq .contact-input-grid {
+                gap: 0;
+            }
+
+            .ppp-faq .faq-category-list {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                padding-bottom: 8px;
+            }
+
+            .ppp-faq .faq-filter-button {
+                flex-shrink: 0;
+                font-size: 11px;
+            }
+
+            .ppp-faq .faq-item {
+                padding: 18px;
+            }
+
+            .ppp-faq .faq-question {
+                font-size: 15px;
+            }
+
+            .ppp-faq .faq-answer > p {
+                font-size: 13px;
+            }
+
+            .ppp-faq .faq-sidebar {
+                padding: 24px;
+            }
+
+            .ppp-faq .faq-flow-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+                gap: 12px;
+            }
+
+            .ppp-faq .faq-flow-card {
+                padding: 18px;
+            }
+
+            .ppp-faq .contact-channel-card h3 {
+                font-size: 21px;
+            }
+
+            .ppp-faq .contact-social-card {
+                width: 100%;
+            }
+
+            .ppp-faq .office-map iframe {
+                height: 220px;
+            }
+
+            .ppp-faq .office-content {
+                padding: 20px;
+            }
+
+            .ppp-faq .faq-hero-buttons .faq-button {
+                flex: 1;
+            }
+
+        }
+
+        @media (max-width: 380px) {
+
+            .ppp-faq .faq-flow-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ppp-faq .faq-hero-buttons .faq-button {
+                width: 100%;
+                flex: auto;
+            }
+
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .ppp-faq main *,
+            .ppp-faq main *::before,
+            .ppp-faq main *::after {
+                transition: none !important;
+                scroll-behavior: auto !important;
+            }
+
+        }
+
+    </style>
+
 </head>
 
-<body>
+<body class="ppp-home ppp-faq">
 
-<!-- ==========================================
-     HEADER DAN NAVBAR
-========================================== -->
+    <!-- ========================================
+         TOP BAR
+    ========================================= -->
 
-<header class="ppp-site-header">
+    <div class="topbar">
 
-  <!-- TOP BAR -->
-  <div class="ppp-head-top">
-    <div class="container ppp-head-top-inner">
+        <div class="wrap">
 
-      <span>KELOMPOK 8 · MATA KULIAH DIGIPR</span>
+            <span>
+                KELOMPOK 8 · MATA KULIAH DIGIPR
+            </span>
 
-      <span class="d-none d-sm-inline">
-        PROTOTIPE AKADEMIK · BUKAN SITUS RESMI PPP
-      </span>
+            <span>
+                PROTOTIPE AKADEMIK · BUKAN SITUS RESMI PPP
+            </span>
 
-    </div>
-  </div>
-
-  <!-- LOGO PPP -->
-  <div class="ppp-head-main">
-    <div class="container ppp-head-main-inner">
-
-      <a href="index.html" class="ppp-head-brand">
-
-        <img
-          src="assets/images/logo-ppp-navbar.png"
-          alt="Logo Partai Persatuan Pembangunan"
-          class="ppp-head-logo">
-
-        <span class="ppp-head-name">
-          <strong>PARTAI</strong>
-          <strong>PERSATUAN</strong>
-          <strong>PEMBANGUNAN</strong>
-        </span>
-
-      </a>
-
-      <p class="ppp-head-tagline">
-        Berakar pada Nilai, Bergerak untuk Rakyat.
-      </p>
+        </div>
 
     </div>
-  </div>
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-xl ppp-head-nav">
-    <div class="container ppp-head-nav-inner">
 
-      <button
-        class="navbar-toggler ppp-head-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#pppNavMenu"
-        aria-controls="pppNavMenu"
-        aria-expanded="false"
-        aria-label="Buka navigasi">
+    <!-- ========================================
+         HEADER
+    ========================================= -->
 
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <header class="brand-header">
 
-      <div class="collapse navbar-collapse"
-           id="pppNavMenu">
+        <div class="wrap brand-row">
 
-        <ul class="navbar-nav ppp-head-menu">
+            <a class="brand" href="index.html">
 
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">
-              Beranda
-            </a>
-          </li>
+                <img
+                    src="assets/images/logo-ppp.png"
+                    alt="Logo Partai Persatuan Pembangunan">
 
-          <!-- DROPDOWN TENTANG PPP -->
-          <li class="nav-item dropdown ppp-about-dropdown">
+                <span>
+                    PARTAI<br>
+                    PERSATUAN<br>
+                    PEMBANGUNAN
+                </span>
 
-            <a class="nav-link ppp-about-link"
-               href="tentang.html">
-              Tentang PPP
             </a>
 
-            <button
-              class="ppp-about-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              aria-label="Buka submenu Tentang PPP">
-              <i class="bi bi-chevron-down"></i>
-            </button>
+            <p>
+                Berakar pada Nilai, Bergerak untuk Rakyat.
+            </p>
 
-            <ul class="dropdown-menu ppp-about-menu">
+        </div>
 
-              <li>
-                <a class="dropdown-item"
-                   href="tentang.html#identitas-ppp">
-                  Profil PPP
-                </a>
-              </li>
+    </header>
 
-              <li>
-                <a class="dropdown-item"
-                   href="tentang.html#sejarah-ppp">
-                  Sejarah PPP
-                </a>
-              </li>
 
-              <li>
-                <a class="dropdown-item"
-                   href="tentang.html#visi-misi-ppp">
-                  Visi &amp; Misi
-                </a>
-              </li>
+    <!-- ========================================
+         NAVIGATION BAR
+    ========================================= -->
 
-              <li>
-                <a class="dropdown-item"
-                   href="tentang.html#ideologi-ppp">
-                  Ideologi &amp; Nilai Dasar
-                </a>
-              </li>
+    
+<!-- ========================================
+     NAVIGATION BAR PPP — FINAL
+========================================= -->
 
-              <li>
-                <a class="dropdown-item"
-                   href="tentang.html#lima-khidmat">
-                  Lima Khidmat PPP
-                </a>
-              </li>
+<nav class="navbar navbar-expand-lg site-nav"
+     aria-label="Navigasi utama">
 
-              <li>
-                <a class="dropdown-item"
-                   href="tentang.html#enam-prinsip">
-                  Enam Prinsip Perjuangan
-                </a>
-              </li>
+    <div class="wrap nav-wrap">
 
-              <li>
-                <a class="dropdown-item"
-                   href="tentang.html#struktur-organisasi">
-                  Struktur Organisasi
-                </a>
-              </li>
+        <!-- TOGGLE MOBILE -->
 
-              <li>
-                <a class="dropdown-item"
-                   href="tentang.html#tokoh-kepemimpinan">
-                  Tokoh &amp; Kepemimpinan
-                </a>
-              </li>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Buka navigasi">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="mainNav">
+
+            <ul class="navbar-nav nav-list">
+
+
+                <!-- =================================
+                     01. BERANDA
+                ================================== -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="index.html">
+
+                        BERANDA
+
+                    </a>
+
+                </li>
+
+
+                <!-- =================================
+                     02. TENTANG PPP
+                ================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        TENTANG PPP
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- PROFIL DAN SEJARAH -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="tentang.html#profil-sejarah">
+
+                                Profil &amp; Sejarah
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- VISI MISI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="tentang.html#visi-misi">
+
+                                Visi, Misi &amp; Lima Khidmat
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- STRUKTUR ORGANISASI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="struktur.html">
+
+                                Struktur Organisasi
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- STAKEHOLDER -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="tentang.html#stakeholder">
+
+                                Stakeholder PPP
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- MASKOT KABA -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="kaba.html">
+
+                                Kenalan dengan KABA
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- =================================
+                     03. PROGRAM & AKSI
+                ================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        PROGRAM &amp; AKSI
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- SEMUA PROGRAM -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="program.html">
+
+                                Semua Program &amp; Aksi
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- PPP PEDULI BUMI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="peduli-bumi.html">
+
+                                PPP Peduli Bumi &amp; Kemanusiaan
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- BEASISWA -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="beasiswa.html">
+
+                                Beasiswa Pendidikan Pemuda
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- TALKSHOW -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="talkshow.html">
+
+                                Seminar &amp; Kolaborasi
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- =================================
+                     04. INFORMASI
+                ================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        INFORMASI
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- KABAR PPP -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="kabar.html">
+
+                                Kabar PPP
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- PERNYATAAN RESMI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="pernyataan.html">
+
+                                Pernyataan Resmi
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- OPINI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="opini.html">
+
+                                Opini
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- TRANSPARANSI DATA -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="transparansi.html">
+
+                                Transparansi &amp; Data
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- =================================
+                     05. PARTISIPASI
+                ================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        PARTISIPASI
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- JARING ASPIRASI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="aspirasi.html">
+
+                                Jaring Aspirasi Rakyat
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- BERGABUNG -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="bergabung.html">
+
+                                Bergabung
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- FAQ DAN KONTAK -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="faq.html">
+
+                                FAQ &amp; Kontak
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
 
             </ul>
-          </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="program.html">
-              Program &amp; Aksi
-            </a>
-          </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="aspirasi.html">
-              Aspirasi Rakyat
-            </a>
-          </li>
+            <!-- =================================
+                 SEARCH BAR
 
-          <li class="nav-item">
-            <a class="nav-link" href="kabar.html">
-              Kabar PPP
-            </a>
-          </li>
+                 Pertahankan ID search form dan input
+                 dari halaman HTML sebelumnya.
+            ================================== -->
 
-          <li class="nav-item">
-            <a class="nav-link" href="pernyataan.html">
-              Pernyataan Resmi
-            </a>
-          </li>
+            <form class="site-search"
+                  id="globalSearchForm"
+                  role="search">
 
-          <li class="nav-item">
-            <a class="nav-link active"
-               href="faq.html"
-               aria-current="page">
-              FAQ &amp; Kontak
-            </a>
-          </li>
+                <button
+                    type="submit"
+                    aria-label="Cari">
 
-          <li class="nav-item">
-            <a class="nav-link" href="bergabung.html">
-              Bergabung
-            </a>
-          </li>
+                    <i class="bi bi-search"></i>
 
-        </ul>
-
-        <!-- SEARCH GLOBAL -->
-        <form
-          id="pppSiteSearch"
-          class="ppp-head-search"
-          role="search">
-
-          <button type="submit" aria-label="Cari">
-            <i class="bi bi-search"></i>
-          </button>
-
-          <input
-            type="search"
-            id="pppSearchInput"
-            placeholder="Cari di situs PPP..."
-            aria-label="Cari halaman website"
-            autocomplete="off">
-
-          <div
-            id="pppSearchResults"
-            class="ppp-head-results"
-            aria-live="polite"
-            hidden>
-          </div>
-
-        </form>
-
-      </div>
-    </div>
-  </nav>
-
-</header>
-
-
-<!-- ==========================================
-     MAIN FAQ & KONTAK
-========================================== -->
-
-<main class="faq-new-page">
-
-  <!-- ======================================
-       1. HERO FAQ
-  ====================================== -->
-  <section class="faq-new-hero">
-
-    <div class="container">
-
-      <p class="faq-new-label">
-        FAQ &amp; KONTAK
-      </p>
-
-      <h1>
-        Ada pertanyaan? Temukan jawabannya
-        di sini
-      </h1>
-
-      <p class="faq-new-description">
-        Dapatkan informasi mengenai Partai Persatuan
-        Pembangunan, program dan kegiatan, serta
-        berbagai layanan informasi yang tersedia.
-        Temukan jawaban atas pertanyaan umum atau
-        hubungi kanal komunikasi untuk memperoleh
-        informasi lebih lanjut.
-      </p>
-
-    </div>
-  </section>
-
-
-  <!-- ======================================
-       2. KANAL INFORMASI
-  ====================================== -->
-  <section class="faq-new-content">
-
-    <div class="container">
-
-      <p class="faq-new-label mb-4">
-        KANAL INFORMASI
-      </p>
-
-      <div class="row g-4">
-
-        <!-- WHATSAPP -->
-        <div class="col-lg-4 col-md-6">
-
-          <a
-            href="https://wa.me/6281938358425"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="faq-new-contact-card">
-
-            <i class="bi bi-chat"></i>
-
-            <h2>WhatsApp</h2>
-
-            <strong>081938358425</strong>
-
-            <p>
-              Hubungi layanan informasi untuk memperoleh
-              penjelasan mengenai kegiatan, program,
-              dan informasi organisasi.
-            </p>
-
-            <small class="faq-contact-note">
-              Kontak contoh pada mockup;
-              belum diverifikasi.
-            </small>
-
-          </a>
-
-        </div>
-
-
-        <!-- EMAIL -->
-        <div class="col-lg-4 col-md-6">
-
-          <a
-            href="mailto:PPP@gmail.com"
-            class="faq-new-contact-card">
-
-            <i class="bi bi-envelope"></i>
-
-            <h2>Email Resmi</h2>
-
-            <strong>PPP@gmail.com</strong>
-
-            <p>
-              Sampaikan pertanyaan, masukan, atau
-              kebutuhan informasi melalui layanan
-              korespondensi organisasi.
-            </p>
-
-            <small class="faq-contact-note">
-              Alamat contoh pada mockup;
-              belum diverifikasi.
-            </small>
-
-          </a>
-
-        </div>
-
-
-        <!-- WEBSITE RESMI -->
-        <div class="col-lg-4 col-md-12">
-
-          <a
-            href="https://ppp.or.id/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="faq-new-contact-card">
-
-            <i class="bi bi-globe"></i>
-
-            <h2>Website Resmi</h2>
-
-            <strong>ppp.or.id</strong>
-
-            <p>
-              Kunjungi website resmi PPP untuk mengetahui
-              informasi organisasi, berita, dan
-              perkembangan kegiatan terkini.
-            </p>
-
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <!-- ======================================
-           3. MEDIA SOSIAL
-      ====================================== -->
-      <div class="faq-new-social-section">
-
-        <p class="faq-new-label">
-          MEDIA SOSIAL · TAUTAN AKUN
-        </p>
-
-        <div class="faq-new-social-links">
-
-          <!-- INSTAGRAM -->
-          <a
-            href="https://www.instagram.com/ppp.peduli?srtk=ODE5c3A2bmkzeGVz&amp;utm_source=qr"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="faq-new-social-card">
-
-            <strong>
-              <i class="bi bi-instagram"></i>
-              Instagram
-            </strong>
-
-            <span>@ppp.peduli</span>
-
-          </a>
-
-
-          <!-- TIKTOK -->
-          <a
-            href="https://www.tiktok.com/@ppp.peduli?_r=1&amp;_t=ZS-9BHOIDImUGy"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="faq-new-social-card">
-
-            <strong>
-              <i class="bi bi-tiktok"></i>
-              TikTok
-            </strong>
-
-            <span>@ppp.peduli</span>
-
-          </a>
-
-
-          <!-- YOUTUBE -->
-          <a
-            href="https://youtube.com/@partaipersatuanpembangunandpp?si=k4i02ifY6VN0bI6U"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="faq-new-social-card">
-
-            <strong>
-              <i class="bi bi-youtube"></i>
-              YouTube
-            </strong>
-
-            <span>@partaipersatuanpembangunandpp</span>
-
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <!-- ======================================
-           4. FORMULIR KONTAK
-      ====================================== -->
-      <div class="faq-new-form-section">
-
-        <div class="row g-4 g-lg-5">
-
-          <!-- PENJELASAN KIRI -->
-          <div class="col-lg-4">
-
-            <p class="faq-new-label">
-              FORMULIR KONTAK
-            </p>
-
-            <h2 class="faq-new-form-title">
-              Sampaikan pertanyaan dan masukan Anda.
-            </h2>
-
-            <p class="faq-new-form-description">
-              Kami menghargai setiap pertanyaan, saran,
-              dan masukan yang dapat mendukung komunikasi
-              lebih terbuka serta akses informasi yang
-              lebih baik.
-            </p>
-
-            <p class="faq-contact-note">
-              Form ini membuka aplikasi email.
-              Tidak ada data yang disimpan
-              dalam website.
-            </p>
-
-          </div>
-
-
-          <!-- FORM KANAN -->
-          <div class="col-lg-8">
-
-            <form id="faqContactForm">
-
-              <!-- NAMA DAN EMAIL -->
-              <div class="row g-3">
-
-                <div class="col-md-6">
-
-                  <label
-                    for="faqName"
-                    class="faq-new-form-label">
-                    Nama lengkap
-                  </label>
-
-                  <input
-                    type="text"
-                    id="faqName"
-                    class="faq-new-input"
-                    placeholder="Boleh dikosongkan"
-                    maxlength="100">
-
-                </div>
-
-
-                <div class="col-md-6">
-
-                  <label
-                    for="faqEmail"
-                    class="faq-new-form-label">
-                    Email (opsional)
-                  </label>
-
-                  <input
-                    type="email"
-                    id="faqEmail"
-                    class="faq-new-input"
-                    placeholder="Boleh dikosongkan"
-                    maxlength="150">
-
-                </div>
-
-              </div>
-
-
-              <!-- SUBJEK -->
-              <div class="mt-3">
-
-                <label
-                  for="faqSubject"
-                  class="faq-new-form-label">
-                  Subjek
-                </label>
+                </button>
 
                 <input
-                  type="text"
-                  id="faqSubject"
-                  class="faq-new-input"
-                  placeholder="Contoh: informasi rancangan program"
-                  maxlength="150"
-                  required>
-
-              </div>
-
-
-              <!-- PESAN -->
-              <div class="mt-3">
-
-                <label
-                  for="faqMessage"
-                  class="faq-new-form-label">
-                  Pesan
-                </label>
-
-                <textarea
-                  id="faqMessage"
-                  class="faq-new-textarea"
-                  placeholder="Tulis pertanyaan contoh tanpa data pribadi sensitif."
-                  rows="6"
-                  maxlength="2000"
-                  required></textarea>
-
-              </div>
-
-
-              <!-- BUTTON KIRIM -->
-              <button
-                type="submit"
-                class="faq-new-submit">
-
-                Kirim pesan
-                <i class="bi bi-arrow-up-right"></i>
-
-              </button>
-
-              <p
-                id="faqFormStatus"
-                class="faq-new-status"
-                role="status"
-                aria-live="polite">
-              </p>
+                    type="search"
+                    id="globalSearchInput"
+                    placeholder="Cari di situs PPP..."
+                    aria-label="Cari informasi PPP"
+                    autocomplete="off"
+                    required>
 
             </form>
 
-          </div>
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+    <!-- ========================================
+         MAIN CONTENT
+    ========================================= -->
+
+    <main>
+
+        <!-- ====================================
+             HERO FAQ & KONTAK
+        ===================================== -->
+
+        <section class="faq-hero">
+
+            <div class="wrap">
+
+                <p class="faq-label">
+                    FAQ &amp; KONTAK
+                </p>
+
+                <h1>
+                    Ada pertanyaan? Temukan jawabannya
+                    di sini.
+                </h1>
+
+                <p class="faq-hero-description">
+
+                    Dapatkan informasi mengenai Partai
+                    Persatuan Pembangunan, program dan
+                    kegiatan, serta berbagai layanan
+                    informasi yang tersedia. Temukan
+                    jawaban atas pertanyaan umum dan
+                    informasi mengenai kanal komunikasi.
+
+                </p>
+
+                <div class="faq-hero-buttons">
+
+                    <a class="faq-button"
+                       href="#bank-data-faq">
+
+                        Jelajahi Bank Data FAQ
+
+                        <i class="bi bi-arrow-down"></i>
+
+                    </a>
+
+                    <a class="faq-button faq-button-outline"
+                       href="#kanal-informasi">
+
+                        Informasi Kontak
+
+                        <i class="bi bi-arrow-up-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ====================================
+             01 — BANK DATA FAQ
+        ===================================== -->
+
+        <section class="faq-bank"
+                 id="bank-data-faq">
+
+            <div class="wrap">
+
+                <div class="faq-bank-heading">
+
+                    <p class="faq-label">
+                        01 / BANK DATA FAQ
+                    </p>
+
+                    <h2>
+                        Masyarakat bertanya, kami menjawab.
+                    </h2>
+
+                    <p class="faq-description">
+
+                        Bank Data FAQ Jaring Aspirasi Rakyat
+                        menyajikan contoh pertanyaan, tanggapan
+                        informatif, dokumentasi kegiatan,
+                        dan sumber informasi terkait
+                        berbagai isu publik.
+
+                    </p>
+
+                </div>
+
+
+                <!-- SEARCH DAN SELECT CATEGORY -->
+
+                <div class="faq-filter-grid">
+
+                    <div class="faq-search-box">
+
+                        <i class="bi bi-search"></i>
+
+                        <input
+                            type="search"
+                            id="faqSearch"
+                            placeholder="Cari pertanyaan atau topik..."
+                            aria-label="Cari pertanyaan FAQ"
+                            autocomplete="off">
+
+                    </div>
+
+                    <select
+                        class="faq-category-select"
+                        id="faqCategorySelect"
+                        aria-label="Filter kategori FAQ">
+
+                        <option value="all">
+                            Semua Kategori
+                        </option>
+
+                        <option value="lingkungan">
+                            Lingkungan Hidup
+                        </option>
+
+                        <option value="informasi">
+                            Informasi Publik
+                        </option>
+
+                        <option value="pendidikan">
+                            Pendidikan
+                        </option>
+
+                        <option value="program">
+                            Program &amp; Kegiatan
+                        </option>
+
+                        <option value="ekonomi">
+                            Ekonomi &amp; UMKM
+                        </option>
+
+                        <option value="sosial">
+                            Sosial &amp; Kemanusiaan
+                        </option>
+
+                        <option value="kesehatan">
+                            Kesehatan Masyarakat
+                        </option>
+
+                        <option value="organisasi">
+                            Organisasi &amp; Keanggotaan PPP
+                        </option>
+
+                        <option value="aspirasi">
+                            Aspirasi &amp; Pengaduan
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- BUTTON FILTER CATEGORY -->
+
+                <div class="faq-category-list"
+                     id="faqCategoryButtons">
+
+                    <!-- DIISI JAVASCRIPT -->
+
+                </div>
+
+
+                <!-- JUMLAH HASIL -->
+
+                <p class="faq-result-count"
+                   id="faqResultCount"
+                   role="status">
+
+                    Menampilkan 18 pertanyaan.
+
+                </p>
+
+
+                <!-- =================================
+                     DAFTAR FAQ DAN SIDEBAR
+                ================================== -->
+
+                <div class="faq-bank-layout">
+
+
+                    <!-- DAFTAR FAQ -->
+
+                    <div>
+
+                        <div class="faq-list"
+                             id="faqList">
+
+                            <!--
+                                Seluruh 18 FAQ diambil
+                                dari data JavaScript.
+                            -->
+
+                        </div>
+
+                        <div class="faq-empty"
+                             id="faqEmpty"
+                             hidden>
+
+                            <i class="bi bi-search"></i>
+
+                            <strong>
+                                Pertanyaan tidak ditemukan.
+                            </strong>
+
+                            <p class="mt-3">
+
+                                Coba gunakan kata kunci
+                                atau kategori lainnya.
+
+                            </p>
+
+                            <button
+                                type="button"
+                                class="faq-button"
+                                id="resetFaq">
+
+                                Tampilkan Semua FAQ
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SIDEBAR BANK DATA -->
+
+                    <aside class="faq-sidebar">
+
+                        <p class="faq-label">
+                            RUANG INFORMASI
+                        </p>
+
+                        <h3>
+                            Kenali isu, pahami konteksnya.
+                        </h3>
+
+                        <p>
+
+                            Temukan pembahasan mengenai
+                            isu lingkungan, pendidikan,
+                            ekonomi, kesehatan, sosial,
+                            dan informasi organisasi.
+
+                        </p>
+
+
+                        <!-- TOTAL FAQ -->
+
+                        <div class="faq-sidebar-stat">
+
+                            <strong id="totalFaq">
+                                18
+                            </strong>
+
+                            <span>
+                                Pertanyaan dan Jawaban
+                            </span>
+
+                        </div>
+
+
+                        <!-- TOTAL CATEGORY -->
+
+                        <div class="faq-sidebar-stat">
+
+                            <strong>09</strong>
+
+                            <span>
+                                Kategori Pembahasan
+                            </span>
+
+                        </div>
+
+                        <hr>
+
+                        <h3>
+
+                            Belum menemukan jawaban?
+
+                        </h3>
+
+                        <p>
+
+                            Gunakan fitur Jaring Aspirasi
+                            Rakyat untuk melihat mekanisme
+                            penyampaian pertanyaan,
+                            kritik, saran, dan gagasan.
+
+                        </p>
+
+                        <a class="faq-button"
+                           href="aspirasi.html">
+
+                            Buka Jaring Aspirasi
+
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+
+                        <a class="faq-button faq-button-outline"
+                           href="#formulir-kontak">
+
+                            Formulir Kontak
+
+                            <i class="bi bi-arrow-down"></i>
+
+                        </a>
+
+                    </aside>
+
+                </div>
+
+
+                <!-- CATATAN BANK FAQ -->
+
+                <div class="faq-academic-note">
+
+                    <i class="bi bi-info-circle"></i>
+
+                    <span>
+
+                        Bank Data FAQ merupakan contoh
+                        tanggapan informatif dalam
+                        prototipe akademik Digital Public
+                        Relations. Konten bukan tanggapan
+                        resmi PPP maupun hasil langsung
+                        pengambilan respons Google Forms.
+                        Klaim aktual dan sumber informasi
+                        perlu diverifikasi sebelum publikasi.
+
+                    </span>
+
+                </div>
+
+                <p class="faq-note">
+
+                    Referensi konten: Bank Data FAQ Jaring
+                    Aspirasi Rakyat — Prototipe Akademik
+                    Digital Public Relations, FAQ 01–18.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ====================================
+             02 — ALUR TINDAK LANJUT ASPIRASI
+        ===================================== -->
+
+        <section class="faq-section"
+                 id="alur-aspirasi">
+
+            <div class="wrap">
+
+                <p class="faq-label">
+                    02 / ALUR TINDAK LANJUT
+                </p>
+
+                <h2>
+                    Dari aspirasi menjadi informasi.
+                </h2>
+
+                <p class="faq-description">
+
+                    Rancangan mekanisme pengelolaan
+                    aspirasi dalam prototipe
+                    PPP Ruang Bersama.
+
+                </p>
+
+                <div class="faq-flow-grid">
+
+                    <article class="faq-flow-card">
+
+                        <span class="faq-flow-number">
+                            01
+                        </span>
+
+                        <h3>Aspirasi Masuk</h3>
+
+                        <p>
+
+                            Pertanyaan, kritik, saran,
+                            dan gagasan disampaikan
+                            melalui Jaring Aspirasi.
+
+                        </p>
+
+                    </article>
+
+                    <article class="faq-flow-card">
+
+                        <span class="faq-flow-number">
+                            02
+                        </span>
+
+                        <h3>Klasifikasi</h3>
+
+                        <p>
+
+                            Aspirasi dikelompokkan
+                            berdasarkan kategori dan
+                            topik pembahasan.
+
+                        </p>
+
+                    </article>
+
+                    <article class="faq-flow-card">
+
+                        <span class="faq-flow-number">
+                            03
+                        </span>
+
+                        <h3>Peninjauan</h3>
+
+                        <p>
+
+                            Pertanyaan ditinjau
+                            berdasarkan konteks
+                            dan kebutuhan informasi.
+
+                        </p>
+
+                    </article>
+
+                    <article class="faq-flow-card">
+
+                        <span class="faq-flow-number">
+                            04
+                        </span>
+
+                        <h3>Penyusunan Tanggapan</h3>
+
+                        <p>
+
+                            Tanggapan disusun
+                            menggunakan penjelasan
+                            dan rujukan pendukung.
+
+                        </p>
+
+                    </article>
+
+                    <article class="faq-flow-card">
+
+                        <span class="faq-flow-number">
+                            05
+                        </span>
+
+                        <h3>Publikasi Bank FAQ</h3>
+
+                        <p>
+
+                            Pertanyaan yang relevan
+                            dapat dipublikasikan
+                            tanpa membuka identitas
+                            pribadi pengirim.
+
+                        </p>
+
+                    </article>
+
+                </div>
+
+                <p class="faq-note">
+
+                    Alur ini merupakan rancangan akademik,
+                    bukan sistem tindak lanjut resmi partai.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ====================================
+             03 — KANAL INFORMASI
+        ===================================== -->
+
+        <section class="faq-section faq-section-sage"
+                 id="kanal-informasi">
+
+            <div class="wrap">
+
+                <p class="faq-label">
+                    03 / KANAL INFORMASI
+                </p>
+
+                <h2>
+                    Informasi dan kontak.
+                </h2>
+
+                <p class="faq-description">
+
+                    Referensi kanal komunikasi
+                    dan informasi organisasi.
+
+                </p>
+
+
+                <div class="contact-channel-grid">
+
+                    <!-- WHATSAPP -->
+
+                    <article class="contact-channel-card">
+
+                        <i class="bi bi-whatsapp"></i>
+
+                        <h3>WhatsApp</h3>
+
+                        <span class="contact-channel-value">
+
+                            081938358425
+
+                        </span>
+
+                        <p>
+
+                            Referensi nomor kontak pada
+                            rancangan website untuk
+                            kebutuhan informasi program
+                            dan kegiatan organisasi.
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- EMAIL -->
+
+                    <article class="contact-channel-card">
+
+                        <i class="bi bi-envelope"></i>
+
+                        <h3>Email</h3>
+
+                        <span class="contact-channel-value">
+
+                            PPP@gmail.com
+
+                        </span>
+
+                        <p>
+
+                            Referensi alamat email
+                            yang tercantum dalam desain
+                            prototipe akademik.
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- WEBSITE -->
+
+                    <article class="contact-channel-card">
+
+                        <i class="bi bi-globe"></i>
+
+                        <h3>Website Resmi</h3>
+
+                        <a class="contact-channel-value"
+                           href="https://ppp.or.id/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            ppp.or.id
+
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+
+                        <p>
+
+                            Rujukan informasi organisasi,
+                            pemberitaan, dan perkembangan
+                            kegiatan partai.
+
+                        </p>
+
+                    </article>
+
+                </div>
+
+                <p class="faq-note">
+
+                    Nomor WhatsApp dan alamat email mengikuti
+                    referensi desain sebelumnya dan belum
+                    diverifikasi sebagai kontak resmi aktif.
+
+                </p>
+
+
+                <!-- =================================
+                     MEDIA SOSIAL
+                ================================== -->
+
+                <div class="contact-social">
+
+                    <p class="faq-label">
+                        MEDIA SOSIAL
+                    </p>
+
+                    <div class="contact-social-grid">
+
+
+                        <!-- INSTAGRAM -->
+
+                        <a class="contact-social-card"
+                           href="https://www.instagram.com/ppp.peduli/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <i class="bi bi-instagram"></i>
+
+                            <span>
+
+                                <strong>Instagram</strong>
+
+                                <small>@ppp.peduli</small>
+
+                            </span>
+
+                        </a>
+
+
+                        <!-- TIKTOK -->
+
+                        <a class="contact-social-card"
+                           href="https://www.tiktok.com/@ppp.peduli"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <i class="bi bi-tiktok"></i>
+
+                            <span>
+
+                                <strong>TikTok</strong>
+
+                                <small>@ppp.peduli</small>
+
+                            </span>
+
+                        </a>
+
+
+                        <!-- YOUTUBE -->
+
+                        <a class="contact-social-card"
+                           href="https://www.youtube.com/@PartaiPersatuanPembangunanDPP"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <i class="bi bi-youtube"></i>
+
+                            <span>
+
+                                <strong>YouTube</strong>
+
+                                <small>
+                                    @PartaiPersatuanPembangunanDPP
+                                </small>
+
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ====================================
+             04 — FORMULIR KONTAK
+        ===================================== -->
+
+        <section class="contact-form-section"
+                 id="formulir-kontak">
+
+            <div class="wrap contact-form-grid">
+
+
+                <!-- FORM HEADING -->
+
+                <div class="contact-form-heading">
+
+                    <p class="faq-label">
+
+                        04 / FORMULIR KONTAK
+
+                    </p>
+
+                    <h2>
+
+                        Sampaikan pertanyaan
+                        dan masukan Anda.
+
+                    </h2>
+
+                    <p>
+
+                        Formulir ini merupakan simulasi
+                        komunikasi publik untuk
+                        mendemonstrasikan penyampaian
+                        pertanyaan, saran, dan masukan.
+
+                    </p>
+
+                    <p class="faq-note">
+
+                        Gunakan data contoh dan jangan
+                        memasukkan informasi pribadi
+                        atau dokumen sensitif.
+
+                    </p>
+
+                </div>
+
+
+                <!-- FORM -->
+
+                <form class="contact-form"
+                      id="contactForm">
+
+                    <div class="contact-input-grid">
+
+
+                        <!-- NAMA -->
+
+                        <div class="contact-field">
+
+                            <label for="contactName">
+
+                                Nama (opsional)
+
+                            </label>
+
+                            <input
+                                type="text"
+                                id="contactName"
+                                placeholder="Boleh dikosongkan"
+                                maxlength="80">
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="contact-field">
+
+                            <label for="contactEmail">
+
+                                Email (opsional)
+
+                            </label>
+
+                            <input
+                                type="email"
+                                id="contactEmail"
+                                placeholder="contoh@example.com"
+                                maxlength="100">
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- KATEGORI -->
+
+                    <div class="contact-field">
+
+                        <label for="contactCategory">
+                            Kategori
+                        </label>
+
+                        <select id="contactCategory"
+                                required>
+
+                            <option value="">
+
+                                Pilih kategori pertanyaan
+
+                            </option>
+
+                            <option>Lingkungan Hidup</option>
+
+                            <option>Informasi Publik</option>
+
+                            <option>Pendidikan</option>
+
+                            <option>Program &amp; Kegiatan</option>
+
+                            <option>Ekonomi &amp; UMKM</option>
+
+                            <option>Sosial &amp; Kemanusiaan</option>
+
+                            <option>Kesehatan Masyarakat</option>
+
+                            <option>Organisasi &amp; Keanggotaan</option>
+
+                            <option>Aspirasi &amp; Pengaduan</option>
+
+                            <option>Lainnya</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- SUBJEK -->
+
+                    <div class="contact-field">
+
+                        <label for="contactSubject">
+
+                            Subjek
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="contactSubject"
+                            placeholder="Contoh: Informasi rancangan program"
+                            maxlength="150"
+                            required>
+
+                    </div>
+
+
+                    <!-- PESAN -->
+
+                    <div class="contact-field">
+
+                        <label for="contactMessage">
+
+                            Pesan
+
+                        </label>
+
+                        <textarea
+                            id="contactMessage"
+                            placeholder="Tuliskan pertanyaan contoh tanpa data pribadi nyata."
+                            maxlength="2000"
+                            required></textarea>
+
+                    </div>
+
+
+                    <!-- BUTTON SUBMIT -->
+
+                    <button class="faq-button"
+                            type="submit">
+
+                        Kirim Pesan · Simulasi
+
+                        <i class="bi bi-arrow-up-right"></i>
+
+                    </button>
+
+
+                    <!-- NOTIFIKASI -->
+
+                    <div class="contact-form-status"
+                         id="contactFormStatus"
+                         role="status"
+                         hidden>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- ====================================
+             05 — LOKASI KANTOR
+        ===================================== -->
+
+        <section class="faq-section"
+                 id="lokasi-kantor">
+
+            <div class="wrap">
+
+                <p class="faq-label">
+                    05 / LOKASI ORGANISASI
+                </p>
+
+                <h2>
+                    Temukan Kantor Kami.
+                </h2>
+
+                <p class="faq-description">
+
+                    Referensi lokasi kantor pusat
+                    di Jakarta dan kantor wilayah
+                    Jawa Timur di Surabaya.
+
+                </p>
+
+
+                <div class="office-grid">
+
+
+                    <!-- =================================
+                         KANTOR DPP PPP JAKARTA
+                    ================================== -->
+
+                    <article class="office-card">
+
+                        <div class="office-map">
+
+                            <iframe
+                                src="https://maps.google.com/maps?q=Jl.%20Pangeran%20Diponegoro%20No.%2060%20Menteng%20Jakarta%20Pusat&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                                title="Peta referensi lokasi Menteng Jakarta"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                allowfullscreen>
+                            </iframe>
+
+                            <p class="office-map-caption">
+
+                                Pratinjau area Menteng,
+                                Jakarta Pusat.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="office-content">
+
+                            <h3>
+
+                                Kantor Pusat DPP PPP — Jakarta
+
+                            </h3>
+
+                            <p>
+
+                                Jl. Pangeran Diponegoro No. 60,
+                                Menteng, Jakarta Pusat.
+
+                            </p>
+
+                            <p>
+
+                                Telepon referensi:
+                                (021) 31936338
+
+                            </p>
+
+                            <a class="faq-button"
+                               href="https://www.google.com/maps/search/?api=1&amp;query=Jl+Pangeran+Diponegoro+No+60+Menteng+Jakarta+Pusat"
+                               target="_blank"
+                               rel="noopener noreferrer">
+
+                                Petunjuk Arah
+
+                                <i class="bi bi-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================
+                         KANTOR DPW PPP JAWA TIMUR
+                    ================================== -->
+
+                    <article class="office-card">
+
+                        <div class="office-map">
+
+                            <iframe
+                                src="https://maps.google.com/maps?q=Jl.%20Raya%20Kendangsari%20No.%2036%20Surabaya%20Jawa%20Timur&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                                title="Peta referensi lokasi Kendangsari Surabaya"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                allowfullscreen>
+                            </iframe>
+
+                            <p class="office-map-caption">
+
+                                Pratinjau area Kendangsari,
+                                Surabaya.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="office-content">
+
+                            <h3>
+
+                                Kantor DPW PPP Jawa Timur — Surabaya
+
+                            </h3>
+
+                            <p>
+
+                                Jl. Raya Kendangsari No. 36,
+                                Surabaya, Jawa Timur.
+
+                            </p>
+
+                            <p>
+
+                                Telepon referensi:
+                                (031) 8492378
+
+                            </p>
+
+                            <a class="faq-button"
+                               href="https://www.google.com/maps/search/?api=1&amp;query=Jl+Raya+Kendangsari+No+36+Surabaya"
+                               target="_blank"
+                               rel="noopener noreferrer">
+
+                                Petunjuk Arah
+
+                                <i class="bi bi-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <p class="faq-note">
+
+                    Alamat dan nomor telepon mengikuti
+                    referensi desain prototipe sebelumnya.
+                    Informasi perlu dikonfirmasi melalui
+                    sumber resmi sebelum melakukan kunjungan.
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+
+    <footer class="footer">
+
+        <div class="wrap footer-wrap">
+
+            <div class="footer-grid">
+
+                <!-- IDENTITAS -->
+
+                <div>
+
+                    <h3>
+                        PPP — Ruang Bersama
+                    </h3>
+
+                    <p>
+
+                        Partai Persatuan Pembangunan.
+                        Ruang informasi dan dialog publik
+                        dalam sebuah prototipe akademik.
+
+                    </p>
+
+                    <p class="gold">
+
+                        Merawat Persatuan dengan Pembangunan.
+
+                    </p>
+
+                </div>
+
+
+                <!-- QUICK LINKS -->
+
+                <div>
+
+                    <h4>Quick Links</h4>
+
+                    <a href="index.html">
+                        Beranda
+                    </a>
+
+                    <a href="tentang.html">
+                        Tentang PPP
+                    </a>
+
+                    <a href="struktur.html">
+                        Organisasi
+                    </a>
+
+                    <a href="program.html">
+                        Program &amp; Aksi
+                    </a>
+
+                    <a href="aspirasi.html">
+                        Aspirasi Rakyat
+                    </a>
+
+                    <a href="kabar.html">
+                        Berita
+                    </a>
+
+                    <a href="pernyataan.html">
+                        Pernyataan Resmi
+                    </a>
+
+                </div>
+
+
+                <!-- INFORMATION -->
+
+                <div>
+
+                    <h4>Information</h4>
+
+                    <a href="faq.html">
+                        FAQ &amp; Kontak
+                    </a>
+
+                    <a href="opini.html">
+                        Opini
+                    </a>
+
+                </div>
+
+
+                <!-- SOCIAL -->
+
+                <div>
+
+                    <h4>Social</h4>
+
+                    <a href="https://www.instagram.com/ppp.peduli/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        Instagram @ppp.peduli
+
+                    </a>
+
+                    <a href="https://www.tiktok.com/@ppp.peduli"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        TikTok @ppp.peduli
+
+                    </a>
+
+                    <a href="https://www.youtube.com/@PartaiPersatuanPembangunanDPP"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        YouTube<br>
+                        @PartaiPersatuanPembangunanDPP
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- DISCLAIMER -->
+
+            <p class="disclaimer">
+
+                Website ini merupakan prototipe akademik
+                yang dikembangkan untuk keperluan pembelajaran
+                Digital Public Relations. Website ini bukan
+                situs resmi Partai Persatuan Pembangunan
+                (PPP). Seluruh program simulasi dan fitur
+                interaktif yang ditampilkan tidak mewakili
+                kegiatan atau layanan resmi organisasi.
+
+            </p>
+
+            <p class="copyright">
+
+                © 2026 PPP — Ruang Bersama ·
+                Prototipe akademik Digital Public Relations
+
+            </p>
 
         </div>
 
-      </div>
-
-    </div>
-
-  </section>
-
-</main>
+    </footer>
 
 
-<!-- ==========================================
-     FOOTER BARU
-========================================== -->
+    <!-- TOAST NOTIFICATION -->
 
-<footer class="ppp-footer-v2">
-
-  <div class="container">
-
-    <div class="row g-4">
-
-      <!-- KOLOM 1 - IDENTITAS -->
-      <div class="col-lg-3 col-md-6">
-
-        <a
-          href="index.html"
-          class="ppp-footer-brand">
-          PPP — Ruang Bersama
-        </a>
-
-        <p class="ppp-footer-description">
-          Partai Persatuan Pembangunan.
-          Ruang informasi dan dialog publik
-          dalam sebuah prototipe akademik.
-        </p>
-
-        <p class="ppp-footer-motto">
-          Merawat Persatuan dengan Pembangunan.
-        </p>
-
-      </div>
-
-
-      <!-- KOLOM 2 - QUICK LINKS -->
-      <div class="col-lg-3 col-md-6">
-
-        <h3>Quick Links</h3>
-
-        <ul class="ppp-footer-list">
-
-          <li><a href="index.html">Beranda</a></li>
-
-          <li>
-            <a href="tentang.html">Tentang PPP</a>
-          </li>
-
-          <li>
-            <a href="tentang.html#struktur-organisasi">
-              Organisasi
-            </a>
-          </li>
-
-          <li>
-            <a href="program.html">Program &amp; Aksi</a>
-          </li>
-
-          <li>
-            <a href="aspirasi.html">Aspirasi Rakyat</a>
-          </li>
-
-          <li>
-            <a href="kabar.html">Berita</a>
-          </li>
-
-          <li>
-            <a href="pernyataan.html">
-              Pernyataan Resmi
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-
-      <!-- KOLOM 3 - INFORMASI -->
-      <div class="col-lg-3 col-md-6">
-
-        <h3>Information</h3>
-
-        <ul class="ppp-footer-list">
-
-          <li>
-            <a href="faq.html">FAQ &amp; Kontak</a>
-          </li>
-
-          <li>
-            <a href="kabar.html#daftar-artikel">
-              Opini
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-
-      <!-- KOLOM 4 - SOCIAL MEDIA -->
-      <div class="col-lg-3 col-md-6">
-
-        <h3>Social</h3>
-
-        <ul class="ppp-footer-list">
-
-          <!-- INSTAGRAM -->
-          <li>
-            <a
-              href="https://www.instagram.com/ppp.peduli?srtk=ODE5c3A2bmkzeGVz&amp;utm_source=qr"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              <i class="bi bi-instagram"></i>
-              Instagram · @ppp.peduli
-
-            </a>
-          </li>
-
-          <!-- TIKTOK -->
-          <li>
-            <a
-              href="https://www.tiktok.com/@ppp.peduli?_r=1&amp;_t=ZS-9BHOIDImUGy"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              <i class="bi bi-tiktok"></i>
-              TikTok · @ppp.peduli
-
-            </a>
-          </li>
-
-          <!-- YOUTUBE -->
-          <li>
-            <a
-              href="https://youtube.com/@partaipersatuanpembangunandpp?si=k4i02ifY6VN0bI6U"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              <i class="bi bi-youtube"></i>
-              YouTube · PPP DPP
-
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
+    <div class="faq-toast"
+         id="faqToast"
+         role="status"
+         aria-live="polite"
+         hidden>
     </div>
 
 
-    <!-- DISCLAIMER -->
-    <div class="ppp-footer-disclaimer">
+    <!-- BOOTSTRAP JAVASCRIPT -->
 
-      Website ini merupakan prototipe akademik yang
-      dikembangkan untuk keperluan pembelajaran
-      Digital Public Relations. Website ini bukan
-      situs resmi Partai Persatuan Pembangunan (PPP).
-      Seluruh program simulasi dan fitur interaktif
-      yang ditampilkan tidak mewakili kegiatan
-      atau layanan resmi organisasi.
-
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 
-    <!-- COPYRIGHT -->
-    <div class="ppp-footer-copyright">
-      © 2026 PPP — Ruang Bersama ·
-      Prototipe akademik Digital Public Relations
-    </div>
+    <!-- ========================================
+         JAVASCRIPT BANK DATA FAQ
+    ========================================= -->
 
-  </div>
+    <script>
 
-</footer>
+        document.addEventListener('DOMContentLoaded', () => {
 
 
-<!-- ==========================================
-     JAVASCRIPT
-========================================== -->
+            /* =================================
+               DATA KATEGORI FAQ
+            ================================== */
 
-<!-- BOOTSTRAP -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+            const categories = [
 
-<!-- JAVASCRIPT GLOBAL WEBSITE -->
-<script src="assets/js/main.js"></script>
+                {
+                    id: 'all',
+                    name: 'Semua'
+                },
+
+                {
+                    id: 'lingkungan',
+                    name: 'Lingkungan Hidup'
+                },
+
+                {
+                    id: 'informasi',
+                    name: 'Informasi Publik'
+                },
+
+                {
+                    id: 'pendidikan',
+                    name: 'Pendidikan'
+                },
+
+                {
+                    id: 'program',
+                    name: 'Program & Kegiatan'
+                },
+
+                {
+                    id: 'ekonomi',
+                    name: 'Ekonomi & UMKM'
+                },
+
+                {
+                    id: 'sosial',
+                    name: 'Sosial & Kemanusiaan'
+                },
+
+                {
+                    id: 'kesehatan',
+                    name: 'Kesehatan Masyarakat'
+                },
+
+                {
+                    id: 'organisasi',
+                    name: 'Organisasi & Keanggotaan PPP'
+                },
+
+                {
+                    id: 'aspirasi',
+                    name: 'Aspirasi & Pengaduan'
+                }
+
+            ];
 
 
-<!-- JAVASCRIPT FORM KONTAK -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+            /* ========================================
+               BANK DATA FAQ — 18 PERTANYAAN
 
-  const contactForm =
-    document.getElementById("faqContactForm");
+               Sumber:
+               Bank_Data_FAQ_Jaring_Aspirasi_PPP.pdf
 
-  const formStatus =
-    document.getElementById("faqFormStatus");
+               Urutan mengikuti panduan publikasi
+               pada halaman terakhir PDF.
+            ========================================= */
 
-  contactForm.addEventListener("submit", function(event) {
+            const faqData = [
 
-    event.preventDefault();
 
-    if (!contactForm.reportValidity()) {
-      return;
-    }
+                /* =================================
+                   FAQ 01 — KARHUTLA
+                ================================== */
 
-    // Ambil isi formulir
-    const name =
-      document.getElementById("faqName").value.trim();
+                {
+                    id: 1,
 
-    const email =
-      document.getElementById("faqEmail").value.trim();
+                    category: 'lingkungan',
 
-    const subject =
-      document.getElementById("faqSubject").value.trim();
+                    question:
+                        'Bagaimana peran PPP dalam menyikapi kebakaran hutan dan lahan (karhutla) di Indonesia?',
 
-    const message =
-      document.getElementById("faqMessage").value.trim();
+                    answer: [
 
-    // Pesan yang akan dibuka di aplikasi email
-    const emailBody =
-      "Nama: " + (name || "Tidak diisi") + "\n" +
-      "Email: " + (email || "Tidak diisi") + "\n\n" +
-      "Pesan:\n" + message + "\n\n" +
-      "Dikirim dari prototipe akademik website PPP.";
+                        'Kebakaran hutan dan lahan merupakan persoalan lingkungan yang berdampak pada kesehatan masyarakat, aktivitas ekonomi, serta keberlangsungan ekosistem. Penanganannya membutuhkan keterlibatan pemerintah, masyarakat, dunia usaha, dan berbagai organisasi politik dalam mendukung upaya pencegahan maupun pemulihan lingkungan.',
 
-    // Email pada mockup adalah contoh
-    // Ganti jika alamat resmi telah diverifikasi.
-    const destination = "PPP@gmail.com";
+                        'Melalui rancangan program PPP Peduli Bumi dan Kemanusiaan, kepedulian terhadap persoalan lingkungan dapat diwujudkan melalui edukasi pencegahan kebakaran, penghijauan, penyampaian aspirasi warga terdampak, serta kegiatan sosial. Pelaksanaan penanganan karhutla secara langsung tetap membutuhkan koordinasi dengan instansi yang berwenang.'
 
-    const mailtoLink =
-      "mailto:" + destination +
-      "?subject=" + encodeURIComponent(subject) +
-      "&body=" + encodeURIComponent(emailBody);
+                    ],
 
-    formStatus.textContent =
-      "Aplikasi email akan dibuka. " +
-      "Periksa alamat tujuan dan isi pesan sebelum mengirim. " +
-      "Pesan belum otomatis terkirim.";
+                    support:
+                        'Materi pendukung yang disarankan: foto ilustrasi karhutla dan infografis dampak karhutla.',
 
-    // Membuka aplikasi email pengguna
-    window.location.href = mailtoLink;
+                    links: [
 
-  });
+                        {
+                            name: 'Lihat Program PPP Peduli Bumi',
+                            url: 'peduli-bumi.html'
+                        },
 
-});
-</script>
+                        {
+                            name: 'Kementerian Kehutanan',
+                            url: 'https://www.kehutanan.go.id/'
+                        }
+
+                    ]
+
+                },
+
+
+                /* =================================
+                   FAQ 03 — ISU GIBRAN
+                ================================== */
+
+                {
+                    id: 3,
+
+                    category: 'informasi',
+
+                    question:
+                        'Bagaimana tanggapan PPP terhadap isu pengunduran diri Gibran Rakabuming Raka sebagai Wakil Presiden?',
+
+                    answer: [
+
+                        'Isu mengenai pengunduran diri atau pemakzulan Wakil Presiden perlu dipahami berdasarkan informasi resmi dan mekanisme konstitusional yang berlaku. Pernyataan mengenai sikap PPP perlu merujuk pada publikasi resmi atau pemberitaan yang dapat diverifikasi.',
+
+                        'Masyarakat diharapkan memperoleh informasi melalui sumber terpercaya dan memahami proses ketatanegaraan yang berlaku, sehingga tidak mudah terpengaruh oleh informasi yang belum terverifikasi. Status pengunduran diri, tanggal kejadian, dan kutipan tanggapan partai belum diperiksa ulang untuk dokumen ini.'
+
+                    ],
+
+                    verification:
+                        'Isu, status kejadian, dan sikap partai belum diverifikasi. Pertanyaan ini tidak mengonfirmasi adanya pengunduran diri.',
+
+                    support:
+                        'Rujukan publikasi resmi dan pemberitaan bertanggal dapat ditambahkan setelah diverifikasi.',
+
+                    links: [
+
+                        {
+                            name: 'Halaman Pernyataan Resmi',
+                            url: 'pernyataan.html'
+                        },
+
+                        {
+                            name: 'Portal PPP',
+                            url: 'https://ppp.or.id/'
+                        }
+
+                    ]
+
+                },
+
+
+                /* =================================
+                   FAQ 04 — RUU PERAMPASAN ASET
+                ================================== */
+
+                {
+                    id: 4,
+
+                    category: 'informasi',
+
+                    question:
+                        'Bagaimana perkembangan RUU Perampasan Aset yang ramai dibicarakan masyarakat?',
+
+                    answer: [
+
+                        'RUU Perampasan Aset berkaitan dengan mekanisme penanganan aset yang berasal dari tindak pidana, termasuk tindak pidana korupsi. Status pembahasan atau pengesahan perlu diperiksa melalui dokumen resmi terbaru sebelum dipublikasikan.',
+
+                        'Masyarakat dapat berpartisipasi dalam pengawasan kebijakan melalui akses informasi publik, penyampaian masukan, dan pemantauan proses penegakan hukum. Keterbukaan informasi menjadi bagian penting dalam memastikan pelaksanaan kebijakan sesuai ketentuan hukum.'
+
+                    ],
+
+                    verification:
+                        'Status pembahasan atau pengesahan terbaru belum diverifikasi.',
+
+                    support:
+                        'Materi pendukung yang disarankan: berita terkait dan dokumen regulasi.',
+
+                    links: [
+
+                        {
+                            name: 'JDIH DPR RI',
+                            url: 'https://jdih.dpr.go.id/'
+                        },
+
+                        {
+                            name: 'Ruang Perspektif',
+                            url: 'opini.html'
+                        }
+
+                    ]
+
+                },
+
+
+                /* =================================
+                   FAQ 13 — KEAMANAN PANGAN MBG
+                ================================== */
+
+                {
+                    id: 13,
+
+                    category: 'kesehatan',
+
+                    question:
+                        'Bagaimana menyikapi kasus keracunan makanan dalam program Makan Bergizi Gratis (MBG)?',
+
+                    answer: [
+
+                        'Keamanan pangan merupakan aspek penting dalam pelaksanaan program Makan Bergizi Gratis. Informasi mengenai kasus keracunan di daerah tertentu perlu diperiksa melalui publikasi resmi instansi kesehatan sebelum dicantumkan.',
+
+                        'Evaluasi program perlu memperhatikan kualitas bahan makanan, kebersihan dapur, proses distribusi, penyimpanan makanan, serta kesiapan penanganan apabila terjadi gangguan kesehatan. Masyarakat yang mengalami atau mengetahui dugaan keracunan dapat segera menghubungi fasilitas kesehatan dan melaporkannya kepada pihak berwenang.'
+
+                    ],
+
+                    verification:
+                        'Informasi kasus pada daerah tertentu perlu dikonfirmasi kepada instansi kesehatan.',
+
+                    support:
+                        'Materi pendukung yang disarankan: berita kesehatan dan infografis keamanan pangan.',
+
+                    links: [
+
+                        {
+                            name: 'Kementerian Kesehatan RI',
+                            url: 'https://www.kemkes.go.id/'
+                        }
+
+                    ]
+
+                },
+
+
+                /* =================================
+                   FAQ 05 — PROGRAM BEASISWA
+                ================================== */
+
+                {
+                    id: 5,
+
+                    category: 'pendidikan',
+
+                    question:
+                        'Bagaimana PPP membantu generasi muda yang mengalami kesulitan biaya pendidikan?',
+
+                    answer: [
+
+                        'Program Beasiswa Pendidikan Pemuda dalam rancangan program PPP dikembangkan sebagai bentuk perhatian terhadap persoalan akses pendidikan. Program ini berfokus pada kesempatan belajar, pengembangan potensi, dan peningkatan keterampilan generasi muda yang menghadapi keterbatasan ekonomi.',
+
+                        'Melalui program tersebut, bantuan pendidikan dirancang tidak hanya dalam bentuk dukungan finansial, tetapi juga melalui kegiatan pengembangan diri dan pendampingan. Informasi mengenai mekanisme pendaftaran dan pelaksanaan program dapat ditemukan pada halaman Beasiswa Pendidikan Pemuda dalam website ini.'
+
+                    ],
+
+                    support:
+                        'Informasi rancangan program, gambar kegiatan pendidikan, dan tahapan program.',
+
+                    links: [
+
+                        {
+                            name: 'Beasiswa Pendidikan Pemuda',
+                            url: 'beasiswa.html'
+                        },
+
+                        {
+                            name: 'Pendaftaran & Persyaratan',
+                            url: 'pendaftaran-beasiswa.html'
+                        }
+
+                    ]
+
+                },
+
+
+                /* =================================
+                   FAQ 07 — PROGRAM TALKSHOW
+                ================================== */
+
+                {
+                    id: 7,
+
+                    category: 'program',
+
+                    question:
+                        'Apa tujuan pelaksanaan Talk Show “Lost in Your 20’s: Finding God, Finding Yourself”?',
+
+                    answer: [
+
+                        'Pada 25 November 2026, kelompok pelaksana menyelenggarakan simulasi kegiatan talk show bertajuk “Lost in Your 20’s: Finding God, Finding Yourself” melalui Zoom Meeting dalam rangka program akademik Digital Public Relations PPP.',
+
+                        'Kegiatan ini mengangkat persoalan pencarian jati diri, penguatan iman, dan tantangan kehidupan pada usia 20-an. Materi yang disampaikan mencakup iman sebagai pegangan, Islam sebagai kompas kehidupan, serta pentingnya mengenali potensi diri. Kegiatan juga dilengkapi sesi diskusi dan tanya jawab mengenai berbagai persoalan kehidupan.'
+
+                    ],
+
+                    verification:
+                        'Informasi kegiatan mengikuti dokumentasi akademik kelompok pada PDF.',
+
+                    support:
+                        'Dokumentasi Zoom Meeting dan poster After Report kegiatan 25 November 2026.',
+
+                    links: [
+
+                        {
+                            name: 'Baca After Report',
+                            url: 'talkshow.html'
+                        },
+
+                        {
+                            name: 'Instagram @ppp.peduli',
+                            url: 'https://www.instagram.com/ppp.peduli/'
+                        }
+
+                    ]
+
+                },
+
+
+                /* =================================
+                   FAQ 15 — MASKOT KABA
+                ================================== */
+
+                {
+                    id: 15,
+
+                    category: 'organisasi',
+
+                    question:
+                        'Apa tujuan PPP memperkenalkan maskot KABA?',
+
+                    answer: [
+
+                        'KABA merupakan maskot yang dikembangkan dalam rancangan komunikasi digital PPP dengan mengambil inspirasi dari lambang Ka’bah. Karakter ini memiliki tampilan ramah, ceria, dan identitas visual berwarna hijau, hitam, serta emas.',
+
+                        'Dalam prototipe akademik ini, KABA digunakan sebagai karakter pendamping dalam berbagai publikasi media sosial, dokumentasi kegiatan, dan penyampaian informasi. Kehadirannya menggambarkan semangat persatuan dan kebersamaan yang menjadi bagian dari konsep visual komunikasi.'
+
+                    ],
+
+                    support:
+                        'Gambar maskot KABA dan konten pengenalan karakter dalam proyek akademik.',
+
+                    links: [
+
+                        {
+                            name: 'Kenalan dengan KABA',
+                            url: 'kaba.html'
+                        },
+
+                        {
+                            name: 'Instagram @ppp.peduli',
+                            url: 'https://www.instagram.com/ppp.peduli/'
+                        }
+
+                    ]
+
+                },
+
+
+                /* =================================
+                   FAQ 09 — HARGA KEBUTUHAN POKOK
+                ================================== */
+
+                {
+                    id: 9,
+
+                    category: 'ekonomi',
+
+                    question:
+                        'Bagaimana masyarakat dapat menghadapi kenaikan harga kebutuhan pokok?',
+
+                    answer: [
+
+                        'Kenaikan harga kebutuhan pokok menjadi salah satu persoalan yang dapat memengaruhi kesejahteraan rumah tangga. Kondisi tersebut dapat dipengaruhi oleh perubahan produksi, distribusi, permintaan pasar, serta ketersediaan bahan pangan.',
+
+                        'Upaya penanganannya membutuhkan pengawasan distribusi, keterbukaan informasi harga, dan kebijakan yang memperhatikan kebutuhan masyarakat. Warga juga dapat menyampaikan aspirasi mengenai kenaikan harga dan kesulitan ekonomi di wilayahnya melalui Jaring Aspirasi Rakyat.'
+
+                    ],
+
+                    support:
+                        'Materi pendukung yang disarankan: informasi harga pangan dan infografis kebutuhan pokok.',
+
+                    links: [
+
+                        {
+                            name: 'Panel Harga Pangan',
+                            url: 'https://panelharga.badanpangan.go.id/'
+                        },
+
+                        {
+                            name: 'Jaring Aspirasi Rakyat',
+                            url: 'aspirasi.html'
+                        }
+
+                    ]
+
+                },
+
+
+                /* =================================
+                   FAQ 02 — BANJIR
+                ================================== */
+
+                {
+                    id: 2,
+
+                    category: 'lingkungan',
+
+                    question:
+                        'Bagaimana upaya mengatasi banjir dan kerusakan lingkungan yang semakin sering menjadi perhatian masyarakat?',
+
+                    answer: [
+
+                        'Permasalahan banjir perlu ditangani melalui pendekatan yang menyeluruh, mulai dari pengelolaan sampah, perbaikan sistem drainase, perlindungan daerah resapan air, hingga penataan lingkungan permukiman.',
+
+                        'Dalam rancangan program PPP Peduli Bumi dan Kemanusiaan, kegiatan seperti penghijauan, kerja bakti, edukasi pengelolaan sampah, dan kepedulian terhadap masyarakat terdampak dapat menjadi bentuk partisipasi dalam menjaga lingkungan. Masyarakat juga dapat menyampaikan aspirasi mengenai kondisi lingkungan di daerahnya melalui Jaring Aspirasi.'
+
+                    ],
+
+                    support:
+                        'Materi pendukung yang disarankan: infografis pencegahan banjir dan dokumentasi kegiatan lingkungan apabila tersedia.',
+
+                    links: [
+
+                        {
+                            name: 'PPP Peduli Bumi',
+                            url: 'peduli-bumi.html'
+                        },
+
+                        {
+                            name: 'BNPB',
+                            url: 'https://www.bnpb.go.id/'
+                        }
+
+                    ]
+
+                },
+
+
+                /* =================================
+                   FAQ 06 — PERSYARATAN BEASISWA
+                ================================== */
+
+                {
+                    id: 6,
+
+                    category: 'pendidikan',
+
+                    question:
+                        'Apakah program beasiswa dapat diikuti oleh mahasiswa dan pelajar dari keluarga kurang mampu?',
+
+                    answer: [
+
+                        'Beasiswa Pendidikan Pemuda dirancang dengan memperhatikan kebutuhan pelajar dan mahasiswa yang menghadapi keterbatasan akses pendidikan. Kondisi ekonomi, kebutuhan pendidikan, serta motivasi belajar dapat menjadi pertimbangan dalam rancangan proses seleksi.',
+
+                        'Calon peserta perlu memperhatikan informasi persyaratan dan dokumen yang diperlukan sebelum melakukan pendaftaran. Ketentuan beasiswa dalam website ini merupakan bagian dari rancangan program akademik, bukan pengumuman penerimaan beasiswa resmi.'
+
+                    ],
+
+                    support:
+                        'Tahapan pendaftaran, persyaratan umum, dan dokumen yang diperlukan dalam rancangan program.',
+
+                    links: [
+
+                        {
+                            name: 'Lihat Persyaratan Beasiswa',
+                            url: 'pendaftaran-beasiswa.html'
+                        },
+
+                        {
+                            name: 'Informasi Program Beasiswa',
+                            url: 'beasiswa.html'
+                        }
+
+                    ]
+
+                },
+
+
+                /* =================================
+                   FAQ 08 — SPIRITUALITAS
+                ================================== */
+
+                {
+                    id: 8,
+
+                    category: 'program',
+
+                    question:
+                        'Mengapa PPP mengangkat tema pengembangan diri dan spiritualitas dalam kegiatan talk show?',
+
+                    answer: [
+
+                        'Tema pengembangan diri dan spiritualitas dipilih karena berkaitan dengan berbagai tantangan kehidupan, seperti tekanan sosial, kebingungan dalam menentukan masa depan, serta pencarian makna dan tujuan hidup.',
+
+                        'Dalam rancangan kegiatan akademik ini, talk show menjadi ruang pembelajaran dan refleksi mengenai hubungan antara kehidupan sehari-hari, nilai keislaman, dan kemanusiaan. Kegiatan tersebut juga memberikan kesempatan untuk mendiskusikan persoalan nonpolitik melalui pendekatan edukatif.'
+
+                    ],
+
+                    support:
+                        'Dokumentasi materi webinar dan publikasi After Report kegiatan.',
+
+                    links: [
+
+                        {
+                            name: 'Seminar & Kolaborasi',
+                            url: 'talkshow.html'
+                        }
+
+                    ]
+
+                },
+
+
+                /* =================================
+                   FAQ 10 — DIGITALISASI UMKM
+                ================================== */
+
+                {
+                    id: 10,
+
+                    category: 'ekonomi',
+
+                    question:
+                        'Bagaimana pelaku UMKM dapat bersaing di tengah perkembangan bisnis digital?',
+
+                    answer: [
+
+                        'Perkembangan teknologi digital memberikan peluang bagi pelaku UMKM untuk memperluas pasar melalui media sosial, marketplace, dan layanan pembayaran digital. Namun, masih terdapat tantangan berupa keterbatasan keterampilan, akses teknologi, modal, serta kemampuan pemasaran.',
+
+                        'Pengembangan UMKM dapat dilakukan melalui pelatihan pemasaran digital, pengelolaan keuangan, peningkatan kualitas produk, dan pendampingan usaha. Masyarakat dapat mengakses informasi program pengembangan usaha melalui instansi pemerintah yang berkaitan dengan pemberdayaan UMKM.'
+
+                    ],
+
+                    support:
+                        'Materi pendukung yang disarankan: infografis digitalisasi UMKM, ilustrasi pelaku usaha, dan informasi pelatihan.',
+
+                    links: [
+
+                        {
+                            name: 'Ruang Perspektif',
+                            url: 'opini.html'
+                        }
+
+                    ]
+
+                },
+
+
+                /* =================================
+                   FAQ 11 — BANTUAN BENCANA
+                ================================== */
+
+                {
+                    id: 11,
+
+                    category: 'sosial',
+
+                    question:
+                        'Bagaimana peran PPP dalam membantu masyarakat terdampak bencana alam?',
+
+                    answer: [
+
+                        'Dalam menghadapi bencana alam, berbagai organisasi masyarakat dan partai politik dapat berkontribusi melalui penggalangan bantuan, koordinasi kerelawanan, penyediaan kebutuhan dasar, serta penyampaian aspirasi masyarakat terdampak.',
+
+                        'Rancangan program PPP Peduli Bumi dan Kemanusiaan mencakup kegiatan kepedulian sosial dan lingkungan. Bentuk kegiatan yang dapat dikembangkan antara lain bantuan kebutuhan pokok, dukungan terhadap pemulihan lingkungan, serta kerja sama dengan komunitas dan lembaga kemanusiaan. Informasi pelaksanaan kegiatan perlu dilengkapi dokumentasi dan sumber yang jelas.'
+
+                    ],
+
+                    support:
+                        'Galeri kegiatan sosial yang tersedia dan informasi rancangan program kemanusiaan.',
+
+                    links: [
+
+                        {
+                            name: 'PPP Peduli Bumi dan Kemanusiaan',
+                            url: 'peduli-bumi.html'
+                        },
+
+                        {
+                            name: 'BNPB',
+                            url: 'https://www.bnpb.go.id/'
+                        }
+
+                    ]
+
+                },
+
+
+                /* =================================
+                   FAQ 12 — PERUNDUNGAN
+                ================================== */
+
+                {
+                    id: 12,
+
+                    category: 'sosial',
+
+                    question:
+                        'Bagaimana mengatasi maraknya kasus perundungan di sekolah dan media sosial?',
+
+                    answer: [
+
+                        'Perundungan merupakan persoalan sosial yang dapat berdampak pada kondisi psikologis, kenyamanan, dan kehidupan sehari-hari seseorang. Pencegahannya membutuhkan keterlibatan keluarga, sekolah, masyarakat, serta pengelola platform digital.',
+
+                        'Upaya yang dapat dilakukan meliputi edukasi mengenai etika komunikasi, penyediaan ruang pengaduan yang aman, pendampingan korban, dan peningkatan literasi digital. Masyarakat juga perlu menghindari penyebaran ulang konten perundungan yang dapat memperburuk kondisi korban.'
+
+                    ],
+
+                    support:
+                        'Materi pendukung yang disarankan: infografis Stop Bullying dan panduan pelaporan perundungan.',
+
+                    links: [
+
+                        {
+                            name: 'Pembahasan Media Sosial',
+                            url: 'opini.html#opini-media-digital'
+                        }
+
+                    ]
+
+                },
+
+
+                /* =================================
+                   FAQ 14 — KESEHATAN KABUT ASAP
+                ================================== */
+
+                {
+                    id: 14,
+
+                    category: 'kesehatan',
+
+                    question:
+                        'Bagaimana masyarakat menjaga kesehatan saat terjadi kabut asap akibat karhutla?',
+
+                    answer: [
+
+                        'Paparan kabut asap dapat menyebabkan gangguan pernapasan, iritasi mata, batuk, dan memperburuk kondisi kesehatan kelompok rentan, seperti anak-anak, lansia, serta penderita penyakit pernapasan.',
+
+                        'Masyarakat dapat mengurangi aktivitas di luar ruangan saat kualitas udara memburuk, menggunakan masker respirator yang sesuai apabila harus beraktivitas di luar, dan memantau informasi kualitas udara. Apabila mengalami sesak napas atau gangguan kesehatan yang berat, segera periksakan diri ke fasilitas kesehatan.'
+
+                    ],
+
+                    support:
+                        'Materi pendukung yang disarankan: infografis perlindungan kesehatan dari kabut asap.',
+
+                    links: [
+
+                        {
+                            name: 'Informasi BMKG',
+                            url: 'https://www.bmkg.go.id/'
+                        }
+
+                    ]
+
+                },
+
+
+                /* =================================
+                   FAQ 16 — STAKEHOLDER PPP
+                ================================== */
+
+                {
+                    id: 16,
+
+                    category: 'organisasi',
+
+                    question:
+                        'Siapa saja yang terlibat dalam lingkungan organisasi PPP?',
+
+                    answer: [
+
+                        'Lingkungan organisasi PPP mencakup unsur kepengurusan, kader, anggota, serta berbagai badan otonom dan pihak yang memiliki hubungan kelembagaan dengan partai.',
+
+                        'Informasi mengenai struktur kepengurusan, organisasi sayap, dan pemetaan stakeholder dapat diakses melalui halaman Tentang PPP. Pemetaan tersebut membantu masyarakat memahami perbedaan antara unsur internal organisasi dan pihak eksternal yang berinteraksi dalam kehidupan politik maupun sosial.'
+
+                    ],
+
+                    support:
+                        'Diagram ekosistem stakeholder dan pemetaan organisasi sayap PPP.',
+
+                    links: [
+
+                        {
+                            name: 'Lihat Struktur Organisasi',
+                            url: 'struktur.html'
+                        },
+
+                        {
+                            name: 'Stakeholder PPP',
+                            url: 'tentang.html#stakeholder'
+                        },
+
+                        {
+                            name: 'Organisasi Sayap PPP',
+                            url: 'tentang.html#organisasi-sayap'
+                        }
+
+                    ]
+
+                },
+
+
+                /* =================================
+                   FAQ 17 — MENYAMPAIKAN ASPIRASI
+                ================================== */
+
+                {
+                    id: 17,
+
+                    category: 'aspirasi',
+
+                    question:
+                        'Bagaimana cara menyampaikan aspirasi, kritik, atau pertanyaan kepada PPP?',
+
+                    answer: [
+
+                        'Masyarakat dapat menyampaikan pertanyaan, kritik, saran, dan gagasan melalui program Jaring Aspirasi Rakyat yang tersedia dalam website prototipe PPP. Aspirasi dapat berkaitan dengan persoalan pendidikan, lingkungan, ekonomi, kesehatan, sosial, maupun informasi publik.',
+
+                        'Masukan yang diterima dapat dikelompokkan berdasarkan kategori untuk kemudian ditinjau dan disusun menjadi materi tanggapan. Pertanyaan yang relevan dapat dipublikasikan melalui Bank Data FAQ dengan tetap memperhatikan perlindungan data pribadi.'
+
+                    ],
+
+                    support:
+                        'Halaman Jaring Aspirasi dan referensi formulir akademik. Jangan memasukkan data pribadi nyata.',
+
+                    links: [
+
+                        {
+                            name: 'Sampaikan Aspirasi',
+                            url: 'aspirasi.html'
+                        },
+
+                        {
+                            name: 'Formulir Aspirasi Akademik',
+                            url: 'https://forms.gle/nBwQbHqGnEUhwqDG6'
+                        }
+
+                    ]
+
+                },
+
+
+                /* =================================
+                   FAQ 18 — TINDAK LANJUT ASPIRASI
+                ================================== */
+
+                {
+                    id: 18,
+
+                    category: 'aspirasi',
+
+                    question:
+                        'Bagaimana cara mengetahui tindak lanjut aspirasi yang telah disampaikan?',
+
+                    answer: [
+
+                        'Aspirasi yang disampaikan melalui Jaring Aspirasi Rakyat dapat ditinjau dan dikelompokkan berdasarkan topik pembahasan. Pertanyaan yang memiliki relevansi dengan kepentingan masyarakat luas dapat dikembangkan menjadi tanggapan informatif melalui Bank Data FAQ.',
+
+                        'Tanggapan dapat disertai penjelasan tertulis, dokumentasi kegiatan, artikel berita, infografis, maupun tautan sumber informasi. Melalui sistem tersebut, masyarakat dapat memperoleh informasi mengenai topik yang disampaikan tanpa harus menampilkan identitas pribadi pengirim aspirasi.'
+
+                    ],
+
+                    support:
+                        'Alur tindak lanjut: Aspirasi Masuk – Klasifikasi – Peninjauan – Penyusunan Tanggapan – Publikasi Bank FAQ.',
+
+                    links: [
+
+                        {
+                            name: 'Lihat Alur Tindak Lanjut',
+                            url: '#alur-aspirasi'
+                        },
+
+                        {
+                            name: 'Jaring Aspirasi Rakyat',
+                            url: 'aspirasi.html'
+                        }
+
+                    ]
+
+                }
+
+            ];
+
+
+            /* =================================
+               ELEMENT FAQ
+            ================================== */
+
+            const faqList =
+                document.getElementById('faqList');
+
+            const faqSearch =
+                document.getElementById('faqSearch');
+
+            const categorySelect =
+                document.getElementById('faqCategorySelect');
+
+            const categoryButtons =
+                document.getElementById('faqCategoryButtons');
+
+            const resultCount =
+                document.getElementById('faqResultCount');
+
+            const faqEmpty =
+                document.getElementById('faqEmpty');
+
+            const resetFaq =
+                document.getElementById('resetFaq');
+
+            let activeCategory = 'all';
+
+
+            /* =================================
+               HELPER FUNCTION
+            ================================== */
+
+            function normalizeText(value) {
+
+                return String(value)
+                    .toLocaleLowerCase('id')
+                    .trim()
+                    .replace(/\s+/g, ' ');
+
+            }
+
+
+            function escapeHtml(value) {
+
+                return String(value).replace(
+
+                    /[&<>"']/g,
+
+                    character => ({
+
+                        '&': '&amp;',
+                        '<': '&lt;',
+                        '>': '&gt;',
+                        '"': '&quot;',
+                        "'": '&#39;'
+
+                    })[character]
+
+                );
+
+            }
+
+
+            function getCategoryName(categoryId) {
+
+                return categories.find(category =>
+
+                    category.id === categoryId
+
+                )?.name || categoryId;
+
+            }
+
+
+            function formatId(id) {
+
+                return String(id).padStart(2, '0');
+
+            }
+
+
+            function scrollToElement(element) {
+
+                if (!element) return;
+
+                const reducedMotion = window.matchMedia(
+                    '(prefers-reduced-motion: reduce)'
+                ).matches;
+
+                element.scrollIntoView({
+
+                    behavior: reducedMotion
+                        ? 'auto'
+                        : 'smooth',
+
+                    block: 'start'
+
+                });
+
+            }
+
+
+            /* =================================
+               RENDER FILTER CATEGORY
+            ================================== */
+
+            function renderCategoryButtons() {
+
+                categoryButtons.innerHTML =
+                    categories.map(category => `
+
+                        <button
+                            type="button"
+                            class="faq-filter-button
+                            ${category.id === activeCategory
+                                ? 'active'
+                                : ''}"
+
+                            data-category="${category.id}"
+
+                            aria-pressed="${
+                                category.id === activeCategory
+                            }">
+
+                            ${escapeHtml(category.name)}
+
+                        </button>
+
+                    `).join('');
+
+            }
+
+
+            /* =================================
+               RENDER SUPPORT LINKS
+            ================================== */
+
+            function renderLinks(links) {
+
+                return links.map(link => {
+
+                    const external =
+                        /^https?:\/\//i.test(link.url);
+
+                    return `
+
+                        <a
+                            class="faq-support-link"
+
+                            href="${escapeHtml(link.url)}"
+
+                            ${external
+                                ? 'target="_blank" rel="noopener noreferrer"'
+                                : ''}>
+
+                            ${escapeHtml(link.name)}
+
+                            <i class="bi bi-arrow-up-right"
+                               aria-hidden="true"></i>
+
+                        </a>
+
+                    `;
+
+                }).join('');
+
+            }
+
+
+            /* =================================
+               RENDER CARD FAQ
+            ================================== */
+
+            function createFaqCard(item) {
+
+                const categoryName =
+                    getCategoryName(item.category);
+
+                const verification =
+                    item.verification ||
+                    'Konten mengikuti dokumen akademik; belum diverifikasi secara independen.';
+
+                return `
+
+                    <details
+                        class="faq-item"
+                        id="faq-${formatId(item.id)}"
+                        data-id="${item.id}">
+
+
+                        <summary>
+
+                            <span class="faq-item-meta">
+
+                                <span class="faq-item-number">
+
+                                    FAQ ${formatId(item.id)}
+
+                                </span>
+
+                                <span class="faq-item-category">
+
+                                    ${escapeHtml(categoryName)}
+
+                                    · Simulasi Akademik
+
+                                </span>
+
+                            </span>
+
+
+                            <span class="faq-question-row">
+
+                                <span class="faq-question">
+
+                                    ${escapeHtml(item.question)}
+
+                                </span>
+
+                                <i class="bi bi-chevron-down"
+                                   aria-hidden="true"></i>
+
+                            </span>
+
+
+                            <span class="faq-open-text">
+
+                                <span class="faq-open-label">
+
+                                    Buka jawaban ↓
+
+                                </span>
+
+                                <span class="faq-close-label">
+
+                                    Tutup jawaban ↑
+
+                                </span>
+
+                            </span>
+
+                        </summary>
+
+
+                        <div class="faq-answer">
+
+                            <h3 class="faq-answer-label">
+
+                                Jawaban
+
+                            </h3>
+
+
+                            ${item.answer.map(paragraph => `
+
+                                <p>
+                                    ${escapeHtml(paragraph)}
+                                </p>
+
+                            `).join('')}
+
+
+                            <!-- STATUS INFORMASI -->
+
+                            <div class="faq-verification">
+
+                                <p>
+
+                                    <strong>Jenis konten:</strong>
+
+                                    Simulasi akademik
+
+                                </p>
+
+                                <p>
+
+                                    <strong>Publikasi resmi:</strong>
+
+                                    Belum dikonfirmasi
+
+                                </p>
+
+                                <p>
+
+                                    <strong>Status verifikasi:</strong>
+
+                                    ${escapeHtml(verification)}
+
+                                </p>
+
+                            </div>
+
+
+                            <!-- KONTEN PENDUKUNG -->
+
+                            <div class="faq-support">
+
+                                <h4>
+
+                                    Konten dan Rujukan Pendukung
+
+                                </h4>
+
+                                <p>
+
+                                    ${escapeHtml(item.support)}
+
+                                </p>
+
+                                <div class="faq-support-links">
+
+                                    ${renderLinks(item.links)}
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- COPY ACTIONS -->
+
+                            <div class="faq-copy-actions">
+
+                                <button
+                                    type="button"
+                                    class="faq-copy-button"
+                                    data-copy="answer"
+                                    data-id="${item.id}">
+
+                                    <i class="bi bi-copy"></i>
+
+                                    Salin Jawaban
+
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="faq-copy-button"
+                                    data-copy="source"
+                                    data-id="${item.id}">
+
+                                    <i class="bi bi-link-45deg"></i>
+
+                                    Salin Rujukan
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </details>
+
+                `;
+
+            }
+
+
+            /* =================================
+               FILTER DAN SEARCH FAQ
+            ================================== */
+
+            function getFilteredFaq() {
+
+                const keyword =
+                    normalizeText(faqSearch.value);
+
+                const words = keyword
+                    ? keyword.split(/\s+/)
+                    : [];
+
+
+                return faqData.filter(item => {
+
+
+                    /* FILTER CATEGORY */
+
+                    const categoryMatch =
+
+                        activeCategory === 'all' ||
+
+                        item.category === activeCategory;
+
+
+                    /* FILTER KEYWORD */
+
+                    const text = normalizeText([
+
+                        'FAQ ' + formatId(item.id),
+
+                        getCategoryName(item.category),
+
+                        item.question,
+
+                        ...item.answer,
+
+                        item.support,
+
+                        ...item.links.map(link => link.name)
+
+                    ].join(' '));
+
+
+                    const keywordMatch = words.every(word =>
+
+                        text.includes(word)
+
+                    );
+
+
+                    return categoryMatch && keywordMatch;
+
+                });
+
+            }
+
+
+            /* =================================
+               RENDER SEMUA FAQ
+            ================================== */
+
+            function renderFaq() {
+
+                const filteredFaq = getFilteredFaq();
+
+
+                faqList.innerHTML = filteredFaq.map(item =>
+
+                    createFaqCard(item)
+
+                ).join('');
+
+
+                resultCount.textContent =
+
+                    'Menampilkan ' +
+
+                    filteredFaq.length +
+
+                    ' dari ' +
+
+                    faqData.length +
+
+                    ' pertanyaan.';
+
+
+                faqEmpty.hidden =
+                    filteredFaq.length !== 0;
+
+
+                /* UPDATE BUTTON AKTIF */
+
+                categoryButtons.querySelectorAll(
+                    '.faq-filter-button'
+                ).forEach(button => {
+
+                    const active =
+                        button.dataset.category ===
+                        activeCategory;
+
+                    button.classList.toggle(
+                        'active',
+                        active
+                    );
+
+                    button.setAttribute(
+                        'aria-pressed',
+                        String(active)
+                    );
+
+                });
+
+
+                categorySelect.value =
+                    activeCategory;
+
+            }
+
+
+            /* =================================
+               GANTI CATEGORY
+            ================================== */
+
+            function changeCategory(categoryId) {
+
+                activeCategory = categoryId;
+
+                renderFaq();
+
+            }
+
+
+            /* =================================
+               EVENT FILTER BUTTON
+            ================================== */
+
+            categoryButtons.addEventListener(
+                'click',
+                event => {
+
+                    const button = event.target.closest(
+                        '.faq-filter-button'
+                    );
+
+                    if (!button) return;
+
+                    changeCategory(
+                        button.dataset.category
+                    );
+
+                }
+            );
+
+
+            /* =================================
+               EVENT SELECT CATEGORY
+            ================================== */
+
+            categorySelect.addEventListener(
+                'change',
+                () => {
+
+                    changeCategory(
+                        categorySelect.value
+                    );
+
+                }
+            );
+
+
+            /* =================================
+               SEARCH REALTIME
+            ================================== */
+
+            faqSearch.addEventListener(
+                'input',
+                renderFaq
+            );
+
+
+            /* =================================
+               RESET FILTER
+            ================================== */
+
+            resetFaq.addEventListener('click', () => {
+
+                faqSearch.value = '';
+
+                activeCategory = 'all';
+
+                renderFaq();
+
+                faqSearch.focus();
+
+            });
+
+
+            /* =================================
+               ACCORDION FAQ
+               HANYA SATU JAWABAN TERBUKA
+            ================================== */
+
+            faqList.addEventListener(
+                'toggle',
+                event => {
+
+                    const current = event.target;
+
+                    if (
+                        !current.matches('.faq-item') ||
+                        !current.open
+                    ) return;
+
+
+                    faqList.querySelectorAll(
+                        '.faq-item[open]'
+                    ).forEach(item => {
+
+                        if (item !== current) {
+
+                            item.open = false;
+
+                        }
+
+                    });
+
+                },
+                true
+            );
+
+
+            /* =================================
+               TOAST NOTIFICATION
+            ================================== */
+
+            const toast =
+                document.getElementById('faqToast');
+
+            let toastTimer;
+
+
+            function showToast(message) {
+
+                clearTimeout(toastTimer);
+
+                toast.textContent = message;
+
+                toast.hidden = false;
+
+                toastTimer = setTimeout(() => {
+
+                    toast.hidden = true;
+
+                }, 3000);
+
+            }
+
+
+            /* =================================
+               CLIPBOARD FUNCTION
+            ================================== */
+
+            async function copyText(text) {
+
+                try {
+
+                    if (
+                        navigator.clipboard &&
+                        window.isSecureContext
+                    ) {
+
+                        await navigator.clipboard.writeText(
+                            text
+                        );
+
+                    } else {
+
+                        const textarea =
+                            document.createElement('textarea');
+
+                        textarea.value = text;
+
+                        textarea.style.position = 'fixed';
+
+                        textarea.style.opacity = '0';
+
+                        document.body.appendChild(textarea);
+
+                        textarea.select();
+
+                        const copied =
+                            document.execCommand('copy');
+
+                        textarea.remove();
+
+                        if (!copied) {
+
+                            throw new Error('Copy gagal');
+
+                        }
+
+                    }
+
+                    showToast(
+                        'Berhasil disalin ke clipboard.'
+                    );
+
+                } catch (error) {
+
+                    showToast(
+                        'Tidak dapat menyalin. Silakan salin teks secara manual.'
+                    );
+
+                }
+
+            }
+
+
+            /* =================================
+               BUTTON SALIN JAWABAN
+               DAN SALIN RUJUKAN
+            ================================== */
+
+            faqList.addEventListener(
+                'click',
+                event => {
+
+                    const button = event.target.closest(
+                        '.faq-copy-button'
+                    );
+
+                    if (!button) return;
+
+
+                    const item = faqData.find(faq =>
+
+                        faq.id === Number(
+                            button.dataset.id
+                        )
+
+                    );
+
+                    if (!item) return;
+
+
+                    /* COPY ANSWER */
+
+                    if (button.dataset.copy === 'answer') {
+
+                        const answerText = [
+
+                            item.question,
+
+                            ...item.answer,
+
+                            'Sumber: Bank Data FAQ Jaring Aspirasi Rakyat — Prototipe Akademik Digital Public Relations.',
+
+                            'Catatan: Bukan tanggapan resmi PPP.'
+
+                        ].join('\n\n');
+
+                        copyText(answerText);
+
+                    }
+
+
+                    /* COPY REFERENCE */
+
+                    if (button.dataset.copy === 'source') {
+
+                        const referenceText = [
+
+                            'FAQ ' + formatId(item.id),
+
+                            item.question,
+
+                            'Sumber konten: Bank Data FAQ Jaring Aspirasi Rakyat — Prototipe Akademik Digital Public Relations.',
+
+                            'Tautan pendukung:',
+
+                            ...item.links.map(link =>
+
+                                link.name + ': ' +
+
+                                new URL(
+                                    link.url,
+                                    window.location.href
+                                ).href
+
+                            ),
+
+                            'Status: Rujukan perlu diverifikasi sebelum publikasi.'
+
+                        ].join('\n\n');
+
+                        copyText(referenceText);
+
+                    }
+
+                }
+            );
+
+
+            /* =================================
+               NAVBAR SEARCH
+            ================================== */
+
+            const navSearchForm =
+                document.getElementById('faqNavSearchForm');
+
+            const navSearchInput =
+                document.getElementById('faqNavSearchInput');
+
+
+            navSearchForm.addEventListener(
+                'submit',
+                event => {
+
+                    event.preventDefault();
+
+                    const keyword =
+                        normalizeText(navSearchInput.value);
+
+                    if (!keyword) return;
+
+
+                    /* CARI LOKASI KANTOR */
+
+                    if (
+                        keyword.includes('kantor') ||
+                        keyword.includes('alamat') ||
+                        keyword.includes('lokasi')
+                    ) {
+
+                        scrollToElement(
+                            document.getElementById(
+                                'lokasi-kantor'
+                            )
+                        );
+
+                        return;
+
+                    }
+
+
+                    /* CARI KONTAK */
+
+                    if (
+                        keyword === 'kontak' ||
+                        keyword === 'email' ||
+                        keyword === 'whatsapp' ||
+                        keyword === 'telepon'
+                    ) {
+
+                        scrollToElement(
+                            document.getElementById(
+                                'kanal-informasi'
+                            )
+                        );
+
+                        return;
+
+                    }
+
+
+                    /* CARI FORMULIR KONTAK */
+
+                    if (
+                        keyword === 'formulir kontak' ||
+                        keyword === 'kirim pesan'
+                    ) {
+
+                        scrollToElement(
+                            document.getElementById(
+                                'formulir-kontak'
+                            )
+                        );
+
+                        return;
+
+                    }
+
+
+                    /* CARI SELURUH FAQ */
+
+                    activeCategory = 'all';
+
+                    faqSearch.value =
+
+                        keyword === 'faq' ||
+                        keyword === 'bank data faq'
+
+                            ? ''
+
+                            : navSearchInput.value;
+
+
+                    renderFaq();
+
+
+                    /* BUKA JAWABAN JIKA HANYA SATU */
+
+                    const results =
+                        faqList.querySelectorAll('.faq-item');
+
+                    if (results.length === 1) {
+
+                        results[0].open = true;
+
+                    }
+
+
+                    /* TUTUP MENU MOBILE */
+
+                    const mobileNav =
+                        document.getElementById('mainNav');
+
+                    if (
+                        mobileNav &&
+                        mobileNav.classList.contains('show') &&
+                        window.innerWidth < 992 &&
+                        window.bootstrap
+                    ) {
+
+                        bootstrap.Collapse
+                            .getOrCreateInstance(
+                                mobileNav,
+                                { toggle: false }
+                            )
+                            .hide();
+
+                    }
+
+
+                    scrollToElement(
+                        document.getElementById(
+                            'bank-data-faq'
+                        )
+                    );
+
+                }
+            );
+
+
+            /* =================================
+               FORMULIR KONTAK — SIMULASI
+            ================================== */
+
+            const contactForm =
+                document.getElementById('contactForm');
+
+            const contactFormStatus =
+                document.getElementById(
+                    'contactFormStatus'
+                );
+
+
+            contactForm.addEventListener(
+                'submit',
+                event => {
+
+                    event.preventDefault();
+
+                    if (!contactForm.reportValidity()) {
+
+                        return;
+
+                    }
+
+
+                    contactFormStatus.textContent =
+
+                        'Simulasi pengiriman pesan berhasil. ' +
+
+                        'Pesan tidak dikirim ke server, email, ' +
+
+                        'atau pihak PPP. Formulir ini hanya ' +
+
+                        'digunakan untuk demonstrasi akademik.';
+
+
+                    contactFormStatus.hidden = false;
+
+                    contactForm.reset();
+
+                    scrollToElement(
+                        contactFormStatus
+                    );
+
+                }
+            );
+
+
+            /* =================================
+               BUKA FAQ BERDASARKAN URL
+
+               Contoh:
+               faq.html#faq-01
+               faq.html#faq-17
+            ================================== */
+
+            function openFaqFromHash() {
+
+                const hash =
+                    window.location.hash.slice(1);
+
+                const match =
+                    /^faq-(\d+)$/.exec(hash);
+
+                if (!match) return;
+
+                const id = Number(match[1]);
+
+                if (
+                    !faqData.some(item => item.id === id)
+                ) return;
+
+
+                activeCategory = 'all';
+
+                faqSearch.value = '';
+
+                renderFaq();
+
+
+                const target = document.getElementById(
+
+                    'faq-' + formatId(id)
+
+                );
+
+
+                if (target) {
+
+                    target.open = true;
+
+                    scrollToElement(target);
+
+                }
+
+            }
+
+
+            /* =================================
+               INITIAL RENDER
+            ================================== */
+
+            document.getElementById(
+                'totalFaq'
+            ).textContent = faqData.length;
+
+
+            renderCategoryButtons();
+
+            renderFaq();
+
+            openFaqFromHash();
+
+
+            window.addEventListener(
+                'hashchange',
+                openFaqFromHash
+            );
+
+        });
+
+    </script>
+<!-- GLOBAL NAVBAR JAVASCRIPT -->
+
+<script src="assets/js/navbar.js"></script>
 
 </body>
+
 </html>
