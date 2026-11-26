@@ -1,0 +1,4378 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tentang PPP | PPP — Ruang Bersama</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+          rel="stylesheet">
+
+    <!-- CSS UTAMA -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* ========================================
+           GENERAL HALAMAN TENTANG PPP
+        ========================================= */
+
+        .ppp-about {
+            --about-green: #174c38;
+            --about-gold: #c4a568;
+            --about-paper: #f7f8f2;
+            --about-sage: #e8eee5;
+            --about-muted: #69746d;
+            --about-line: #dce3da;
+        }
+
+        .ppp-about main {
+            background: var(--about-paper);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .ppp-about main section {
+            scroll-margin-top: 35px;
+        }
+
+        .ppp-about .about-section {
+            padding: 75px 0;
+        }
+
+        .ppp-about .about-paper {
+            background: var(--about-paper);
+        }
+
+        .ppp-about .about-sage {
+            background: var(--about-sage);
+        }
+
+        .ppp-about .about-white {
+            background: #ffffff;
+        }
+
+        .ppp-about .about-label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.3px;
+            line-height: 1.7;
+            text-transform: uppercase;
+            color: var(--about-green);
+            margin: 0 0 20px;
+        }
+
+        .ppp-about .stakeholder-label {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: .4px;
+            color: #947b4b;
+            text-transform: uppercase;
+            margin: 0 0 22px;
+        }
+
+        .ppp-about main h1,
+        .ppp-about main h2,
+        .ppp-about main h3,
+        .ppp-about main h4 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--about-green);
+        }
+
+        .ppp-about main h2 {
+            font-size: clamp(27px, 3vw, 42px);
+            font-weight: 700;
+            line-height: 1.3;
+            letter-spacing: -.7px;
+            margin: 0 0 23px;
+        }
+
+        .ppp-about main p {
+            color: var(--about-muted);
+            font-size: 15px;
+            line-height: 1.85;
+        }
+
+        .ppp-about .about-description {
+            margin: 0 0 30px;
+        }
+
+        .ppp-about .about-small-note {
+            font-size: 11px;
+            line-height: 1.8;
+            color: var(--about-muted);
+            margin: 22px 0 0;
+        }
+
+        .ppp-about .about-breadcrumb {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 6px;
+            font-size: 12px;
+            color: var(--about-muted);
+            margin-bottom: 35px;
+        }
+
+
+        /* ========================================
+           HERO PROFIL PPP
+        ========================================= */
+
+        .ppp-about .about-hero {
+            padding: 65px 0 70px;
+            background: var(--about-paper);
+        }
+
+        .ppp-about .about-hero h1 {
+            font-size: clamp(36px, 4.6vw, 64px);
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -1.5px;
+            margin: 0 0 24px;
+        }
+
+        .ppp-about .about-hero-description {
+            max-width: 1000px;
+            font-size: 16px;
+            line-height: 1.85;
+            margin: 0;
+        }
+
+
+        /* ========================================
+           PROFIL DAN IDENTITAS ORGANISASI
+        ========================================= */
+
+        .ppp-about .about-profile-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            align-items: center;
+            gap: 65px;
+        }
+
+        .ppp-about .about-profile-content p {
+            margin: 0 0 18px;
+        }
+
+        .ppp-about .about-profile-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .ppp-about .about-profile-image {
+            margin: 0;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .ppp-about .about-profile-image img {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            object-position: center;
+        }
+
+
+        /* ========================================
+           SEJARAH PPP
+        ========================================= */
+
+        .ppp-about .about-history-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .ppp-about .about-history-card {
+            border: 1px solid var(--about-line);
+            padding: 25px;
+            min-width: 0;
+        }
+
+        .ppp-about .about-history-card h3 {
+            font-size: 23px;
+            font-weight: 700;
+            line-height: 1.4;
+            margin: 0 0 15px;
+        }
+
+        .ppp-about .about-history-card p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+
+        /* ========================================
+           VISI DAN MISI
+        ========================================= */
+
+        .ppp-about .about-vision {
+            margin-bottom: 45px;
+        }
+
+        .ppp-about .about-vision p {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .ppp-about .about-mission-list {
+            padding-left: 24px;
+            color: var(--about-muted);
+            font-size: 16px;
+            line-height: 1.9;
+            margin: 0;
+        }
+
+        .ppp-about .about-mission-list li {
+            padding-left: 3px;
+            margin-bottom: 7px;
+        }
+
+
+        /* ========================================
+           LIMA KHIDMAT
+        ========================================= */
+
+        .ppp-about .khidmat-grid {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 24px;
+            margin-top: 35px;
+        }
+
+        .ppp-about .khidmat-card {
+            grid-column: span 2;
+            background: var(--about-paper);
+            padding: 26px;
+            border: 1px solid var(--about-line);
+        }
+
+        .ppp-about .khidmat-card:nth-child(4),
+        .ppp-about .khidmat-card:nth-child(5) {
+            grid-column: span 3;
+        }
+
+        .ppp-about .khidmat-card i {
+            display: block;
+            color: var(--about-green);
+            font-size: 25px;
+            margin-bottom: 18px;
+        }
+
+        .ppp-about .khidmat-card h3 {
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 1.4;
+            margin: 0 0 15px;
+        }
+
+        .ppp-about .khidmat-card p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+
+        /* ========================================
+           HERO STAKEHOLDER PPP
+        ========================================= */
+
+        .ppp-about .stakeholder-hero {
+            background: var(--about-green);
+            color: #ffffff;
+            padding: 55px 0 65px;
+        }
+
+        .ppp-about .stakeholder-hero .about-breadcrumb {
+            color: #d1e0d5;
+            margin-bottom: 30px;
+        }
+
+        .ppp-about .stakeholder-hero .about-breadcrumb a {
+            color: #d1e0d5;
+        }
+
+        .ppp-about .stakeholder-hero .about-label {
+            color: var(--about-gold);
+            margin-bottom: 25px;
+        }
+
+        .ppp-about .stakeholder-hero h2 {
+            color: #ffffff;
+            font-size: clamp(34px, 4.3vw, 58px);
+            font-weight: 700;
+            margin-bottom: 27px;
+        }
+
+        .ppp-about .stakeholder-hero-description {
+            color: #dce7de;
+            font-size: 17px;
+            max-width: 850px;
+            margin: 0 0 20px;
+        }
+
+        .ppp-about .stakeholder-hero-note {
+            color: #b8cec0;
+            font-size: 12px;
+            margin: 0;
+        }
+
+
+        /* ========================================
+           DIAGRAM EKOSISTEM STAKEHOLDER
+        ========================================= */
+
+        .ppp-about .ecosystem-diagram {
+            position: relative;
+            width: 100%;
+            height: 460px;
+            max-width: 1100px;
+            margin: 25px auto 0;
+        }
+
+        /* GARIS PENGHUBUNG SVG */
+
+        .ppp-about .ecosystem-lines {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* NODE TENGAH */
+
+        .ppp-about .ecosystem-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 155px;
+            height: 155px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 9px;
+
+            background: #ffffff;
+            border: 2px solid var(--about-gold);
+            border-radius: 50%;
+
+            z-index: 2;
+        }
+
+        .ppp-about .ecosystem-center img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .ppp-about .ecosystem-center strong {
+            font-size: 13px;
+            color: var(--about-green);
+        }
+
+        /* NODE STAKEHOLDER */
+
+        .ppp-about .ecosystem-node {
+            position: absolute;
+            transform: translate(-50%, -50%);
+
+            width: 22%;
+            min-height: 72px;
+
+            background: #ffffff;
+            border: 1px solid var(--about-line);
+            border-radius: 12px;
+
+            padding: 15px 18px;
+
+            z-index: 1;
+
+            transition:
+                border-color .25s ease,
+                box-shadow .25s ease;
+        }
+
+        .ppp-about .ecosystem-node:hover {
+            border-color: var(--about-gold);
+            box-shadow: 0 5px 18px rgba(23,76,56,.08);
+        }
+
+        .ppp-about .ecosystem-node h3 {
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 1.4;
+            margin: 0 0 5px;
+        }
+
+        .ppp-about .ecosystem-node p {
+            font-size: 11px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* POSISI ENAM NODE */
+
+        .ppp-about .node-kader {
+            left: 26%;
+            top: 13%;
+        }
+
+        .ppp-about .node-sayap {
+            left: 74%;
+            top: 13%;
+        }
+
+        .ppp-about .node-ulama {
+            left: 11%;
+            top: 50%;
+        }
+
+        .ppp-about .node-negara {
+            left: 89%;
+            top: 50%;
+        }
+
+        .ppp-about .node-media {
+            left: 26%;
+            top: 87%;
+        }
+
+        .ppp-about .node-masyarakat {
+            left: 74%;
+            top: 87%;
+        }
+
+
+        /* ========================================
+           STAKEHOLDER INTERNAL
+        ========================================= */
+
+        .ppp-about .internal-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .ppp-about .internal-card {
+            min-width: 0;
+            background: #ffffff;
+            border: 1px solid var(--about-line);
+            border-radius: 12px;
+            padding: 24px;
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease;
+        }
+
+        .ppp-about .internal-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(23,76,56,.07);
+        }
+
+        .ppp-about .internal-card > i {
+            display: block;
+            color: var(--about-green);
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .ppp-about .internal-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.4;
+            margin: 0 0 12px;
+        }
+
+        .ppp-about .internal-card .internal-role {
+            color: var(--about-green);
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 1.7;
+            margin: 0 0 8px;
+        }
+
+        .ppp-about .internal-card p {
+            font-size: 13px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+
+        /* ========================================
+           ORGANISASI SAYAP PPP
+        ========================================= */
+
+        .ppp-about .wings-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            align-items: stretch;
+            gap: 20px;
+        }
+
+        .ppp-about .wings-card {
+            min-width: 0;
+            background: #ffffff;
+            border: 1px solid var(--about-line);
+            border-radius: 12px;
+            padding: 25px;
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease;
+        }
+
+        .ppp-about .wings-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(23,76,56,.07);
+        }
+
+        .ppp-about .wings-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            object-position: center;
+            margin-bottom: 20px;
+        }
+
+        .ppp-about .wings-card h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin: 0 0 12px;
+        }
+
+        .ppp-about .wings-fullname {
+            color: var(--about-green);
+            font-size: 13px;
+            font-weight: 500;
+            margin: 0 0 12px;
+        }
+
+        .ppp-about .wings-description {
+            font-size: 13px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+
+        /* ========================================
+           STAKEHOLDER EKSTERNAL
+        ========================================= */
+
+        .ppp-about .stakeholder-tabs {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 15px;
+            margin: 25px 0 20px;
+        }
+
+        .ppp-about .stakeholder-tab {
+            min-height: 50px;
+            background: var(--about-paper);
+            color: var(--about-green);
+            border: 1px solid var(--about-line);
+            border-radius: 8px;
+            padding: 14px 20px;
+            text-align: left;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition:
+                background .2s ease,
+                color .2s ease;
+        }
+
+        .ppp-about .stakeholder-tab:hover {
+            background: var(--about-sage);
+        }
+
+        .ppp-about .stakeholder-tab.active {
+            background: var(--about-green);
+            color: #ffffff;
+            border-color: var(--about-green);
+        }
+
+        /* TAB CONTENT */
+
+        .ppp-about .stakeholder-panel {
+            background: var(--about-paper);
+            border: 1px solid var(--about-line);
+            border-radius: 12px;
+            padding: 28px;
+            min-height: 225px;
+        }
+
+        .ppp-about .stakeholder-panel[hidden] {
+            display: none !important;
+        }
+
+        .ppp-about .stakeholder-panel > h3 {
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 1.4;
+            margin: 0 0 25px;
+        }
+
+        .ppp-about .external-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .ppp-about .external-item {
+            min-width: 0;
+        }
+
+        .ppp-about .external-item h4 {
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 1.4;
+            margin: 0 0 10px;
+        }
+
+        .ppp-about .external-item p {
+            font-size: 13px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+
+        /* ========================================
+           DIAGRAM AKAR HISTORIS PPP
+        ========================================= */
+
+        .ppp-about .history-fusion {
+            margin-top: 30px;
+        }
+
+        .ppp-about .fusion-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .ppp-about .fusion-card {
+            position: relative;
+            background: #ffffff;
+            border: 1px solid var(--about-line);
+            border-radius: 10px;
+            padding: 20px;
+            min-height: 90px;
+        }
+
+        .ppp-about .fusion-card h3 {
+            font-size: 21px;
+            font-weight: 600;
+            margin: 0 0 8px;
+        }
+
+        .ppp-about .fusion-card p {
+            font-size: 12px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* GARIS FUSI PARTAI */
+
+        .ppp-about .fusion-connector {
+            display: block;
+            width: 100%;
+            height: 95px;
+        }
+
+        /* HASIL FUSI */
+
+        .ppp-about .fusion-result {
+            max-width: 420px;
+            margin: 0 auto;
+            background: var(--about-green);
+            color: #ffffff;
+            border-radius: 12px;
+            padding: 23px;
+            text-align: center;
+        }
+
+        .ppp-about .fusion-result h3 {
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.5;
+            margin: 0 0 8px;
+        }
+
+        .ppp-about .fusion-result p {
+            color: #c7d8cd;
+            font-size: 12px;
+            margin: 0;
+        }
+
+
+        /* ========================================
+           CATATAN PEMETAAN AKADEMIK
+        ========================================= */
+
+        .ppp-about .stakeholder-note {
+            background: #e9ede4;
+            border: 1px solid var(--about-line);
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 45px;
+        }
+
+        .ppp-about .stakeholder-note h3 {
+            font-size: 15px;
+            font-weight: 600;
+            margin: 0 0 12px;
+        }
+
+        .ppp-about .stakeholder-note p {
+            font-size: 12px;
+            line-height: 1.85;
+            margin: 0;
+        }
+
+
+        /* ========================================
+           RESPONSIVE TABLET
+        ========================================= */
+
+        @media (max-width: 991px) {
+
+            .ppp-about .about-section {
+                padding: 55px 0;
+            }
+
+            .ppp-about .about-hero {
+                padding: 45px 0;
+            }
+
+            .ppp-about .about-profile-grid {
+                gap: 30px;
+            }
+
+            .ppp-about .about-history-grid {
+                gap: 15px;
+            }
+
+            .ppp-about .about-history-card,
+            .ppp-about .khidmat-card {
+                padding: 20px;
+            }
+
+            .ppp-about .ecosystem-diagram {
+                height: 380px;
+            }
+
+            .ppp-about .ecosystem-center {
+                width: 120px;
+                height: 120px;
+            }
+
+            .ppp-about .ecosystem-center img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .ppp-about .ecosystem-node {
+                padding: 12px;
+                min-height: 65px;
+            }
+
+            .ppp-about .ecosystem-node h3 {
+                font-size: 12px;
+            }
+
+            .ppp-about .ecosystem-node p {
+                font-size: 10px;
+            }
+
+            .ppp-about .internal-grid,
+            .ppp-about .wings-grid,
+            .ppp-about .external-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .ppp-about .stakeholder-tab {
+                padding: 12px;
+                font-size: 12px;
+            }
+
+            .ppp-about .fusion-card {
+                padding: 16px;
+            }
+
+        }
+
+
+        /* ========================================
+           RESPONSIVE MOBILE
+        ========================================= */
+
+        @media (max-width: 600px) {
+
+            .ppp-about .about-section {
+                padding: 42px 0;
+            }
+
+            .ppp-about .about-hero {
+                padding: 32px 0 42px;
+            }
+
+            .ppp-about .about-hero h1 {
+                font-size: 35px;
+                letter-spacing: -.7px;
+            }
+
+            .ppp-about main h2 {
+                font-size: 29px;
+                letter-spacing: -.4px;
+            }
+
+            .ppp-about main p {
+                font-size: 14px;
+            }
+
+            .ppp-about .about-label,
+            .ppp-about .stakeholder-label {
+                font-size: 10px;
+                margin-bottom: 18px;
+            }
+
+            .ppp-about .about-breadcrumb {
+                font-size: 10px;
+                margin-bottom: 25px;
+            }
+
+            .ppp-about .about-profile-grid,
+            .ppp-about .about-history-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .ppp-about .about-history-card h3 {
+                font-size: 21px;
+            }
+
+            .ppp-about .about-mission-list {
+                font-size: 14px;
+            }
+
+            .ppp-about .khidmat-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .ppp-about .khidmat-card,
+            .ppp-about .khidmat-card:nth-child(4),
+            .ppp-about .khidmat-card:nth-child(5) {
+                grid-column: span 1;
+            }
+
+            .ppp-about .stakeholder-hero {
+                padding: 35px 0 42px;
+            }
+
+            .ppp-about .stakeholder-hero h2 {
+                font-size: 35px;
+            }
+
+            .ppp-about .stakeholder-hero-description {
+                font-size: 14px;
+            }
+
+            /* DIAGRAM MOBILE */
+
+            .ppp-about .ecosystem-diagram {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 12px;
+                height: auto;
+                margin: 25px auto;
+            }
+
+            .ppp-about .ecosystem-lines {
+                display: none;
+            }
+
+            .ppp-about .ecosystem-center {
+                position: relative;
+                top: auto;
+                left: auto;
+                transform: none;
+                grid-column: span 2;
+                justify-self: center;
+                margin-bottom: 15px;
+                width: 125px;
+                height: 125px;
+            }
+
+            .ppp-about .ecosystem-node {
+                position: relative;
+                top: auto;
+                left: auto;
+                transform: none;
+                width: 100%;
+                min-height: 85px;
+                padding: 15px;
+                border-top: 2px solid var(--about-gold);
+            }
+
+            .ppp-about .ecosystem-node h3 {
+                font-size: 13px;
+            }
+
+            .ppp-about .internal-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .ppp-about .wings-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 12px;
+            }
+
+            .ppp-about .wings-card {
+                padding: 17px;
+            }
+
+            .ppp-about .wings-logo {
+                width: 60px;
+                height: 60px;
+            }
+
+            .ppp-about .wings-card h3 {
+                font-size: 20px;
+            }
+
+            .ppp-about .wings-card p {
+                font-size: 12px;
+            }
+
+            .ppp-about .stakeholder-tabs {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+            }
+
+            .ppp-about .stakeholder-panel {
+                padding: 20px;
+            }
+
+            .ppp-about .stakeholder-panel > h3 {
+                font-size: 20px;
+            }
+
+            .ppp-about .external-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .ppp-about .external-item:not(:last-child) {
+                border-bottom: 1px solid var(--about-line);
+                padding-bottom: 17px;
+            }
+
+            /* DIAGRAM FUSI MOBILE */
+
+            .ppp-about .fusion-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 12px;
+            }
+
+            .ppp-about .fusion-card {
+                min-height: 95px;
+            }
+
+            .ppp-about .fusion-card h3 {
+                font-size: 19px;
+            }
+
+            .ppp-about .fusion-card p {
+                font-size: 11px;
+            }
+
+            .ppp-about .fusion-connector {
+                display: none;
+            }
+
+            .ppp-about .fusion-result {
+                position: relative;
+                margin-top: 35px;
+            }
+
+            .ppp-about .fusion-result::before {
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 35px;
+                background: var(--about-gold);
+                top: -35px;
+                left: calc(50% - 1px);
+            }
+
+            .ppp-about .fusion-result h3 {
+                font-size: 18px;
+            }
+
+            .ppp-about .stakeholder-note {
+                margin-top: 30px;
+                padding: 20px;
+            }
+
+        }
+
+
+        /* AKSESIBILITAS */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .ppp-about .ecosystem-node,
+            .ppp-about .internal-card,
+            .ppp-about .wings-card,
+            .ppp-about .stakeholder-tab {
+                transition: none;
+            }
+
+            .ppp-about .internal-card:hover,
+            .ppp-about .wings-card:hover {
+                transform: none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body class="ppp-home ppp-about">
+
+
+    <!-- ========================================
+         TOP BAR
+    ========================================= -->
+
+    <div class="topbar">
+
+        <div class="wrap">
+
+            <span>
+                KELOMPOK 8 · MATA KULIAH DIGIPR
+            </span>
+
+            <span>
+                PROTOTIPE AKADEMIK · BUKAN SITUS RESMI PPP
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================================
+         HEADER
+    ========================================= -->
+
+    <header class="brand-header">
+
+        <div class="wrap brand-row">
+
+            <a class="brand" href="index.html">
+
+                <img
+                    src="assets/images/logo-ppp.png"
+                    alt="Logo Partai Persatuan Pembangunan">
+
+                <span>
+                    PARTAI<br>
+                    PERSATUAN<br>
+                    PEMBANGUNAN
+                </span>
+
+            </a>
+
+            <p>
+                Berakar pada Nilai, Bergerak untuk Rakyat.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- ========================================
+         NAVIGATION BAR
+    ========================================= -->
+
+    
+<!-- ========================================
+     NAVIGATION BAR PPP — FINAL
+========================================= -->
+
+<nav class="navbar navbar-expand-lg site-nav"
+     aria-label="Navigasi utama">
+
+    <div class="wrap nav-wrap">
+
+        <!-- TOGGLE MOBILE -->
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Buka navigasi">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="mainNav">
+
+            <ul class="navbar-nav nav-list">
+
+
+                <!-- =================================
+                     01. BERANDA
+                ================================== -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="index.html">
+
+                        BERANDA
+
+                    </a>
+
+                </li>
+
+
+                <!-- =================================
+                     02. TENTANG PPP
+                ================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        TENTANG PPP
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- PROFIL DAN SEJARAH -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="tentang.html#profil-sejarah">
+
+                                Profil &amp; Sejarah
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- VISI MISI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="tentang.html#visi-misi">
+
+                                Visi, Misi &amp; Lima Khidmat
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- STRUKTUR ORGANISASI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="struktur.html">
+
+                                Struktur Organisasi
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- STAKEHOLDER -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="tentang.html#stakeholder">
+
+                                Stakeholder PPP
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- MASKOT KABA -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="kaba.html">
+
+                                Kenalan dengan KABA
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- =================================
+                     03. PROGRAM & AKSI
+                ================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        PROGRAM &amp; AKSI
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- SEMUA PROGRAM -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="program.html">
+
+                                Semua Program &amp; Aksi
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- PPP PEDULI BUMI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="peduli-bumi.html">
+
+                                PPP Peduli Bumi &amp; Kemanusiaan
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- BEASISWA -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="beasiswa.html">
+
+                                Beasiswa Pendidikan Pemuda
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- TALKSHOW -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="talkshow.html">
+
+                                Seminar &amp; Kolaborasi
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- =================================
+                     04. INFORMASI
+                ================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        INFORMASI
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- KABAR PPP -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="kabar.html">
+
+                                Kabar PPP
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- PERNYATAAN RESMI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="pernyataan.html">
+
+                                Pernyataan Resmi
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- OPINI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="opini.html">
+
+                                Opini
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- TRANSPARANSI DATA -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="transparansi.html">
+
+                                Transparansi &amp; Data
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- =================================
+                     05. PARTISIPASI
+                ================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        PARTISIPASI
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- JARING ASPIRASI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="aspirasi.html">
+
+                                Jaring Aspirasi Rakyat
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- BERGABUNG -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="bergabung.html">
+
+                                Bergabung
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- FAQ DAN KONTAK -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="faq.html">
+
+                                FAQ &amp; Kontak
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+            </ul>
+
+
+            <!-- =================================
+                 SEARCH BAR
+
+                 Pertahankan ID search form dan input
+                 dari halaman HTML sebelumnya.
+            ================================== -->
+
+            <form class="site-search"
+                  id="globalSearchForm"
+                  role="search">
+
+                <button
+                    type="submit"
+                    aria-label="Cari">
+
+                    <i class="bi bi-search"></i>
+
+                </button>
+
+                <input
+                    type="search"
+                    id="globalSearchInput"
+                    placeholder="Cari di situs PPP..."
+                    aria-label="Cari informasi PPP"
+                    autocomplete="off"
+                    required>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+    <!-- ========================================
+         MAIN CONTENT
+    ========================================= -->
+
+    <main>
+
+
+        <!-- ====================================
+             HERO TENTANG PPP
+        ===================================== -->
+
+        <section class="about-hero" id="profil-sejarah">
+
+            <div class="wrap">
+
+                <p class="about-label">
+
+                    TENTANG PPP
+
+                </p>
+
+                <h1>
+
+                    Identitas tetap, narasi diperluas.
+
+                </h1>
+
+                <p class="about-hero-description">
+
+                    Mengenal lebih dekat Partai Persatuan
+                    Pembangunan melalui sejarah, nilai
+                    perjuangan, visi, misi, serta komitmennya
+                    dalam kehidupan berbangsa dan bernegara.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ====================================
+             PROFIL DAN IDENTITAS PPP
+        ===================================== -->
+
+        <section class="about-section about-sage"
+                 id="identitas-organisasi">
+
+            <div class="wrap about-profile-grid">
+
+                <!-- PROFIL -->
+
+                <div class="about-profile-content">
+
+                    <p class="about-label">
+
+                        IDENTITAS ORGANISASI
+
+                    </p>
+
+                    <h2>
+
+                        Berakar, tanpa menutup<br>
+                        ruang dialog.
+
+                    </h2>
+
+                    <p>
+
+                        Partai Persatuan Pembangunan (PPP)
+                        merupakan partai politik Indonesia
+                        yang didirikan pada 5 Januari 1973.
+                        PPP lahir dari penggabungan empat
+                        partai politik Islam dan menjadikan
+                        nilai-nilai keislaman sebagai landasan
+                        perjuangan organisasi.
+
+                    </p>
+
+                    <p>
+
+                        Dalam perkembangannya, PPP
+                        memperjuangkan berbagai isu yang
+                        berkaitan dengan kehidupan masyarakat,
+                        mulai dari ekonomi kerakyatan,
+                        pendidikan, kesejahteraan sosial,
+                        hingga penegakan hukum dan demokrasi.
+
+                    </p>
+
+                    <p>
+
+                        Dengan mempertahankan identitas
+                        keislaman, PPP berupaya membangun
+                        komunikasi yang terbuka, memperkuat
+                        persatuan, serta memperjuangkan
+                        kepentingan masyarakat dalam kehidupan
+                        berbangsa dan bernegara.
+
+                    </p>
+
+                </div>
+
+
+                <!-- FOTO PPP -->
+
+                <figure class="about-profile-image">
+
+                    <img
+                        src="assets/images/hero-ppp.jpg"
+                        alt="Foto kegiatan organisasi Partai Persatuan Pembangunan"
+                        fetchpriority="high">
+
+                </figure>
+
+            </div>
+
+        </section>
+
+
+        <!-- ====================================
+             SEJARAH PPP
+        ===================================== -->
+
+        <section class="about-section about-paper"
+                 id="sejarah-ppp">
+
+            <div class="wrap">
+
+                <h2>
+
+                    Sejarah yang membentuk perjalanan PPP.
+
+                </h2>
+
+                <p>
+
+                    Partai Persatuan Pembangunan didirikan
+                    pada 5 Januari 1973 melalui penyatuan
+                    empat partai politik Islam, yaitu
+                    Nahdlatul Ulama (NU), Partai Muslimin
+                    Indonesia (Parmusi), Partai Syarikat
+                    Islam Indonesia (PSII), dan Persatuan
+                    Tarbiyah Islamiyah (Perti).
+
+                    Sejak berdiri, PPP telah melalui
+                    berbagai dinamika politik nasional,
+                    mulai dari masa Orde Baru, Reformasi,
+                    hingga perkembangan demokrasi Indonesia.
+
+                </p>
+
+                <div class="about-history-grid">
+
+                    <article class="about-history-card">
+
+                        <h3>
+
+                            Latar pembentukan
+
+                        </h3>
+
+                        <p>
+
+                            PPP dibentuk melalui penggabungan
+                            empat partai politik Islam pada
+                            1973 sebagai bagian dari
+                            penyederhanaan sistem kepartaian
+                            Indonesia.
+
+                        </p>
+
+                    </article>
+
+                    <article class="about-history-card">
+
+                        <h3>
+
+                            Perjalanan organisasi
+
+                        </h3>
+
+                        <p>
+
+                            PPP berpartisipasi dalam
+                            kehidupan politik nasional
+                            dan menghadapi berbagai
+                            perubahan sistem pemerintahan
+                            serta dinamika demokrasi.
+
+                        </p>
+
+                    </article>
+
+                    <article class="about-history-card">
+
+                        <h3>
+
+                            Identitas dan kesinambungan
+
+                        </h3>
+
+                        <p>
+
+                            PPP mempertahankan nilai-nilai
+                            keislaman sebagai identitas
+                            perjuangan, dengan lambang
+                            Ka'bah yang menjadi simbol
+                            khas organisasi.
+
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ====================================
+             VISI DAN MISI PPP
+        ===================================== -->
+
+        <section class="about-section about-white"
+                 id="visi-misi">
+
+            <div class="wrap">
+
+                <p class="about-label">
+
+                    ARAH DAN NILAI PERJUANGAN
+
+                </p>
+
+                <!-- VISI -->
+
+                <div class="about-vision">
+
+                    <h2>Visi</h2>
+
+                    <p>
+
+                        Terwujudnya masyarakat yang bertakwa
+                        kepada Allah SWT dan negara Indonesia
+                        yang adil, makmur, sejahtera, bermoral,
+                        demokratis, tegaknya supremasi hukum,
+                        penghormatan terhadap Hak Asasi
+                        Manusia (HAM), serta menjunjung tinggi
+                        harkat dan martabat kemanusiaan dan
+                        keadilan sosial yang berlandaskan
+                        nilai-nilai keislaman.
+
+                    </p>
+
+                </div>
+
+
+                <!-- MISI -->
+
+                <div class="about-mission">
+
+                    <h2>Misi</h2>
+
+                    <ol class="about-mission-list">
+
+                        <li>
+
+                            Menjadikan nilai agama sebagai
+                            pedoman moral dalam kehidupan
+                            berbangsa dan bernegara.
+
+                        </li>
+
+                        <li>
+
+                            Membangun budaya politik yang
+                            demokratis, berakhlak mulia,
+                            dan menghormati hak asasi manusia.
+
+                        </li>
+
+                        <li>
+
+                            Memperkuat ekonomi kerakyatan,
+                            penegakan hukum, serta upaya
+                            pemberantasan korupsi, kolusi,
+                            dan nepotisme.
+
+                        </li>
+
+                        <li>
+
+                            Mendorong kehidupan masyarakat
+                            yang religius, harmonis, dan
+                            menjunjung tinggi nilai kemanusiaan.
+
+                        </li>
+
+                        <li>
+
+                            Meningkatkan kualitas sumber daya
+                            manusia melalui pendidikan dan
+                            pembangunan kesejahteraan.
+
+                        </li>
+
+                    </ol>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ====================================
+             LIMA KHIDMAT PPP
+        ===================================== -->
+
+        <section class="about-section about-sage"
+                 id="lima-khidmat">
+
+            <div class="wrap">
+
+                <h2>
+
+                    Lima Khidmat PPP
+
+                </h2>
+
+                <div class="khidmat-grid">
+
+
+                    <!-- KHIDMAT 1 -->
+
+                    <article class="khidmat-card">
+
+                        <i class="bi bi-book"></i>
+
+                        <h3>
+
+                            Iman dan Takwa
+
+                        </h3>
+
+                        <p>
+
+                            Menempatkan nilai keimanan dan
+                            ketakwaan sebagai landasan moral
+                            dalam kehidupan bermasyarakat,
+                            berbangsa, dan bernegara.
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- KHIDMAT 2 -->
+
+                    <article class="khidmat-card">
+
+                        <i class="bi bi-person-heart"></i>
+
+                        <h3>
+
+                            Hak Asasi dan Martabat Manusia
+
+                        </h3>
+
+                        <p>
+
+                            Menghormati hak dan martabat
+                            manusia, menjunjung keadilan,
+                            serta menolak diskriminasi
+                            melalui nilai ukhuwah basyariyah.
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- KHIDMAT 3 -->
+
+                    <article class="khidmat-card">
+
+                        <i class="bi bi-people"></i>
+
+                        <h3>
+
+                            Persatuan Bangsa
+
+                        </h3>
+
+                        <p>
+
+                            Menjaga keutuhan bangsa dengan
+                            memperkuat ukhuwah wathaniyah
+                            dan membangun keharmonisan
+                            dalam keberagaman.
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- KHIDMAT 4 -->
+
+                    <article class="khidmat-card">
+
+                        <i class="bi bi-chat-square-text"></i>
+
+                        <h3>
+
+                            Demokrasi
+
+                        </h3>
+
+                        <p>
+
+                            Mewujudkan kehidupan politik
+                            yang demokratis dengan
+                            mengutamakan kedaulatan rakyat
+                            dan musyawarah untuk mufakat.
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- KHIDMAT 5 -->
+
+                    <article class="khidmat-card">
+
+                        <i class="bi bi-bank"></i>
+
+                        <h3>
+
+                            Keadilan dan Kemakmuran
+
+                        </h3>
+
+                        <p>
+
+                            Mewujudkan masyarakat yang
+                            adil dan sejahtera melalui
+                            pemerataan kesempatan serta
+                            pengurangan kesenjangan
+                            ekonomi, sosial, dan budaya.
+
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+<!-- ========================================
+     STRUKTUR KEPEMIMPINAN PPP
+========================================= -->
+
+<section class="about-section about-paper"
+         id="kepengurusan">
+
+    <div class="wrap">
+
+        <!-- JUDUL STRUKTUR -->
+
+        <div class="text-center mb-5">
+
+            <p class="about-label">
+                KEPEMIMPINAN &amp; STRUKTUR ORGANISASI
+            </p>
+
+            <h2>
+                Mengenal Sosok di Balik Perjuangan PPP
+            </h2>
+
+            <p class="about-description mx-auto"
+               style="max-width: 850px;">
+
+                Struktur kepemimpinan Partai Persatuan
+                Pembangunan disusun untuk mendukung
+                koordinasi organisasi, pelaksanaan kebijakan,
+                serta penyaluran aspirasi masyarakat
+                di berbagai tingkatan.
+
+            </p>
+
+            <div class="mx-auto mb-5"
+                 style="width: 42px;
+                        height: 3px;
+                        background: var(--about-gold);">
+            </div>
+
+            <p class="about-small-note">
+                DPP PPP 2025–2030 · Referensi susunan
+                inti per 6 Oktober 2025
+            </p>
+
+        </div>
+
+
+        <!-- =================================
+             KETUA UMUM
+        ================================== -->
+
+        <article
+            class="internal-card mx-auto mb-4
+                   d-flex flex-column flex-sm-row
+                   align-items-center gap-4"
+            style="max-width: 800px;">
+
+            <img
+                src="assets/images/struktur-01.jpg"
+                alt="Foto Ketua Umum pada referensi kepengurusan"
+                class="rounded flex-shrink-0"
+                style="width: 100%;
+                       max-width: 190px;
+                       aspect-ratio: 4 / 5;
+                       object-fit: cover;
+                       object-position: center top;"
+                loading="lazy">
+
+            <div class="flex-grow-1">
+
+                <div class="mb-3"
+                     style="width: 36px;
+                            height: 2px;
+                            background: var(--about-gold);">
+                </div>
+
+                <p class="internal-role text-uppercase">
+                    Ketua Umum
+                </p>
+
+                <h3 class="fs-4">
+                    H. Muhamad Mardiono
+                </h3>
+
+                <p>
+                    Memimpin arah kebijakan dan koordinasi
+                    organisasi partai di tingkat nasional.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- =================================
+             GRID PENGURUS INTI
+        ================================== -->
+
+        <div class="row g-4 justify-content-center">
+
+
+            <!-- WAKIL KETUA UMUM -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <article class="internal-card h-100">
+
+                    <div class="d-flex align-items-center
+                                gap-3 mb-3">
+
+                        <img
+                            src="assets/images/struktur-02.jpg"
+                            alt="Foto pengurus pada referensi kepengurusan"
+                            class="rounded flex-shrink-0"
+                            style="width: 32%;
+                                   max-width: 110px;
+                                   aspect-ratio: 3 / 4;
+                                   object-fit: cover;
+                                   object-position: center top;"
+                            loading="lazy">
+
+                        <div>
+
+                            <p class="internal-role">
+                                Wakil Ketua Umum
+                            </p>
+
+                            <h3 class="fs-5 mb-0">
+                                Agus Suparmanto
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                    <p>
+                        Mendampingi Ketua Umum dalam
+                        koordinasi dan pelaksanaan
+                        agenda organisasi.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <!-- SEKRETARIS JENDERAL -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <article class="internal-card h-100">
+
+                    <div class="d-flex align-items-center
+                                gap-3 mb-3">
+
+                        <img
+                            src="assets/images/struktur-03.jpg"
+                            alt="Foto pengurus pada referensi kepengurusan"
+                            class="rounded flex-shrink-0"
+                            style="width: 32%;
+                                   max-width: 110px;
+                                   aspect-ratio: 3 / 4;
+                                   object-fit: cover;
+                                   object-position: center top;"
+                            loading="lazy">
+
+                        <div>
+
+                            <p class="internal-role">
+                                Sekretaris Jenderal
+                            </p>
+
+                            <h3 class="fs-5 mb-0">
+                                Taj Yasin Maimoen
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                    <p>
+                        Mengoordinasikan kesekretariatan,
+                        administrasi, dan komunikasi
+                        organisasi.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <!-- WAKIL SEKRETARIS JENDERAL -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <article class="internal-card h-100">
+
+                    <div class="d-flex align-items-center
+                                gap-3 mb-3">
+
+                        <img
+                            src="assets/images/struktur-04.jpg"
+                            alt="Foto pengurus pada referensi kepengurusan"
+                            class="rounded flex-shrink-0"
+                            style="width: 32%;
+                                   max-width: 110px;
+                                   aspect-ratio: 3 / 4;
+                                   object-fit: cover;
+                                   object-position: center top;"
+                            loading="lazy">
+
+                        <div>
+
+                            <p class="internal-role">
+                                Wakil Sekretaris Jenderal
+                            </p>
+
+                            <h3 class="fs-5 mb-0">
+                                Jabbar Idris
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                    <p>
+                        Membantu Sekretaris Jenderal
+                        dalam administrasi dan
+                        koordinasi kepengurusan.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <!-- BENDAHARA UMUM -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <article class="internal-card h-100">
+
+                    <div class="d-flex align-items-center
+                                gap-3 mb-3">
+
+                        <img
+                            src="assets/images/struktur-05.jpg"
+                            alt="Foto pengurus pada referensi kepengurusan"
+                            class="rounded flex-shrink-0"
+                            style="width: 32%;
+                                   max-width: 110px;
+                                   aspect-ratio: 3 / 4;
+                                   object-fit: cover;
+                                   object-position: center top;"
+                            loading="lazy">
+
+                        <div>
+
+                            <p class="internal-role">
+                                Bendahara Umum
+                            </p>
+
+                            <h3 class="fs-5 mb-0">
+                                Imam Fauzan Amir Uskara
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                    <p>
+                        Mengoordinasikan pengelolaan
+                        keuangan dan pelaporan
+                        keuangan organisasi.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <!-- WAKIL BENDAHARA UMUM -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <article class="internal-card h-100">
+
+                    <div class="d-flex align-items-center
+                                gap-3 mb-3">
+
+                        <img
+                            src="assets/images/struktur-06.jpg"
+                            alt="Foto pengurus pada referensi kepengurusan"
+                            class="rounded flex-shrink-0"
+                            style="width: 32%;
+                                   max-width: 110px;
+                                   aspect-ratio: 3 / 4;
+                                   object-fit: cover;
+                                   object-position: center top;"
+                            loading="lazy">
+
+                        <div>
+
+                            <p class="internal-role">
+                                Wakil Bendahara Umum
+                            </p>
+
+                            <h3 class="fs-5 mb-0">
+                                Rusman Ya’qub
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                    <p>
+                        Membantu Bendahara Umum
+                        dalam administrasi dan
+                        pelaporan keuangan partai.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+
+        <!-- CATATAN KEPENGURUSAN -->
+
+        
+
+    </div>
+
+</section>
+
+
+        <!-- ====================================
+             HERO STAKEHOLDER PPP
+        ===================================== -->
+
+        <section class="stakeholder-hero"
+                 id="stakeholder">
+
+            <div class="wrap">
+
+                <nav class="about-breadcrumb"
+                     aria-label="Breadcrumb Stakeholder">
+
+                    <a href="index.html">Beranda</a>
+
+                    <span>/</span>
+
+                    <a href="tentang.html">Tentang PPP</a>
+
+                    <span>/</span>
+
+                    <span aria-current="location">
+                        Stakeholder PPP
+                    </span>
+
+                </nav>
+
+                <p class="about-label">
+
+                    TENTANG PPP · PEMETAAN AKADEMIK
+
+                </p>
+
+                <h2>
+
+                    Stakeholder PPP
+
+                </h2>
+
+                <p class="stakeholder-hero-description">
+
+                    Mengenal berbagai pemangku kepentingan
+                    yang memiliki peran dan hubungan dengan
+                    Partai Persatuan Pembangunan.
+
+                </p>
+
+                <p class="stakeholder-hero-note">
+
+                    Internal organisasi, ruang publik,
+                    dan akar sejarah dalam satu pemetaan.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ====================================
+             01 — EKOSISTEM STAKEHOLDER
+        ===================================== -->
+
+        <section class="about-section about-paper"
+                 id="ekosistem-stakeholder">
+
+            <div class="wrap">
+
+                <p class="stakeholder-label">
+
+                    01 / EKOSISTEM
+
+                </p>
+
+                <h2>
+
+                    Terhubung dalam satu ekosistem
+
+                </h2>
+
+                <p class="about-description">
+
+                    Pemetaan peran dan ruang interaksi PPP,
+                    bukan pernyataan afiliasi atau dukungan
+                    pihak eksternal.
+
+                </p>
+
+
+                <!-- DIAGRAM EKOSISTEM -->
+
+                <div class="ecosystem-diagram">
+
+
+                    <!-- GARIS PENGHUBUNG -->
+
+                    <svg class="ecosystem-lines"
+                         viewBox="0 0 1000 460"
+                         preserveAspectRatio="none"
+                         aria-hidden="true">
+
+                        <!-- PENGURUS DAN KADER -->
+
+                        <line
+                            x1="500" y1="230"
+                            x2="260" y2="59.8"
+                            stroke="#c4a568"
+                            stroke-width="1.5">
+
+                        </line>
+
+                        <!-- ORGANISASI SAYAP -->
+
+                        <line
+                            x1="500" y1="230"
+                            x2="740" y2="59.8"
+                            stroke="#c4a568"
+                            stroke-width="1.5">
+
+                        </line>
+
+                        <!-- ULAMA DAN PESANTREN -->
+
+                        <line
+                            x1="500" y1="230"
+                            x2="110" y2="230"
+                            stroke="#c4a568"
+                            stroke-width="1.5">
+
+                        </line>
+
+                        <!-- LEMBAGA NEGARA -->
+
+                        <line
+                            x1="500" y1="230"
+                            x2="890" y2="230"
+                            stroke="#c4a568"
+                            stroke-width="1.5">
+
+                        </line>
+
+                        <!-- MEDIA DAN AKADEMISI -->
+
+                        <line
+                            x1="500" y1="230"
+                            x2="260" y2="400.2"
+                            stroke="#c4a568"
+                            stroke-width="1.5">
+
+                        </line>
+
+                        <!-- MASYARAKAT -->
+
+                        <line
+                            x1="500" y1="230"
+                            x2="740" y2="400.2"
+                            stroke="#c4a568"
+                            stroke-width="1.5">
+
+                        </line>
+
+                    </svg>
+
+
+                    <!-- LOGO PPP DI TENGAH -->
+
+                    <div class="ecosystem-center">
+
+                        <img
+                            src="assets/images/logo-ppp.png"
+                            alt="Logo PPP"
+                            loading="lazy">
+
+                        <strong>PPP</strong>
+
+                    </div>
+
+
+                    <!-- PENGURUS DAN KADER -->
+
+                    <article class="ecosystem-node node-kader">
+
+                        <h3>
+
+                            Pengurus &amp; Kader
+
+                        </h3>
+
+                        <p>
+
+                            Penggerak organisasi
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- ORGANISASI SAYAP -->
+
+                    <article class="ecosystem-node node-sayap">
+
+                        <h3>
+
+                            Organisasi Sayap
+
+                        </h3>
+
+                        <p>
+
+                            Wadah partisipasi kader
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- ULAMA DAN PESANTREN -->
+
+                    <article class="ecosystem-node node-ulama">
+
+                        <h3>
+
+                            Ulama &amp; Pesantren
+
+                        </h3>
+
+                        <p>
+
+                            Dialog keumatan
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- LEMBAGA NEGARA -->
+
+                    <article class="ecosystem-node node-negara">
+
+                        <h3>
+
+                            Lembaga Negara
+
+                        </h3>
+
+                        <p>
+
+                            Hubungan kelembagaan
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- MEDIA DAN AKADEMISI -->
+
+                    <article class="ecosystem-node node-media">
+
+                        <h3>
+
+                            Media &amp; Akademisi
+
+                        </h3>
+
+                        <p>
+
+                            Informasi dan kajian
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- MASYARAKAT -->
+
+                    <article class="ecosystem-node node-masyarakat">
+
+                        <h3>
+
+                            Masyarakat
+
+                        </h3>
+
+                        <p>
+
+                            Aspirasi dan partisipasi
+
+                        </p>
+
+                    </article>
+
+                </div>
+
+
+                <p class="about-small-note">
+
+                    Garis menunjukkan kategori hubungan
+                    dalam pemetaan akademik, tidak
+                    menunjukkan hubungan komando.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ====================================
+             02 — STAKEHOLDER INTERNAL
+        ===================================== -->
+
+        <section class="about-section about-white"
+                 id="stakeholder-internal">
+
+            <div class="wrap">
+
+                <p class="stakeholder-label">
+
+                    02 / INTERNAL ORGANISASI
+
+                </p>
+
+                <h2>
+
+                    Stakeholder internal
+
+                </h2>
+
+                <p class="about-description">
+
+                    Unsur organisasi yang menjalankan
+                    tata kelola, kaderisasi, dan
+                    representasi politik PPP.
+
+                </p>
+
+
+                <div class="internal-grid">
+
+
+                    <!-- PENGURUS -->
+
+                    <article class="internal-card">
+
+                        <i class="bi bi-building"></i>
+
+                        <h3>Pengurus</h3>
+
+                        <p class="internal-role">
+
+                            DPP, DPW, DPC, PAC, Ranting.
+
+                        </p>
+
+                        <p>
+
+                            Mengelola organisasi dari
+                            tingkat pusat hingga basis.
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- MAJELIS -->
+
+                    <article class="internal-card">
+
+                        <i class="bi bi-chat-dots"></i>
+
+                        <h3>Majelis</h3>
+
+                        <p class="internal-role">
+
+                            Pertimbangan organisasi.
+
+                        </p>
+
+                        <p>
+
+                            Memberikan nasihat dan
+                            pertimbangan bagi organisasi.
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- KADER DAN ANGGOTA -->
+
+                    <article class="internal-card">
+
+                        <i class="bi bi-people"></i>
+
+                        <h3>Kader &amp; Anggota</h3>
+
+                        <p class="internal-role">
+
+                            Kaderisasi.
+
+                        </p>
+
+                        <p>
+
+                            Mengikuti pendidikan politik
+                            serta menggerakkan kegiatan
+                            partai.
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- BADAN OTONOM -->
+
+                    <article class="internal-card">
+
+                        <i class="bi bi-diagram-3"></i>
+
+                        <h3>Badan Otonom</h3>
+
+                        <p class="internal-role">
+
+                            Organisasi sayap.
+
+                        </p>
+
+                        <p>
+
+                            Mewadahi partisipasi dan
+                            pengembangan kelompok kader.
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- MAHKAMAH PARTAI -->
+
+                    <article class="internal-card">
+
+                        <i class="bi bi-bank"></i>
+
+                        <h3>Mahkamah Partai</h3>
+
+                        <p class="internal-role">
+
+                            Perselisihan internal.
+
+                        </p>
+
+                        <p>
+
+                            Menangani penyelesaian
+                            perselisihan internal
+                            sesuai ketentuan partai.
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- LEGISLATIF -->
+
+                    <article class="internal-card">
+
+                        <i class="bi bi-building-columns"></i>
+
+                        <h3>Legislatif</h3>
+
+                        <p class="internal-role">
+
+                            Representasi masyarakat.
+
+                        </p>
+
+                        <p>
+
+                            Menyalurkan aspirasi melalui
+                            anggota legislatif dari PPP.
+
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ====================================
+             03 — ORGANISASI SAYAP PPP
+        ===================================== -->
+
+        <section class="about-section about-paper"
+                 id="organisasi-sayap">
+
+            <div class="wrap">
+
+                <p class="stakeholder-label">
+
+                    03 / WADAH PARTISIPASI
+
+                </p>
+
+                <h2>
+
+                    Organisasi sayap PPP
+
+                </h2>
+
+                <p class="about-description">
+
+                    Badan otonom sebagai ruang
+                    pengembangan kader perempuan
+                    dan generasi muda.
+
+                </p>
+
+
+                <div class="wings-grid">
+
+
+                    <!-- WPP -->
+
+                    <article class="wings-card">
+
+                        <img
+                            class="wings-logo"
+                            src="assets/images/logo-wpp.png"
+                            alt="Logo Wanita Persatuan Pembangunan"
+                            loading="lazy">
+
+                        <h3>WPP</h3>
+
+                        <p class="wings-fullname">
+
+                            Wanita Persatuan Pembangunan
+
+                        </p>
+
+                        <p class="wings-description">
+
+                            Wadah kader perempuan untuk
+                            pendidikan politik, pemberdayaan,
+                            dan partisipasi dalam kehidupan
+                            publik.
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- GPK -->
+
+                    <article class="wings-card">
+
+                        <img
+                            class="wings-logo"
+                            src="assets/images/logo-gpk.png"
+                            alt="Logo Gerakan Pemuda Ka'bah"
+                            loading="lazy">
+
+                        <h3>GPK</h3>
+
+                        <p class="wings-fullname">
+
+                            Gerakan Pemuda Ka'bah
+
+                        </p>
+
+                        <p class="wings-description">
+
+                            Wadah pengembangan kader muda
+                            serta partisipasi pemuda dalam
+                            kegiatan organisasi dan sosial.
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- GMPI -->
+
+                    <article class="wings-card">
+
+                        <img
+                            class="wings-logo"
+                            src="assets/images/logo-gmpi.png"
+                            alt="Logo Generasi Muda Pembangunan Indonesia"
+                            loading="lazy">
+
+                        <h3>GMPI</h3>
+
+                        <p class="wings-fullname">
+
+                            Generasi Muda Pembangunan Indonesia
+
+                        </p>
+
+                        <p class="wings-description">
+
+                            Wadah generasi muda untuk
+                            kaderisasi, pendidikan politik,
+                            dan pengembangan kepemimpinan.
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- AMK -->
+
+                    <article class="wings-card">
+
+                        <img
+                            class="wings-logo"
+                            src="assets/images/logo-amk.png"
+                            alt="Logo Angkatan Muda Ka'bah"
+                            loading="lazy">
+
+                        <h3>AMK</h3>
+
+                        <p class="wings-fullname">
+
+                            Angkatan Muda Ka'bah
+
+                        </p>
+
+                        <p class="wings-description">
+
+                            Wadah kader muda untuk
+                            mengembangkan kepemimpinan,
+                            jejaring, dan pengabdian
+                            kepada masyarakat.
+
+                        </p>
+
+                    </article>
+
+                </div>
+
+
+                <p class="about-small-note">
+
+                    Identitas visual organisasi sayap
+                    mengikuti referensi desain akademik.
+                    Logo perlu diverifikasi kembali sebelum
+                    digunakan dalam publikasi resmi.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ====================================
+             04 — STAKEHOLDER EKSTERNAL
+        ===================================== -->
+
+        <section class="about-section about-white"
+                 id="stakeholder-eksternal">
+
+            <div class="wrap">
+
+                <p class="stakeholder-label">
+
+                    04 / RELASI DI RUANG PUBLIK
+
+                </p>
+
+                <h2>
+
+                    Stakeholder eksternal
+
+                </h2>
+
+                <p class="about-description">
+
+                    Pilih kategori untuk mengenal perannya.
+                    Hubungan bersifat kelembagaan dan sosial,
+                    bukan afiliasi politik.
+
+                </p>
+
+
+                <!-- =================================
+                     TAB NAVIGATION
+                ================================== -->
+
+                <div class="stakeholder-tabs"
+                     role="tablist"
+                     aria-label="Kategori stakeholder eksternal">
+
+                    <!-- TAB LEMBAGA NEGARA -->
+
+                    <button
+                        type="button"
+                        class="stakeholder-tab active"
+                        id="tab-negara"
+                        data-target="panel-negara"
+                        role="tab"
+                        aria-controls="panel-negara"
+                        aria-selected="true"
+                        tabindex="0">
+
+                        Lembaga Negara
+
+                    </button>
+
+
+                    <!-- TAB KEAGAMAAN -->
+
+                    <button
+                        type="button"
+                        class="stakeholder-tab"
+                        id="tab-keagamaan"
+                        data-target="panel-keagamaan"
+                        role="tab"
+                        aria-controls="panel-keagamaan"
+                        aria-selected="false"
+                        tabindex="-1">
+
+                        Keagamaan
+
+                    </button>
+
+
+                    <!-- TAB MASYARAKAT -->
+
+                    <button
+                        type="button"
+                        class="stakeholder-tab"
+                        id="tab-masyarakat"
+                        data-target="panel-masyarakat"
+                        role="tab"
+                        aria-controls="panel-masyarakat"
+                        aria-selected="false"
+                        tabindex="-1">
+
+                        Masyarakat
+
+                    </button>
+
+
+                    <!-- TAB POLITIK DAN MEDIA -->
+
+                    <button
+                        type="button"
+                        class="stakeholder-tab"
+                        id="tab-politik"
+                        data-target="panel-politik"
+                        role="tab"
+                        aria-controls="panel-politik"
+                        aria-selected="false"
+                        tabindex="-1">
+
+                        Politik &amp; Media
+
+                    </button>
+
+                </div>
+
+
+                <!-- =================================
+                     PANEL 1 — LEMBAGA NEGARA
+                ================================== -->
+
+                <div class="stakeholder-panel"
+                     id="panel-negara"
+                     role="tabpanel"
+                     aria-labelledby="tab-negara"
+                     tabindex="0">
+
+                    <h3>
+
+                        Hubungan dalam tata kelola demokrasi
+
+                    </h3>
+
+                    <div class="external-grid">
+
+                        <article class="external-item">
+
+                            <h4>KPU</h4>
+
+                            <p>
+
+                                Menyelenggarakan pemilu
+                                serta proses administrasi
+                                dan tahapan kepesertaan
+                                partai.
+
+                            </p>
+
+                        </article>
+
+                        <article class="external-item">
+
+                            <h4>Bawaslu</h4>
+
+                            <p>
+
+                                Mengawasi penyelenggaraan
+                                pemilu dan menangani dugaan
+                                pelanggaran sesuai
+                                kewenangannya.
+
+                            </p>
+
+                        </article>
+
+                        <article class="external-item">
+
+                            <h4>MK</h4>
+
+                            <p>
+
+                                Memeriksa dan memutus
+                                perselisihan hasil pemilu
+                                sesuai kewenangan
+                                konstitusional.
+
+                            </p>
+
+                        </article>
+
+                        <article class="external-item">
+
+                            <h4>Kementerian Hukum</h4>
+
+                            <p>
+
+                                Menjalankan administrasi
+                                badan hukum partai politik
+                                sesuai peraturan.
+
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     PANEL 2 — KEAGAMAAN
+                ================================== -->
+
+                <div class="stakeholder-panel"
+                     id="panel-keagamaan"
+                     role="tabpanel"
+                     aria-labelledby="tab-keagamaan"
+                     tabindex="0"
+                     hidden>
+
+                    <h3>
+
+                        Hubungan dalam ruang keagamaan
+
+                    </h3>
+
+                    <div class="external-grid">
+
+                        <article class="external-item">
+
+                            <h4>Ulama</h4>
+
+                            <p>
+
+                                Berperan dalam pendidikan
+                                keagamaan, penyampaian
+                                pandangan, dan dialog
+                                mengenai kehidupan sosial.
+
+                            </p>
+
+                        </article>
+
+                        <article class="external-item">
+
+                            <h4>Pesantren</h4>
+
+                            <p>
+
+                                Lembaga pendidikan keagamaan
+                                yang berperan dalam
+                                pembelajaran dan pengembangan
+                                masyarakat.
+
+                            </p>
+
+                        </article>
+
+                        <article class="external-item">
+
+                            <h4>Organisasi Keagamaan</h4>
+
+                            <p>
+
+                                Menyelenggarakan kegiatan
+                                sosial, pendidikan, serta
+                                pelayanan keagamaan secara
+                                independen.
+
+                            </p>
+
+                        </article>
+
+                        <article class="external-item">
+
+                            <h4>Tokoh Agama</h4>
+
+                            <p>
+
+                                Berpartisipasi dalam dialog
+                                sosial dan pembahasan isu
+                                keagamaan di ruang publik.
+
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     PANEL 3 — MASYARAKAT
+                ================================== -->
+
+                <div class="stakeholder-panel"
+                     id="panel-masyarakat"
+                     role="tabpanel"
+                     aria-labelledby="tab-masyarakat"
+                     tabindex="0"
+                     hidden>
+
+                    <h3>
+
+                        Hubungan dalam kehidupan masyarakat
+
+                    </h3>
+
+                    <div class="external-grid">
+
+                        <article class="external-item">
+
+                            <h4>Masyarakat Umum</h4>
+
+                            <p>
+
+                                Menyampaikan aspirasi,
+                                kebutuhan, serta penilaian
+                                terhadap isu dan kebijakan
+                                publik.
+
+                            </p>
+
+                        </article>
+
+                        <article class="external-item">
+
+                            <h4>Komunitas Lokal</h4>
+
+                            <p>
+
+                                Berperan dalam kegiatan
+                                sosial dan menyampaikan
+                                kebutuhan masyarakat
+                                di tingkat lokal.
+
+                            </p>
+
+                        </article>
+
+                        <article class="external-item">
+
+                            <h4>Akademisi dan LSM</h4>
+
+                            <p>
+
+                                Memberikan kajian,
+                                masukan, kritik, serta
+                                pengawasan independen
+                                terhadap kebijakan publik.
+
+                            </p>
+
+                        </article>
+
+                        <article class="external-item">
+
+                            <h4>Dunia Usaha</h4>
+
+                            <p>
+
+                                Menjadi bagian dari
+                                pemangku kepentingan
+                                dalam pembahasan ekonomi
+                                dan kesejahteraan masyarakat.
+
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     PANEL 4 — POLITIK DAN MEDIA
+                ================================== -->
+
+                <div class="stakeholder-panel"
+                     id="panel-politik"
+                     role="tabpanel"
+                     aria-labelledby="tab-politik"
+                     tabindex="0"
+                     hidden>
+
+                    <h3>
+
+                        Hubungan dalam komunikasi publik
+
+                    </h3>
+
+                    <div class="external-grid">
+
+                        <article class="external-item">
+
+                            <h4>Partai Politik</h4>
+
+                            <p>
+
+                                Berinteraksi dalam sistem
+                                demokrasi, pembahasan
+                                kebijakan, dan dinamika
+                                politik nasional.
+
+                            </p>
+
+                        </article>
+
+                        <article class="external-item">
+
+                            <h4>Media Massa</h4>
+
+                            <p>
+
+                                Menyampaikan informasi,
+                                pemberitaan, dan pengawasan
+                                terhadap aktivitas politik
+                                secara independen.
+
+                            </p>
+
+                        </article>
+
+                        <article class="external-item">
+
+                            <h4>Media Digital</h4>
+
+                            <p>
+
+                                Menjadi ruang penyebaran
+                                informasi dan diskusi
+                                publik mengenai berbagai
+                                isu masyarakat.
+
+                            </p>
+
+                        </article>
+
+                        <article class="external-item">
+
+                            <h4>Pengamat Politik</h4>
+
+                            <p>
+
+                                Memberikan analisis dan
+                                penilaian independen
+                                mengenai perkembangan
+                                politik dan organisasi.
+
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ====================================
+             05 — AKAR HISTORIS PPP
+        ===================================== -->
+
+        <section class="about-section about-paper"
+                 id="akar-historis">
+
+            <div class="wrap">
+
+                <p class="stakeholder-label">
+
+                    05 / AKAR HISTORIS
+
+                </p>
+
+                <h2>
+
+                    Empat unsur, satu persatuan
+
+                </h2>
+
+                <p>
+
+                    PPP lahir melalui fusi empat partai
+                    politik Islam pada 5 Januari 1973.
+
+                </p>
+
+
+                <!-- DIAGRAM FUSI -->
+
+                <div class="history-fusion">
+
+                    <div class="fusion-grid">
+
+
+                        <!-- NU -->
+
+                        <article class="fusion-card">
+
+                            <h3>NU</h3>
+
+                            <p>Nahdlatul Ulama</p>
+
+                        </article>
+
+
+                        <!-- PARMUSI -->
+
+                        <article class="fusion-card">
+
+                            <h3>Parmusi</h3>
+
+                            <p>Partai Muslimin Indonesia</p>
+
+                        </article>
+
+
+                        <!-- PSII -->
+
+                        <article class="fusion-card">
+
+                            <h3>PSII</h3>
+
+                            <p>Partai Syarikat Islam Indonesia</p>
+
+                        </article>
+
+
+                        <!-- PERTI -->
+
+                        <article class="fusion-card">
+
+                            <h3>Perti</h3>
+
+                            <p>Persatuan Tarbiyah Islamiyah</p>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- GARIS PENGHUBUNG -->
+
+                    <svg class="fusion-connector"
+                         viewBox="0 0 1000 95"
+                         preserveAspectRatio="none"
+                         aria-hidden="true">
+
+                        <g
+                            stroke="#c4a568"
+                            stroke-width="1.5"
+                            fill="none">
+
+                            <path d="M 125 0 V 45 H 875 V 0"></path>
+
+                            <path d="M 375 0 V 45"></path>
+
+                            <path d="M 625 0 V 45"></path>
+
+                            <path d="M 500 45 V 95"></path>
+
+                        </g>
+
+                    </svg>
+
+
+                    <!-- HASIL FUSI -->
+
+                    <div class="fusion-result">
+
+                        <h3>
+
+                            Partai Persatuan Pembangunan
+
+                        </h3>
+
+                        <p>
+
+                            5 Januari 1973 · Fusi empat partai
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CATATAN AKADEMIK -->
+
+                <aside class="stakeholder-note">
+
+                    <h3>
+
+                        Catatan pemetaan akademik
+
+                    </h3>
+
+                    <p>
+
+                        Pemetaan ini bersifat edukatif.
+                        Hubungan dengan lembaga negara,
+                        ulama, pesantren, ormas, media,
+                        dan kelompok masyarakat tidak
+                        berarti keanggotaan, afiliasi
+                        formal, atau dukungan politik.
+
+                        Akar historis tidak menyamakan
+                        organisasi masa kini dengan
+                        partai peserta fusi tahun 1973.
+
+                    </p>
+
+                </aside>
+
+
+                <p class="about-small-note">
+
+                    Referensi pemetaan: materi sejarah PPP
+                    dan desain prototipe akademik Digital
+                    Public Relations.
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+
+    <footer class="footer">
+
+        <div class="wrap footer-wrap">
+
+            <div class="footer-grid">
+
+
+                <!-- IDENTITAS -->
+
+                <div>
+
+                    <h3>
+
+                        PPP — Ruang Bersama
+
+                    </h3>
+
+                    <p>
+
+                        Partai Persatuan Pembangunan.
+                        Ruang informasi dan dialog publik
+                        dalam sebuah prototipe akademik.
+
+                    </p>
+
+                    <p class="gold">
+
+                        Merawat Persatuan dengan Pembangunan.
+
+                    </p>
+
+                </div>
+
+
+                <!-- QUICK LINKS -->
+
+                <div>
+
+                    <h4>Quick Links</h4>
+
+                    <a href="index.html">
+
+                        Beranda
+
+                    </a>
+
+                    <a href="tentang.html">
+
+                        Tentang PPP
+
+                    </a>
+
+                    <a href="struktur.html">
+
+                        Organisasi
+
+                    </a>
+
+                    <a href="program.html">
+
+                        Program &amp; Aksi
+
+                    </a>
+
+                    <a href="aspirasi.html">
+
+                        Aspirasi Rakyat
+
+                    </a>
+
+                    <a href="kabar.html">
+
+                        Berita
+
+                    </a>
+
+                    <a href="pernyataan.html">
+
+                        Pernyataan Resmi
+
+                    </a>
+
+                </div>
+
+
+                <!-- INFORMATION -->
+
+                <div>
+
+                    <h4>Information</h4>
+
+                    <a href="faq.html">
+
+                        FAQ &amp; Kontak
+
+                    </a>
+
+                    <span aria-disabled="true">
+
+                        Opini
+
+                    </span>
+
+                </div>
+
+
+                <!-- SOCIAL MEDIA -->
+
+                <div>
+
+                    <h4>Social</h4>
+
+                    <a href="https://www.instagram.com/ppp.peduli/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        Instagram @ppp.peduli
+
+                    </a>
+
+                    <a href="https://www.tiktok.com/@ppp.peduli"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        TikTok @ppp.peduli
+
+                    </a>
+
+                    <a href="https://www.youtube.com/@PartaiPersatuanPembangunanDPP"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        YouTube<br>
+                        @PartaiPersatuanPembangunanDPP
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- DISCLAIMER -->
+
+            <p class="disclaimer">
+
+                Website ini merupakan prototipe akademik
+                yang dikembangkan untuk keperluan pembelajaran
+                Digital Public Relations. Website ini bukan
+                situs resmi Partai Persatuan Pembangunan
+                (PPP). Seluruh program simulasi dan fitur
+                interaktif yang ditampilkan tidak mewakili
+                kegiatan atau layanan resmi organisasi.
+
+            </p>
+
+
+            <!-- COPYRIGHT -->
+
+            <p class="copyright">
+
+                © 2026 PPP — Ruang Bersama ·
+                Prototipe akademik Digital Public Relations
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ========================================
+         BOOTSTRAP JAVASCRIPT
+    ========================================= -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- ========================================
+         JAVASCRIPT TENTANG PPP
+    ========================================= -->
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+
+            /* =================================
+               TAB STAKEHOLDER EKSTERNAL
+            ================================== */
+
+            const tabs = Array.from(
+                document.querySelectorAll('.stakeholder-tab')
+            );
+
+            const panels = Array.from(
+                document.querySelectorAll('.stakeholder-panel')
+            );
+
+
+            function activateTab(selectedTab, moveFocus = false) {
+
+                const targetId = selectedTab.dataset.target;
+
+                /* UPDATE BUTTON */
+
+                tabs.forEach(tab => {
+
+                    const active = tab === selectedTab;
+
+                    tab.classList.toggle('active', active);
+
+                    tab.setAttribute(
+                        'aria-selected',
+                        String(active)
+                    );
+
+                    tab.tabIndex = active ? 0 : -1;
+
+                });
+
+
+                /* UPDATE PANEL */
+
+                panels.forEach(panel => {
+
+                    panel.hidden = panel.id !== targetId;
+
+                });
+
+
+                if (moveFocus) {
+
+                    selectedTab.focus();
+
+                }
+
+            }
+
+
+            /* CLICK TAB */
+
+            tabs.forEach((tab, index) => {
+
+                tab.addEventListener('click', () => {
+
+                    activateTab(tab);
+
+                });
+
+
+                /* NAVIGASI KEYBOARD */
+
+                tab.addEventListener('keydown', event => {
+
+                    let nextIndex;
+
+                    if (event.key === 'ArrowRight') {
+
+                        nextIndex =
+                            (index + 1) % tabs.length;
+
+                    } else if (event.key === 'ArrowLeft') {
+
+                        nextIndex =
+                            (index - 1 + tabs.length) % tabs.length;
+
+                    } else if (event.key === 'Home') {
+
+                        nextIndex = 0;
+
+                    } else if (event.key === 'End') {
+
+                        nextIndex = tabs.length - 1;
+
+                    } else {
+
+                        return;
+
+                    }
+
+                    event.preventDefault();
+
+                    activateTab(tabs[nextIndex], true);
+
+                });
+
+            });
+
+
+            /* =================================
+               SMOOTH SCROLL
+            ================================== */
+
+            const reducedMotion = window.matchMedia(
+                '(prefers-reduced-motion: reduce)'
+            ).matches;
+
+
+            function scrollToSection(target) {
+
+                target.scrollIntoView({
+
+                    behavior: reducedMotion
+                        ? 'auto'
+                        : 'smooth',
+
+                    block: 'start'
+
+                });
+
+            }
+
+
+            /* NAVIGASI ANCHOR HALAMAN TENTANG */
+
+            document.querySelectorAll(
+                'a[href^="tentang.html#"], a[href^="#"]'
+            ).forEach(link => {
+
+                link.addEventListener('click', event => {
+
+                    const href = link.getAttribute('href');
+
+                    const targetId = href.split('#')[1];
+
+                    if (!targetId) return;
+
+                    const target =
+                        document.getElementById(targetId);
+
+                    if (!target) return;
+
+                    event.preventDefault();
+
+                    scrollToSection(target);
+
+                    history.pushState(
+                        null,
+                        '',
+                        '#' + targetId
+                    );
+
+
+                    /* TUTUP DROPDOWN */
+
+                    const dropdown = link.closest('.dropdown');
+
+                    if (dropdown) {
+
+                        const toggle = dropdown.querySelector(
+                            '[data-bs-toggle="dropdown"]'
+                        );
+
+                        if (toggle && window.bootstrap) {
+
+                            bootstrap.Dropdown
+                                .getOrCreateInstance(toggle)
+                                .hide();
+
+                        }
+
+                    }
+
+
+                    /* TUTUP NAVBAR MOBILE */
+
+                    const mobileNav =
+                        document.getElementById('mainNav');
+
+                    if (
+                        mobileNav &&
+                        mobileNav.classList.contains('show') &&
+                        window.innerWidth < 992 &&
+                        window.bootstrap
+                    ) {
+
+                        bootstrap.Collapse
+                            .getOrCreateInstance(
+                                mobileNav,
+                                { toggle: false }
+                            )
+                            .hide();
+
+                    }
+
+                });
+
+            });
+
+
+            /* =================================
+               SEARCH HALAMAN TENTANG
+            ================================== */
+
+            const searchForm =
+                document.getElementById('aboutSearchForm');
+
+            const searchInput =
+                document.getElementById('aboutSearchInput');
+
+
+            const searchPages = [
+
+                {
+                    words: [
+                        'struktur organisasi',
+                        'kepengurusan',
+                        'ketua umum'
+                    ],
+                    url: 'struktur.html'
+                },
+
+                {
+                    words: [
+                        'maskot',
+                        'kaba'
+                    ],
+                    url: 'kaba.html'
+                },
+
+                {
+                    words: [
+                        'talkshow',
+                        'talk show',
+                        'seminar',
+                        'kolaborasi'
+                    ],
+                    url: 'talkshow.html'
+                },
+
+                {
+                    words: [
+                        'beasiswa',
+                        'beasiswa pendidikan pemuda'
+                    ],
+                    url: 'beasiswa.html'
+                },
+
+                {
+                    words: [
+                        'peduli bumi',
+                        'penghijauan'
+                    ],
+                    url: 'peduli-bumi.html'
+                },
+
+                {
+                    words: [
+                        'jaring aspirasi',
+                        'sampaikan aspirasi'
+                    ],
+                    url: 'aspirasi.html'
+                },
+
+                {
+                    words: [
+                        'faq',
+                        'kontak'
+                    ],
+                    url: 'faq.html'
+                }
+
+            ];
+
+
+            const searchSections = [
+
+                {
+                    words: ['profil', 'identitas'],
+                    id: 'profil-sejarah'
+                },
+
+                {
+                    words: ['sejarah', '1973'],
+                    id: 'sejarah-ppp'
+                },
+
+                {
+                    words: ['visi', 'misi'],
+                    id: 'visi-misi'
+                },
+
+                {
+                    words: ['khidmat'],
+                    id: 'lima-khidmat'
+                },
+
+                {
+                    words: ['stakeholder'],
+                    id: 'stakeholder'
+                },
+
+                {
+                    words: ['ekosistem'],
+                    id: 'ekosistem-stakeholder'
+                },
+
+                {
+                    words: [
+                        'stakeholder internal',
+                        'majelis',
+                        'mahkamah partai',
+                        'kader'
+                    ],
+                    id: 'stakeholder-internal'
+                },
+
+                {
+                    words: [
+                        'organisasi sayap',
+                        'wpp',
+                        'gpk',
+                        'gmpi',
+                        'amk'
+                    ],
+                    id: 'organisasi-sayap'
+                },
+
+                {
+                    words: ['stakeholder eksternal'],
+                    id: 'stakeholder-eksternal'
+                },
+
+                {
+                    words: [
+                        'kpu',
+                        'bawaslu',
+                        'mahkamah konstitusi',
+                        'kementerian hukum',
+                        'lembaga negara'
+                    ],
+                    id: 'stakeholder-eksternal',
+                    tab: 'tab-negara'
+                },
+
+                {
+                    words: [
+                        'ulama',
+                        'pesantren',
+                        'keagamaan'
+                    ],
+                    id: 'stakeholder-eksternal',
+                    tab: 'tab-keagamaan'
+                },
+
+                {
+                    words: [
+                        'masyarakat',
+                        'akademisi',
+                        'lsm',
+                        'dunia usaha'
+                    ],
+                    id: 'stakeholder-eksternal',
+                    tab: 'tab-masyarakat'
+                },
+
+                {
+                    words: [
+                        'media',
+                        'pengamat politik',
+                        'media massa'
+                    ],
+                    id: 'stakeholder-eksternal',
+                    tab: 'tab-politik'
+                },
+
+                {
+                    words: [
+                        'fusi',
+                        'akar historis',
+                        'parmusi',
+                        'psii',
+                        'perti',
+                        'nahdlatul ulama'
+                    ],
+                    id: 'akar-historis'
+                }
+
+            ];
+
+
+            function normalizeText(text) {
+
+                return text
+                    .toLocaleLowerCase('id')
+                    .trim()
+                    .replace(/\s+/g, ' ');
+
+            }
+
+
+            searchForm.addEventListener('submit', event => {
+
+                event.preventDefault();
+
+                const keyword =
+                    normalizeText(searchInput.value);
+
+                if (!keyword) return;
+
+
+                /* CARI BERDASARKAN KATA KUNCI */
+
+                const entries = [
+                    ...searchSections,
+                    ...searchPages
+                ];
+
+                const matches = entries.flatMap(entry =>
+
+                    entry.words
+                        .filter(word => {
+
+                            const normalized =
+                                normalizeText(word);
+
+                            return (
+                                keyword === normalized ||
+                                (' ' + keyword + ' ').includes(
+                                    ' ' + normalized + ' '
+                                )
+                            );
+
+                        })
+                        .map(word => ({
+
+                            ...entry,
+
+                            score: word.length
+
+                        }))
+
+                );
+
+
+                matches.sort(
+                    (a, b) => b.score - a.score
+                );
+
+
+                if (matches.length > 0) {
+
+                    const result = matches[0];
+
+
+                    /* PINDAH HALAMAN */
+
+                    if (result.url) {
+
+                        window.location.href = result.url;
+
+                        return;
+
+                    }
+
+
+                    /* BUKA TAB STAKEHOLDER */
+
+                    if (result.tab) {
+
+                        const targetTab =
+                            document.getElementById(result.tab);
+
+                        if (targetTab) {
+
+                            activateTab(targetTab);
+
+                        }
+
+                    }
+
+
+                    /* PINDAH KE SECTION */
+
+                    const target =
+                        document.getElementById(result.id);
+
+                    if (target) {
+
+                        scrollToSection(target);
+
+                        history.replaceState(
+                            null,
+                            '',
+                            '#' + result.id
+                        );
+
+                        return;
+
+                    }
+
+                }
+
+
+                /* PENCARIAN ISI HALAMAN */
+
+                const words = keyword.split(/\s+/);
+
+                const sections = Array.from(
+                    document.querySelectorAll('main section')
+                );
+
+
+                const sectionMatch = sections.find(section => {
+
+                    const text =
+                        normalizeText(section.textContent);
+
+                    return words.every(word =>
+                        text.includes(word)
+                    );
+
+                });
+
+
+                if (sectionMatch) {
+
+                    /* BUKA PANEL TERSEMBUNYI JIKA COCOK */
+
+                    const panelMatch = Array.from(
+                        sectionMatch.querySelectorAll(
+                            '.stakeholder-panel'
+                        )
+                    ).find(panel => {
+
+                        const text =
+                            normalizeText(panel.textContent);
+
+                        return words.every(word =>
+                            text.includes(word)
+                        );
+
+                    });
+
+
+                    if (panelMatch) {
+
+                        const tabMatch = tabs.find(tab =>
+                            tab.dataset.target === panelMatch.id
+                        );
+
+                        if (tabMatch) {
+
+                            activateTab(tabMatch);
+
+                        }
+
+                    }
+
+
+                    scrollToSection(sectionMatch);
+
+                } else {
+
+                    alert(
+                        'Informasi tidak ditemukan. ' +
+                        'Coba kata kunci profil, sejarah, visi, ' +
+                        'stakeholder, WPP, GPK, KPU, atau KABA.'
+                    );
+
+                }
+
+            });
+
+        });
+
+    </script>
+<!-- GLOBAL NAVBAR JAVASCRIPT -->
+
+<script src="assets/js/navbar.js"></script>
+
+</body>
+
+</html>

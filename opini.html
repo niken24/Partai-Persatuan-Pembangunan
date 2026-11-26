@@ -1,0 +1,2395 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ruang Perspektif | PPP — Ruang Bersama</title>
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- BOOTSTRAP -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- BOOTSTRAP ICONS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+          rel="stylesheet">
+
+    <!-- CSS UTAMA -->
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- CSS KHUSUS HALAMAN OPINI -->
+
+    <style>
+
+        /* ========================================
+           GENERAL HALAMAN OPINI
+        ========================================= */
+
+        .ppp-opini {
+            --opini-green: #174c38;
+            --opini-gold: #c4a568;
+            --opini-paper: #f7f8f2;
+            --opini-sage: #e8eee5;
+            --opini-muted: #69746d;
+            --opini-border: #d6ded5;
+        }
+
+        .ppp-opini main {
+            background: var(--opini-paper);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .ppp-opini .opini-wrap {
+            width: calc(100% - 80px);
+            max-width: 1240px;
+            margin: 0 auto;
+        }
+
+
+        /* ========================================
+           HERO RUANG PERSPEKTIF
+        ========================================= */
+
+        .ppp-opini .opini-hero {
+            background: var(--opini-green);
+            color: #ffffff;
+            padding: 48px 0;
+        }
+
+        .ppp-opini .opini-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            color: var(--opini-gold);
+
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.7;
+
+            margin-bottom: 28px;
+        }
+
+        .ppp-opini .opini-hero h1 {
+            font-family: 'Poppins', sans-serif;
+
+            font-size: clamp(36px, 4.4vw, 64px);
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -1px;
+
+            color: #f7f8f2;
+
+            margin: 0 0 28px;
+        }
+
+        .ppp-opini .opini-hero-subtitle {
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 1.6;
+
+            color: #f7f8f2;
+
+            margin: 0 0 12px;
+        }
+
+        .ppp-opini .opini-hero-description {
+            font-size: 16px;
+            line-height: 1.8;
+
+            color: #e3ece5;
+
+            margin: 0;
+        }
+
+
+        /* ========================================
+           FORUM OPINI MASYARAKAT
+        ========================================= */
+
+        .ppp-opini .opini-main {
+            background: var(--opini-paper);
+            padding: 65px 0 75px;
+        }
+
+        .ppp-opini .opini-label {
+            color: var(--opini-green);
+
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .3px;
+            text-transform: uppercase;
+
+            margin: 0 0 30px;
+        }
+
+        .ppp-opini .opini-section-title {
+            font-family: 'Poppins', sans-serif;
+
+            font-size: clamp(30px, 3vw, 40px);
+            font-weight: 600;
+            line-height: 1.45;
+            letter-spacing: -.6px;
+
+            color: var(--opini-green);
+
+            margin: 0 0 35px;
+        }
+
+
+        /* ========================================
+           LAYOUT FORUM
+        ========================================= */
+
+        .ppp-opini .opini-layout {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 2.7fr)
+                minmax(0, 1fr);
+
+            align-items: start;
+
+            gap: 24px;
+        }
+
+        .ppp-opini .opini-list {
+            display: flex;
+            flex-direction: column;
+
+            gap: 12px;
+
+            min-width: 0;
+        }
+
+
+        /* ========================================
+           CARD PEMBAHASAN OPINI
+        ========================================= */
+
+        .ppp-opini .opini-card {
+            background: #ffffff;
+
+            border: 1px solid var(--opini-border);
+            border-radius: 15px;
+
+            padding: 24px;
+
+            scroll-margin-top: 30px;
+
+            transition:
+                border-color .2s ease,
+                box-shadow .2s ease;
+        }
+
+        .ppp-opini .opini-card:hover {
+            border-color: #b5c7b8;
+        }
+
+        .ppp-opini .opini-card[open] {
+            border-color: #a9c2b0;
+        }
+
+        .ppp-opini .opini-card summary {
+            list-style: none;
+            cursor: pointer;
+        }
+
+        .ppp-opini .opini-card summary::-webkit-details-marker {
+            display: none;
+        }
+
+
+        /* KATEGORI OPINI */
+
+        .ppp-opini .opini-card-category {
+            display: block;
+
+            color: #596760;
+
+            font-size: 10px;
+            font-weight: 600;
+            line-height: 1.6;
+            text-transform: uppercase;
+
+            margin-bottom: 18px;
+        }
+
+
+        /* JUDUL OPINI */
+
+        .ppp-opini .opini-card-heading {
+            display: flex;
+            align-items: flex-start;
+
+            gap: 18px;
+
+            color: var(--opini-green);
+
+            margin-bottom: 20px;
+        }
+
+        .ppp-opini .opini-card-heading > i {
+            flex-shrink: 0;
+            font-size: 22px;
+        }
+
+        .ppp-opini .opini-card-title {
+            display: block;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.5;
+
+            color: var(--opini-green);
+        }
+
+
+        /* DESKRIPSI OPINI */
+
+        .ppp-opini .opini-card-intro {
+            display: block;
+
+            color: var(--opini-muted);
+
+            font-size: 14px;
+            line-height: 1.8;
+
+            margin: 0 0 15px;
+        }
+
+
+        /* ========================================
+           BUTTON BUKA PEMBAHASAN
+        ========================================= */
+
+        .ppp-opini .opini-open-button {
+            display: inline-flex;
+            align-items: center;
+
+            gap: 8px;
+
+            color: var(--opini-green);
+
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .ppp-opini .opini-open-button i {
+            transition: transform .2s ease;
+        }
+
+        .ppp-opini .opini-card[open]
+        .opini-open-button i {
+            transform: rotate(180deg);
+        }
+
+        .ppp-opini .opini-card:not([open])
+        .opini-close-text {
+            display: none;
+        }
+
+        .ppp-opini .opini-card[open]
+        .opini-open-text {
+            display: none;
+        }
+
+
+        /* ========================================
+           ISI PEMBAHASAN OPINI
+        ========================================= */
+
+        .ppp-opini .opini-card-body {
+            border-top: 1px solid var(--opini-border);
+
+            padding-top: 22px;
+            margin-top: 22px;
+        }
+
+        .ppp-opini .opini-card-body h3 {
+            font-family: 'Poppins', sans-serif;
+
+            color: var(--opini-green);
+
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 1.5;
+
+            margin: 0 0 12px;
+        }
+
+        .ppp-opini .opini-card-body p,
+        .ppp-opini .opini-card-body li {
+            color: var(--opini-muted);
+
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .ppp-opini .opini-card-body p {
+            margin: 0 0 22px;
+        }
+
+        .ppp-opini .opini-card-body ul {
+            padding-left: 20px;
+            margin: 0 0 22px;
+        }
+
+        .ppp-opini .opini-card-body li {
+            margin-bottom: 6px;
+        }
+
+
+        /* RUJUKAN PEMBAHASAN */
+
+        .ppp-opini .opini-reference {
+            background: var(--opini-paper);
+
+            padding: 16px;
+
+            border-radius: 5px;
+
+            margin-top: 20px;
+        }
+
+        .ppp-opini .opini-reference p {
+            font-size: 12px;
+            line-height: 1.8;
+
+            margin: 0 0 8px;
+        }
+
+        .ppp-opini .opini-reference a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            color: var(--opini-green);
+
+            font-size: 12px;
+            font-weight: 600;
+
+            text-decoration: underline;
+        }
+
+
+        /* ========================================
+           SIDEBAR PANDUAN DISKUSI
+        ========================================= */
+
+        .ppp-opini .opini-sidebar {
+            background: var(--opini-sage);
+
+            border-radius: 15px;
+
+            padding: 24px;
+
+            min-width: 0;
+        }
+
+        .ppp-opini .opini-sidebar h3 {
+            font-family: 'Poppins', sans-serif;
+
+            color: var(--opini-green);
+
+            font-size: 23px;
+            font-weight: 600;
+            line-height: 1.45;
+            letter-spacing: -.4px;
+
+            margin: 0 0 25px;
+        }
+
+        .ppp-opini .opini-guide-item {
+            margin-bottom: 22px;
+        }
+
+        .ppp-opini .opini-guide-title {
+            display: flex;
+            align-items: flex-start;
+
+            gap: 9px;
+
+            color: #596b61;
+
+            font-size: 14px;
+            line-height: 1.6;
+
+            margin-bottom: 2px;
+        }
+
+        .ppp-opini .opini-guide-item p {
+            color: #596b61;
+
+            font-size: 14px;
+            line-height: 1.7;
+
+            margin: 0;
+        }
+
+        .ppp-opini .opini-sidebar-divider {
+            border: 0;
+            border-top: 1px solid #cdd9ce;
+
+            margin: 25px 0;
+
+            opacity: 1;
+        }
+
+
+        /* ========================================
+           BUTTON JARING ASPIRASI
+        ========================================= */
+
+        .ppp-opini .opini-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 18px;
+
+            width: 100%;
+            min-height: 46px;
+
+            padding: 13px 20px;
+
+            background: var(--opini-green);
+            color: #ffffff;
+
+            border: 1px solid var(--opini-green);
+            border-radius: 4px;
+
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 1.6;
+
+            text-decoration: none;
+
+            transition:
+                background .2s ease,
+                color .2s ease,
+                border-color .2s ease;
+        }
+
+        .ppp-opini .opini-button:hover {
+            background: var(--opini-gold);
+
+            border-color: var(--opini-gold);
+
+            color: var(--opini-green);
+
+            text-decoration: none;
+        }
+
+        .ppp-opini .opini-sidebar .opini-button {
+            margin-top: 10px;
+        }
+
+
+        /* ========================================
+           CATATAN AKADEMIK
+        ========================================= */
+
+        .ppp-opini .opini-academic-note {
+            display: flex;
+            align-items: flex-start;
+
+            gap: 10px;
+
+            background: var(--opini-sage);
+
+            border: 1px solid var(--opini-border);
+            border-radius: 8px;
+
+            padding: 20px;
+
+            margin-top: 35px;
+
+            color: var(--opini-muted);
+
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        .ppp-opini .opini-academic-note i {
+            color: var(--opini-green);
+            flex-shrink: 0;
+        }
+
+
+        /* HASIL PENCARIAN */
+
+        .ppp-opini .opini-search-status {
+            color: var(--opini-muted);
+
+            font-size: 13px;
+            line-height: 1.7;
+
+            margin: 0 0 20px;
+        }
+
+        .ppp-opini .opini-search-status[hidden] {
+            display: none;
+        }
+
+
+        /* AKSESIBILITAS */
+
+        .ppp-opini .opini-button:focus-visible,
+        .ppp-opini summary:focus-visible {
+            outline: 3px solid var(--opini-gold);
+            outline-offset: 4px;
+        }
+
+
+        /* ========================================
+           RESPONSIVE TABLET
+        ========================================= */
+
+        @media (max-width: 991px) {
+
+            .ppp-opini .opini-wrap {
+                width: calc(100% - 48px);
+            }
+
+            .ppp-opini .opini-hero h1 {
+                font-size: 48px;
+            }
+
+            .ppp-opini .opini-main {
+                padding: 50px 0 55px;
+            }
+
+            .ppp-opini .opini-layout {
+                grid-template-columns:
+                    minmax(0, 2fr)
+                    minmax(0, 1fr);
+
+                gap: 18px;
+            }
+
+            .ppp-opini .opini-sidebar {
+                padding: 20px;
+            }
+
+            .ppp-opini .opini-sidebar h3 {
+                font-size: 20px;
+            }
+
+            .ppp-opini .opini-card {
+                padding: 20px;
+            }
+
+            .ppp-opini .opini-card-title {
+                font-size: 18px;
+            }
+
+        }
+
+
+        /* ========================================
+           RESPONSIVE MOBILE
+        ========================================= */
+
+        @media (max-width: 767px) {
+
+            .ppp-opini .opini-wrap {
+                width: calc(100% - 40px);
+            }
+
+            .ppp-opini .opini-hero {
+                padding: 35px 0 40px;
+            }
+
+            .ppp-opini .opini-hero h1 {
+                font-size: 35px;
+                line-height: 1.25;
+                letter-spacing: -.5px;
+
+                margin-bottom: 22px;
+            }
+
+            .ppp-opini .opini-hero-subtitle {
+                font-size: 18px;
+            }
+
+            .ppp-opini .opini-hero-description {
+                font-size: 14px;
+            }
+
+            .ppp-opini .opini-main {
+                padding: 40px 0 45px;
+            }
+
+            .ppp-opini .opini-label {
+                font-size: 11px;
+                margin-bottom: 20px;
+            }
+
+            .ppp-opini .opini-section-title {
+                font-size: 29px;
+                line-height: 1.4;
+
+                margin-bottom: 28px;
+            }
+
+            .ppp-opini .opini-section-title br {
+                display: none;
+            }
+
+            .ppp-opini .opini-layout {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .ppp-opini .opini-card {
+                padding: 20px;
+                border-radius: 12px;
+            }
+
+            .ppp-opini .opini-card-heading {
+                gap: 12px;
+            }
+
+            .ppp-opini .opini-card-title {
+                font-size: 18px;
+            }
+
+            .ppp-opini .opini-card-intro {
+                font-size: 13px;
+            }
+
+            .ppp-opini .opini-sidebar {
+                padding: 24px;
+            }
+
+            .ppp-opini .opini-sidebar h3 {
+                font-size: 22px;
+            }
+
+            .ppp-opini .opini-academic-note {
+                margin-top: 25px;
+            }
+
+        }
+
+
+        /* REDUCED MOTION */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .ppp-opini .opini-card,
+            .ppp-opini .opini-button,
+            .ppp-opini .opini-open-button i {
+                transition: none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="ppp-home ppp-opini">
+
+
+    <!-- ========================================
+         TOP BAR
+    ========================================= -->
+
+    <div class="topbar">
+
+        <div class="wrap">
+
+            <span>
+                KELOMPOK 8 · MATA KULIAH DIGIPR
+            </span>
+
+            <span>
+                PROTOTIPE AKADEMIK · BUKAN SITUS RESMI PPP
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================================
+         HEADER
+    ========================================= -->
+
+    <header class="brand-header">
+
+        <div class="wrap brand-row">
+
+            <a class="brand" href="index.html">
+
+                <img
+                    src="assets/images/logo-ppp.png"
+                    alt="Logo Partai Persatuan Pembangunan">
+
+                <span>
+                    PARTAI<br>
+                    PERSATUAN<br>
+                    PEMBANGUNAN
+                </span>
+
+            </a>
+
+            <p>
+                Berakar pada Nilai, Bergerak untuk Rakyat.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- ========================================
+         NAVIGATION BAR
+    ========================================= -->
+
+    
+<!-- ========================================
+     NAVIGATION BAR PPP — FINAL
+========================================= -->
+
+<nav class="navbar navbar-expand-lg site-nav"
+     aria-label="Navigasi utama">
+
+    <div class="wrap nav-wrap">
+
+        <!-- TOGGLE MOBILE -->
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Buka navigasi">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="mainNav">
+
+            <ul class="navbar-nav nav-list">
+
+
+                <!-- =================================
+                     01. BERANDA
+                ================================== -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="index.html">
+
+                        BERANDA
+
+                    </a>
+
+                </li>
+
+
+                <!-- =================================
+                     02. TENTANG PPP
+                ================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        TENTANG PPP
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- PROFIL DAN SEJARAH -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="tentang.html#profil-sejarah">
+
+                                Profil &amp; Sejarah
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- VISI MISI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="tentang.html#visi-misi">
+
+                                Visi, Misi &amp; Lima Khidmat
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- STRUKTUR ORGANISASI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="struktur.html">
+
+                                Struktur Organisasi
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- STAKEHOLDER -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="tentang.html#stakeholder">
+
+                                Stakeholder PPP
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- MASKOT KABA -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="kaba.html">
+
+                                Kenalan dengan KABA
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- =================================
+                     03. PROGRAM & AKSI
+                ================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        PROGRAM &amp; AKSI
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- SEMUA PROGRAM -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="program.html">
+
+                                Semua Program &amp; Aksi
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- PPP PEDULI BUMI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="peduli-bumi.html">
+
+                                PPP Peduli Bumi &amp; Kemanusiaan
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- BEASISWA -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="beasiswa.html">
+
+                                Beasiswa Pendidikan Pemuda
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- TALKSHOW -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="talkshow.html">
+
+                                Seminar &amp; Kolaborasi
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- =================================
+                     04. INFORMASI
+                ================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        INFORMASI
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- KABAR PPP -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="kabar.html">
+
+                                Kabar PPP
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- PERNYATAAN RESMI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="pernyataan.html">
+
+                                Pernyataan Resmi
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- OPINI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="opini.html">
+
+                                Opini
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- TRANSPARANSI DATA -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="transparansi.html">
+
+                                Transparansi &amp; Data
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- =================================
+                     05. PARTISIPASI
+                ================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        PARTISIPASI
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- JARING ASPIRASI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="aspirasi.html">
+
+                                Jaring Aspirasi Rakyat
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- BERGABUNG -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="bergabung.html">
+
+                                Bergabung
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- FAQ DAN KONTAK -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="faq.html">
+
+                                FAQ &amp; Kontak
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+            </ul>
+
+
+            <!-- =================================
+                 SEARCH BAR
+
+                 Pertahankan ID search form dan input
+                 dari halaman HTML sebelumnya.
+            ================================== -->
+
+            <form class="site-search"
+                  id="globalSearchForm"
+                  role="search">
+
+                <button
+                    type="submit"
+                    aria-label="Cari">
+
+                    <i class="bi bi-search"></i>
+
+                </button>
+
+                <input
+                    type="search"
+                    id="globalSearchInput"
+                    placeholder="Cari di situs PPP..."
+                    aria-label="Cari informasi PPP"
+                    autocomplete="off"
+                    required>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+    <!-- ========================================
+         MAIN CONTENT
+    ========================================= -->
+
+    <main>
+
+
+        <!-- ====================================
+             HERO RUANG PERSPEKTIF
+        ===================================== -->
+
+        <section class="opini-hero">
+
+            <div class="opini-wrap">
+
+
+                <!-- BREADCRUMB -->
+
+                <nav class="opini-breadcrumb"
+                     aria-label="Breadcrumb">
+
+                    <span>INFORMASI</span>
+
+                    <span>/</span>
+
+                    <span aria-current="page">
+                        OPINI
+                    </span>
+
+                </nav>
+
+
+                <!-- TITLE -->
+
+                <h1>
+
+                    RUANG PERSPEKTIF
+
+                </h1>
+
+
+                <!-- SUBTITLE -->
+
+                <p class="opini-hero-subtitle">
+
+                    Suara, Gagasan &amp; Tanggapan Masyarakat
+
+                </p>
+
+
+                <!-- DESCRIPTION -->
+
+                <p class="opini-hero-description">
+
+                    Beda sudut pandang, satu ruang
+                    untuk saling memahami.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ====================================
+             FORUM OPINI MASYARAKAT
+        ===================================== -->
+
+        <section class="opini-main"
+                 id="forum-opini">
+
+            <div class="opini-wrap">
+
+
+                <!-- SECTION HEADING -->
+
+                <p class="opini-label">
+
+                    FORUM OPINI MASYARAKAT
+
+                </p>
+
+                <h2 class="opini-section-title">
+
+                    Gagasan bertemu,<br>
+                    pemahaman bertumbuh.
+
+                </h2>
+
+
+                <!-- STATUS PENCARIAN -->
+
+                <p class="opini-search-status"
+                   id="opiniSearchStatus"
+                   role="status"
+                   hidden>
+                </p>
+
+
+                <!-- =================================
+                     FORUM LAYOUT
+                ================================== -->
+
+                <div class="opini-layout">
+
+
+                    <!-- DAFTAR OPINI -->
+
+                    <div class="opini-list">
+
+
+                        <!-- =================================
+                             OPINI 1 — KARHUTLA
+                        ================================== -->
+
+                        <details class="opini-card"
+                                 id="opini-karhutla">
+
+                            <summary>
+
+                                <span class="opini-card-category">
+
+                                    LINGKUNGAN · KAJIAN AKADEMIK
+
+                                </span>
+
+
+                                <span class="opini-card-heading">
+
+                                    <i class="bi bi-arrow-return-right"
+                                       aria-hidden="true"></i>
+
+                                    <span class="opini-card-title">
+
+                                        Karhutla dan tanggung
+                                        jawab lingkungan.
+
+                                    </span>
+
+                                </span>
+
+
+                                <span class="opini-card-intro">
+
+                                    Bagaimana pencegahan,
+                                    pengawasan lahan, dan
+                                    pemulihan bisa berjalan bersama?
+
+                                </span>
+
+
+                                <span class="opini-open-button">
+
+                                    <span class="opini-open-text">
+
+                                        Buka pembahasan
+
+                                    </span>
+
+                                    <span class="opini-close-text">
+
+                                        Tutup pembahasan
+
+                                    </span>
+
+                                    <i class="bi bi-arrow-down"
+                                       aria-hidden="true"></i>
+
+                                </span>
+
+                            </summary>
+
+
+                            <!-- ISI PEMBAHASAN -->
+
+                            <div class="opini-card-body">
+
+                                <h3>Konteks pembahasan</h3>
+
+                                <p>
+
+                                    Kebakaran hutan dan lahan
+                                    merupakan isu lingkungan
+                                    yang dapat dikaji dari aspek
+                                    pencegahan, pengawasan,
+                                    kesehatan masyarakat,
+                                    serta pemulihan lingkungan.
+
+                                </p>
+
+
+                                <h3>Sudut pandang diskusi</h3>
+
+                                <ul>
+
+                                    <li>
+                                        Peran pemerintah dalam
+                                        pencegahan dan pengawasan.
+                                    </li>
+
+                                    <li>
+                                        Tanggung jawab perusahaan
+                                        dalam pengelolaan lahan.
+                                    </li>
+
+                                    <li>
+                                        Partisipasi masyarakat
+                                        dalam menjaga lingkungan.
+                                    </li>
+
+                                    <li>
+                                        Perlindungan masyarakat
+                                        yang terdampak kebakaran.
+                                    </li>
+
+                                </ul>
+
+
+                                <!-- RUJUKAN -->
+
+                                <div class="opini-reference">
+
+                                    <p>
+
+                                        <strong>Rujukan awal:</strong>
+
+                                        Portal informasi kebakaran
+                                        hutan dan lahan.
+
+                                    </p>
+
+                                    <a href="https://sipongi.menlhk.go.id/"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+
+                                        Portal SIPONGI
+
+                                        <i class="bi bi-arrow-up-right"></i>
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </details>
+
+
+                        <!-- =================================
+                             OPINI 2 — INFORMASI PUBLIK
+                        ================================== -->
+
+                        <details class="opini-card"
+                                 id="opini-informasi">
+
+                            <summary>
+
+                                <span class="opini-card-category">
+
+                                    INFORMASI PUBLIK · KAJIAN AKADEMIK
+
+                                </span>
+
+
+                                <span class="opini-card-heading">
+
+                                    <i class="bi bi-arrow-return-right"
+                                       aria-hidden="true"></i>
+
+                                    <span class="opini-card-title">
+
+                                        Keterbukaan informasi
+                                        dan kepercayaan publik.
+
+                                    </span>
+
+                                </span>
+
+
+                                <span class="opini-card-intro">
+
+                                    Bagaimana akses informasi
+                                    dan transparansi dapat
+                                    mendukung komunikasi publik?
+
+                                </span>
+
+
+                                <span class="opini-open-button">
+
+                                    <span class="opini-open-text">
+
+                                        Buka pembahasan
+
+                                    </span>
+
+                                    <span class="opini-close-text">
+
+                                        Tutup pembahasan
+
+                                    </span>
+
+                                    <i class="bi bi-arrow-down"
+                                       aria-hidden="true"></i>
+
+                                </span>
+
+                            </summary>
+
+
+                            <!-- ISI PEMBAHASAN -->
+
+                            <div class="opini-card-body">
+
+                                <h3>Konteks pembahasan</h3>
+
+                                <p>
+
+                                    Keterbukaan informasi dapat
+                                    dibahas melalui ketersediaan
+                                    informasi, kejelasan sumber,
+                                    aksesibilitas, serta mekanisme
+                                    penyampaian tanggapan masyarakat.
+
+                                </p>
+
+
+                                <h3>Sudut pandang diskusi</h3>
+
+                                <ul>
+
+                                    <li>
+                                        Kemudahan masyarakat
+                                        memperoleh informasi.
+                                    </li>
+
+                                    <li>
+                                        Kejelasan sumber dan
+                                        tanggal publikasi.
+                                    </li>
+
+                                    <li>
+                                        Mekanisme kritik,
+                                        tanggapan, dan klarifikasi.
+                                    </li>
+
+                                    <li>
+                                        Perlindungan informasi
+                                        dan data pribadi.
+                                    </li>
+
+                                </ul>
+
+
+                                <!-- RUJUKAN -->
+
+                                <div class="opini-reference">
+
+                                    <p>
+
+                                        <strong>Rujukan awal:</strong>
+
+                                        Informasi mengenai
+                                        keterbukaan informasi publik.
+
+                                    </p>
+
+                                    <a href="https://komisiinformasi.go.id/"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+
+                                        Komisi Informasi Pusat
+
+                                        <i class="bi bi-arrow-up-right"></i>
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </details>
+
+
+                        <!-- =================================
+                             OPINI 3 — PENDIDIKAN
+                        ================================== -->
+
+                        <details class="opini-card"
+                                 id="opini-pendidikan">
+
+                            <summary>
+
+                                <span class="opini-card-category">
+
+                                    PENDIDIKAN · KAJIAN AKADEMIK
+
+                                </span>
+
+
+                                <span class="opini-card-heading">
+
+                                    <i class="bi bi-arrow-return-right"
+                                       aria-hidden="true"></i>
+
+                                    <span class="opini-card-title">
+
+                                        Akses pendidikan dan
+                                        kesempatan generasi muda.
+
+                                    </span>
+
+                                </span>
+
+
+                                <span class="opini-card-intro">
+
+                                    Apa saja tantangan dalam
+                                    memperluas kesempatan belajar
+                                    bagi generasi muda?
+
+                                </span>
+
+
+                                <span class="opini-open-button">
+
+                                    <span class="opini-open-text">
+
+                                        Buka pembahasan
+
+                                    </span>
+
+                                    <span class="opini-close-text">
+
+                                        Tutup pembahasan
+
+                                    </span>
+
+                                    <i class="bi bi-arrow-down"
+                                       aria-hidden="true"></i>
+
+                                </span>
+
+                            </summary>
+
+
+                            <!-- ISI PEMBAHASAN -->
+
+                            <div class="opini-card-body">
+
+                                <h3>Konteks pembahasan</h3>
+
+                                <p>
+
+                                    Akses pendidikan dapat
+                                    dikaji melalui berbagai aspek,
+                                    seperti biaya, ketersediaan
+                                    fasilitas, kondisi ekonomi
+                                    keluarga, dan kesempatan
+                                    pengembangan keterampilan.
+
+                                </p>
+
+
+                                <h3>Sudut pandang diskusi</h3>
+
+                                <ul>
+
+                                    <li>
+                                        Pemerataan kesempatan
+                                        memperoleh pendidikan.
+                                    </li>
+
+                                    <li>
+                                        Akses informasi bantuan
+                                        dan beasiswa pendidikan.
+                                    </li>
+
+                                    <li>
+                                        Pendampingan akademik
+                                        dan pengembangan diri.
+                                    </li>
+
+                                    <li>
+                                        Kesiapan menghadapi
+                                        dunia kerja.
+                                    </li>
+
+                                </ul>
+
+
+                                <!-- RUJUKAN -->
+
+                                <div class="opini-reference">
+
+                                    <p>
+
+                                        <strong>Rujukan awal:</strong>
+
+                                        Data dan statistik pendidikan.
+
+                                    </p>
+
+                                    <a href="https://www.bps.go.id/"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+
+                                        Badan Pusat Statistik
+
+                                        <i class="bi bi-arrow-up-right"></i>
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </details>
+
+
+                        <!-- =================================
+                             OPINI 4 — MEDIA DIGITAL
+                        ================================== -->
+
+                        <details class="opini-card"
+                                 id="opini-media-digital">
+
+                            <summary>
+
+                                <span class="opini-card-category">
+
+                                    KOMUNIKASI DIGITAL · KAJIAN AKADEMIK
+
+                                </span>
+
+
+                                <span class="opini-card-heading">
+
+                                    <i class="bi bi-arrow-return-right"
+                                       aria-hidden="true"></i>
+
+                                    <span class="opini-card-title">
+
+                                        Media sosial dan
+                                        kualitas dialog publik.
+
+                                    </span>
+
+                                </span>
+
+
+                                <span class="opini-card-intro">
+
+                                    Bagaimana membangun ruang
+                                    diskusi digital yang terbuka
+                                    dan bertanggung jawab?
+
+                                </span>
+
+
+                                <span class="opini-open-button">
+
+                                    <span class="opini-open-text">
+
+                                        Buka pembahasan
+
+                                    </span>
+
+                                    <span class="opini-close-text">
+
+                                        Tutup pembahasan
+
+                                    </span>
+
+                                    <i class="bi bi-arrow-down"
+                                       aria-hidden="true"></i>
+
+                                </span>
+
+                            </summary>
+
+
+                            <!-- ISI PEMBAHASAN -->
+
+                            <div class="opini-card-body">
+
+                                <h3>Konteks pembahasan</h3>
+
+                                <p>
+
+                                    Media sosial menjadi salah
+                                    satu ruang pertukaran informasi
+                                    dan pendapat. Pembahasan dapat
+                                    diarahkan pada kualitas informasi,
+                                    etika komunikasi, dan cara
+                                    menghadapi perbedaan sudut pandang.
+
+                                </p>
+
+
+                                <h3>Sudut pandang diskusi</h3>
+
+                                <ul>
+
+                                    <li>
+                                        Pentingnya memeriksa
+                                        sumber informasi.
+                                    </li>
+
+                                    <li>
+                                        Perbedaan antara
+                                        fakta dan opini.
+                                    </li>
+
+                                    <li>
+                                        Etika penyampaian
+                                        kritik di ruang digital.
+                                    </li>
+
+                                    <li>
+                                        Perlindungan privasi
+                                        dalam berkomunikasi.
+                                    </li>
+
+                                </ul>
+
+
+                                <div class="opini-reference">
+
+                                    <p>
+
+                                        <strong>Catatan:</strong>
+
+                                        Topik ini merupakan bahan
+                                        diskusi dalam prototipe
+                                        akademik.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </details>
+
+                    </div>
+
+
+                    <!-- =================================
+                         SIDEBAR PANDUAN DISKUSI
+                    ================================== -->
+
+                    <aside class="opini-sidebar">
+
+                        <h3>
+
+                            Ruang dialog,<br>
+                            bukan ruang gaduh.
+
+                        </h3>
+
+
+                        <!-- PANDUAN 01 -->
+
+                        <div class="opini-guide-item">
+
+                            <div class="opini-guide-title">
+
+                                <span>01</span>
+
+                                Baca konteks
+
+                            </div>
+
+                            <p>
+
+                                Mulai dari ringkasan dan rujukan.
+
+                            </p>
+
+                        </div>
+
+
+                        <!-- PANDUAN 02 -->
+
+                        <div class="opini-guide-item">
+
+                            <div class="opini-guide-title">
+
+                                <span>02</span>
+
+                                Pisahkan fakta &amp; opini
+
+                            </div>
+
+                            <p>
+
+                                Cek tanggal, sumber, dan bukti.
+
+                            </p>
+
+                        </div>
+
+
+                        <!-- PANDUAN 03 -->
+
+                        <div class="opini-guide-item">
+
+                            <div class="opini-guide-title">
+
+                                <span>03</span>
+
+                                Hargai perbedaan
+
+                            </div>
+
+                            <p>
+
+                                Kritik gagasan tanpa menyerang pribadi.
+
+                            </p>
+
+                        </div>
+
+
+                        <!-- PANDUAN 04 -->
+
+                        <div class="opini-guide-item">
+
+                            <div class="opini-guide-title">
+
+                                <span>04</span>
+
+                                Sampaikan dengan bertanggung jawab
+
+                            </div>
+
+                            <p>
+
+                                Gunakan bahasa yang santun
+                                dan hindari informasi yang
+                                belum terverifikasi.
+
+                            </p>
+
+                        </div>
+
+
+                        <hr class="opini-sidebar-divider">
+
+
+                        <!-- JARING ASPIRASI -->
+
+                        <h3>
+
+                            Punya gagasan lain?
+
+                        </h3>
+
+                        <p class="opini-card-intro">
+
+                            Jaring Aspirasi Rakyat merupakan
+                            fitur penyampaian saran dan masukan
+                            dalam prototipe akademik ini.
+
+                        </p>
+
+                        <a class="opini-button"
+                           href="aspirasi.html">
+
+                            Buka Jaring Aspirasi
+
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+
+                    </aside>
+
+                </div>
+
+
+                <!-- =================================
+                     CATATAN AKADEMIK
+                ================================== -->
+
+                
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+
+    <footer class="footer">
+
+        <div class="wrap footer-wrap">
+
+            <div class="footer-grid">
+
+
+                <!-- IDENTITAS -->
+
+                <div>
+
+                    <h3>
+
+                        PPP — Ruang Bersama
+
+                    </h3>
+
+                    <p>
+
+                        Partai Persatuan Pembangunan.
+                        Ruang informasi dan dialog publik
+                        dalam sebuah prototipe akademik.
+
+                    </p>
+
+                    <p class="gold">
+
+                        Merawat Persatuan dengan Pembangunan.
+
+                    </p>
+
+                </div>
+
+
+                <!-- QUICK LINKS -->
+
+                <div>
+
+                    <h4>Quick Links</h4>
+
+                    <a href="index.html">
+
+                        Beranda
+
+                    </a>
+
+                    <a href="tentang.html">
+
+                        Tentang PPP
+
+                    </a>
+
+                    <a href="struktur.html">
+
+                        Organisasi
+
+                    </a>
+
+                    <a href="program.html">
+
+                        Program &amp; Aksi
+
+                    </a>
+
+                    <a href="aspirasi.html">
+
+                        Aspirasi Rakyat
+
+                    </a>
+
+                    <a href="kabar.html">
+
+                        Berita
+
+                    </a>
+
+                    <a href="pernyataan.html">
+
+                        Pernyataan Resmi
+
+                    </a>
+
+                </div>
+
+
+                <!-- INFORMATION -->
+
+                <div>
+
+                    <h4>Information</h4>
+
+                    <a href="faq.html">
+
+                        FAQ &amp; Kontak
+
+                    </a>
+
+                    <a href="opini.html">
+
+                        Opini
+
+                    </a>
+
+                </div>
+
+
+                <!-- SOCIAL MEDIA -->
+
+                <div>
+
+                    <h4>Social</h4>
+
+                    <a href="https://www.instagram.com/ppp.peduli/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        Instagram @ppp.peduli
+
+                    </a>
+
+                    <a href="https://www.tiktok.com/@ppp.peduli"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        TikTok @ppp.peduli
+
+                    </a>
+
+                    <a href="https://www.youtube.com/@PartaiPersatuanPembangunanDPP"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        YouTube<br>
+                        @PartaiPersatuanPembangunanDPP
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- DISCLAIMER -->
+
+            <p class="disclaimer">
+
+                Website ini merupakan prototipe akademik
+                yang dikembangkan untuk keperluan pembelajaran
+                Digital Public Relations. Website ini bukan
+                situs resmi Partai Persatuan Pembangunan
+                (PPP). Seluruh program simulasi dan fitur
+                interaktif yang ditampilkan tidak mewakili
+                kegiatan atau layanan resmi organisasi.
+
+            </p>
+
+
+            <!-- COPYRIGHT -->
+
+            <p class="copyright">
+
+                © 2026 PPP — Ruang Bersama ·
+                Prototipe akademik Digital Public Relations
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ========================================
+         BOOTSTRAP JAVASCRIPT
+    ========================================= -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- ========================================
+         JAVASCRIPT HALAMAN OPINI
+    ========================================= -->
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+
+            /* =================================
+               ELEMENT
+            ================================== */
+
+            const opinionCards = Array.from(
+                document.querySelectorAll('.opini-card')
+            );
+
+            const searchForm =
+                document.getElementById('opiniSearchForm');
+
+            const searchInput =
+                document.getElementById('opiniSearchInput');
+
+            const searchStatus =
+                document.getElementById('opiniSearchStatus');
+
+
+            /* REDUCED MOTION */
+
+            const reducedMotion = window.matchMedia(
+                '(prefers-reduced-motion: reduce)'
+            ).matches;
+
+
+            /* =================================
+               ACCORDION OPINI
+               HANYA SATU PEMBAHASAN TERBUKA
+            ================================== */
+
+            opinionCards.forEach(card => {
+
+                card.addEventListener('toggle', () => {
+
+                    if (!card.open) return;
+
+                    opinionCards.forEach(otherCard => {
+
+                        if (otherCard !== card) {
+
+                            otherCard.open = false;
+
+                        }
+
+                    });
+
+                });
+
+            });
+
+
+            /* =================================
+               NORMALISASI TEKS
+            ================================== */
+
+            function normalizeText(text) {
+
+                return text
+                    .toLocaleLowerCase('id')
+                    .trim()
+                    .replace(/\s+/g, ' ');
+
+            }
+
+
+            /* =================================
+               SCROLL KE PEMBAHASAN
+            ================================== */
+
+            function scrollToOpinion(card) {
+
+                card.scrollIntoView({
+
+                    behavior: reducedMotion
+                        ? 'auto'
+                        : 'smooth',
+
+                    block: 'start'
+
+                });
+
+            }
+
+
+            /* =================================
+               SEARCH OPINI
+            ================================== */
+
+            searchForm.addEventListener('submit', event => {
+
+                event.preventDefault();
+
+
+                const keyword =
+                    normalizeText(searchInput.value);
+
+                if (!keyword) return;
+
+
+                /* ARAHKAN FAQ KE HALAMAN FAQ */
+
+                if (
+                    keyword === 'faq' ||
+                    keyword === 'bank data faq' ||
+                    keyword === 'bank data' ||
+                    keyword === 'kontak'
+                ) {
+
+                    window.location.href = 'faq.html';
+
+                    return;
+
+                }
+
+
+                /* PENCARIAN TOPIK OPINI */
+
+                const words = keyword.split(/\s+/);
+
+                const match = opinionCards.find(card => {
+
+                    const content =
+                        normalizeText(card.textContent);
+
+                    return words.every(word =>
+                        content.includes(word)
+                    );
+
+                });
+
+
+                /* JIKA TOPIK DITEMUKAN */
+
+                if (match) {
+
+                    opinionCards.forEach(card => {
+
+                        card.open = card === match;
+
+                    });
+
+                    searchStatus.hidden = true;
+
+                    const mobileNav =
+                        document.getElementById('mainNav');
+
+                    if (
+                        mobileNav &&
+                        mobileNav.classList.contains('show') &&
+                        window.innerWidth < 992 &&
+                        window.bootstrap
+                    ) {
+
+                        bootstrap.Collapse
+                            .getOrCreateInstance(
+                                mobileNav,
+                                { toggle: false }
+                            )
+                            .hide();
+
+                    }
+
+                    scrollToOpinion(match);
+
+                    history.replaceState(
+                        null,
+                        '',
+                        '#' + match.id
+                    );
+
+                } else {
+
+
+                    /* JIKA TOPIK TIDAK DITEMUKAN */
+
+                    searchStatus.textContent =
+                        'Topik tidak ditemukan. ' +
+                        'Coba kata kunci karhutla, ' +
+                        'informasi publik, pendidikan, ' +
+                        'atau media sosial.';
+
+                    searchStatus.hidden = false;
+
+                    searchStatus.scrollIntoView({
+
+                        behavior: reducedMotion
+                            ? 'auto'
+                            : 'smooth',
+
+                        block: 'center'
+
+                    });
+
+                }
+
+            });
+
+
+            /* =================================
+               BUKA OPINI BERDASARKAN URL
+            ================================== */
+
+            function openOpinionFromHash() {
+
+                const targetId =
+                    window.location.hash.slice(1);
+
+                const target = opinionCards.find(card =>
+                    card.id === targetId
+                );
+
+                if (target) {
+
+                    target.open = true;
+
+                    scrollToOpinion(target);
+
+                }
+
+            }
+
+            openOpinionFromHash();
+
+            window.addEventListener(
+                'hashchange',
+                openOpinionFromHash
+            );
+
+        });
+
+    </script>
+<!-- GLOBAL NAVBAR JAVASCRIPT -->
+
+<script src="assets/js/navbar.js"></script>
+
+</body>
+
+</html>

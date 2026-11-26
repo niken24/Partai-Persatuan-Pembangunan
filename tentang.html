@@ -1,651 +1,1411 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="id">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="PPP – Ruang Bersama. Mock-up akademik untuk tugas website Public Relations Digital.">
-  <title>Tentang PPP | PPP – Ruang Bersama</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link
-  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
-  rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Tentang PPP — Ruang Bersama</title>
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- BOOTSTRAP CSS -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- BOOTSTRAP ICONS -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+
+    <!-- CSS UTAMA -->
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
-<body>
-  <!-- NAVBAR PPP - DESKTOP FIGMA REVISI -->
-<header class="ppp-site-header">
-  <!-- Bar hijau atas -->
-  <div class="ppp-head-top">
-    <div class="container ppp-head-top-inner">
-      <span>KELOMPOK 8 · MATA KULIAH DIGIPR</span>
-      <span class="d-none d-sm-inline">PROTOTIPE AKADEMIK · BUKAN SITUS RESMI PPP</span>
-    </div>
-  </div>
-
-  <!-- Logo + nama partai + tagline -->
-  <div class="ppp-head-main">
-    <div class="container ppp-head-main-inner">
-      <a href="index.html" class="ppp-head-brand" aria-label="Partai Persatuan Pembangunan - Beranda">
-        <img src="assets/images/logo-ppp-navbar.png"
-             alt="Logo PPP"
-             class="ppp-head-logo">
-        <span class="ppp-head-name">
-          <strong>PARTAI</strong>
-          <strong>PERSATUAN</strong>
-          <strong>PEMBANGUNAN</strong>
-        </span>
-      </a>
-      <p class="ppp-head-tagline">Aspirasi Didengar, Informasi Terbuka, Aksi Terasa.</p>
-    </div>
-  </div>
-
-  <!-- Menu + pencarian -->
-  <nav class="navbar navbar-expand-xl ppp-head-nav" aria-label="Navigasi utama">
-    <div class="container ppp-head-nav-inner">
-      <button class="navbar-toggler ppp-head-toggler" type="button"
-              data-bs-toggle="collapse" data-bs-target="#pppNavMenu"
-              aria-controls="pppNavMenu" aria-expanded="false"
-              aria-label="Buka menu navigasi">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="pppNavMenu">
-        <ul class="navbar-nav ppp-head-menu">
-          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-          <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang PPP</a></li>
-          
-<!-- DROPDOWN TENTANG PPP -->
-<!-- END DROPDOWN TENTANG PPP -->
-
-          <li class="nav-item"><a class="nav-link" href="program.html">Program &amp; Aksi</a></li>
-          <li class="nav-item"><a class="nav-link" href="aspirasi.html">Aspirasi Rakyat</a></li>
-          <li class="nav-item"><a class="nav-link" href="kabar.html">Kabar PPP</a></li>
-          <li class="nav-item"><a class="nav-link" href="pernyataan.html">Pernyataan Resmi</a></li>
-          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ &amp; Kontak</a></li>
-          <li class="nav-item"><a class="nav-link" href="bergabung.html">Bergabung</a></li>
-        </ul>
-
-        <!-- Pencarian halaman dan topik website (front-end) -->
-        <form class="ppp-head-search" id="pppSiteSearch" role="search" autocomplete="off">
-          <button type="submit" aria-label="Cari"><i class="bi bi-search"></i></button>
-          <input type="search" id="pppSearchInput" aria-label="Cari halaman atau topik"
-                 placeholder="Cari di situs PPP..." />
-          <div class="ppp-head-results" id="pppSearchResults" aria-live="polite" hidden></div>
-        </form>
-      </div>
-    </div>
-  </nav>
-</header>
-<!-- AKHIR NAVBAR PPP -->
 
 
-  
-<main class="tentang-page">
+<body class="ppp-home ppp-about">
 
-  <!-- 1. HERO TENTANG PPP -->
-  <section class="tp-hero">
-    <div class="container">
-      <p class="tp-kicker">TENTANG PPP</p>
-      <h1>Identitas tetap, narasi diperluas.</h1>
-      <p class="tp-intro">
-        Mengenal lebih dekat Partai Persatuan Pembangunan
-        melalui sejarah, nilai perjuangan, visi, misi,
-        serta komitmennya dalam kehidupan berbangsa
-        dan bernegara.
-      </p>
-    </div>
-  </section>
 
-  <!-- 2. IDENTITAS ORGANISASI -->
-  <section class="tp-section tp-soft" id="identitas-ppp">
-    <div class="container">
-      <div class="row g-4 g-lg-5 align-items-center">
+    <!-- ========================================
+         TOP BAR
+    ========================================= -->
 
-        <div class="col-lg-6">
-          <p class="tp-kicker">IDENTITAS ORGANISASI</p>
-          <h2>Berakar, tanpa menutup ruang dialog.</h2>
+    <div class="topbar">
 
-          <p>
-            Partai Persatuan Pembangunan (PPP) merupakan
-            partai politik Indonesia yang didirikan pada
-            5 Januari 1973. PPP lahir dari penggabungan
-            empat partai politik Islam dan menjadikan
-            nilai-nilai keislaman sebagai landasan
-            perjuangan organisasi.
-          </p>
+        <div class="wrap">
 
-          <p>
-            Dalam perkembangannya, PPP memperjuangkan
-            berbagai isu yang berkaitan dengan kehidupan
-            masyarakat, mulai dari ekonomi kerakyatan,
-            pendidikan, kesejahteraan sosial, hingga
-            penegakan hukum dan demokrasi.
-          </p>
+            <span>
+                KELOMPOK 8 · MATA KULIAH DIGIPR
+            </span>
 
-          <p>
-            Dengan mempertahankan identitas keislaman,
-            PPP berupaya membangun komunikasi yang
-            terbuka, memperkuat persatuan, serta
-            memperjuangkan kepentingan masyarakat dalam
-            kehidupan berbangsa dan bernegara.
-          </p>
+            <span>
+                PROTOTIPE AKADEMIK · BUKAN SITUS RESMI PPP
+            </span>
+
         </div>
 
-        <div class="col-lg-6">
-          <figure class="tp-photo mb-0">
-            <img
-              src="assets/images/foto-organisasi-ppp.jpg"
-              alt="Dokumentasi kegiatan organisasi PPP"
-              loading="lazy">
-            <figcaption>
-              Foto dokumentasi yang digunakan pada
-              rancangan Figma.
-            </figcaption>
-          </figure>
-        </div>
-
-      </div>
     </div>
-  </section>
 
-  <!-- 3. SEJARAH PPP -->
-  <section class="tp-section tp-cream" id="sejarah-ppp">
-    <div class="container">
 
-      <h2>Sejarah yang membentuk perjalanan PPP.</h2>
+    <!-- ========================================
+         HEADER
+    ========================================= -->
 
-      <p class="tp-wide-copy">
-        Partai Persatuan Pembangunan didirikan pada
-        5 Januari 1973 melalui penyatuan empat partai
-        politik Islam, yaitu Nahdlatul Ulama (NU),
-        Partai Muslimin Indonesia (Parmusi),
-        Partai Syarikat Islam Indonesia (PSII),
-        dan Persatuan Tarbiyah Islamiyah (Perti).
-      </p>
+    <header class="brand-header">
 
-      <p class="tp-wide-copy">
-        Sejak berdiri, PPP telah melalui berbagai
-        dinamika politik nasional, mulai dari masa
-        Orde Baru, Reformasi, hingga perkembangan
-        demokrasi Indonesia saat ini.
-      </p>
+        <div class="wrap brand-row">
 
-      <div class="row g-3 mt-3">
+            <a class="brand" href="index.html">
 
-        <div class="col-md-4">
-          <article class="tp-history-card">
-            <h3>Latar pembentukan</h3>
+                <img
+                    src="assets/images/logo-ppp.png"
+                    alt="Logo Partai Persatuan Pembangunan">
+
+                <span>
+                    PARTAI<br>
+                    PERSATUAN<br>
+                    PEMBANGUNAN
+                </span>
+
+            </a>
+
             <p>
-              PPP dibentuk melalui penggabungan empat
-              partai politik Islam pada 1973 sebagai
-              bagian dari penyederhanaan sistem
-              kepartaian Indonesia.
+                Berakar pada Nilai, Bergerak untuk Rakyat.
             </p>
-          </article>
-        </div>
-
-        <div class="col-md-4">
-          <article class="tp-history-card">
-            <h3>Perjalanan organisasi</h3>
-            <p>
-              PPP terus berpartisipasi dalam kehidupan
-              politik nasional dan menghadapi berbagai
-              perubahan sistem pemerintahan serta
-              dinamika demokrasi.
-            </p>
-          </article>
-        </div>
-
-        <div class="col-md-4">
-          <article class="tp-history-card">
-            <h3>Identitas dan kesinambungan</h3>
-            <p>
-              PPP mempertahankan nilai-nilai keislaman
-              sebagai identitas perjuangan, dengan
-              lambang Ka'bah yang menjadi simbol
-              khas organisasi.
-            </p>
-          </article>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. VISI DAN MISI -->
-  <section class="tp-section tp-soft" id="visi-misi-ppp">
-    <div class="container">
-
-      <p class="tp-kicker">ARAH PERJUANGAN</p>
-
-      <div class="tp-vision-block">
-        <h2>Visi</h2>
-        <p>
-          Terwujudnya masyarakat yang bertaqwa kepada
-          Allah SWT dan negara Indonesia yang adil,
-          makmur, sejahtera, bermoral, demokratis,
-          tegaknya supremasi hukum, penghormatan
-          terhadap Hak Asasi Manusia (HAM), serta
-          menjunjung tinggi harkat-martabat kemanusiaan
-          dan keadilan sosial yang berlandaskan
-          kepada nilai-nilai ke-Islaman.
-        </p>
-      </div>
-
-      <div class="tp-mission-block">
-        <h2>Misi</h2>
-        <ol>
-          <li>
-            Menjadikan nilai agama sebagai pedoman moral
-            dalam kehidupan berbangsa dan bernegara.
-          </li>
-          <li>
-            Membangun budaya politik yang demokratis,
-            berakhlak mulia, dan menghormati hak
-            asasi manusia.
-          </li>
-          <li>
-            Memperkuat ekonomi kerakyatan, penegakan
-            hukum, serta upaya pemberantasan korupsi,
-            kolusi, dan nepotisme.
-          </li>
-          <li>
-            Mendorong kehidupan masyarakat yang
-            religius, harmonis, dan menjunjung
-            tinggi nilai kemanusiaan.
-          </li>
-          <li>
-            Meningkatkan kualitas sumber daya manusia
-            melalui pendidikan dan pembangunan
-            kesejahteraan.
-          </li>
-        </ol>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 5. LIMA KHIDMAT PPP -->
-  <section class="tp-section tp-cream" id="lima-khidmat">
-    <div class="container">
-
-      <h2 class="tp-section-title">Lima Khidmat PPP</h2>
-
-      <div class="row g-3 g-lg-4">
-
-        <!-- CARD 1 -->
-        <div class="col-md-6 col-lg-4">
-          <article class="tp-khidmat-card">
-            <i class="bi bi-file-earmark-text"></i>
-            <h3>Iman dan Takwa</h3>
-            <p>
-              Menjadikan nilai agama sebagai landasan
-              moral dalam kehidupan bermasyarakat,
-              berbangsa, dan bernegara.
-            </p>
-            <a href="pernyataan.html">
-              Pernyataan Resmi
-              <i class="bi bi-arrow-right"></i>
-            </a>
-          </article>
-        </div>
-
-        <!-- CARD 2 -->
-        <div class="col-md-6 col-lg-4">
-          <article class="tp-khidmat-card">
-            <i class="bi bi-chat"></i>
-            <h3>Hak Asasi dan Martabat Manusia</h3>
-            <p>
-              Menghormati hak dan martabat manusia,
-              menjunjung keadilan, serta menolak
-              diskriminasi melalui nilai ukhuwah
-              basyariyah.
-            </p>
-            <a href="aspirasi.html">
-              Aspirasi Rakyat
-              <i class="bi bi-arrow-right"></i>
-            </a>
-          </article>
-        </div>
-
-        <!-- CARD 3 -->
-        <div class="col-md-6 col-lg-4">
-          <article class="tp-khidmat-card">
-            <i class="bi bi-question-circle"></i>
-            <h3>Persatuan Bangsa</h3>
-            <p>
-              Menjaga keutuhan bangsa dengan memperkuat
-              ukhuwah wathaniyah dan membangun
-              keharmonisan dalam keberagaman.
-            </p>
-            <a href="faq.html">
-              FAQ &amp; Kontak
-              <i class="bi bi-arrow-right"></i>
-            </a>
-          </article>
-        </div>
-
-        <!-- CARD 4 -->
-        <div class="col-md-6 col-lg-6">
-          <article class="tp-khidmat-card">
-            <i class="bi bi-file-earmark-text"></i>
-            <h3>Demokrasi</h3>
-            <p>
-              Mewujudkan kehidupan politik yang
-              demokratis dengan mengutamakan kedaulatan
-              rakyat dan musyawarah untuk mufakat.
-            </p>
-            <a href="pernyataan.html">
-              Pernyataan Resmi
-              <i class="bi bi-arrow-right"></i>
-            </a>
-          </article>
-        </div>
-
-        <!-- CARD 5 -->
-        <div class="col-md-12 col-lg-6">
-          <article class="tp-khidmat-card">
-            <i class="bi bi-chat"></i>
-            <h3>Keadilan dan Kemakmuran</h3>
-            <p>
-              Mewujudkan masyarakat yang adil dan
-              sejahtera melalui pemerataan kesempatan
-              serta pengurangan kesenjangan ekonomi,
-              sosial, dan budaya.
-            </p>
-            <a href="aspirasi.html">
-              Aspirasi Rakyat
-              <i class="bi bi-arrow-right"></i>
-            </a>
-          </article>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- 6. KEPEMIMPINAN DAN STRUKTUR -->
-  <section class="tp-section tp-soft" id="struktur-organisasi">
-    <div class="container">
-      <div class="row g-4 g-lg-5">
-
-        <div class="col-lg-5">
-          <p class="tp-kicker">
-            KEPEMIMPINAN &amp; STRUKTUR ORGANISASI
-          </p>
-
-          <h2>
-            Kepemimpinan yang terstruktur,
-            perjuangan yang berkelanjutan.
-          </h2>
-
-          <p>
-            Tidak ada nama, jabatan, periode
-            kepengurusan, atau bagan yang direka.
-            Struktur hanya akan ditampilkan setelah
-            materi resmi terverifikasi.
-          </p>
-        </div>
-
-        <div class="col-lg-7">
-
-          <div class="tp-source-notice">
-            <strong>Materi resmi belum tersedia</strong>
-            <p>
-              Area kepemimpinan dan bagan organisasi
-              menunggu dokumen sumber. Tidak ada
-              hierarki atau posisi organisasi yang
-              diasumsikan dalam rancangan ini.
-            </p>
-          </div>
-
-          <h3 class="tp-check-title">
-            Daftar periksa sebelum publikasi
-          </h3>
-
-          <p>
-            Cocokkan nama dan jabatan dengan keputusan
-            yang berlaku; cantumkan masa kepengurusan;
-            periksa hubungan antarunit; tambahkan
-            tanggal pembaruan dan rujukan dokumen.
-            Semua materi perlu ditinjau oleh pemilik
-            informasi.
-          </p>
-
-          <a
-            class="tp-outline-btn"
-            href="https://ppp.or.id/"
-            target="_blank"
-            rel="noopener noreferrer">
-            Rujukan resmi: ppp.or.id
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
 
         </div>
-      </div>
-    </div>
-  </section>
 
-</main>
+    </header>
 
 
-  <section class="footer-cta">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
-      <h2>Kebersamaan punya banyak bentuk.</h2>
-      <a class="btn btn-outline-light" href="bergabung.html">Kenali cara bergabung <i class="bi bi-arrow-up-right"></i></a>
-    </div>
-  </section>
+    <!-- ========================================
+         NAVIGATION BAR
+    ========================================= -->
 
-<!-- ==========================================
-     FOOTER PPP - REVISI 06
-     GUNAKAN DI SEMUA HALAMAN
-========================================== -->
+    
+<!-- ========================================
+     NAVIGATION BAR PPP — FINAL
+========================================= -->
 
-<footer class="ppp-footer-v2">
+<nav class="navbar navbar-expand-lg site-nav"
+     aria-label="Navigasi utama">
 
-  <div class="container">
+    <div class="wrap nav-wrap">
 
-    <div class="row g-4">
+        <!-- TOGGLE MOBILE -->
 
-      <!-- ==================================
-           KOLOM 1 - IDENTITAS WEBSITE
-      ================================== -->
-      <div class="col-lg-3 col-md-6">
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Buka navigasi">
 
-        <a
-          href="index.html"
-          class="ppp-footer-brand">
-          PPP — Ruang Bersama
-        </a>
+            <span class="navbar-toggler-icon"></span>
 
-        <p class="ppp-footer-description">
-          Partai Persatuan Pembangunan.
-          Ruang informasi dan dialog publik
-          dalam sebuah prototipe akademik.
-        </p>
-
-        <p class="ppp-footer-motto">
-          Merawat Persatuan dengan Pembangunan.
-        </p>
-
-      </div>
+        </button>
 
 
-      <!-- ==================================
-           KOLOM 2 - QUICK LINKS
-      ================================== -->
-      <div class="col-lg-3 col-md-6">
+        <div class="collapse navbar-collapse" id="mainNav">
 
-        <h3>Quick Links</h3>
-
-        <ul class="ppp-footer-list">
-
-          <li>
-            <a href="index.html">
-              Beranda
-            </a>
-          </li>
-
-          <li>
-            <a href="tentang.html">
-              Tentang PPP
-            </a>
-          </li>
-
-          <li>
-            <a href="tentang.html#struktur-organisasi">
-              Organisasi
-            </a>
-          </li>
-
-          <li>
-            <a href="program.html">
-              Program &amp; Aksi
-            </a>
-          </li>
-
-          <li>
-            <a href="aspirasi.html">
-              Aspirasi Rakyat
-            </a>
-          </li>
-
-          <li>
-            <a href="kabar.html">
-              Berita
-            </a>
-          </li>
-
-          <li>
-            <a href="pernyataan.html">
-              Pernyataan Resmi
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
+            <ul class="navbar-nav nav-list">
 
 
-      <!-- ==================================
-           KOLOM 3 - INFORMATION
-      ================================== -->
-      <div class="col-lg-3 col-md-6">
+                <!-- =================================
+                     01. BERANDA
+                ================================== -->
 
-        <h3>Information</h3>
+                <li class="nav-item">
 
-        <ul class="ppp-footer-list">
+                    <a class="nav-link"
+                       href="index.html">
 
-          <li>
-            <a href="faq.html">
-              FAQ &amp; Kontak
-            </a>
-          </li>
+                        BERANDA
 
-          <li>
-            <a href="kabar.html#daftar-artikel">
-              Opini
-            </a>
-          </li>
+                    </a>
 
-        </ul>
-
-      </div>
+                </li>
 
 
-      <!-- ==================================
-           KOLOM 4 - MEDIA SOSIAL
-      ================================== -->
-      <div class="col-lg-3 col-md-6">
+                <!-- =================================
+                     02. TENTANG PPP
+                ================================== -->
 
-        <h3>Social</h3>
+                <li class="nav-item dropdown">
 
-        <ul class="ppp-footer-list">
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
 
-          <!-- INSTAGRAM -->
-          <li>
-            <a
-              href="https://www.instagram.com/ppp.peduli?srtk=ODE5c3A2bmkzeGVz&amp;utm_source=qr"
-              target="_blank"
-              rel="noopener noreferrer">
+                        TENTANG PPP
 
-              <i class="bi bi-instagram"></i>
-              Instagram · @ppp.peduli
+                    </button>
 
-            </a>
-          </li>
+                    <ul class="dropdown-menu">
 
 
-          <!-- TIKTOK -->
-          <li>
-            <a
-              href="https://www.tiktok.com/@ppp.peduli?_r=1&amp;_t=ZS-9BHOIDImUGy"
-              target="_blank"
-              rel="noopener noreferrer">
+                        <!-- PROFIL DAN SEJARAH -->
 
-              <i class="bi bi-tiktok"></i>
-              TikTok · @ppp.peduli
+                        <li>
 
-            </a>
-          </li>
+                            <a class="dropdown-item"
+                               href="tentang.html#profil-sejarah">
+
+                                Profil &amp; Sejarah
+
+                            </a>
+
+                        </li>
 
 
-          <!-- YOUTUBE -->
-          <li>
-            <a
-              href="https://youtube.com/@partaipersatuanpembangunandpp?si=k4i02ifY6VN0bI6U"
-              target="_blank"
-              rel="noopener noreferrer">
+                        <!-- VISI MISI -->
 
-              <i class="bi bi-youtube"></i>
-              YouTube · PPP DPP
+                        <li>
 
-            </a>
-          </li>
+                            <a class="dropdown-item"
+                               href="tentang.html#visi-misi">
 
-        </ul>
+                                Visi, Misi &amp; Lima Khidmat
 
-      </div>
+                            </a>
+
+                        </li>
+
+
+                        <!-- STRUKTUR ORGANISASI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="struktur.html">
+
+                                Struktur Organisasi
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- STAKEHOLDER -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="tentang.html#stakeholder">
+
+                                Stakeholder PPP
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- MASKOT KABA -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="kaba.html">
+
+                                Kenalan dengan KABA
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- =================================
+                     03. PROGRAM & AKSI
+                ================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        PROGRAM &amp; AKSI
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- SEMUA PROGRAM -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="program.html">
+
+                                Semua Program &amp; Aksi
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- PPP PEDULI BUMI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="peduli-bumi.html">
+
+                                PPP Peduli Bumi &amp; Kemanusiaan
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- BEASISWA -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="beasiswa.html">
+
+                                Beasiswa Pendidikan Pemuda
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- TALKSHOW -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="talkshow.html">
+
+                                Seminar &amp; Kolaborasi
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- =================================
+                     04. INFORMASI
+                ================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        INFORMASI
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- KABAR PPP -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="kabar.html">
+
+                                Kabar PPP
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- PERNYATAAN RESMI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="pernyataan.html">
+
+                                Pernyataan Resmi
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- OPINI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="opini.html">
+
+                                Opini
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- TRANSPARANSI DATA -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="transparansi.html">
+
+                                Transparansi &amp; Data
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- =================================
+                     05. PARTISIPASI
+                ================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        PARTISIPASI
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- JARING ASPIRASI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="aspirasi.html">
+
+                                Jaring Aspirasi Rakyat
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- BERGABUNG -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="bergabung.html">
+
+                                Bergabung
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- FAQ DAN KONTAK -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="faq.html">
+
+                                FAQ &amp; Kontak
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+            </ul>
+
+
+            <!-- =================================
+                 SEARCH BAR
+
+                 Pertahankan ID search form dan input
+                 dari halaman HTML sebelumnya.
+            ================================== -->
+
+            <form class="site-search"
+                  id="globalSearchForm"
+                  role="search">
+
+                <button
+                    type="submit"
+                    aria-label="Cari">
+
+                    <i class="bi bi-search"></i>
+
+                </button>
+
+                <input
+                    type="search"
+                    id="globalSearchInput"
+                    placeholder="Cari di situs PPP..."
+                    aria-label="Cari informasi PPP"
+                    autocomplete="off"
+                    required>
+
+            </form>
+
+        </div>
 
     </div>
 
+</nav>
 
-    <!-- ==================================
-         DISCLAIMER
-    ================================== -->
-    <div class="ppp-footer-disclaimer">
 
-      Website ini merupakan prototipe akademik yang
-      dikembangkan untuk keperluan pembelajaran
-      Digital Public Relations. Website ini bukan
-      situs resmi Partai Persatuan Pembangunan (PPP).
-      Seluruh program simulasi dan fitur interaktif
-      yang ditampilkan tidak mewakili kegiatan
-      atau layanan resmi organisasi.
+
+    <!-- ========================================
+         MAIN CONTENT
+    ========================================= -->
+
+    <main>
+
+
+        <!-- ========================================
+             MENGENAL PPP
+        ========================================= -->
+
+        <section class="about-intro about-section"
+                 id="profil-sejarah">
+
+            <div class="wrap">
+
+
+                <!-- PROFIL PPP -->
+
+                <div class="about-intro-grid">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            MENGENAL PPP
+                        </p>
+
+                        <h1>Mengenal PPP</h1>
+
+                    </div>
+
+
+                    <div class="about-intro-content">
+
+                        <p>
+
+                            Partai Persatuan Pembangunan (PPP)
+                            merupakan partai politik Indonesia
+                            yang berdiri sejak 5 Januari 1973.
+                            Berlandaskan nilai-nilai keislaman,
+                            PPP memperjuangkan persatuan bangsa,
+                            demokrasi, keadilan sosial, dan
+                            kesejahteraan masyarakat melalui
+                            berbagai bidang kehidupan.
+
+                        </p>
+
+                        <a class="action outline"
+                           href="#visi-misi">
+
+                            Tentang PPP
+
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ========================================
+                     VISI DAN MISI
+                ========================================= -->
+
+                <div class="about-vision-mission"
+                     id="visi-misi">
+
+
+                    <!-- VISI -->
+
+                    <div class="about-vision">
+
+                        <h2>Visi</h2>
+
+                        <p>
+
+                            Terwujudnya masyarakat yang bertaqwa
+                            kepada Allah SWT dan negara Indonesia
+                            yang adil, makmur, sejahtera, bermoral,
+                            demokratis, tegaknya supremasi hukum,
+                            penghormatan terhadap Hak Asasi Manusia
+                            (HAM), serta menjunjung tinggi
+                            harkat-martabat kemanusiaan dan keadilan
+                            sosial yang berlandaskan kepada
+                            nilai-nilai ke-Islaman.
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- MISI -->
+
+                    <div class="about-mission">
+
+                        <h2>Misi</h2>
+
+                        <ol>
+
+                            <li>
+
+                                Menjadikan nilai agama sebagai
+                                pedoman moral dalam kehidupan
+                                berbangsa dan bernegara.
+
+                            </li>
+
+                            <li>
+
+                                Membangun budaya politik yang
+                                demokratis, berakhlak mulia,
+                                dan menghormati hak asasi manusia.
+
+                            </li>
+
+                            <li>
+
+                                Memperkuat ekonomi kerakyatan,
+                                penegakan hukum, serta upaya
+                                pemberantasan korupsi, kolusi,
+                                dan nepotisme.
+
+                            </li>
+
+                            <li>
+
+                                Mendorong kehidupan masyarakat
+                                yang religius, harmonis, dan
+                                menjunjung tinggi nilai kemanusiaan.
+
+                            </li>
+
+                            <li>
+
+                                Meningkatkan kualitas sumber daya
+                                manusia melalui pendidikan dan
+                                pembangunan kesejahteraan.
+
+                            </li>
+
+                        </ol>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             LIMA KHIDMAT PPP
+        ========================================= -->
+
+        <section class="about-section about-khidmat"
+                 id="lima-khidmat">
+
+            <div class="wrap">
+
+                <h2>Lima Khidmat PPP</h2>
+
+
+                <!-- GRID KHIDMAT -->
+
+                <div class="khidmat-grid">
+
+
+                    <!-- KHIDMAT 1 -->
+
+                    <article class="khidmat-card">
+
+                        <div class="khidmat-icon">
+
+                            <i class="bi bi-file-earmark-text"></i>
+
+                        </div>
+
+                        <h3>Iman dan Takwa</h3>
+
+                        <p>
+
+                            Menempatkan nilai keimanan dan
+                            ketakwaan sebagai landasan moral
+                            dalam kehidupan bermasyarakat,
+                            berbangsa, dan bernegara.
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- KHIDMAT 2 -->
+
+                    <article class="khidmat-card">
+
+                        <div class="khidmat-icon">
+
+                            <i class="bi bi-chat"></i>
+
+                        </div>
+
+                        <h3>
+                            Hak Asasi dan Martabat Manusia
+                        </h3>
+
+                        <p>
+
+                            Menghormati hak dan martabat manusia,
+                            menjunjung keadilan, serta menolak
+                            diskriminasi melalui nilai
+                            ukhuwah basyariyah.
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- KHIDMAT 3 -->
+
+                    <article class="khidmat-card">
+
+                        <div class="khidmat-icon">
+
+                            <i class="bi bi-people"></i>
+
+                        </div>
+
+                        <h3>Persatuan Bangsa</h3>
+
+                        <p>
+
+                            Menjaga keutuhan bangsa dengan
+                            memperkuat ukhuwah wathaniyah
+                            dan membangun keharmonisan
+                            dalam keberagaman.
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- KHIDMAT 4 -->
+
+                    <article class="khidmat-card khidmat-wide">
+
+                        <div class="khidmat-icon">
+
+                            <i class="bi bi-file-earmark-text"></i>
+
+                        </div>
+
+                        <h3>Demokrasi</h3>
+
+                        <p>
+
+                            Mewujudkan kehidupan politik yang
+                            demokratis dengan mengutamakan
+                            kedaulatan rakyat dan musyawarah
+                            untuk mufakat.
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- KHIDMAT 5 -->
+
+                    <article class="khidmat-card khidmat-wide">
+
+                        <div class="khidmat-icon">
+
+                            <i class="bi bi-chat"></i>
+
+                        </div>
+
+                        <h3>Keadilan dan Kemakmuran</h3>
+
+                        <p>
+
+                            Mewujudkan masyarakat yang adil
+                            dan sejahtera melalui pemerataan
+                            kesempatan serta pengurangan
+                            kesenjangan ekonomi, sosial,
+                            dan budaya.
+
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             STRUKTUR ORGANISASI
+        ========================================= -->
+
+        
+<!-- PENGANTAR STRUKTUR ORGANISASI -->
+
+<section class="section" id="struktur-organisasi">
+
+    <div class="wrap">
+
+        <div class="section-head">
+
+            <div>
+
+                <p class="eyebrow">
+
+                    KEPEMIMPINAN &amp; STRUKTUR ORGANISASI
+
+                </p>
+
+                <h2>
+
+                    Mengenal Sosok di Balik Perjuangan PPP.
+
+                </h2>
+
+                <p>
+
+                    Kenali susunan kepengurusan dan tingkatan
+                    organisasi Partai Persatuan Pembangunan
+                    dari pusat hingga daerah.
+
+                </p>
+
+            </div>
+
+            <a class="action outline"
+               href="struktur.html">
+
+                Lihat Struktur Organisasi
+
+                <i class="bi bi-arrow-up-right"></i>
+
+            </a>
+
+        </div>
 
     </div>
 
+</section>
 
-    <!-- ==================================
-         COPYRIGHT
-    ================================== -->
-    <div class="ppp-footer-copyright">
 
-      © 2026 PPP — Ruang Bersama ·
-      Prototipe akademik Digital Public Relations
+
+        <!-- ========================================
+             STAKEHOLDER PPP
+        ========================================= -->
+
+        <section class="about-section about-stakeholder"
+                 id="stakeholder">
+
+            <div class="wrap">
+
+
+                <div class="about-section-heading">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            EKOSISTEM ORGANISASI
+                        </p>
+
+                        <h2>Stakeholder PPP</h2>
+
+                        <p>
+
+                            Mengenal berbagai pemangku kepentingan
+                            dalam ekosistem komunikasi Partai
+                            Persatuan Pembangunan, baik dari
+                            lingkungan internal maupun eksternal
+                            organisasi.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DIAGRAM STAKEHOLDER -->
+
+                <div class="stakeholder-map">
+
+
+                    <!-- GARIS PENGHUBUNG -->
+
+                    <svg class="stakeholder-connections"
+                         viewBox="0 0 1000 1000"
+                         preserveAspectRatio="none"
+                         aria-hidden="true">
+
+                        <g stroke="#a7bcb0"
+                           stroke-width="1.5"
+                           stroke-dasharray="5 5"
+                           fill="none">
+
+                            <line x1="500" y1="375"
+                                  x2="167" y2="125"/>
+
+                            <line x1="500" y1="375"
+                                  x2="500" y2="125"/>
+
+                            <line x1="500" y1="375"
+                                  x2="833" y2="125"/>
+
+                            <line x1="500" y1="375"
+                                  x2="167" y2="375"/>
+
+                            <line x1="500" y1="375"
+                                  x2="833" y2="375"/>
+
+                            <line x1="500" y1="375"
+                                  x2="167" y2="625"/>
+
+                            <line x1="500" y1="375"
+                                  x2="500" y2="625"/>
+
+                            <line x1="500" y1="375"
+                                  x2="833" y2="625"/>
+
+                            <line x1="500" y1="375"
+                                  x2="500" y2="875"/>
+
+                        </g>
+
+                    </svg>
+
+
+                    <!-- STAKEHOLDER 1 -->
+
+                    <article class="stakeholder-card stakeholder-1">
+
+                        <i class="bi bi-people"></i>
+
+                        <h3>Pengurus & Kader</h3>
+
+                        <p>
+
+                            Pemangku kepentingan internal dalam
+                            kepengurusan, koordinasi, dan
+                            pelaksanaan kegiatan organisasi.
+
+                        </p>
+
+                        <span>Internal</span>
+
+                    </article>
+
+
+                    <!-- STAKEHOLDER 2 -->
+
+                    <article class="stakeholder-card stakeholder-2">
+
+                        <i class="bi bi-diagram-3"></i>
+
+                        <h3>Organisasi Sayap</h3>
+
+                        <p>
+
+                            GPK, AMK, GMPI, WPP, dan AMPP sebagai
+                            kelompok dalam ekosistem organisasi.
+
+                        </p>
+
+                        <span>Internal</span>
+
+                    </article>
+
+
+                    <!-- STAKEHOLDER 3 -->
+
+                    <article class="stakeholder-card stakeholder-3">
+
+                        <i class="bi bi-bank"></i>
+
+                        <h3>Fraksi DPR & DPRD</h3>
+
+                        <p>
+
+                            Unsur perwakilan politik pada lembaga
+                            legislatif sesuai dengan keterwakilan
+                            partai pada setiap tingkatan.
+
+                        </p>
+
+                        <span>Representasi Politik</span>
+
+                    </article>
+
+
+                    <!-- STAKEHOLDER 4 -->
+
+                    <article class="stakeholder-card stakeholder-4">
+
+                        <i class="bi bi-shield-check"></i>
+
+                        <h3>Lembaga Negara</h3>
+
+                        <p>
+
+                            KPU, Bawaslu, serta lembaga terkait
+                            dalam penyelenggaraan dan pengawasan
+                            proses demokrasi.
+
+                        </p>
+
+                        <span>Eksternal</span>
+
+                    </article>
+
+
+                    <!-- PUSAT DIAGRAM -->
+
+                    <div class="stakeholder-center">
+
+                        <img
+                            src="assets/images/logo-ppp.png"
+                            alt="Logo PPP"
+                            loading="lazy">
+
+                        <h3>PPP</h3>
+
+                        <p>Ruang Bersama</p>
+
+                    </div>
+
+
+                    <!-- STAKEHOLDER 5 -->
+
+                    <article class="stakeholder-card stakeholder-5">
+
+                        <i class="bi bi-house-heart"></i>
+
+                        <h3>Ormas & Pesantren</h3>
+
+                        <p>
+
+                            Organisasi masyarakat dan pesantren
+                            sebagai bagian dari lingkungan
+                            sosial dan keagamaan.
+
+                        </p>
+
+                        <span>Eksternal</span>
+
+                    </article>
+
+
+                    <!-- STAKEHOLDER 6 -->
+
+                    <article class="stakeholder-card stakeholder-6">
+
+                        <i class="bi bi-newspaper"></i>
+
+                        <h3>Media</h3>
+
+                        <p>
+
+                            Pihak yang berperan dalam pemberitaan,
+                            penyebaran informasi, dan pengawasan
+                            publik.
+
+                        </p>
+
+                        <span>Eksternal</span>
+
+                    </article>
+
+
+                    <!-- STAKEHOLDER 7 -->
+
+                    <article class="stakeholder-card stakeholder-7">
+
+                        <i class="bi bi-mortarboard"></i>
+
+                        <h3>Akademisi & LSM</h3>
+
+                        <p>
+
+                            Kelompok yang memberikan perspektif,
+                            kajian, kritik, dan masukan terhadap
+                            isu sosial serta kebijakan publik.
+
+                        </p>
+
+                        <span>Eksternal</span>
+
+                    </article>
+
+
+                    <!-- STAKEHOLDER 8 -->
+
+                    <article class="stakeholder-card stakeholder-8">
+
+                        <i class="bi bi-briefcase"></i>
+
+                        <h3>Dunia Usaha</h3>
+
+                        <p>
+
+                            Pelaku ekonomi dan sektor usaha
+                            yang berkaitan dengan isu
+                            pembangunan serta pemberdayaan
+                            masyarakat.
+
+                        </p>
+
+                        <span>Eksternal</span>
+
+                    </article>
+
+
+                    <!-- STAKEHOLDER 9 -->
+
+                    <article class="stakeholder-card stakeholder-public">
+
+                        <i class="bi bi-person-hearts"></i>
+
+                        <h3>Masyarakat & Publik</h3>
+
+                        <p>
+
+                            Warga, komunitas, dan masyarakat
+                            umum sebagai pemangku kepentingan
+                            dalam komunikasi publik, penyampaian
+                            aspirasi, serta pengawasan demokratis.
+
+                        </p>
+
+                        <span>Publik</span>
+
+                    </article>
+
+                </div>
+
+
+                <p class="about-note">
+
+                    <i class="bi bi-info-circle"></i>
+
+                    Pemetaan stakeholder ini merupakan rancangan
+                    akademik dan tidak menunjukkan hubungan
+                    kemitraan atau afiliasi resmi dengan pihak
+                    yang disebutkan.
+
+                </p>
+
+
+                <!-- STAKEHOLDER ACTION -->
+
+                <div class="stakeholder-actions">
+
+                    <a class="action outline"
+                       href="aspirasi.html">
+
+                        Sampaikan Aspirasi
+
+                        <i class="bi bi-arrow-up-right"></i>
+
+                    </a>
+
+                    <a class="action outline"
+                       href="faq.html">
+
+                        Informasi & Kontak
+
+                        <i class="bi bi-arrow-up-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             KENALAN DENGAN KABA
+        ========================================= -->
+
+        
+<!-- PENGANTAR MASKOT KABA -->
+
+<section class="section" id="kaba">
+
+    <div class="wrap">
+
+        <div class="section-head">
+
+            <div>
+
+                <p class="eyebrow">
+
+                    MASKOT PPP
+
+                </p>
+
+                <h2>
+
+                    Kenalan dengan KABA!
+
+                </h2>
+
+                <p>
+
+                    Mengenal karakter KABA yang membawa
+                    semangat persatuan, kebersamaan,
+                    dan komunikasi dengan masyarakat.
+
+                </p>
+
+            </div>
+
+            <a class="action outline"
+               href="kaba.html">
+
+                Kenalan dengan KABA
+
+                <i class="bi bi-arrow-up-right"></i>
+
+            </a>
+
+        </div>
 
     </div>
 
-  </div>
+</section>
 
-</footer>
 
-<!-- END FOOTER -->
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/main.js"></script>
+    </main>
+
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+
+    <footer class="footer">
+
+        <div class="wrap footer-wrap">
+
+            <div class="footer-grid">
+
+
+                <!-- IDENTITAS -->
+
+                <div>
+
+                    <h3>PPP — Ruang Bersama</h3>
+
+                    <p>
+
+                        Partai Persatuan Pembangunan.
+                        Ruang informasi dan dialog publik
+                        dalam sebuah prototipe akademik.
+
+                    </p>
+
+                    <p class="gold">
+
+                        Merawat Persatuan dengan Pembangunan.
+
+                    </p>
+
+                </div>
+
+
+                <!-- QUICK LINKS -->
+
+                <div>
+
+                    <h4>Quick Links</h4>
+
+                    <a href="index.html">Beranda</a>
+
+                    <a href="tentang.html">Tentang PPP</a>
+
+                    <a href="struktur.html">
+                        Organisasi
+                    </a>
+
+                    <a href="program.html">Program & Aksi</a>
+
+                    <a href="aspirasi.html">Aspirasi Rakyat</a>
+
+                    <a href="kabar.html">Berita</a>
+
+                    <a href="pernyataan.html">
+                        Pernyataan Resmi
+                    </a>
+
+                </div>
+
+
+                <!-- INFORMATION -->
+
+                <div>
+
+                    <h4>Information</h4>
+
+                    <a href="faq.html">FAQ & Kontak</a>
+
+                    <span aria-disabled="true">Opini</span>
+
+                </div>
+
+
+                <!-- SOCIAL MEDIA -->
+
+                <div>
+
+                    <h4>Social</h4>
+
+                    <a
+                        href="https://www.instagram.com/ppp.peduli/"
+                        target="_blank"
+                        rel="noopener">
+
+                        Instagram @ppp.peduli
+
+                    </a>
+
+                    <a
+                        href="https://www.tiktok.com/@ppp.peduli"
+                        target="_blank"
+                        rel="noopener">
+
+                        TikTok @ppp.peduli
+
+                    </a>
+
+                    <a
+                        href="https://www.youtube.com/@PartaiPersatuanPembangunanDPP"
+                        target="_blank"
+                        rel="noopener">
+
+                        YouTube<br>
+                        @PartaiPersatuanPembangunanDPP
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- DISCLAIMER -->
+
+            <p class="disclaimer">
+
+                Website ini merupakan prototipe akademik
+                yang dikembangkan untuk keperluan pembelajaran
+                Digital Public Relations. Website ini bukan
+                situs resmi Partai Persatuan Pembangunan (PPP).
+                Seluruh program simulasi dan fitur interaktif
+                yang ditampilkan tidak mewakili kegiatan
+                atau layanan resmi organisasi.
+
+            </p>
+
+
+            <!-- COPYRIGHT -->
+
+            <p class="copyright">
+
+                © 2026 PPP — Ruang Bersama ·
+                Prototipe akademik Digital Public Relations
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- BOOTSTRAP JAVASCRIPT -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+<!-- GLOBAL NAVBAR JAVASCRIPT -->
+
+<script src="assets/js/navbar.js"></script>
+<!-- BOOTSTRAP JAVASCRIPT -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- GLOBAL NAVBAR JAVASCRIPT -->
+
+<script src="assets/js/navbar.js"></script>
+
 </body>
+</html>
+</body>
+
 </html>

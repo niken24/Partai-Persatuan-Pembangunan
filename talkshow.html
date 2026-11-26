@@ -1,0 +1,1401 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Seminar &amp; Kolaborasi | PPP — Ruang Bersama</title>
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- BOOTSTRAP -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- BOOTSTRAP ICONS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+          rel="stylesheet">
+
+    <!-- CSS UTAMA -->
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- ========================================
+         CSS HALAMAN TALKSHOW
+    ========================================= -->
+
+    <style>
+
+        .ppp-talkshow main {
+            background: #f7f8f2;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .ppp-talkshow main section {
+            scroll-margin-top: 25px;
+        }
+
+        /* HERO */
+
+        .ppp-talkshow .talkshow-hero {
+            background: #f7f8f2;
+            padding: 42px 0 48px;
+            border-bottom: 1px solid #c4a568;
+        }
+
+        .ppp-talkshow .talkshow-breadcrumb {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 5px;
+            font-size: 12px;
+            line-height: 1.7;
+            color: #69746d;
+            margin-bottom: 15px;
+        }
+
+        .ppp-talkshow .talkshow-breadcrumb a {
+            color: #69746d;
+            text-decoration: none;
+        }
+
+        .ppp-talkshow .talkshow-breadcrumb a:hover {
+            color: #174c38;
+            text-decoration: underline;
+        }
+
+        .ppp-talkshow .talkshow-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(36px, 4.2vw, 60px);
+            font-weight: 700;
+            line-height: 1.25;
+            letter-spacing: -1.1px;
+            color: #174c38;
+            margin: 0 0 16px;
+        }
+
+        .ppp-talkshow .talkshow-hero-description {
+            color: #69746d;
+            font-size: 18px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+
+        /* LAPORAN KEGIATAN */
+
+        .ppp-talkshow .talkshow-report {
+            background: #f7f8f2;
+            padding: 56px 0 75px;
+        }
+
+        .ppp-talkshow .talkshow-article {
+            width: 100%;
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        .ppp-talkshow .talkshow-label {
+            color: #174c38;
+            font-size: 11px;
+            font-weight: 700;
+            line-height: 1.6;
+            text-transform: uppercase;
+            margin: 0 0 20px;
+        }
+
+        .ppp-talkshow .talkshow-article-header {
+            margin-bottom: 27px;
+        }
+
+        .ppp-talkshow .talkshow-article-header h2 {
+            color: #174c38;
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(30px, 3.4vw, 48px);
+            font-weight: 700;
+            line-height: 1.3;
+            letter-spacing: -.7px;
+            margin: 0 0 20px;
+        }
+
+        .ppp-talkshow .talkshow-category {
+            color: #174c38;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.7;
+            margin: 0 0 16px;
+        }
+
+        .ppp-talkshow .talkshow-date {
+            color: #69746d;
+            font-size: 14px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+
+        /* =====================================
+           POSTER AFTER REPORT TALKSHOW
+        ====================================== */
+
+        .ppp-talkshow .talkshow-cover {
+            width: 100%;
+            margin: 0 0 30px;
+        }
+
+        .ppp-talkshow .talkshow-cover-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            max-height: none;
+            overflow: hidden;
+            background: transparent;
+            border-radius: 5px;
+        }
+
+        .ppp-talkshow .talkshow-cover-image img {
+            display: block;
+            width: 100%;
+            max-width: 900px;
+            height: auto !important;
+            max-height: none;
+            aspect-ratio: auto !important;
+            object-fit: contain !important;
+            object-position: center;
+            border-radius: 5px;
+        }
+
+        .ppp-talkshow .talkshow-cover figcaption {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 1.8;
+            color: #69746d;
+            margin-top: 12px;
+            text-align: center;
+        }
+
+
+        /* ARTICLE GRID */
+
+        .ppp-talkshow .talkshow-article-grid {
+            display: grid;
+            grid-template-columns:
+                minmax(0, 3fr)
+                minmax(0, 1.05fr);
+            align-items: start;
+            gap: 55px;
+        }
+
+        .ppp-talkshow .talkshow-article-content {
+            min-width: 0;
+        }
+
+        .ppp-talkshow .talkshow-article-content p {
+            color: #34463d;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.8;
+            margin: 0 0 24px;
+        }
+
+        .ppp-talkshow .talkshow-article-content p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* SIDEBAR DOKUMENTASI */
+
+        .ppp-talkshow .talkshow-sidebar {
+            min-width: 0;
+        }
+
+        .ppp-talkshow .talkshow-documentation {
+            background: #e8eee5;
+            padding: 24px;
+        }
+
+        .ppp-talkshow .talkshow-documentation .talkshow-label {
+            font-size: 10px;
+            margin-bottom: 18px;
+        }
+
+        .ppp-talkshow .talkshow-documentation h3 {
+            color: #174c38;
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(19px, 1.8vw, 25px);
+            font-weight: 600;
+            line-height: 1.4;
+            letter-spacing: -.3px;
+            margin: 0 0 20px;
+        }
+
+        .ppp-talkshow .talkshow-sidebar-description {
+            color: #69746d;
+            font-size: 14px;
+            line-height: 1.75;
+            margin: 0 0 18px;
+        }
+
+
+        /* BUTTON DOKUMENTASI */
+
+        .ppp-talkshow .talkshow-documentation-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            width: 100%;
+            min-height: 50px;
+            padding: 12px 15px;
+            background: #c4a568;
+            color: #174c38;
+            border: 1px solid #c4a568;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 1.5;
+            text-decoration: none;
+            transition:
+                background .25s ease,
+                color .25s ease,
+                border-color .25s ease;
+        }
+
+        .ppp-talkshow .talkshow-documentation-button:hover {
+            background: #174c38;
+            color: #ffffff;
+            border-color: #174c38;
+            text-decoration: none;
+        }
+
+        .ppp-talkshow .talkshow-documentation-button i {
+            font-size: 14px;
+            flex-shrink: 0;
+            transition: transform .25s ease;
+        }
+
+        .ppp-talkshow .talkshow-documentation-button:hover i {
+            transform: translate(2px, -2px);
+        }
+
+        .ppp-talkshow .talkshow-documentation-button:focus-visible {
+            outline: 3px solid #174c38;
+            outline-offset: 4px;
+        }
+
+
+        /* RESPONSIVE TABLET */
+
+        @media (max-width: 991px) {
+
+            .ppp-talkshow .talkshow-hero {
+                padding: 35px 0 40px;
+            }
+
+            .ppp-talkshow .talkshow-hero h1 {
+                font-size: 44px;
+            }
+
+            .ppp-talkshow .talkshow-hero-description {
+                font-size: 16px;
+            }
+
+            .ppp-talkshow .talkshow-report {
+                padding: 45px 0 55px;
+            }
+
+            .ppp-talkshow .talkshow-article-header h2 {
+                font-size: 36px;
+            }
+
+            .ppp-talkshow .talkshow-article-grid {
+                grid-template-columns:
+                    minmax(0, 2fr)
+                    minmax(0, 1fr);
+                gap: 25px;
+            }
+
+            .ppp-talkshow .talkshow-article-content p {
+                font-size: 16px;
+                line-height: 1.85;
+            }
+
+            .ppp-talkshow .talkshow-documentation {
+                padding: 20px;
+            }
+
+            .ppp-talkshow .talkshow-documentation h3 {
+                font-size: 20px;
+            }
+
+            .ppp-talkshow .talkshow-sidebar-description {
+                font-size: 13px;
+            }
+
+            .ppp-talkshow .talkshow-documentation-button {
+                font-size: 12px;
+                gap: 8px;
+            }
+
+        }
+
+
+        /* RESPONSIVE MOBILE */
+
+        @media (max-width: 600px) {
+
+            .ppp-talkshow .talkshow-hero {
+                padding: 28px 0 35px;
+            }
+
+            .ppp-talkshow .talkshow-breadcrumb {
+                font-size: 10px;
+                margin-bottom: 18px;
+            }
+
+            .ppp-talkshow .talkshow-hero h1 {
+                font-size: 34px;
+                line-height: 1.25;
+                letter-spacing: -.6px;
+                margin-bottom: 15px;
+            }
+
+            .ppp-talkshow .talkshow-hero-description {
+                font-size: 14px;
+            }
+
+            .ppp-talkshow .talkshow-report {
+                padding: 35px 0 45px;
+            }
+
+            .ppp-talkshow .talkshow-label {
+                font-size: 10px;
+                margin-bottom: 16px;
+            }
+
+            .ppp-talkshow .talkshow-article-header {
+                margin-bottom: 22px;
+            }
+
+            .ppp-talkshow .talkshow-article-header h2 {
+                font-size: 28px;
+                line-height: 1.35;
+                letter-spacing: -.5px;
+                margin-bottom: 16px;
+            }
+
+            .ppp-talkshow .talkshow-category {
+                font-size: 12px;
+                margin-bottom: 12px;
+            }
+
+            .ppp-talkshow .talkshow-date {
+                font-size: 12px;
+            }
+
+            .ppp-talkshow .talkshow-cover {
+                margin-bottom: 24px;
+            }
+
+            .ppp-talkshow .talkshow-cover-image img {
+                width: 100%;
+                height: auto !important;
+                aspect-ratio: auto !important;
+                object-fit: contain !important;
+            }
+
+            .ppp-talkshow .talkshow-cover figcaption {
+                font-size: 10px;
+                line-height: 1.8;
+            }
+
+            .ppp-talkshow .talkshow-article-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .ppp-talkshow .talkshow-article-content p {
+                font-size: 15px;
+                line-height: 1.9;
+                margin-bottom: 20px;
+            }
+
+            .ppp-talkshow .talkshow-documentation {
+                padding: 24px;
+            }
+
+            .ppp-talkshow .talkshow-documentation h3 {
+                font-size: 23px;
+                margin-bottom: 16px;
+            }
+
+            .ppp-talkshow .talkshow-sidebar-description {
+                font-size: 14px;
+            }
+
+            .ppp-talkshow .talkshow-documentation-button {
+                font-size: 13px;
+                justify-content: space-between;
+                padding: 12px 18px;
+            }
+
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .ppp-talkshow .talkshow-documentation-button,
+            .ppp-talkshow .talkshow-documentation-button i {
+                transition: none;
+            }
+
+            .ppp-talkshow .talkshow-documentation-button:hover i {
+                transform: none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body class="ppp-home ppp-talkshow">
+
+
+    <!-- ========================================
+         TOP BAR
+    ========================================= -->
+
+    <div class="topbar">
+
+        <div class="wrap">
+
+            <span>
+                KELOMPOK 8 · MATA KULIAH DIGIPR
+            </span>
+
+            <span>
+                PROTOTIPE AKADEMIK · BUKAN SITUS RESMI PPP
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================================
+         HEADER
+    ========================================= -->
+
+    <header class="brand-header">
+
+        <div class="wrap brand-row">
+
+            <a class="brand" href="index.html">
+
+                <img
+                    src="assets/images/logo-ppp.png"
+                    alt="Logo Partai Persatuan Pembangunan">
+
+                <span>
+                    PARTAI<br>
+                    PERSATUAN<br>
+                    PEMBANGUNAN
+                </span>
+
+            </a>
+
+            <p>
+                Berakar pada Nilai, Bergerak untuk Rakyat.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- ========================================
+         NAVIGATION BAR
+    ========================================= -->
+
+    
+<!-- ========================================
+     NAVIGATION BAR PPP — FINAL
+========================================= -->
+
+<nav class="navbar navbar-expand-lg site-nav"
+     aria-label="Navigasi utama">
+
+    <div class="wrap nav-wrap">
+
+        <!-- TOGGLE MOBILE -->
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Buka navigasi">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="mainNav">
+
+            <ul class="navbar-nav nav-list">
+
+
+                <!-- =================================
+                     01. BERANDA
+                ================================== -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="index.html">
+
+                        BERANDA
+
+                    </a>
+
+                </li>
+
+
+                <!-- =================================
+                     02. TENTANG PPP
+                ================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        TENTANG PPP
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- PROFIL DAN SEJARAH -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="tentang.html#profil-sejarah">
+
+                                Profil &amp; Sejarah
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- VISI MISI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="tentang.html#visi-misi">
+
+                                Visi, Misi &amp; Lima Khidmat
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- STRUKTUR ORGANISASI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="struktur.html">
+
+                                Struktur Organisasi
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- STAKEHOLDER -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="tentang.html#stakeholder">
+
+                                Stakeholder PPP
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- MASKOT KABA -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="kaba.html">
+
+                                Kenalan dengan KABA
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- =================================
+                     03. PROGRAM & AKSI
+                ================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        PROGRAM &amp; AKSI
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- SEMUA PROGRAM -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="program.html">
+
+                                Semua Program &amp; Aksi
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- PPP PEDULI BUMI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="peduli-bumi.html">
+
+                                PPP Peduli Bumi &amp; Kemanusiaan
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- BEASISWA -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="beasiswa.html">
+
+                                Beasiswa Pendidikan Pemuda
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- TALKSHOW -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="talkshow.html">
+
+                                Seminar &amp; Kolaborasi
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- =================================
+                     04. INFORMASI
+                ================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        INFORMASI
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- KABAR PPP -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="kabar.html">
+
+                                Kabar PPP
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- PERNYATAAN RESMI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="pernyataan.html">
+
+                                Pernyataan Resmi
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- OPINI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="opini.html">
+
+                                Opini
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- TRANSPARANSI DATA -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="transparansi.html">
+
+                                Transparansi &amp; Data
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- =================================
+                     05. PARTISIPASI
+                ================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        PARTISIPASI
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- JARING ASPIRASI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="aspirasi.html">
+
+                                Jaring Aspirasi Rakyat
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- BERGABUNG -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="bergabung.html">
+
+                                Bergabung
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- FAQ DAN KONTAK -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="faq.html">
+
+                                FAQ &amp; Kontak
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+            </ul>
+
+
+            <!-- =================================
+                 SEARCH BAR
+
+                 Pertahankan ID search form dan input
+                 dari halaman HTML sebelumnya.
+            ================================== -->
+
+            <form class="site-search"
+                  id="globalSearchForm"
+                  role="search">
+
+                <button
+                    type="submit"
+                    aria-label="Cari">
+
+                    <i class="bi bi-search"></i>
+
+                </button>
+
+                <input
+                    type="search"
+                    id="globalSearchInput"
+                    placeholder="Cari di situs PPP..."
+                    aria-label="Cari informasi PPP"
+                    autocomplete="off"
+                    required>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+    <!-- ========================================
+         MAIN CONTENT
+    ========================================= -->
+
+    <main>
+
+
+        <!-- ====================================
+             HERO SEMINAR & KOLABORASI
+        ===================================== -->
+
+        <section class="talkshow-hero"
+                 id="seminar-kolaborasi">
+
+            <div class="wrap">
+
+                <!-- BREADCRUMB -->
+
+                <nav class="talkshow-breadcrumb"
+                     aria-label="Breadcrumb">
+
+                    <a href="index.html">Beranda</a>
+
+                    <span>/</span>
+
+                    <a href="program.html">Program &amp; Aksi</a>
+
+                    <span>/</span>
+
+                    <span aria-current="page">
+                        Seminar &amp; Kolaborasi
+                    </span>
+
+                </nav>
+
+
+                <!-- PAGE TITLE -->
+
+                <h1>
+
+                    Seminar &amp; Kolaborasi
+
+                </h1>
+
+                <p class="talkshow-hero-description">
+
+                    Dokumentasi Kegiatan dan Pengembangan Diri.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ====================================
+             LAPORAN KEGIATAN TALKSHOW
+        ===================================== -->
+
+        <section class="talkshow-report"
+                 id="laporan-kegiatan">
+
+            <div class="wrap">
+
+                <article class="talkshow-article">
+
+
+                    <!-- ARTICLE HEADER -->
+
+                    <header class="talkshow-article-header">
+
+                        <p class="talkshow-label">
+
+                            LAPORAN KEGIATAN
+
+                        </p>
+
+                        <h2>
+
+                            PPP Hadirkan Talk Show Lost in
+                            Your 20’s: Finding God,
+                            Finding Yourself
+
+                        </h2>
+
+                        <p class="talkshow-category">
+
+                            Edukasi, Keagamaan &amp;
+                            Pengembangan Diri.
+
+                        </p>
+
+                        <p class="talkshow-date">
+
+                            Dipublikasikan pada
+
+                            <time datetime="2026-11-25">
+                                25 November 2026.
+                            </time>
+
+                        </p>
+
+                    </header>
+
+
+                    <!-- =================================
+                         POSTER AFTER REPORT
+                    ================================== -->
+
+                    <figure class="talkshow-cover">
+
+                        <div class="talkshow-cover-image">
+
+                            <img
+                                src="assets/images/talkshow.jpeg"
+                                alt="Poster After Report Talk Show Lost in Your 20’s: Finding God, Finding Yourself"
+                                width="596"
+                                height="429"
+                                fetchpriority="high">
+
+                        </div>
+
+                        <figcaption>
+
+                            Dokumentasi Tim PPP Ruang Bersama
+
+                        </figcaption>
+
+                    </figure>
+
+
+                    <!-- =================================
+                         ARTICLE BODY
+                    ================================== -->
+
+                    <div class="talkshow-article-grid">
+
+
+                        <!-- ISI ARTIKEL -->
+
+                        <div class="talkshow-article-content">
+
+                            <p>
+
+                                Dalam simulasi program akademik
+                                Digital Public Relations,
+                                kegiatan talk show bertajuk
+                                “Lost in Your 20’s: Finding God,
+                                Finding Yourself” dilaksanakan
+                                pada 25 November 2026 melalui
+                                Zoom Meeting.
+
+                            </p>
+
+                            <p>
+
+                                Kegiatan ini mengangkat tema
+                                pencarian jati diri, penguatan
+                                iman, dan refleksi spiritual
+                                dalam menghadapi tantangan
+                                kehidupan. Rangkaian kegiatan
+                                mencakup penyampaian materi
+                                mengenai iman sebagai pegangan,
+                                Islam sebagai kompas kehidupan,
+                                serta sesi diskusi dan tanya
+                                jawab.
+
+                            </p>
+
+                            <p>
+
+                                Talk show ini menjadi ruang
+                                pembelajaran mengenai nilai
+                                keislaman, kemanusiaan, dan
+                                pengembangan diri yang relevan
+                                dengan kehidupan generasi muda.
+
+                            </p>
+
+                        </div>
+
+
+                        <!-- SIDEBAR DOKUMENTASI -->
+
+                        <aside class="talkshow-sidebar">
+
+                            <div class="talkshow-documentation">
+
+                                <p class="talkshow-label">
+
+                                    DOKUMENTASI
+
+                                </p>
+
+                                <h3>
+
+                                    Ruang refleksi dan
+                                    pengembangan diri
+
+                                </h3>
+
+                                <p class="talkshow-sidebar-description">
+
+                                    Lihat dokumentasi kegiatan
+                                    melalui Instagram @ppp.peduli.
+
+                                </p>
+
+                                <a
+                                    class="talkshow-documentation-button"
+                                    href="https://www.instagram.com/ppp.peduli/"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+
+                                    Lihat Dokumentasi
+
+                                    <i class="bi bi-arrow-up-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </aside>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+
+    <footer class="footer">
+
+        <div class="wrap footer-wrap">
+
+            <div class="footer-grid">
+
+
+                <!-- IDENTITAS -->
+
+                <div>
+
+                    <h3>
+                        PPP — Ruang Bersama
+                    </h3>
+
+                    <p>
+
+                        Partai Persatuan Pembangunan.
+                        Ruang informasi dan dialog publik
+                        dalam sebuah prototipe akademik.
+
+                    </p>
+
+                    <p class="gold">
+
+                        Merawat Persatuan dengan Pembangunan.
+
+                    </p>
+
+                </div>
+
+
+                <!-- QUICK LINKS -->
+
+                <div>
+
+                    <h4>Quick Links</h4>
+
+                    <a href="index.html">Beranda</a>
+
+                    <a href="tentang.html">Tentang PPP</a>
+
+                    <a href="struktur.html">Organisasi</a>
+
+                    <a href="program.html">
+                        Program &amp; Aksi
+                    </a>
+
+                    <a href="aspirasi.html">Aspirasi Rakyat</a>
+
+                    <a href="kabar.html">Berita</a>
+
+                    <a href="pernyataan.html">Pernyataan Resmi</a>
+
+                </div>
+
+
+                <!-- INFORMATION -->
+
+                <div>
+
+                    <h4>Information</h4>
+
+                    <a href="faq.html">FAQ &amp; Kontak</a>
+
+                    <span aria-disabled="true">
+                        Opini
+                    </span>
+
+                </div>
+
+
+                <!-- SOCIAL MEDIA -->
+
+                <div>
+
+                    <h4>Social</h4>
+
+                    <a
+                        href="https://www.instagram.com/ppp.peduli/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        Instagram @ppp.peduli
+
+                    </a>
+
+                    <a
+                        href="https://www.tiktok.com/@ppp.peduli"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        TikTok @ppp.peduli
+
+                    </a>
+
+                    <a
+                        href="https://www.youtube.com/@PartaiPersatuanPembangunanDPP"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        YouTube<br>
+                        @PartaiPersatuanPembangunanDPP
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- DISCLAIMER -->
+
+            <p class="disclaimer">
+
+                Website ini merupakan prototipe akademik
+                yang dikembangkan untuk keperluan pembelajaran
+                Digital Public Relations. Website ini bukan
+                situs resmi Partai Persatuan Pembangunan
+                (PPP). Seluruh program simulasi dan fitur
+                interaktif yang ditampilkan tidak mewakili
+                kegiatan atau layanan resmi organisasi.
+
+            </p>
+
+
+            <!-- COPYRIGHT -->
+
+            <p class="copyright">
+
+                © 2026 PPP — Ruang Bersama ·
+                Prototipe akademik Digital Public Relations
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- BOOTSTRAP JAVASCRIPT -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- ========================================
+         SEARCH HALAMAN TALKSHOW
+    ========================================= -->
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const searchForm =
+                document.getElementById('talkshowSearchForm');
+
+            const searchInput =
+                document.getElementById('talkshowSearchInput');
+
+            const reducedMotion = window.matchMedia(
+                '(prefers-reduced-motion: reduce)'
+            ).matches;
+
+
+            searchForm.addEventListener('submit', event => {
+
+                event.preventDefault();
+
+                const keyword = searchInput.value
+                    .trim()
+                    .toLocaleLowerCase('id');
+
+                if (!keyword) return;
+
+                const words = keyword.split(/\s+/);
+
+                const sections = Array.from(
+                    document.querySelectorAll('main section')
+                );
+
+                const match = sections.find(section => {
+
+                    const content = section.textContent
+                        .replace(/\s+/g, ' ')
+                        .toLocaleLowerCase('id');
+
+                    return words.every(word =>
+                        content.includes(word)
+                    );
+
+                });
+
+                if (match) {
+
+                    match.scrollIntoView({
+
+                        behavior: reducedMotion
+                            ? 'auto'
+                            : 'smooth',
+
+                        block: 'start'
+
+                    });
+
+                } else {
+
+                    alert(
+                        'Informasi tidak ditemukan pada halaman ini. ' +
+                        'Coba kata kunci talkshow, seminar, iman, ' +
+                        'pengembangan diri, atau dokumentasi.'
+                    );
+
+                }
+
+            });
+
+        });
+
+    </script>
+<!-- GLOBAL NAVBAR JAVASCRIPT -->
+
+<script src="assets/js/navbar.js"></script>
+
+</body>
+
+</html>

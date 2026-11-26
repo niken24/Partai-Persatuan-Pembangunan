@@ -1,338 +1,1634 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="id">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="PPP – Ruang Bersama. Mock-up akademik untuk tugas website Public Relations Digital.">
-  <title>Aspirasi Rakyat | PPP – Ruang Bersama</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link
-  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
-  rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <title>Jaring Aspirasi Rakyat | PPP — Ruang Bersama</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- BOOTSTRAP CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+
+    <!-- CSS UTAMA -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <!-- NAVBAR PPP - DESKTOP FIGMA REVISI -->
-<header class="ppp-site-header">
-  <!-- Bar hijau atas -->
-  <div class="ppp-head-top">
-    <div class="container ppp-head-top-inner">
-      <span>KELOMPOK 8 · MATA KULIAH DIGIPR</span>
-      <span class="d-none d-sm-inline">PROTOTIPE AKADEMIK · BUKAN SITUS RESMI PPP</span>
-    </div>
-  </div>
 
-  <!-- Logo + nama partai + tagline -->
-  <div class="ppp-head-main">
-    <div class="container ppp-head-main-inner">
-      <a href="index.html" class="ppp-head-brand" aria-label="Partai Persatuan Pembangunan - Beranda">
-        <img src="assets/images/logo-ppp-navbar.png"
-             alt="Logo PPP"
-             class="ppp-head-logo">
-        <span class="ppp-head-name">
-          <strong>PARTAI</strong>
-          <strong>PERSATUAN</strong>
-          <strong>PEMBANGUNAN</strong>
-        </span>
-      </a>
-      <p class="ppp-head-tagline">Aspirasi Didengar, Informasi Terbuka, Aksi Terasa.</p>
-    </div>
-  </div>
+<body class="ppp-home ppp-aspirasi">
 
-  <!-- Menu + pencarian -->
-  <nav class="navbar navbar-expand-xl ppp-head-nav" aria-label="Navigasi utama">
-    <div class="container ppp-head-nav-inner">
-      <button class="navbar-toggler ppp-head-toggler" type="button"
-              data-bs-toggle="collapse" data-bs-target="#pppNavMenu"
-              aria-controls="pppNavMenu" aria-expanded="false"
-              aria-label="Buka menu navigasi">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="pppNavMenu">
-        <ul class="navbar-nav ppp-head-menu">
-          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-          <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang PPP</a></li>
-          <li class="nav-item"><a class="nav-link" href="program.html">Program &amp; Aksi</a></li>
-          <li class="nav-item"><a class="nav-link" href="aspirasi.html">Aspirasi Rakyat</a></li>
-          <li class="nav-item"><a class="nav-link" href="kabar.html">Kabar PPP</a></li>
-          <li class="nav-item"><a class="nav-link" href="pernyataan.html">Pernyataan Resmi</a></li>
-          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ &amp; Kontak</a></li>
-          <li class="nav-item"><a class="nav-link" href="bergabung.html">Bergabung</a></li>
-        </ul>
+    <!-- ========================================
+         TOP BAR
+    ========================================= -->
 
-        <!-- Pencarian halaman dan topik website (front-end) -->
-        <form class="ppp-head-search" id="pppSiteSearch" role="search" autocomplete="off">
-          <button type="submit" aria-label="Cari"><i class="bi bi-search"></i></button>
-          <input type="search" id="pppSearchInput" aria-label="Cari halaman atau topik"
-                 placeholder="Cari di situs PPP..." />
-          <div class="ppp-head-results" id="pppSearchResults" aria-live="polite" hidden></div>
-        </form>
-      </div>
-    </div>
-  </nav>
-</header>
-<!-- AKHIR NAVBAR PPP -->
+    <div class="topbar">
+        <div class="wrap">
+            <span>
+                KELOMPOK 8 · MATA KULIAH DIGIPR
+            </span>
 
-
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <div class="eyebrow eyebrow-light">ASPIRASI RAKYAT</div>
-        <h1>Suara Anda layak<br>mendapat ruang.</h1>
-        <p>Contoh formulir untuk memperlihatkan bagaimana masukan publik dapat dicatat dan dikelompokkan.</p>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <div class="row g-5">
-          <div class="col-lg-5">
-            <div class="eyebrow">ALUR ASPIRASI</div>
-            <h2 class="section-heading">Dari gagasan menuju tindak lanjut.</h2>
-            <p class="body-copy">Formulir di samping hanya simulasi antarmuka. Data yang diisi tidak disimpan dan tidak dikirim ke organisasi mana pun.</p>
-            <ol class="steps-list">
-              <li><strong>Diterima</strong><span>Masukan dicatat berdasarkan topik.</span></li>
-              <li><strong>Ditinjau</strong><span>Isi masukan dipahami dan dikelompokkan.</span></li>
-              <li><strong>Ditindaklanjuti</strong><span>Contoh status tindak lanjut ditampilkan secara transparan.</span></li>
-            </ol>
-          </div>
-          <div class="col-lg-7">
-            <form class="form-panel demo-form">
-              <div class="eyebrow">FORMULIR SIMULASI</div>
-              <h2>Kirim aspirasi</h2>
-              <div class="row g-3">
-                <div class="col-md-6"><label class="form-label" for="nama">Nama</label><input class="form-control" id="nama" name="nama" placeholder="Nama Anda" required></div>
-                <div class="col-md-6"><label class="form-label" for="email">Email</label><input class="form-control" id="email" name="email" type="email" placeholder="nama@email.com" required></div>
-                <div class="col-12"><label class="form-label" for="topik">Topik aspirasi</label><select class="form-select" id="topik" required><option value="">Pilih topik</option><option>Pendidikan</option><option>Ekonomi masyarakat</option><option>Sosial dan kemanusiaan</option><option>Lingkungan</option><option>Lainnya</option></select></div>
-                <div class="col-12"><label class="form-label" for="judul">Judul aspirasi</label><input class="form-control" id="judul" placeholder="Tuliskan inti gagasan" required></div>
-                <div class="col-12"><label class="form-label" for="isi">Isi aspirasi</label><textarea class="form-control" id="isi" rows="5" placeholder="Ceritakan gagasan atau masukan Anda..." required></textarea></div>
-                <div class="col-12 form-check ms-2"><input class="form-check-input" type="checkbox" id="setuju" required><label class="form-check-label" for="setuju">Saya memahami bahwa formulir ini hanya simulasi akademik.</label></div>
-                <div class="col-12"><button class="btn btn-green" type="submit">Kirim simulasi <i class="bi bi-arrow-up-right"></i></button><div class="form-feedback" role="status"></div></div>
-              </div>
-            </form>
-          </div>
+            <span>
+                PROTOTIPE AKADEMIK · BUKAN SITUS RESMI PPP
+            </span>
         </div>
-      </div>
-    </section>
-  </main>
-
-  <section class="footer-cta">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
-      <h2>Kebersamaan punya banyak bentuk.</h2>
-      <a class="btn btn-outline-light" href="bergabung.html">Kenali cara bergabung <i class="bi bi-arrow-up-right"></i></a>
-    </div>
-  </section>
-  
-<!-- ==========================================
-     FOOTER PPP - REVISI 06
-     GUNAKAN DI SEMUA HALAMAN
-========================================== -->
-
-<footer class="ppp-footer-v2">
-
-  <div class="container">
-
-    <div class="row g-4">
-
-      <!-- ==================================
-           KOLOM 1 - IDENTITAS WEBSITE
-      ================================== -->
-      <div class="col-lg-3 col-md-6">
-
-        <a
-          href="index.html"
-          class="ppp-footer-brand">
-          PPP — Ruang Bersama
-        </a>
-
-        <p class="ppp-footer-description">
-          Partai Persatuan Pembangunan.
-          Ruang informasi dan dialog publik
-          dalam sebuah prototipe akademik.
-        </p>
-
-        <p class="ppp-footer-motto">
-          Merawat Persatuan dengan Pembangunan.
-        </p>
-
-      </div>
-
-
-      <!-- ==================================
-           KOLOM 2 - QUICK LINKS
-      ================================== -->
-      <div class="col-lg-3 col-md-6">
-
-        <h3>Quick Links</h3>
-
-        <ul class="ppp-footer-list">
-
-          <li>
-            <a href="index.html">
-              Beranda
-            </a>
-          </li>
-
-          <li>
-            <a href="tentang.html">
-              Tentang PPP
-            </a>
-          </li>
-
-          <li>
-            <a href="tentang.html#struktur-organisasi">
-              Organisasi
-            </a>
-          </li>
-
-          <li>
-            <a href="program.html">
-              Program &amp; Aksi
-            </a>
-          </li>
-
-          <li>
-            <a href="aspirasi.html">
-              Aspirasi Rakyat
-            </a>
-          </li>
-
-          <li>
-            <a href="kabar.html">
-              Berita
-            </a>
-          </li>
-
-          <li>
-            <a href="pernyataan.html">
-              Pernyataan Resmi
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-
-      <!-- ==================================
-           KOLOM 3 - INFORMATION
-      ================================== -->
-      <div class="col-lg-3 col-md-6">
-
-        <h3>Information</h3>
-
-        <ul class="ppp-footer-list">
-
-          <li>
-            <a href="faq.html">
-              FAQ &amp; Kontak
-            </a>
-          </li>
-
-          <li>
-            <a href="kabar.html#daftar-artikel">
-              Opini
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-
-      <!-- ==================================
-           KOLOM 4 - MEDIA SOSIAL
-      ================================== -->
-      <div class="col-lg-3 col-md-6">
-
-        <h3>Social</h3>
-
-        <ul class="ppp-footer-list">
-
-          <!-- INSTAGRAM -->
-          <li>
-            <a
-              href="https://www.instagram.com/ppp.peduli?srtk=ODE5c3A2bmkzeGVz&amp;utm_source=qr"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              <i class="bi bi-instagram"></i>
-              Instagram · @ppp.peduli
-
-            </a>
-          </li>
-
-
-          <!-- TIKTOK -->
-          <li>
-            <a
-              href="https://www.tiktok.com/@ppp.peduli?_r=1&amp;_t=ZS-9BHOIDImUGy"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              <i class="bi bi-tiktok"></i>
-              TikTok · @ppp.peduli
-
-            </a>
-          </li>
-
-
-          <!-- YOUTUBE -->
-          <li>
-            <a
-              href="https://youtube.com/@partaipersatuanpembangunandpp?si=k4i02ifY6VN0bI6U"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              <i class="bi bi-youtube"></i>
-              YouTube · PPP DPP
-
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
     </div>
 
 
-    <!-- ==================================
-         DISCLAIMER
-    ================================== -->
-    <div class="ppp-footer-disclaimer">
+    <!-- ========================================
+         HEADER
+    ========================================= -->
 
-      Website ini merupakan prototipe akademik yang
-      dikembangkan untuk keperluan pembelajaran
-      Digital Public Relations. Website ini bukan
-      situs resmi Partai Persatuan Pembangunan (PPP).
-      Seluruh program simulasi dan fitur interaktif
-      yang ditampilkan tidak mewakili kegiatan
-      atau layanan resmi organisasi.
+    <header class="brand-header">
+        <div class="wrap brand-row">
+
+            <a class="brand" href="index.html">
+
+                <img
+                    src="assets/images/logo-ppp.png"
+                    alt="Logo Partai Persatuan Pembangunan">
+
+                <span>
+                    PARTAI<br>
+                    PERSATUAN<br>
+                    PEMBANGUNAN
+                </span>
+
+            </a>
+
+            <p>
+                Berakar pada Nilai, Bergerak untuk Rakyat.
+            </p>
+
+        </div>
+    </header>
+
+
+    <!-- ========================================
+         NAVIGATION BAR
+    ========================================= -->
+
+   
+<!-- ========================================
+     NAVIGATION BAR PPP — FINAL
+========================================= -->
+
+<nav class="navbar navbar-expand-lg site-nav"
+     aria-label="Navigasi utama">
+
+    <div class="wrap nav-wrap">
+
+        <!-- TOGGLE MOBILE -->
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Buka navigasi">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="mainNav">
+
+            <ul class="navbar-nav nav-list">
+
+
+                <!-- =================================
+                     01. BERANDA
+                ================================== -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="index.html">
+
+                        BERANDA
+
+                    </a>
+
+                </li>
+
+
+                <!-- =================================
+                     02. TENTANG PPP
+                ================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        TENTANG PPP
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- PROFIL DAN SEJARAH -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="tentang.html#profil-sejarah">
+
+                                Profil &amp; Sejarah
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- VISI MISI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="tentang.html#visi-misi">
+
+                                Visi, Misi &amp; Lima Khidmat
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- STRUKTUR ORGANISASI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="struktur.html">
+
+                                Struktur Organisasi
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- STAKEHOLDER -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="tentang.html#stakeholder">
+
+                                Stakeholder PPP
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- MASKOT KABA -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="kaba.html">
+
+                                Kenalan dengan KABA
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- =================================
+                     03. PROGRAM & AKSI
+                ================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        PROGRAM &amp; AKSI
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- SEMUA PROGRAM -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="program.html">
+
+                                Semua Program &amp; Aksi
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- PPP PEDULI BUMI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="peduli-bumi.html">
+
+                                PPP Peduli Bumi &amp; Kemanusiaan
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- BEASISWA -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="beasiswa.html">
+
+                                Beasiswa Pendidikan Pemuda
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- TALKSHOW -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="talkshow.html">
+
+                                Seminar &amp; Kolaborasi
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- =================================
+                     04. INFORMASI
+                ================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        INFORMASI
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- KABAR PPP -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="kabar.html">
+
+                                Kabar PPP
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- PERNYATAAN RESMI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="pernyataan.html">
+
+                                Pernyataan Resmi
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- OPINI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="opini.html">
+
+                                Opini
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- TRANSPARANSI DATA -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="transparansi.html">
+
+                                Transparansi &amp; Data
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- =================================
+                     05. PARTISIPASI
+                ================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        PARTISIPASI
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- JARING ASPIRASI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="aspirasi.html">
+
+                                Jaring Aspirasi Rakyat
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- BERGABUNG -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="bergabung.html">
+
+                                Bergabung
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- FAQ DAN KONTAK -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="faq.html">
+
+                                FAQ &amp; Kontak
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+            </ul>
+
+
+            <!-- =================================
+                 SEARCH BAR
+
+                 Pertahankan ID search form dan input
+                 dari halaman HTML sebelumnya.
+            ================================== -->
+
+            <form class="site-search"
+                  id="globalSearchForm"
+                  role="search">
+
+                <button
+                    type="submit"
+                    aria-label="Cari">
+
+                    <i class="bi bi-search"></i>
+
+                </button>
+
+                <input
+                    type="search"
+                    id="globalSearchInput"
+                    placeholder="Cari di situs PPP..."
+                    aria-label="Cari informasi PPP"
+                    autocomplete="off"
+                    required>
+
+            </form>
+
+        </div>
 
     </div>
 
+</nav>
 
-    <!-- ==================================
-         COPYRIGHT
-    ================================== -->
-    <div class="ppp-footer-copyright">
 
-      © 2026 PPP — Ruang Bersama ·
-      Prototipe akademik Digital Public Relations
 
-    </div>
+    <!-- ========================================
+         MAIN CONTENT
+    ========================================= -->
 
-  </div>
+    <main>
 
-</footer>
+        <!-- ====================================
+             HERO ASPIRASI
+        ===================================== -->
 
-<!-- END FOOTER -->
+        <section class="aspirasi-hero">
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/main.js"></script>
+            <div class="wrap">
+
+                <!-- BREADCRUMB -->
+
+                <nav class="aspirasi-breadcrumb"
+                     aria-label="Breadcrumb">
+
+                    <a href="index.html">Beranda</a>
+
+                    <i class="bi bi-chevron-right"></i>
+
+                    <span>Partisipasi</span>
+
+                    <i class="bi bi-chevron-right"></i>
+
+                    <span aria-current="page">
+                        Jaring Aspirasi Rakyat
+                    </span>
+
+                </nav>
+
+
+                <div class="aspirasi-hero-grid">
+
+                    <!-- HERO TEXT -->
+
+                    <div class="aspirasi-hero-content">
+
+                        <p class="eyebrow">
+                            JARING ASPIRASI RAKYAT
+                        </p>
+
+                        <h1>
+                            Suara Anda layak
+                            <span>mendapat ruang.</span>
+                        </h1>
+
+                        <p class="aspirasi-hero-lead">
+                            Satu ruang untuk mendengar,
+                            memahami, dan berbagi gagasan.
+                        </p>
+
+                        <p class="aspirasi-hero-description">
+                            Jaring Aspirasi Rakyat merupakan
+                            ruang komunikasi digital dalam
+                            web PPP Ruang Bersama untuk
+                            menyampaikan kritik, saran, gagasan,
+                            dan masukan mengenai berbagai
+                            persoalan masyarakat.
+                        </p>
+
+                        <div class="actions">
+
+                            <a class="action gold-button"
+                               href="#formulir-aspirasi">
+
+                                Sampaikan Aspirasi
+
+                                <i class="bi bi-arrow-up-right"></i>
+
+                            </a>
+
+                            <a class="action outline-light"
+                               href="#tindak-lanjut">
+
+                                Lihat Tindak Lanjut
+
+                                <i class="bi bi-arrow-down"></i>
+
+                            </a>
+
+                        </div>
+
+                        <p class="aspirasi-hero-note">
+
+                            <i class="bi bi-info-circle"></i>
+
+                            Ruang partisipasi dalam proyek akademik,
+                            bukan kanal pengaduan resmi PPP.
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- MASKOT KABA -->
+
+                    <div class="aspirasi-hero-visual">
+
+                        <div class="aspirasi-circle"></div>
+
+                        <img
+                            src="assets/images/kaba.png"
+                            alt="Maskot KABA"
+                            onerror="this.hidden=true;">
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ====================================
+             TENTANG JARING ASPIRASI
+        ===================================== -->
+
+        <section class="aspirasi-section"
+                 id="tentang-aspirasi">
+
+            <div class="wrap aspirasi-intro-grid">
+
+                <div>
+
+                    <p class="eyebrow">
+                        TENTANG PROGRAM
+                    </p>
+
+                    <h2>
+                        Mendengar adalah awal
+                        dari sebuah dialog.
+                    </h2>
+
+                </div>
+
+                <div class="aspirasi-intro-content">
+
+                    <p>
+                        Jaring Aspirasi Rakyat dikembangkan
+                        sebagai salah satu program Community
+                        Online Engagement dalam konsep
+                        PPP Ruang Bersama.
+                    </p>
+
+                    <p>
+                        Program ini menyediakan ruang komunikasi
+                        dua arah yang memungkinkan masyarakat
+                        menyampaikan pandangan, kebutuhan,
+                        kritik, serta gagasan melalui
+                        media digital.
+                    </p>
+
+                    <p>
+                        Masukan yang diterima dapat menjadi
+                        bahan pembelajaran dan evaluasi
+                        bagi tim pengembang dalam memahami
+                        berbagai persoalan masyarakat.
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ====================================
+             KATEGORI ASPIRASI
+        ===================================== -->
+
+        <section class="aspirasi-section aspirasi-sage"
+                 id="kategori-aspirasi">
+
+            <div class="wrap">
+
+                <div class="aspirasi-heading">
+
+                    <p class="eyebrow">
+                        KATEGORI ASPIRASI
+                    </p>
+
+                    <h2>
+                        Beragam kebutuhan,
+                        satu ruang untuk berbagi.
+                    </h2>
+
+                    <p>
+                        Aspirasi dapat berkaitan dengan
+                        berbagai isu yang dekat dengan
+                        kehidupan masyarakat.
+                    </p>
+
+                </div>
+
+
+                <div class="aspirasi-category-grid">
+
+                    <!-- PENDIDIKAN -->
+
+                    <article class="aspirasi-category-card">
+
+                        <div class="aspirasi-icon">
+                            <i class="bi bi-mortarboard"></i>
+                        </div>
+
+                        <h3>Pendidikan</h3>
+
+                        <p>
+                            Akses pendidikan, beasiswa,
+                            fasilitas belajar, dan
+                            pengembangan generasi muda.
+                        </p>
+
+                    </article>
+
+
+                    <!-- LINGKUNGAN -->
+
+                    <article class="aspirasi-category-card">
+
+                        <div class="aspirasi-icon">
+                            <i class="bi bi-tree"></i>
+                        </div>
+
+                        <h3>Lingkungan</h3>
+
+                        <p>
+                            Kebersihan, pengelolaan sampah,
+                            penghijauan, dan pelestarian
+                            lingkungan.
+                        </p>
+
+                    </article>
+
+
+                    <!-- EKONOMI -->
+
+                    <article class="aspirasi-category-card">
+
+                        <div class="aspirasi-icon">
+                            <i class="bi bi-shop"></i>
+                        </div>
+
+                        <h3>Ekonomi Masyarakat</h3>
+
+                        <p>
+                            Pemberdayaan UMKM, kesempatan
+                            kerja, dan pengembangan
+                            ekonomi masyarakat.
+                        </p>
+
+                    </article>
+
+
+                    <!-- SOSIAL -->
+
+                    <article class="aspirasi-category-card">
+
+                        <div class="aspirasi-icon">
+                            <i class="bi bi-heart-pulse"></i>
+                        </div>
+
+                        <h3>Sosial dan Kemanusiaan</h3>
+
+                        <p>
+                            Kepedulian sosial, kesejahteraan,
+                            solidaritas, dan kebutuhan
+                            masyarakat.
+                        </p>
+
+                    </article>
+
+
+                    <!-- KEAGAMAAN -->
+
+                    <article class="aspirasi-category-card">
+
+                        <div class="aspirasi-icon">
+                            <i class="bi bi-people"></i>
+                        </div>
+
+                        <h3>Keagamaan</h3>
+
+                        <p>
+                            Keharmonisan kehidupan beragama,
+                            toleransi, dan kegiatan
+                            sosial keagamaan.
+                        </p>
+
+                    </article>
+
+
+                    <!-- LAINNYA -->
+
+                    <article class="aspirasi-category-card">
+
+                        <div class="aspirasi-icon">
+                            <i class="bi bi-chat-dots"></i>
+                        </div>
+
+                        <h3>Aspirasi Lainnya</h3>
+
+                        <p>
+                            Kritik, saran, dan gagasan lain
+                            yang belum tercakup dalam
+                            kategori sebelumnya.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ====================================
+             FORMULIR ASPIRASI
+        ===================================== -->
+
+        <section class="aspirasi-section"
+                 id="formulir-aspirasi">
+
+            <div class="wrap">
+
+                <div class="aspirasi-heading">
+
+                    <p class="eyebrow">
+                        FORMULIR ASPIRASI
+                    </p>
+
+                    <h2>
+                        Apa yang ingin Anda sampaikan?
+                    </h2>
+
+                    <p>
+                        Gunakan formulir yang telah disediakan
+                        untuk menyampaikan aspirasi kepada
+                        tim PPP Ruang Bersama.
+                    </p>
+
+                </div>
+
+
+                <div class="aspirasi-form-grid">
+
+                    <!-- PANDUAN PENGISIAN -->
+
+                    <div class="aspirasi-guidelines">
+
+                        <h3>Panduan Penyampaian Aspirasi</h3>
+
+                        <div class="aspirasi-guideline-item">
+
+                            <span>01</span>
+
+                            <div>
+                                <h4>Jelaskan persoalan</h4>
+                                <p>
+                                    Sampaikan persoalan atau
+                                    kebutuhan secara jelas
+                                    dan mudah dipahami.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="aspirasi-guideline-item">
+
+                            <span>02</span>
+
+                            <div>
+                                <h4>Sampaikan gagasan</h4>
+                                <p>
+                                    Tambahkan kritik, saran,
+                                    atau usulan yang relevan
+                                    dengan persoalan tersebut.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="aspirasi-guideline-item">
+
+                            <span>03</span>
+
+                            <div>
+                                <h4>Periksa informasi</h4>
+                                <p>
+                                    Pastikan informasi yang
+                                    disampaikan tidak memuat
+                                    data pribadi sensitif
+                                    atau informasi pribadi
+                                    orang lain.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="aspirasi-guideline-item">
+
+                            <span>04</span>
+
+                            <div>
+                                <h4>Kirim aspirasi</h4>
+                                <p>
+                                    Buka Google Forms,
+                                    isi sesuai petunjuk,
+                                    kemudian kirimkan jawaban.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- GOOGLE FORM CARD -->
+
+                    <div class="aspirasi-form-card">
+
+                        <div class="aspirasi-form-icon">
+                            <i class="bi bi-ui-checks"></i>
+                        </div>
+
+                        <p class="eyebrow">
+                            RUANG KOMUNIKASI DUA ARAH
+                        </p>
+
+                        <h3>
+                            Formulir Jaring Aspirasi Rakyat
+                        </h3>
+
+                        <p>
+                            Sampaikan pandangan, masukan,
+                            dan gagasan Anda melalui formulir
+                            digital PPP Ruang Bersama.
+                        </p>
+
+                        <a
+                            class="action gold-button"
+                            href="https://forms.gle/nBwQbHqGnEUhwqDG6"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Buka Formulir Aspirasi
+
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+
+                        <div class="aspirasi-form-note">
+
+                            <i class="bi bi-shield-check"></i>
+
+                            <p>
+                                Formulir dibuka melalui Google Forms.
+                                Periksa keterangan penggunaan data
+                                sebelum mengirimkan jawaban.
+                                Pengiriman aspirasi tidak berarti
+                                adanya tindak lanjut resmi dari PPP.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ====================================
+             ALUR ASPIRASI
+        ===================================== -->
+
+        <section class="aspirasi-section aspirasi-sage"
+                 id="alur-aspirasi">
+
+            <div class="wrap">
+
+                <div class="aspirasi-heading">
+
+                    <p class="eyebrow">
+                        MEKANISME ASPIRASI
+                    </p>
+
+                    <h2>
+                        Bagaimana aspirasi diproses?
+                    </h2>
+
+                    <p>
+                        Berikut merupakan rancangan alur
+                        pengelolaan aspirasi dalam
+                        proyek akademik PPP Ruang Bersama.
+                    </p>
+
+                </div>
+
+
+                <div class="aspirasi-flow">
+
+                    <!-- STEP 1 -->
+
+                    <article class="aspirasi-flow-card">
+
+                        <span class="aspirasi-flow-number">
+                            01
+                        </span>
+
+                        <div class="aspirasi-flow-icon">
+                            <i class="bi bi-inbox"></i>
+                        </div>
+
+                        <h3>Diterima</h3>
+
+                        <p>
+                            Aspirasi dikirim melalui
+                            formulir digital dan masuk
+                            ke dalam catatan respons.
+                        </p>
+
+                    </article>
+
+
+                    <div class="aspirasi-flow-arrow"
+                         aria-hidden="true">
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </div>
+
+
+                    <!-- STEP 2 -->
+
+                    <article class="aspirasi-flow-card">
+
+                        <span class="aspirasi-flow-number">
+                            02
+                        </span>
+
+                        <div class="aspirasi-flow-icon">
+                            <i class="bi bi-clipboard-check"></i>
+                        </div>
+
+                        <h3>Diproses</h3>
+
+                        <p>
+                            Aspirasi ditinjau dan
+                            dikelompokkan berdasarkan
+                            topik atau kebutuhan.
+                        </p>
+
+                    </article>
+
+
+                    <div class="aspirasi-flow-arrow"
+                         aria-hidden="true">
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </div>
+
+
+                    <!-- STEP 3 -->
+
+                    <article class="aspirasi-flow-card">
+
+                        <span class="aspirasi-flow-number">
+                            03
+                        </span>
+
+                        <div class="aspirasi-flow-icon">
+                            <i class="bi bi-chat-square-text"></i>
+                        </div>
+
+                        <h3>Ditindaklanjuti</h3>
+
+                        <p>
+                            Aspirasi yang telah ditinjau
+                            dapat menjadi bahan pembahasan,
+                            evaluasi, atau publikasi
+                            ringkasan oleh tim.
+                        </p>
+
+                    </article>
+
+                </div>
+
+
+                <p class="aspirasi-small-note">
+
+                    <i class="bi bi-info-circle"></i>
+
+                    Alur di atas merupakan rancangan
+                    pengelolaan aspirasi oleh tim akademik.
+                    Website belum memiliki sistem pelacakan
+                    status aspirasi secara otomatis.
+
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- ====================================
+             PUBLIKASI TINDAK LANJUT
+        ===================================== -->
+
+        <section class="aspirasi-section"
+                 id="tindak-lanjut">
+
+            <div class="wrap">
+
+                <div class="aspirasi-heading">
+
+                    <p class="eyebrow">
+                        TRANSPARANSI &amp; TINDAK LANJUT
+                    </p>
+
+                    <h2>
+                        Dari suara menjadi catatan bersama.
+                    </h2>
+
+                    <p>
+                        Ruang publikasi untuk menyampaikan
+                        ringkasan aspirasi serta hasil
+                        peninjauan yang telah dilakukan
+                        dalam proyek PPP Ruang Bersama.
+                    </p>
+
+                </div>
+
+
+                <!-- STATUS INFORMATION -->
+
+                <div class="aspirasi-publication-status">
+
+                    <div class="aspirasi-publication-icon">
+
+                        <i class="bi bi-journal-text"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Publikasi Tindak Lanjut Aspirasi
+                        </h3>
+
+                        <p>
+                            Belum ada laporan tindak lanjut
+                            yang dipublikasikan pada halaman ini.
+                            Ringkasan dapat ditambahkan setelah
+                            aspirasi ditinjau oleh tim pengelola.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FORMAT PUBLIKASI -->
+
+                <div class="aspirasi-publication">
+
+                    <div class="aspirasi-publication-header">
+
+                        <div>
+
+                            <p class="eyebrow">
+                                FORMAT PUBLIKASI
+                            </p>
+
+                            <h3>
+                                Ringkasan Pengelolaan Aspirasi
+                            </h3>
+
+                        </div>
+
+                        <span class="aspirasi-example-label">
+                            Contoh Format
+                        </span>
+
+                    </div>
+
+
+                    <div class="table-responsive">
+
+                        <table class="aspirasi-table">
+
+                            <thead>
+
+                                <tr>
+                                    <th scope="col">Kategori</th>
+                                    <th scope="col">Ringkasan Aspirasi</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Tindak Lanjut</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>Pendidikan</td>
+
+                                    <td>
+                                        Contoh usulan akses
+                                        informasi beasiswa.
+                                    </td>
+
+                                    <td>
+                                        <span class="aspirasi-status status-received">
+                                            Diterima
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        Contoh pencatatan masukan.
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>Lingkungan</td>
+
+                                    <td>
+                                        Contoh usulan edukasi
+                                        pengelolaan sampah.
+                                    </td>
+
+                                    <td>
+                                        <span class="aspirasi-status status-process">
+                                            Diproses
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        Contoh pengelompokan
+                                        topik aspirasi.
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>Sosial</td>
+
+                                    <td>
+                                        Contoh gagasan
+                                        kegiatan sosial.
+                                    </td>
+
+                                    <td>
+                                        <span class="aspirasi-status status-completed">
+                                            Ditindaklanjuti
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        Contoh pembahasan
+                                        dalam evaluasi tim.
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                    <p class="aspirasi-small-note">
+
+                        Seluruh baris dalam tabel merupakan
+                        ilustrasi format, bukan data aspirasi
+                        masyarakat yang sebenarnya.
+
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ====================================
+             FAQ ASPIRASI
+        ===================================== -->
+
+        <section class="aspirasi-section aspirasi-sage"
+                 id="faq-aspirasi">
+
+            <div class="wrap aspirasi-faq-grid">
+
+                <div>
+
+                    <p class="eyebrow">
+                        FREQUENTLY ASKED QUESTIONS
+                    </p>
+
+                    <h2>
+                        Pertanyaan seputar aspirasi.
+                    </h2>
+
+                    <p class="aspirasi-faq-description">
+                        Informasi mengenai penggunaan
+                        fitur Jaring Aspirasi Rakyat
+                        dalam website PPP Ruang Bersama.
+                    </p>
+
+                    <a class="action outline"
+                       href="faq.html">
+
+                        Lihat FAQ &amp; Kontak
+
+                        <i class="bi bi-arrow-up-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="aspirasi-faq-list">
+
+                    <!-- FAQ 1 -->
+
+                    <details>
+
+                        <summary>
+
+                            Apa itu Jaring Aspirasi Rakyat?
+
+                            <i class="bi bi-plus-lg"></i>
+
+                        </summary>
+
+                        <p>
+                            Jaring Aspirasi Rakyat merupakan
+                            fitur komunikasi dua arah dalam
+                            web akademik PPP Ruang Bersama
+                            yang menyediakan ruang penyampaian
+                            kritik, saran, dan gagasan.
+                        </p>
+
+                    </details>
+
+
+                    <!-- FAQ 2 -->
+
+                    <details>
+
+                        <summary>
+
+                            Bagaimana cara mengirim aspirasi?
+
+                            <i class="bi bi-plus-lg"></i>
+
+                        </summary>
+
+                        <p>
+                            Pilih tombol Buka Formulir Aspirasi,
+                            kemudian isi Google Forms sesuai
+                            petunjuk dan kirimkan jawaban Anda.
+                        </p>
+
+                    </details>
+
+
+                    <!-- FAQ 3 -->
+
+                    <details>
+
+                        <summary>
+
+                            Apakah aspirasi dapat dilacak?
+
+                            <i class="bi bi-plus-lg"></i>
+
+                        </summary>
+
+                        <p>
+                            Website belum menyediakan sistem
+                            pelacakan aspirasi secara otomatis.
+                            Informasi tindak lanjut dapat
+                            dipublikasikan oleh tim dalam bentuk
+                            ringkasan setelah proses peninjauan.
+                        </p>
+
+                    </details>
+
+
+                    <!-- FAQ 4 -->
+
+                    <details>
+
+                        <summary>
+
+                            Apakah aspirasi akan diterima oleh PPP?
+
+                            <i class="bi bi-plus-lg"></i>
+
+                        </summary>
+
+                        <p>
+                            Website ini merupakan prototipe
+                            akademik dan bukan kanal aspirasi
+                            resmi Partai Persatuan Pembangunan.
+                            Tidak terdapat jaminan bahwa aspirasi
+                            diteruskan kepada organisasi PPP.
+                        </p>
+
+                    </details>
+
+
+                    <!-- FAQ 5 -->
+
+                    <details>
+
+                        <summary>
+
+                            Apakah data pribadi akan dipublikasikan?
+
+                            <i class="bi bi-plus-lg"></i>
+
+                        </summary>
+
+                        <p>
+                            Rancangan publikasi pada website
+                            menggunakan ringkasan aspirasi tanpa
+                            menampilkan identitas pengirim.
+                            Untuk informasi pengelolaan data
+                            formulir, periksa keterangan yang
+                            diberikan oleh tim pengelola
+                            Google Forms.
+                        </p>
+
+                    </details>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ====================================
+             CLOSING SECTION
+        ===================================== -->
+
+        <section class="aspirasi-closing">
+
+            <div class="wrap aspirasi-closing-grid">
+
+                <div>
+
+                    <p class="eyebrow">
+                        PPP — RUANG BERSAMA
+                    </p>
+
+                    <h2>
+                        Setiap suara memiliki arti.
+                    </h2>
+
+                    <p>
+                        Berbagi gagasan dan mendengarkan
+                        perspektif menjadi bagian penting
+                        dalam membangun komunikasi
+                        yang terbuka.
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <a class="action gold-button"
+                       href="#formulir-aspirasi">
+
+                        Sampaikan Aspirasi
+
+                        <i class="bi bi-arrow-up-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+
+    <footer class="footer">
+
+        <div class="wrap footer-wrap">
+
+            <div class="footer-grid">
+
+                <!-- IDENTITAS -->
+
+                <div>
+
+                    <h3>PPP — Ruang Bersama</h3>
+
+                    <p>
+                        Partai Persatuan Pembangunan.
+                        Ruang informasi dan dialog publik
+                        dalam sebuah website.
+                    </p>
+
+                    <p class="gold">
+                        Merawat Persatuan dengan Pembangunan.
+                    </p>
+
+                </div>
+
+
+                <!-- QUICK LINKS -->
+
+                <div>
+
+                    <h4>Quick Links</h4>
+
+                    <a href="index.html">Beranda</a>
+
+                    <a href="tentang.html">Tentang PPP</a>
+
+                    <a href="struktur.html">
+                        Organisasi
+                    </a>
+
+                    <a href="program.html">
+                        Program &amp; Aksi
+                    </a>
+
+                    <a href="aspirasi.html">
+                        Aspirasi Rakyat
+                    </a>
+
+                    <a href="kabar.html">Berita</a>
+
+                    <a href="pernyataan.html">
+                        Pernyataan Resmi
+                    </a>
+
+                </div>
+
+
+                <!-- INFORMATION -->
+
+                <div>
+
+                    <h4>Information</h4>
+
+                    <a href="faq.html">FAQ &amp; Kontak</a>
+
+                    <span aria-disabled="true">Opini</span>
+
+                </div>
+
+
+                <!-- SOCIAL MEDIA -->
+
+                <div>
+
+                    <h4>Social</h4>
+
+                    <a
+                        href="https://www.instagram.com/ppp.peduli/"
+                        target="_blank"
+                        rel="noopener">
+
+                        Instagram @ppp.peduli
+
+                    </a>
+
+                    <a
+                        href="https://www.tiktok.com/@ppp.peduli"
+                        target="_blank"
+                        rel="noopener">
+
+                        TikTok @ppp.peduli
+
+                    </a>
+
+                    <a
+                        href="https://www.youtube.com/@PartaiPersatuanPembangunanDPP"
+                        target="_blank"
+                        rel="noopener">
+
+                        YouTube<br>
+                        @PartaiPersatuanPembangunanDPP
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- DISCLAIMER -->
+
+            <p class="disclaimer">
+
+                Website ini merupakan prototipe akademik
+                yang dikembangkan untuk keperluan pembelajaran
+                Digital Public Relations. Website ini bukan
+                situs resmi Partai Persatuan Pembangunan
+                (PPP). Seluruh program simulasi dan fitur
+                interaktif yang ditampilkan tidak mewakili
+                kegiatan atau layanan resmi organisasi.
+
+            </p>
+
+
+            <!-- COPYRIGHT -->
+
+            <p class="copyright">
+
+                © 2026 PPP — Ruang Bersama ·
+                Prototipe akademik Digital Public Relations
+
+            </p>
+
+        </div>
+    </footer>
+
+
+    <!-- BOOTSTRAP JAVASCRIPT -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+<!-- GLOBAL NAVBAR JAVASCRIPT -->
+
+<script src="assets/js/navbar.js"></script>
+
 </body>
+
 </html>

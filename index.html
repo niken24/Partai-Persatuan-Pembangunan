@@ -3,1310 +3,2226 @@
 <html lang="id">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description"
-        content="PPP Ruang Bersama - Prototipe akademik website informasi Partai Persatuan Pembangunan.">
+    <title>PPP — Ruang Bersama | Beranda</title>
 
-  <title>Beranda | PPP Ruang Bersama</title>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- GOOGLE FONTS: POPPINS & INTER -->
-  <link rel="preconnect"
-        href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="preconnect"
-        href="https://fonts.gstatic.com" crossorigin>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet">
+    <!-- BOOTSTRAP ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
-  <!-- BOOTSTRAP 5 -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet">
+    <!-- CSS UTAMA -->
+    <link rel="stylesheet" href="style.css">
 
-  <!-- BOOTSTRAP ICONS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    rel="stylesheet">
+    <!-- =====================================
+         CSS HERO BERANDA
+    ====================================== -->
 
-  <!-- CSS UTAMA -->
-  <link rel="stylesheet" href="style.css">
+    <style>
+
+        .ppp-home #beranda.hero {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            min-height: 734px;
+            background: #054A38;
+            color: #fff;
+        }
+
+        .ppp-home #beranda.hero::before,
+        .ppp-home #beranda.hero::after {
+            display: none !important;
+            content: none !important;
+        }
+
+        /* GAMBAR */
+
+        .ppp-home #beranda .hero-image-wrapper {
+            position: absolute;
+            inset: 0 0 0 auto;
+            width: 68%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .ppp-home #beranda .hero-image-wrapper img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            max-width: none;
+            object-fit: cover;
+            object-position: center;
+            opacity: 1;
+            visibility: visible;
+            transition: opacity .4s ease;
+        }
+
+        /* OVERLAY */
+
+        .ppp-home #beranda .hero-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #054A38 0%,
+                    #054A38 25%,
+                    rgba(5,74,56,.96) 35%,
+                    rgba(5,74,56,.75) 46%,
+                    rgba(5,74,56,.25) 65%,
+                    rgba(5,74,56,.03) 100%
+                ),
+                linear-gradient(
+                    0deg,
+                    #054A38 0%,
+                    rgba(5,74,56,.4) 15%,
+                    transparent 35%
+                );
+        }
+
+        /* HERO CONTENT */
+
+        .ppp-home #beranda .hero-layout {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 734px;
+            padding-top: 88px;
+        }
+
+        .ppp-home #beranda .hero-content {
+            position: relative;
+            max-width: 720px;
+            padding-bottom: 60px;
+        }
+
+        .ppp-home #beranda h1 {
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(38px, 4.45vw, 66px);
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -1.2px;
+            margin: 24px 0;
+        }
+
+        .ppp-home #beranda h1 span {
+            display: block;
+        }
+
+        .ppp-home #beranda h1 .gold {
+            color: #CBA36B;
+        }
+
+        .ppp-home #beranda .hero-lead {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .ppp-home #beranda .hero-description {
+            max-width: 560px;
+            color: #fff;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        /* HERO BUTTON */
+
+        .ppp-home #beranda .gold-button {
+            background: #CBA36B;
+            color: #054A38;
+            border-color: #CBA36B;
+        }
+
+        .ppp-home #beranda .outline-light {
+            background: transparent;
+            color: #fff;
+            border: 1px solid rgba(255,255,255,.65);
+        }
+
+        .ppp-home #beranda .outline-light:hover {
+            background: rgba(255,255,255,.15);
+        }
+
+        /* SOCIAL MEDIA */
+
+        .ppp-home #beranda .hero-social {
+            position: absolute;
+            right: -30px;
+            top: 35%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            z-index: 3;
+        }
+
+        .ppp-home #beranda .hero-social a {
+            color: #fff;
+            font-size: 19px;
+        }
+
+        .ppp-home #beranda .hero-social a:hover {
+            color: #CBA36B;
+        }
+
+        /* LABEL PROGRAM TALKSHOW */
+
+        .ppp-home #beranda .hero-bottom-label {
+            color: #CBA36B;
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+            margin-bottom: 14px;
+            padding: 0;
+            border: 0;
+        }
+
+        /* MENGHILANGKAN GARIS DEKORATIF */
+
+        .ppp-home #beranda .hero-bottom-label::before,
+        .ppp-home #beranda .hero-bottom-label::after {
+            display: none !important;
+            content: none !important;
+        }
+
+        /* HERO BOTTOM */
+
+        .ppp-home #beranda .hero-bottom {
+            position: relative;
+            z-index: 3;
+            margin-top: 24px;
+            padding-bottom: 10px;
+        }
+
+        .ppp-home #beranda .slide-tabs button {
+            color: rgba(255,255,255,.7);
+            background: transparent;
+            border: 0;
+            border-bottom: 2px solid transparent;
+            padding: 10px 0;
+            cursor: pointer;
+        }
+
+        .ppp-home #beranda .slide-tabs button.selected {
+            color: #fff;
+            border-bottom-color: #CBA36B;
+        }
+
+        .ppp-home #beranda .arrows button {
+            color: #fff;
+            background: transparent;
+            border: 1px solid rgba(255,255,255,.6);
+        }
+
+        .ppp-home #beranda .arrows button:hover {
+            background: rgba(255,255,255,.15);
+        }
+
+        .ppp-home #beranda .hero-image-warning {
+            display: inline-block;
+            color: #f3d6a2;
+            font-size: 12px;
+            margin-top: 12px;
+        }
+
+        .ppp-home #beranda [hidden] {
+            display: none !important;
+        }
+
+        /* RESPONSIVE TABLET */
+
+        @media (max-width: 991px) {
+
+            .ppp-home #beranda.hero,
+            .ppp-home #beranda .hero-layout {
+                min-height: 680px;
+            }
+
+            .ppp-home #beranda .hero-image-wrapper {
+                width: 80%;
+            }
+
+            .ppp-home #beranda .hero-content {
+                max-width: 78%;
+            }
+
+            .ppp-home #beranda .hero-social {
+                right: 0;
+            }
+
+            .ppp-home #beranda .hero-overlay {
+                background:
+                    linear-gradient(
+                        90deg,
+                        #054A38 0%,
+                        rgba(5,74,56,.94) 30%,
+                        rgba(5,74,56,.7) 50%,
+                        rgba(5,74,56,.15) 100%
+                    ),
+                    linear-gradient(
+                        0deg,
+                        #054A38,
+                        transparent 30%
+                    );
+            }
+
+        }
+
+        /* RESPONSIVE MOBILE */
+
+        @media (max-width: 600px) {
+
+            .ppp-home #beranda.hero,
+            .ppp-home #beranda .hero-layout {
+                min-height: 680px;
+            }
+
+            .ppp-home #beranda .hero-layout {
+                padding-top: 54px;
+            }
+
+            .ppp-home #beranda .hero-image-wrapper {
+                width: 100%;
+            }
+
+            .ppp-home #beranda .hero-image-wrapper img {
+                object-position: 65% center;
+            }
+
+            .ppp-home #beranda .hero-overlay {
+                background:
+                    linear-gradient(
+                        90deg,
+                        rgba(5,74,56,.92),
+                        rgba(5,74,56,.60)
+                    ),
+                    linear-gradient(
+                        0deg,
+                        #054A38 0%,
+                        transparent 40%
+                    );
+            }
+
+            .ppp-home #beranda .hero-content {
+                max-width: 100%;
+                padding-right: 20px;
+                padding-bottom: 35px;
+            }
+
+            .ppp-home #beranda h1 {
+                font-size: clamp(30px, 8vw, 38px);
+                letter-spacing: -.8px;
+            }
+
+            .ppp-home #beranda .hero-lead {
+                font-size: 16px;
+            }
+
+            .ppp-home #beranda .hero-description {
+                font-size: 14px;
+            }
+
+            .ppp-home #beranda .actions {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .ppp-home #beranda .hero-social {
+                right: 0;
+                top: 40%;
+                gap: 12px;
+            }
+
+            .ppp-home #beranda .hero-social a {
+                font-size: 15px;
+            }
+
+            .ppp-home #beranda .hero-controls {
+                flex-wrap: wrap;
+            }
+
+            .ppp-home #beranda .slide-tabs {
+                gap: 15px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
-<body>
+<body class="ppp-home">
 
-<!-- ==========================================
-     HEADER DAN NAVBAR PPP
-========================================== -->
+    <!-- TOP BAR -->
 
-<header class="ppp-site-header">
+    <div class="topbar">
 
-  <!-- TOP BAR -->
-  <div class="ppp-head-top">
-    <div class="container ppp-head-top-inner">
+        <div class="wrap">
 
-      <span>
-        KELOMPOK 8 · MATA KULIAH DIGIPR
-      </span>
+            <span>
+                KELOMPOK 8 · MATA KULIAH DIGIPR
+            </span>
 
-      <span class="d-none d-sm-inline">
-        PROTOTIPE AKADEMIK · BUKAN SITUS RESMI PPP
-      </span>
+            <span>
+                PROTOTIPE AKADEMIK · BUKAN SITUS RESMI PPP
+            </span>
+
+        </div>
 
     </div>
-  </div>
 
 
-  <!-- LOGO DAN NAMA ORGANISASI -->
-  <div class="ppp-head-main">
-    <div class="container ppp-head-main-inner">
+    <!-- HEADER -->
 
-      <a href="index.html" class="ppp-head-brand">
+    <header class="brand-header">
 
-        <img
-          src="assets/images/logo-ppp-navbar.png"
-          class="ppp-head-logo"
-          alt="Logo Partai Persatuan Pembangunan">
+        <div class="wrap brand-row">
 
-        <span class="ppp-head-name">
-          <strong>PARTAI</strong>
-          <strong>PERSATUAN</strong>
-          <strong>PEMBANGUNAN</strong>
-        </span>
+            <a class="brand" href="index.html">
 
-      </a>
+                <img
+                    src="assets/images/logo-ppp.png"
+                    alt="Logo Partai Persatuan Pembangunan">
 
-      <p class="ppp-head-tagline">
-        Berakar pada Nilai, Bergerak untuk Rakyat.
-      </p>
+                <span>
+                    PARTAI<br>
+                    PERSATUAN<br>
+                    PEMBANGUNAN
+                </span>
 
-    </div>
-  </div>
-
-
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-xl ppp-head-nav"
-       aria-label="Navigasi utama">
-
-    <div class="container ppp-head-nav-inner">
-
-      <!-- TOMBOL MOBILE -->
-      <button
-        class="navbar-toggler ppp-head-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#pppNavMenu"
-        aria-controls="pppNavMenu"
-        aria-expanded="false"
-        aria-label="Buka menu navigasi">
-
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-
-      <div class="collapse navbar-collapse"
-           id="pppNavMenu">
-
-        <ul class="navbar-nav ppp-head-menu">
-
-          <!-- BERANDA -->
-          <li class="nav-item">
-            <a class="nav-link active"
-               href="index.html"
-               aria-current="page">
-              Beranda
-            </a>
-          </li>
-
-
-          <!-- DROPDOWN TENTANG PPP -->
-          <li class="nav-item dropdown ppp-about-dropdown">
-
-            <a class="nav-link ppp-about-link"
-               href="tentang.html">
-              Tentang PPP
             </a>
 
-            <!-- TOMBOL MOBILE, DISEMBUNYIKAN DI DESKTOP -->
-            <button
-              class="ppp-about-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              aria-label="Buka submenu Tentang PPP">
+            <p>
+                Berakar pada Nilai, Bergerak untuk Rakyat.
+            </p>
 
-              <i class="bi bi-chevron-down"></i>
-            </button>
+        </div>
 
-            <ul class="dropdown-menu ppp-about-menu">
+    </header>
 
-              <li>
-                <a class="dropdown-item"
-                   href="tentang.html#identitas-ppp">
-                  Profil PPP
-                </a>
-              </li>
 
-              <li>
-                <a class="dropdown-item"
-                   href="tentang.html#sejarah-ppp">
-                  Sejarah PPP
-                </a>
-              </li>
+    <!-- NAVBAR -->
 
-              <li>
-                <a class="dropdown-item"
-                   href="tentang.html#visi-misi-ppp">
-                  Visi &amp; Misi
-                </a>
-              </li>
+    
+<!-- ========================================
+     NAVIGATION BAR PPP — FINAL
+========================================= -->
 
-              <li>
-                <a class="dropdown-item"
-                   href="tentang.html#ideologi-ppp">
-                  Ideologi &amp; Nilai Dasar
-                </a>
-              </li>
+<nav class="navbar navbar-expand-lg site-nav"
+     aria-label="Navigasi utama">
 
-              <li>
-                <a class="dropdown-item"
-                   href="tentang.html#lima-khidmat">
-                  Lima Khidmat PPP
-                </a>
-              </li>
+    <div class="wrap nav-wrap">
 
-              <li>
-                <a class="dropdown-item"
-                   href="tentang.html#enam-prinsip">
-                  Enam Prinsip Perjuangan
-                </a>
-              </li>
+        <!-- TOGGLE MOBILE -->
 
-              <li>
-                <a class="dropdown-item"
-                   href="tentang.html#struktur-organisasi">
-                  Struktur Organisasi
-                </a>
-              </li>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Buka navigasi">
 
-              <li>
-                <a class="dropdown-item"
-                   href="tentang.html#tokoh-kepemimpinan">
-                  Tokoh &amp; Kepemimpinan
-                </a>
-              </li>
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="mainNav">
+
+            <ul class="navbar-nav nav-list">
+
+
+                <!-- =================================
+                     01. BERANDA
+                ================================== -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="index.html">
+
+                        BERANDA
+
+                    </a>
+
+                </li>
+
+
+                <!-- =================================
+                     02. TENTANG PPP
+                ================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        TENTANG PPP
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- PROFIL DAN SEJARAH -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="tentang.html#profil-sejarah">
+
+                                Profil &amp; Sejarah
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- VISI MISI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="tentang.html#visi-misi">
+
+                                Visi, Misi &amp; Lima Khidmat
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- STRUKTUR ORGANISASI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="struktur.html">
+
+                                Struktur Organisasi
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- STAKEHOLDER -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="tentang.html#stakeholder">
+
+                                Stakeholder PPP
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- MASKOT KABA -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="kaba.html">
+
+                                Kenalan dengan KABA
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- =================================
+                     03. PROGRAM & AKSI
+                ================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        PROGRAM &amp; AKSI
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- SEMUA PROGRAM -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="program.html">
+
+                                Semua Program &amp; Aksi
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- PPP PEDULI BUMI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="peduli-bumi.html">
+
+                                PPP Peduli Bumi &amp; Kemanusiaan
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- BEASISWA -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="beasiswa.html">
+
+                                Beasiswa Pendidikan Pemuda
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- TALKSHOW -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="talkshow.html">
+
+                                Seminar &amp; Kolaborasi
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- =================================
+                     04. INFORMASI
+                ================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        INFORMASI
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- KABAR PPP -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="kabar.html">
+
+                                Kabar PPP
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- PERNYATAAN RESMI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="pernyataan.html">
+
+                                Pernyataan Resmi
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- OPINI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="opini.html">
+
+                                Opini
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- TRANSPARANSI DATA -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="transparansi.html">
+
+                                Transparansi &amp; Data
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- =================================
+                     05. PARTISIPASI
+                ================================== -->
+
+                <li class="nav-item dropdown">
+
+                    <button
+                        class="nav-link dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        PARTISIPASI
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+                        <!-- JARING ASPIRASI -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="aspirasi.html">
+
+                                Jaring Aspirasi Rakyat
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- BERGABUNG -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="bergabung.html">
+
+                                Bergabung
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- FAQ DAN KONTAK -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="faq.html">
+
+                                FAQ &amp; Kontak
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
 
             </ul>
-          </li>
 
 
-          <li class="nav-item">
-            <a class="nav-link" href="program.html">
-              Program &amp; Aksi
-            </a>
-          </li>
+            <!-- =================================
+                 SEARCH BAR
 
-          <li class="nav-item">
-            <a class="nav-link" href="aspirasi.html">
-              Aspirasi Rakyat
-            </a>
-          </li>
+                 Pertahankan ID search form dan input
+                 dari halaman HTML sebelumnya.
+            ================================== -->
 
-          <li class="nav-item">
-            <a class="nav-link" href="kabar.html">
-              Kabar PPP
-            </a>
-          </li>
+            <form class="site-search"
+                  id="globalSearchForm"
+                  role="search">
 
-          <li class="nav-item">
-            <a class="nav-link" href="pernyataan.html">
-              Pernyataan Resmi
-            </a>
-          </li>
+                <button
+                    type="submit"
+                    aria-label="Cari">
 
-          <li class="nav-item">
-            <a class="nav-link" href="faq.html">
-              FAQ &amp; Kontak
-            </a>
-          </li>
+                    <i class="bi bi-search"></i>
 
-          <li class="nav-item">
-            <a class="nav-link" href="bergabung.html">
-              Bergabung
-            </a>
-          </li>
+                </button>
 
-        </ul>
+                <input
+                    type="search"
+                    id="globalSearchInput"
+                    placeholder="Cari di situs PPP..."
+                    aria-label="Cari informasi PPP"
+                    autocomplete="off"
+                    required>
 
+            </form>
 
-        <!-- PENCARIAN GLOBAL -->
-        <form
-          class="ppp-head-search"
-          id="pppSiteSearch"
-          role="search"
-          autocomplete="off">
+        </div>
 
-          <button type="submit" aria-label="Cari">
-            <i class="bi bi-search"></i>
-          </button>
-
-          <input
-            id="pppSearchInput"
-            type="search"
-            placeholder="Cari di situs PPP..."
-            aria-label="Cari informasi website">
-
-          <div
-            id="pppSearchResults"
-            class="ppp-head-results"
-            aria-live="polite"
-            hidden>
-          </div>
-
-        </form>
-
-      </div>
     </div>
-  </nav>
 
-</header>
+</nav>
 
 
-<!-- ==========================================
-     KONTEN UTAMA BERANDA
-========================================== -->
 
-<main class="home-page">
+    <!-- MAIN -->
 
-  <!-- ======================================
-       1. CAROUSEL UTAMA
-  ====================================== -->
+    <main>
 
-  <section
-    id="homeHero"
-    class="carousel slide home-hero"
-    data-bs-ride="carousel"
-    data-bs-interval="5000"
-    data-bs-pause="false"
-    data-bs-wrap="true"
-    data-bs-touch="true"
-    aria-label="Sorotan Beranda PPP">
 
-    <!-- ISI CAROUSEL -->
-    <div class="carousel-inner">
+        <!-- =====================================
+             HERO CAROUSEL
+        ====================================== -->
 
-      <!-- SLIDE 1 -->
-      <div class="carousel-item active"
-           data-bs-interval="5000">
+        <section class="hero"
+                 id="beranda"
+                 aria-label="Sorotan Beranda">
 
-        <img
-          src="assets/images/hero-1-identitas.jpg"
-          class="home-hero-image"
-          alt=""
-          fetchpriority="high">
 
-        <div class="home-hero-overlay"></div>
+            <!-- GAMBAR HERO -->
 
-        <div class="container home-hero-container">
+            <div class="hero-image-wrapper">
 
-          <div class="home-hero-copy">
-
-            <p class="home-hero-kicker">
-              IDENTITAS TETAP, NARASI DIPERLUAS
-            </p>
-
-            <h1>
-              PARTAI PERSATUAN<br>
-              <span>PEMBANGUNAN</span>
-            </h1>
-
-            <p class="home-hero-tagline">
-              Berakar pada Nilai,
-              Bergerak untuk Rakyat.
-            </p>
-
-            <p class="home-hero-description">
-              Ruang informasi dan dialog publik yang
-              menghadirkan gagasan, aspirasi masyarakat,
-              serta berbagai inisiatif untuk masa
-              depan bersama.
-            </p>
-
-            <div class="home-hero-actions">
-
-              <a href="program.html"
-                 class="home-btn-gold">
-                Jelajahi Program &amp; Aksi
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-
-              <a href="aspirasi.html"
-                 class="home-btn-transparent">
-                Sampaikan Aspirasi
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
+                <img
+                    id="heroImage"
+                    src="assets/images/hero-ppp.jpg"
+                    alt="Foto ilustrasi kegiatan PPP"
+                    fetchpriority="high">
 
             </div>
 
-          </div>
-        </div>
 
-        <span class="home-hero-caption">
-          Foto referensi desain Figma
-        </span>
+            <!-- OVERLAY -->
 
-      </div>
+            <div class="hero-overlay"
+                 aria-hidden="true">
+            </div>
 
 
-      <!-- SLIDE 2 -->
-      <div class="carousel-item"
-           data-bs-interval="5000">
+            <!-- KONTEN -->
 
-        <img
-          src="assets/images/hero-2-aspirasi.jpg"
-          class="home-hero-image"
-          alt=""
-          loading="lazy">
+            <div class="wrap hero-layout">
 
-        <div class="home-hero-overlay"></div>
+                <div class="hero-content">
 
-        <div class="container home-hero-container">
+                    <p id="heroEyebrow"
+                       class="eyebrow hero-eyebrow">
 
-          <div class="home-hero-copy">
+                        IDENTITAS TETAP, NARASI DIPERLUAS
 
-            <p class="home-hero-kicker">
-              RUANG KOMUNIKASI PUBLIK
-            </p>
+                    </p>
 
-            <h2>
-              SUARA MASYARAKAT,<br>
-              <span>RUANG UNTUK DIDENGAR</span>
-            </h2>
 
-            <p class="home-hero-tagline">
-              Aspirasi Didengar,
-              Informasi Terbuka,
-              Aksi Terasa.
-            </p>
+                    <h1>
 
-            <p class="home-hero-description">
-              Mengenal rancangan ruang komunikasi
-              yang lebih terbuka untuk menampung
-              gagasan, kritik, serta aspirasi
-              masyarakat.
-            </p>
+                        <span id="heroTitle">
+                            PARTAI PERSATUAN
+                        </span>
 
-            <div class="home-hero-actions">
+                        <span id="heroAccent" class="gold">
+                            PEMBANGUNAN
+                        </span>
 
-              <a href="aspirasi.html"
-                 class="home-btn-gold">
-                Sampaikan Aspirasi
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
+                    </h1>
+
+
+                    <p id="heroLead" class="hero-lead">
+
+                        Berakar pada Nilai, Bergerak untuk Rakyat.
+
+                    </p>
+
+
+                    <p id="heroDescription"
+                       class="hero-description">
+
+                        Ruang informasi dan dialog publik yang
+                        menghadirkan gagasan, aspirasi masyarakat,
+                        serta berbagai inisiatif untuk masa depan
+                        bersama.
+
+                    </p>
+
+
+                    <!-- BUTTON -->
+
+                    <div class="actions">
+
+                        <a class="action gold-button"
+                           href="program.html">
+
+                            Jelajahi Program &amp; Aksi
+
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+
+                        <a class="action outline-light"
+                           href="aspirasi.html">
+
+                            Sampaikan Aspirasi
+
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- ERROR GAMBAR -->
+
+                    <p
+                        id="heroImageWarning"
+                        class="hero-image-warning"
+                        role="status"
+                        hidden>
+                    </p>
+
+                </div>
+
+
+                <!-- SOCIAL MEDIA -->
+
+                <aside class="hero-social"
+                       aria-label="Media sosial">
+
+                    <a href="https://www.instagram.com/ppp.peduli/"
+                       aria-label="Instagram"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        <i class="bi bi-instagram"></i>
+
+                    </a>
+
+                    <a href="https://www.tiktok.com/@ppp.peduli"
+                       aria-label="TikTok"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        <i class="bi bi-tiktok"></i>
+
+                    </a>
+
+                    <a href="https://www.youtube.com/@PartaiPersatuanPembangunanDPP"
+                       aria-label="YouTube"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        <i class="bi bi-youtube"></i>
+
+                    </a>
+
+                </aside>
+
+
+                <!-- SCROLL DOWN -->
+
+                <a class="scroll-down" href="#kabar">
+
+                    SCROLL DOWN
+
+                    <i class="bi bi-arrow-down"></i>
+
+                </a>
+
+
+                <!-- SLIDE CONTROLS -->
+
+                <div class="hero-bottom">
+
+                    <!-- LABEL DIGANTI -->
+
+                  
+
+
+                    <div class="hero-controls">
+
+                        <div class="slide-tabs"
+                             aria-label="Pilih slide">
+
+                            <button
+                                type="button"
+                                data-slide="0"
+                                class="selected"
+                                aria-pressed="true">
+
+                                01 <span>Identitas PPP</span>
+
+                            </button>
+
+                            <button
+                                type="button"
+                                data-slide="1"
+                                aria-pressed="false">
+
+                                02 <span>Aspirasi Rakyat</span>
+
+                            </button>
+
+                            <button
+                                type="button"
+                                data-slide="2"
+                                aria-pressed="false">
+
+                                03 <span>Program &amp; Aksi</span>
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="arrows">
+
+                            <button
+                                type="button"
+                                id="pauseSlide"
+                                aria-label="Jeda carousel">
+
+                                <i class="bi bi-pause-fill"></i>
+
+                            </button>
+
+                            <button
+                                type="button"
+                                id="prevSlide"
+                                aria-label="Slide sebelumnya">
+
+                                <i class="bi bi-chevron-left"></i>
+
+                            </button>
+
+                            <button
+                                type="button"
+                                id="nextSlide"
+                                aria-label="Slide berikutnya">
+
+                                <i class="bi bi-chevron-right"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="photo-credit" id="heroCredit">
+
+                        Arsip PPP · Identitas Partai
+
+                    </p>
+
+                </div>
 
             </div>
 
-          </div>
-        </div>
-
-        <span class="home-hero-caption">
-          Foto referensi desain Figma
-        </span>
-
-      </div>
+        </section>
 
 
-      <!-- SLIDE 3 -->
-      <div class="carousel-item"
-           data-bs-interval="5000">
+        <!-- =====================================
+             KABAR TERBARU
+        ====================================== -->
 
-        <img
-          src="assets/images/hero-3-program.jpg"
-          class="home-hero-image"
-          alt=""
-          loading="lazy">
+        <section class="section news" id="kabar">
 
-        <div class="home-hero-overlay"></div>
+            <div class="wrap">
 
-        <div class="container home-hero-container">
+                <div class="section-head">
 
-          <div class="home-hero-copy">
+                    <div>
 
-            <p class="home-hero-kicker">
-              DARI KEPEDULIAN MENJADI GAGASAN
-            </p>
+                        <p class="eyebrow">
+                            KABAR PPP
+                        </p>
 
-            <h2>
-              KEPEDULIAN BERSAMA,<br>
-              <span>GAGASAN MASA DEPAN</span>
-            </h2>
+                        <h2>
+                            Kabar Terbaru PPP
+                        </h2>
 
-            <p class="home-hero-tagline">
-              Bersama membangun ruang kepedulian.
-            </p>
+                        <p>
 
-            <p class="home-hero-description">
-              Jelajahi rancangan program di bidang
-              pendidikan, lingkungan, dan kemanusiaan
-              dalam prototipe akademik ini.
-            </p>
+                            Ikuti perkembangan informasi Partai
+                            Persatuan Pembangunan melalui contoh
+                            pemberitaan dalam web ini.
 
-            <div class="home-hero-actions">
+                        </p>
 
-              <a href="program.html"
-                 class="home-btn-gold">
-                Jelajahi Program
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
+                    </div>
+
+                    <a class="action outline"
+                       href="kabar.html">
+
+                        Semua Kabar PPP
+
+                        <i class="bi bi-arrow-up-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="news-grid">
+
+
+                    <!-- BERITA 1 -->
+
+                    <article class="news-card">
+
+                        <img
+                            src="assets/images/kabar-p3muda.jpg"
+                            alt="Foto kegiatan P3Muda"
+                            loading="lazy">
+
+                        <p class="credit">
+                            P3Muda · Foto: SINDOnews
+                        </p>
+
+                        <p class="eyebrow">
+                            POLITIK &amp; KEBANGSAAN · 06 NOVEMBER 2026
+                        </p>
+
+                        <p class="source">
+                            Referensi mockup: SINDOnews
+                        </p>
+
+                        <h3>
+
+                            P3Muda Tegas Menjaga NKRI,
+                            Dukung Langkah Konstitusional Presiden
+
+                        </h3>
+
+                        <p>
+
+                            P3Muda dukung langkah konstitusional
+                            Presiden.
+
+                        </p>
+
+                        <a class="read-link"
+                           href="kabar.html">
+
+                            Baca selengkapnya
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                    </article>
+
+
+                    <!-- BERITA 2 -->
+
+                    <article class="news-card">
+
+                        <img
+                            src="assets/images/kabar-dpp.jpg"
+                            alt="Kantor DPP PPP Jakarta"
+                            loading="lazy">
+
+                        <p class="credit">
+                            Kantor DPP PPP, Jakarta · Foto: SINDOnews
+                        </p>
+
+                        <p class="eyebrow">
+                            ORGANISASI &amp; POLITIK · 29 OKTOBER 2026
+                        </p>
+
+                        <p class="source">
+                            Referensi mockup: SINDOnews
+                        </p>
+
+                        <h3>
+
+                            PPP Dinilai Masih Berpeluang Pulihkan
+                            Soliditas Jelang Pemilu 2029
+
+                        </h3>
+
+                        <p>
+
+                            Konsolidasi internal PPP jelang
+                            Pemilu 2029.
+
+                        </p>
+
+                        <a class="read-link"
+                           href="kabar.html">
+
+                            Baca selengkapnya
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                    </article>
+
+
+                    <!-- BERITA 3 -->
+
+                    <article class="news-card">
+
+                        <img
+                            src="assets/images/kabar-it.jpg"
+                            alt="Foto pelatihan IT PPP"
+                            loading="lazy">
+
+                        <p class="credit">
+                            Pelatihan IT PPP · Foto: SINDOnews
+                        </p>
+
+                        <p class="eyebrow">
+                            TRANSFORMASI DIGITAL · 29 OKTOBER 2026
+                        </p>
+
+                        <p class="source">
+                            Referensi mockup: SINDOnews
+                        </p>
+
+                        <h3>
+
+                            Badan IT PPP Perkuat Transformasi
+                            Digital melalui TOT bagi 38 DPW
+
+                        </h3>
+
+                        <p>
+
+                            Pelatihan daring bagi admin IT
+                            dari 38 DPW.
+
+                        </p>
+
+                        <a class="read-link"
+                           href="kabar.html">
+
+                            Baca selengkapnya
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                    </article>
+
+                </div>
+
+               
 
             </div>
 
-          </div>
-        </div>
-
-        <span class="home-hero-caption">
-          Foto ilustratif dari rancangan Figma
-        </span>
-
-      </div>
-
-    </div>
+        </section>
 
 
-    <!-- INDIKATOR CAROUSEL -->
-    <div class="carousel-indicators home-hero-indicators">
+        <!-- =====================================
+             PROGRAM & AKSI
+        ====================================== -->
 
-      <button
-        type="button"
-        data-bs-target="#homeHero"
-        data-bs-slide-to="0"
-        class="active"
-        aria-current="true"
-        aria-label="Slide 1: Identitas PPP">
-        01 <span>Identitas PPP</span>
-      </button>
+        <section class="section" id="program">
 
-      <button
-        type="button"
-        data-bs-target="#homeHero"
-        data-bs-slide-to="1"
-        aria-label="Slide 2: Aspirasi Rakyat">
-        02 <span>Aspirasi Rakyat</span>
-      </button>
+            <div class="wrap">
 
-      <button
-        type="button"
-        data-bs-target="#homeHero"
-        data-bs-slide-to="2"
-        aria-label="Slide 3: Program dan Aksi">
-        03 <span>Program &amp; Aksi</span>
-      </button>
+                <div class="section-head">
 
-    </div>
+                    <div>
 
+                        <p class="eyebrow">
+                            PROGRAM &amp; AKSI
+                        </p>
 
-    <!-- TOMBOL SEBELUMNYA -->
-    <button
-      class="carousel-control-prev home-hero-prev"
-      type="button"
-      data-bs-target="#homeHero"
-      data-bs-slide="prev">
+                        <h2>
+                            Dari kepedulian, menjadi gagasan.
+                        </h2>
 
-      <i class="bi bi-chevron-left"
-         aria-hidden="true"></i>
+                        <p>
 
-      <span class="visually-hidden">
-        Slide sebelumnya
-      </span>
-    </button>
+                            Temukan rancangan program pendidikan,
+                            pemberdayaan masyarakat, lingkungan,
+                            dan kesejahteraan sosial.
+
+                        </p>
+
+                    </div>
+
+                    <a class="action outline"
+                       href="program.html">
+
+                        Semua Program &amp; Aksi
+
+                        <i class="bi bi-arrow-up-right"></i>
+
+                    </a>
+
+                </div>
 
 
-    <!-- TOMBOL SELANJUTNYA -->
-    <button
-      class="carousel-control-next home-hero-next"
-      type="button"
-      data-bs-target="#homeHero"
-      data-bs-slide="next">
-
-      <i class="bi bi-chevron-right"
-         aria-hidden="true"></i>
-
-      <span class="visually-hidden">
-        Slide selanjutnya
-      </span>
-    </button>
-
-  </section>
+                <div class="program-grid">
 
 
-  <!-- ======================================
-       2. TIGA NILAI UTAMA
-  ====================================== -->
+                    <!-- PEDULI BUMI -->
 
-  <section class="home-values">
+                    <article class="program-card">
 
-    <div class="container">
+                        <img
+                            src="assets/images/program-bumi.jpg"
+                            alt="Kegiatan masyarakat di persawahan"
+                            loading="lazy">
 
-      <div class="row text-center g-3">
+                        <p class="eyebrow">
 
-        <div class="col-md-4">
-          <span>Informasi terbuka</span>
-        </div>
+                            LINGKUNGAN · SOSIAL DAN KEMANUSIAAN
 
-        <div class="col-md-4">
-          <span>Dialog setara</span>
-        </div>
+                        </p>
 
-        <div class="col-md-4">
-          <span>Kepedulian bersama</span>
-        </div>
+                        <h3>
 
-      </div>
+                            PPP Peduli Bumi dan Kemanusiaan
 
-    </div>
+                        </h3>
 
-  </section>
+                        <p>
 
+                            Merawat lingkungan dan memperkuat
+                            kepedulian sosial melalui pembelajaran
+                            warga, kebun komunitas, dan
+                            kesiapsiagaan bersama.
 
-  <!-- ======================================
-       3. KABAR TERBARU PPP
-  ====================================== -->
+                        </p>
 
-  <section class="home-news">
+                        <a class="read-link"
+                           href="peduli-bumi.html">
 
-    <div class="container">
+                            Jelajahi program
 
-      <div class="home-section-heading">
+                            <i class="bi bi-arrow-right"></i>
 
-        <div>
-          <p class="home-label">KABAR PPP</p>
+                        </a>
 
-          <h2>Kabar Terbaru PPP</h2>
-
-          <p class="home-section-desc">
-            Ikuti perkembangan terbaru Partai Persatuan
-            Pembangunan melalui pemberitaan aktual
-            dari berbagai sumber media terpercaya.
-          </p>
-        </div>
-
-        <a href="kabar.html"
-           class="home-outline-button">
-          Semua Kabar PPP
-          <i class="bi bi-arrow-up-right"></i>
-        </a>
-
-      </div>
+                    </article>
 
 
-      <div class="row g-4">
+                    <!-- BEASISWA -->
 
-        <!-- BERITA 1 -->
-        <div class="col-lg-4 col-md-6">
+                    <article class="program-card">
 
-          <article class="home-news-card">
+                        <img
+                            class="education-photo"
+                            src="assets/images/program-pendidikan.jpg"
+                            alt="Kegiatan belajar bersama anak-anak"
+                            loading="lazy">
 
-            <a
-              href="https://nasional.sindonews.com/read/1769243/12/p3muda-tegas-menjaga-nkri-dukung-langkah-konstitusional-presiden-terhadap-segala-bentuk-ancaman-makar-1793970685"
-              target="_blank"
-              rel="noopener noreferrer">
+                        <p class="eyebrow">
+                            PENDIDIKAN
+                        </p>
 
-              <img
-                src="assets/images/berita-p3muda.jpg"
-                alt="Dokumentasi acara P3Muda"
-                loading="lazy">
+                        <h3>
 
-            </a>
+                            Beasiswa Pendidikan Pemuda
 
-            <p class="home-photo-source">
-              P3Muda · Foto: SINDOnews
+                        </h3>
+
+                        <p>
+
+                            Usulan dukungan belajar yang memadukan
+                            bantuan pendidikan, pendampingan,
+                            dan akses informasi bagi pemuda.
+
+                        </p>
+
+                        <a class="read-link"
+                           href="beasiswa.html">
+
+                            Jelajahi program
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                    </article>
+
+                </div>
+
+
+                <!-- KATEGORI PROGRAM -->
+
+                <div class="program-topics">
+
+                    <p class="eyebrow">
+
+                        SATU RUANG, BERAGAM KEBUTUHAN
+
+                    </p>
+
+                    <div class="topic-list">
+
+                        <span>Pendidikan</span>
+
+                        <span>Ekonomi Masyarakat</span>
+
+                        <span>Sosial dan Kemanusiaan</span>
+
+                        <span>Lingkungan</span>
+
+                        <span>Keagamaan</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             JARING ASPIRASI
+        ====================================== -->
+
+        <section class="section aspiration" id="aspirasi">
+
+            <div class="wrap aspiration-grid">
+
+                <div>
+
+                    <p class="eyebrow">
+                        JARING ASPIRASI RAKYAT
+                    </p>
+
+                    <h2>
+                        Suara Anda layak mendapat ruang.
+                    </h2>
+
+                    <p>
+
+                        Setiap aspirasi menjadi bagian penting
+                        dalam membangun komunikasi yang terbuka.
+                        Sampaikan gagasan, kritik, dan masukan
+                        melalui ruang partisipasi akademik ini.
+
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <a class="action white-button"
+                       href="aspirasi.html">
+
+                        Sampaikan aspirasi
+
+                        <i class="bi bi-arrow-up-right"></i>
+
+                    </a>
+
+                    <p class="aspiration-status">
+
+                        Diterima → Diproses → Ditindaklanjuti
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             PERNYATAAN RESMI
+        ====================================== -->
+
+        <section class="section" id="pernyataan">
+
+            <div class="wrap statement-grid">
+
+                <div>
+
+                    <p class="eyebrow">
+                        PERNYATAAN RESMI
+                    </p>
+
+                    <h2>
+
+                        Jelas sumbernya.<br>
+                        Utuh konteksnya.
+
+                    </h2>
+
+                    <p>
+
+                        Temukan contoh pernyataan dan klarifikasi
+                        mengenai berbagai isu yang berkaitan
+                        dengan organisasi dalam web ini.
+
+                    </p>
+
+                    <a class="action outline"
+                       href="pernyataan.html">
+
+                        Lihat semua informasi
+
+                        <i class="bi bi-arrow-up-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="statement-list">
+
+
+                    <!-- PERNYATAAN 1 -->
+
+                    <article>
+
+                        <p class="credit">
+
+                            9 November 2026 · Seruan Persatuan
+
+                        </p>
+
+                        <h3>
+
+                            Tokoh Senior PPP Serukan Persatuan
+                            dan Penyelesaian Konflik Internal
+
+                        </h3>
+
+                        <p>
+
+                            Pernyataan mengenai imbauan
+                            menjaga keutuhan organisasi dan
+                            menyelesaikan persoalan internal
+                            melalui dialog dan musyawarah.
+
+                        </p>
+
+                        <a class="read-link"
+                           href="pernyataan.html?id=senior">
+
+                            Lihat pernyataan
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                    </article>
+
+
+                    <!-- PERNYATAAN 2 -->
+
+                    <article>
+
+                        <p class="credit">
+
+                            2 November 2026 · Klarifikasi Kepengurusan
+
+                        </p>
+
+                        <h3>
+
+                            Mardiono Tegaskan Penataan
+                            Kepengurusan PPP sebagai Langkah
+                            Restrukturisasi
+
+                        </h3>
+
+                        <p>
+
+                            Pernyataan mengenai penataan
+                            kepengurusan dan restrukturisasi
+                            untuk meningkatkan efektivitas
+                            kerja organisasi.
+
+                        </p>
+
+                        <a class="read-link"
+                           href="pernyataan.html?id=mardiono">
+
+                            Lihat pernyataan
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer class="footer">
+
+        <div class="wrap footer-wrap">
+
+            <div class="footer-grid">
+
+
+                <!-- IDENTITAS -->
+
+                <div>
+
+                    <h3>
+                        PPP — Ruang Bersama
+                    </h3>
+
+                    <p>
+
+                        Partai Persatuan Pembangunan.
+                        Ruang informasi dan dialog publik
+                        dalam sebuah web.
+
+                    </p>
+
+                    <p class="gold">
+
+                        Merawat Persatuan dengan Pembangunan.
+
+                    </p>
+
+                </div>
+
+
+                <!-- QUICK LINKS -->
+
+                <div>
+
+                    <h4>Quick Links</h4>
+
+                    <a href="index.html">Beranda</a>
+
+                    <a href="tentang.html">Tentang PPP</a>
+
+                    <a href="struktur.html">
+                        Organisasi
+                    </a>
+
+                    <a href="program.html">
+                        Program &amp; Aksi
+                    </a>
+
+                    <a href="aspirasi.html">
+                        Aspirasi Rakyat
+                    </a>
+
+                    <a href="kabar.html">
+                        Berita
+                    </a>
+
+                    <a href="pernyataan.html">
+                        Pernyataan Resmi
+                    </a>
+
+                </div>
+
+
+                <!-- INFORMATION -->
+
+                <div>
+
+                    <h4>Information</h4>
+
+                    <a href="faq.html">
+                        FAQ &amp; Kontak
+                    </a>
+
+                    <span aria-disabled="true">
+                        Opini
+                    </span>
+
+                </div>
+
+
+                <!-- SOCIAL -->
+
+                <div>
+
+                    <h4>Social</h4>
+
+                    <a
+                        href="https://www.instagram.com/ppp.peduli/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        Instagram @ppp.peduli
+
+                    </a>
+
+                    <a
+                        href="https://www.tiktok.com/@ppp.peduli"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        TikTok @ppp.peduli
+
+                    </a>
+
+                    <a
+                        href="https://www.youtube.com/@PartaiPersatuanPembangunanDPP"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        YouTube<br>
+                        @PartaiPersatuanPembangunanDPP
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- DISCLAIMER -->
+
+            <p class="disclaimer">
+
+                Website ini merupakan prototipe akademik
+                yang dikembangkan untuk keperluan pembelajaran
+                Digital Public Relations. Website ini bukan
+                situs resmi Partai Persatuan Pembangunan
+                (PPP). Seluruh program simulasi dan fitur
+                interaktif yang ditampilkan tidak mewakili
+                kegiatan atau layanan resmi organisasi.
+
             </p>
 
-            <p class="home-news-category">
-              POLITIK &amp; KEBANGSAAN · 06 NOVEMBER 2026
+
+            <!-- COPYRIGHT -->
+
+            <p class="copyright">
+
+                © 2026 PPP — Ruang Bersama ·
+                Prototipe akademik Digital Public Relations
+
             </p>
-
-            <p class="home-news-source">
-              Sumber: SINDOnews
-            </p>
-
-            <h3>
-              P3Muda Tegas Menjaga NKRI,
-              Dukung Langkah Konstitusional Presiden
-            </h3>
-
-            <p class="home-news-description">
-              P3Muda dukung langkah konstitusional
-              Presiden.
-            </p>
-
-            <a
-              href="https://nasional.sindonews.com/read/1769243/12/p3muda-tegas-menjaga-nkri-dukung-langkah-konstitusional-presiden-terhadap-segala-bentuk-ancaman-makar-1793970685"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="home-text-link">
-
-              Baca Artikel
-              <i class="bi bi-arrow-right"></i>
-            </a>
-
-          </article>
-        </div>
-
-
-        <!-- BERITA 2 -->
-        <div class="col-lg-4 col-md-6">
-
-          <article class="home-news-card">
-
-            <a
-              href="https://www.rctiplus.com/news/detail/sindonews/5504788/ppp-dinilai-masih-punya-peluang-pulihkan-soliditas-jelang-pemilu-2029"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              <img
-                src="assets/images/berita-soliditas.jpg"
-                alt="Gedung kantor DPP PPP"
-                loading="lazy">
-
-            </a>
-
-            <p class="home-photo-source">
-              Kantor DPP PPP, Jakarta · Foto: SINDOnews
-            </p>
-
-            <p class="home-news-category">
-              ORGANISASI &amp; POLITIK · 29 OKTOBER 2026
-            </p>
-
-            <p class="home-news-source">
-              Sumber: SINDOnews
-            </p>
-
-            <h3>
-              PPP Dinilai Masih Berpeluang
-              Pulihkan Soliditas Jelang Pemilu 2029
-            </h3>
-
-            <p class="home-news-description">
-              Konsolidasi internal PPP
-              jelang Pemilu 2029.
-            </p>
-
-            <a
-              href="https://www.rctiplus.com/news/detail/sindonews/5504788/ppp-dinilai-masih-punya-peluang-pulihkan-soliditas-jelang-pemilu-2029"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="home-text-link">
-
-              Baca Artikel
-              <i class="bi bi-arrow-right"></i>
-            </a>
-
-          </article>
-        </div>
-
-
-        <!-- BERITA 3 -->
-        <div class="col-lg-4 col-md-6">
-
-          <article class="home-news-card">
-
-            <a
-              href="https://www.rctiplus.com/news/detail/sindonews/5504796/badan-it-ppp-perkuat-transformasi-digital--gelar-tot-bagi-38-dpw-indonesia"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              <img
-                src="assets/images/berita-digital.jpg"
-                alt="Kegiatan penguatan transformasi digital PPP"
-                loading="lazy">
-
-            </a>
-
-            <p class="home-photo-source">
-              Pelatihan IT PPP · Foto: SINDOnews
-            </p>
-
-            <p class="home-news-category">
-              TRANSFORMASI DIGITAL · 29 OKTOBER 2026
-            </p>
-
-            <p class="home-news-source">
-              Sumber: SINDOnews
-            </p>
-
-            <h3>
-              Badan IT PPP Perkuat Transformasi Digital
-              melalui TOT bagi 38 DPW
-            </h3>
-
-            <p class="home-news-description">
-              Pelatihan daring bagi admin IT
-              dari 38 DPW.
-            </p>
-
-            <a
-              href="https://www.rctiplus.com/news/detail/sindonews/5504796/badan-it-ppp-perkuat-transformasi-digital--gelar-tot-bagi-38-dpw-indonesia"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="home-text-link">
-
-              Baca Artikel
-              <i class="bi bi-arrow-right"></i>
-            </a>
-
-          </article>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ======================================
-       4. PROGRAM DAN AKSI
-  ====================================== -->
-
-  <section class="home-programs">
-
-    <div class="container">
-
-      <div class="home-section-heading">
-
-        <div>
-          <p class="home-label">PROGRAM &amp; AKSI</p>
-
-          <h2>
-            Dari kepedulian, menjadi gagasan.
-          </h2>
-
-          <p class="home-section-desc">
-            Temukan arah perjuangan dan rancangan
-            program dalam mendukung pendidikan,
-            pemberdayaan masyarakat,
-            dan kesejahteraan rakyat.
-          </p>
-        </div>
-
-        <a href="program.html"
-           class="home-outline-button">
-          Semua Program &amp; Aksi
-          <i class="bi bi-arrow-up-right"></i>
-        </a>
-
-      </div>
-
-
-      <div class="row g-4">
-
-        <!-- PROGRAM 1 -->
-        <div class="col-lg-6">
-
-          <article class="home-program-card">
-
-            <a href="program.html#peduli-bumi">
-
-              <img
-                src="assets/images/program-lingkungan.jpg"
-                alt="Ilustrasi kegiatan pertanian dan lingkungan"
-                loading="lazy">
-
-            </a>
-
-            <p class="home-program-category">
-              LINGKUNGAN · SOSIAL DAN KEMANUSIAAN
-            </p>
-
-            <h3>
-              PPP Peduli Bumi dan Kemanusiaan
-            </h3>
-
-            <p>
-              Merawat lingkungan dan memperkuat
-              kepedulian sosial melalui pembelajaran
-              warga, kebun komunitas,
-              dan kesiapsiagaan bersama.
-            </p>
-
-            <a
-              href="program.html#peduli-bumi"
-              class="home-text-link">
-
-              Lihat rancangan program
-              <i class="bi bi-arrow-right"></i>
-            </a>
-
-          </article>
-
-        </div>
-
-
-        <!-- PROGRAM 2 -->
-        <div class="col-lg-6">
-
-          <article class="home-program-card">
-
-            <a href="program.html#beasiswa">
-
-              <img
-                src="assets/images/program-pendidikan.jpg"
-                alt="Ilustrasi kegiatan pendampingan belajar"
-                loading="lazy">
-
-            </a>
-
-            <p class="home-program-category">
-              PENDIDIKAN
-            </p>
-
-            <h3>
-              Beasiswa Pendidikan Pemuda
-            </h3>
-
-            <p>
-              Usulan dukungan belajar yang memadukan
-              bantuan pendidikan, pendampingan,
-              dan akses informasi bagi pemuda.
-            </p>
-
-            <a
-              href="program.html#beasiswa"
-              class="home-text-link">
-
-              Lihat rancangan program
-              <i class="bi bi-arrow-right"></i>
-            </a>
-
-          </article>
-
-        </div>
-
-      </div>
-
-
-      <!-- KATEGORI PROGRAM -->
-      <div class="home-program-tags">
-
-        <p>SATU RUANG, BERAGAM KEBUTUHAN</p>
-
-        <div class="home-tag-list">
-
-          <span>Pendidikan</span>
-          <span>Ekonomi Masyarakat</span>
-          <span>Sosial dan Kemanusiaan</span>
-          <span>Lingkungan</span>
-          <span>Keagamaan</span>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ======================================
-       5. ASPIRASI RAKYAT
-  ====================================== -->
-
-  <section class="home-aspiration">
-
-    <div class="container">
-
-      <div class="row align-items-center g-4">
-
-        <div class="col-lg-8">
-
-          <p class="home-label home-label-light">
-            ASPIRASI RAKYAT
-          </p>
-
-          <h2>
-            Suara Anda layak mendapat ruang.
-          </h2>
-
-          <p>
-            Setiap aspirasi menjadi bagian penting
-            dalam membangun komunikasi yang terbuka.
-            Sampaikan gagasan, kritik, dan masukan
-            untuk mendorong perubahan yang lebih baik.
-          </p>
-
-        </div>
-
-
-        <div class="col-lg-4">
-
-          <div class="home-aspiration-action">
-
-            <a href="aspirasi.html"
-               class="home-light-button">
-              Sampaikan aspirasi
-              <i class="bi bi-arrow-up-right"></i>
-            </a>
-
-            <p class="home-aspiration-note">
-              Diterima → Diproses → Ditindaklanjuti
-            </p>
-
-            <p class="home-aspiration-disclaimer">
-              Simulasi akademik. Formulir tidak
-              mengirim pesan kepada PPP.
-            </p>
-
-          </div>
 
         </div>
 
-      </div>
+    </footer>
 
-    </div>
 
-  </section>
+    <!-- BOOTSTRAP JS -->
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- ======================================
-       6. PERNYATAAN RESMI
-  ====================================== -->
 
-  <section class="home-statements">
+    <!-- =====================================
+         JAVASCRIPT CAROUSEL
+    ====================================== -->
 
-    <div class="container">
+    <script>
 
-      <div class="row g-4 g-lg-5">
+        document.addEventListener('DOMContentLoaded', () => {
 
-        <!-- KIRI -->
-        <div class="col-lg-5">
+            /* DATA SLIDE */
 
-          <p class="home-label">
-            PERNYATAAN RESMI
-          </p>
+            const slides = [
 
-          <h2>
-            Jelas sumbernya.<br>
-            Utuh konteksnya.
-          </h2>
+                {
+                    eyebrow:
+                        'IDENTITAS TETAP, NARASI DIPERLUAS',
 
-          <p class="home-section-desc">
-            Temukan informasi dan rujukan terkait
-            organisasi melalui pernyataan yang
-            dapat ditelusuri sumbernya.
-          </p>
+                    title:
+                        'PARTAI PERSATUAN',
 
-          <a
-            href="pernyataan.html"
-            class="home-outline-button">
+                    accent:
+                        'PEMBANGUNAN',
 
-            Lihat semua informasi
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
+                    lead:
+                        'Berakar pada Nilai, Bergerak untuk Rakyat.',
 
-        </div>
+                    description:
+                        'Ruang informasi dan dialog publik yang menghadirkan gagasan, aspirasi masyarakat, serta berbagai inisiatif untuk masa depan bersama.',
 
+                    image:
+                        'assets/images/hero-ppp.jpg',
 
-        <!-- KANAN -->
-        <div class="col-lg-7">
+                    alt:
+                        'Foto ilustrasi kegiatan PPP',
 
-          <!-- PERNYATAAN 1 -->
-          <article class="home-statement-item">
+                    credit:
+                        'Arsip PPP · Identitas Partai'
+                },
 
-            <p class="home-statement-date">
-              2 NOVEMBER 2026 · INFORMASI ORGANISASI
-            </p>
 
-            <h3>
-              Mardiono Tegaskan Penataan Kepengurusan
-              PPP sebagai Langkah Restrukturisasi
-            </h3>
+                {
+                    eyebrow:
+                        'JARING ASPIRASI RAKYAT',
 
-            <p>
-              Informasi mengenai penataan
-              dan konsolidasi organisasi PPP.
-            </p>
+                    title:
+                        'SUARA ANDA LAYAK',
 
-            <a href="pernyataan.html"
-               class="home-text-link">
+                    accent:
+                        'MENDAPAT RUANG',
 
-              Lihat arsip informasi
-              <i class="bi bi-arrow-right"></i>
-            </a>
+                    lead:
+                        'Satu ruang untuk mendengar dan berbagi gagasan.',
 
-          </article>
+                    description:
+                        'Setiap aspirasi menjadi bagian penting dalam membangun komunikasi yang terbuka melalui prototipe PPP Ruang Bersama.',
 
+                    image:
+                        'assets/images/kabar-dpp.jpg',
 
-          <!-- PERNYATAAN 2 -->
-          <article class="home-statement-item">
+                    alt:
+                        'Kantor DPP PPP Jakarta',
 
-            <p class="home-statement-date">
-              INFORMASI ORGANISASI · RUJUKAN MEDIA
-            </p>
+                    credit:
+                        'Kantor DPP PPP, Jakarta'
+                },
 
-            <h3>
-              Tokoh Senior PPP Serukan Persatuan
-              dan Penyelesaian Konflik Internal
-            </h3>
 
-            <p>
-              Informasi mengenai persatuan
-              dan dinamika internal organisasi.
-            </p>
+                {
+    eyebrow: 'PROGRAM & AKSI',
 
-            <a href="pernyataan.html"
-               class="home-text-link">
+    title: 'DARI KEPEDULIAN,',
 
-              Lihat arsip informasi
-              <i class="bi bi-arrow-right"></i>
-            </a>
+    accent: 'MENJADI GAGASAN',
 
-          </article>
+    lead: 'Program Talkshow.',
 
-        </div>
+    description:
+        'Lost in Your 20’s: Finding God, Finding Yourself. Ruang refleksi spiritual, pembelajaran, dan pengembangan diri.',
 
-      </div>
+    image:
+        'assets/images/talkshow.jpeg',
 
-    </div>
+    alt:
+        'Poster After Report Program Talkshow PPP',
 
-  </section>
+    credit:
+        'Dokumentasi Tim PPP Ruang Bersama'
+}
 
+            ];
 
-  <!-- ======================================
-       7. AJAKAN BERGABUNG
-  ====================================== -->
 
-  <section class="home-join">
+            /* ELEMENT */
 
-    <div class="container">
+            const $ = id => document.getElementById(id);
 
-      <div class="row align-items-center g-3">
+            const hero = $('beranda');
 
-        <div class="col-lg-8">
+            const heroImage = $('heroImage');
 
-          <h2>
-            Kebersamaan punya banyak bentuk.
-          </h2>
+            const imageWarning = $('heroImageWarning');
 
-        </div>
+            const heroEyebrow = $('heroEyebrow');
 
-        <div class="col-lg-4 text-lg-end">
+            const heroTitle = $('heroTitle');
 
-          <a
-            href="bergabung.html"
-            class="home-outline-button">
+            const heroAccent = $('heroAccent');
 
-            Kenali cara Bergabung
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
+            const heroLead = $('heroLead');
 
-        </div>
+            const heroDescription = $('heroDescription');
 
-      </div>
+            const heroCredit = $('heroCredit');
 
-    </div>
+            const prevButton = $('prevSlide');
 
-  </section>
+            const nextButton = $('nextSlide');
 
-</main>
+            const pauseButton = $('pauseSlide');
 
+            const tabs = Array.from(
+                hero.querySelectorAll('[data-slide]')
+            );
 
-<!-- ==========================================
-     8. FOOTER BARU - REVISI 06
-========================================== -->
 
-<footer class="ppp-footer-v2">
+            /* CAROUSEL STATE */
 
-  <div class="container">
+            const reducedMotion = window.matchMedia(
+                '(prefers-reduced-motion: reduce)'
+            ).matches;
 
-    <div class="row g-4">
+            let currentSlide = 0;
 
-      <!-- KOLOM 1 -->
-      <div class="col-lg-3 col-md-6">
+            let timer = null;
 
-        <a
-          href="index.html"
-          class="ppp-footer-brand">
+            let paused = reducedMotion;
 
-          PPP — Ruang Bersama
-        </a>
 
-        <p class="ppp-footer-description">
-          Partai Persatuan Pembangunan.
-          Ruang informasi dan dialog publik
-          dalam sebuah prototipe akademik.
-        </p>
+            /* PRELOAD GAMBAR */
 
-        <p class="ppp-footer-motto">
-          Merawat Persatuan dengan Pembangunan.
-        </p>
+            slides.forEach(slide => {
 
-      </div>
+                const image = new Image();
 
+                image.src = slide.image;
 
-      <!-- KOLOM 2 -->
-      <div class="col-lg-3 col-md-6">
+            });
 
-        <h3>Quick Links</h3>
 
-        <ul class="ppp-footer-list">
+            /* ERROR GAMBAR */
 
-          <li>
-            <a href="index.html">Beranda</a>
-          </li>
+            heroImage.addEventListener('error', () => {
 
-          <li>
-            <a href="tentang.html">Tentang PPP</a>
-          </li>
+                const failedImage =
+                    heroImage.getAttribute('src');
 
-          <li>
-            <a href="tentang.html#struktur-organisasi">
-              Organisasi
-            </a>
-          </li>
+                heroImage.hidden = true;
 
-          <li>
-            <a href="program.html">Program &amp; Aksi</a>
-          </li>
+                imageWarning.hidden = false;
 
-          <li>
-            <a href="aspirasi.html">Aspirasi Rakyat</a>
-          </li>
+                imageWarning.textContent =
+                    'Gambar gagal dimuat: ' + failedImage;
 
-          <li>
-            <a href="kabar.html">Berita</a>
-          </li>
+                console.error(
+                    'Gambar hero gagal dimuat:',
+                    failedImage
+                );
 
-          <li>
-            <a href="pernyataan.html">
-              Pernyataan Resmi
-            </a>
-          </li>
+            });
 
-        </ul>
 
-      </div>
+            heroImage.addEventListener('load', () => {
 
+                heroImage.hidden = false;
 
-      <!-- KOLOM 3 -->
-      <div class="col-lg-3 col-md-6">
+                imageWarning.hidden = true;
 
-        <h3>Information</h3>
+            });
 
-        <ul class="ppp-footer-list">
 
-          <li>
-            <a href="faq.html">
-              FAQ &amp; Kontak
-            </a>
-          </li>
+            /* TAMPILKAN SLIDE */
 
-          <li>
-            <a href="kabar.html#daftar-artikel">
-              Opini
-            </a>
-          </li>
+            function showSlide(index) {
 
-        </ul>
+                currentSlide =
+                    (index + slides.length) % slides.length;
 
-      </div>
+                const slide = slides[currentSlide];
 
 
-      <!-- KOLOM 4 - MEDIA SOSIAL -->
-      <div class="col-lg-3 col-md-6">
+                /* UPDATE TEKS */
 
-        <h3>Social</h3>
+                heroEyebrow.textContent =
+                    slide.eyebrow;
 
-        <ul class="ppp-footer-list">
+                heroTitle.textContent =
+                    slide.title;
 
-          <!-- INSTAGRAM -->
-          <li>
-            <a
-              href="https://www.instagram.com/ppp.peduli?srtk=ODE5c3A2bmkzeGVz&amp;utm_source=qr"
-              target="_blank"
-              rel="noopener noreferrer">
+                heroAccent.textContent =
+                    slide.accent;
 
-              <i class="bi bi-instagram"></i>
-              Instagram · @ppp.peduli
-            </a>
-          </li>
+                heroLead.textContent =
+                    slide.lead;
 
+                heroDescription.textContent =
+                    slide.description;
 
-          <!-- TIKTOK -->
-          <li>
-            <a
-              href="https://www.tiktok.com/@ppp.peduli?_r=1&amp;_t=ZS-9BHOIDImUGy"
-              target="_blank"
-              rel="noopener noreferrer">
+                heroCredit.textContent =
+                    slide.credit;
 
-              <i class="bi bi-tiktok"></i>
-              TikTok · @ppp.peduli
-            </a>
-          </li>
 
+                /* UPDATE GAMBAR */
 
-          <!-- YOUTUBE -->
-          <li>
-            <a
-              href="https://youtube.com/@partaipersatuanpembangunandpp?si=k4i02ifY6VN0bI6U"
-              target="_blank"
-              rel="noopener noreferrer">
+                heroImage.alt = slide.alt;
 
-              <i class="bi bi-youtube"></i>
-              YouTube · PPP DPP
-            </a>
-          </li>
+                heroImage.hidden = false;
 
-        </ul>
+                imageWarning.hidden = true;
 
-      </div>
+                heroImage.src = slide.image;
 
-    </div>
 
+                /* CEK GAMBAR */
 
-    <!-- DISCLAIMER -->
-    <div class="ppp-footer-disclaimer">
+                if (
+                    heroImage.complete &&
+                    heroImage.naturalWidth === 0
+                ) {
 
-      Website ini merupakan prototipe akademik yang
-      dikembangkan untuk keperluan pembelajaran
-      Digital Public Relations. Website ini bukan
-      situs resmi Partai Persatuan Pembangunan (PPP).
-      Seluruh program simulasi dan fitur interaktif
-      yang ditampilkan tidak mewakili kegiatan
-      atau layanan resmi organisasi.
+                    heroImage.hidden = true;
 
-    </div>
+                    imageWarning.hidden = false;
 
+                    imageWarning.textContent =
+                        'Gambar gagal dimuat: ' + slide.image;
 
-    <!-- COPYRIGHT -->
-    <div class="ppp-footer-copyright">
+                }
 
-      © 2026 PPP — Ruang Bersama ·
-      Prototipe akademik Digital Public Relations
 
-    </div>
+                /* UPDATE TAB */
 
-  </div>
+                tabs.forEach((tab, i) => {
 
-</footer>
+                    const active =
+                        i === currentSlide;
 
+                    tab.classList.toggle(
+                        'selected',
+                        active
+                    );
 
-<!-- ==========================================
-     JAVASCRIPT
-========================================== -->
+                    tab.setAttribute(
+                        'aria-pressed',
+                        String(active)
+                    );
 
-<!-- BOOTSTRAP -->
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-</script>
+                });
 
-<!-- JAVASCRIPT GLOBAL WEBSITE -->
-<script src="assets/js/main.js"></script>
+            }
+
+
+            /* AUTO SLIDE 3 DETIK */
+
+            function startCarousel() {
+
+                clearInterval(timer);
+
+                timer = null;
+
+                if (
+                    paused ||
+                    document.hidden
+                ) {
+
+                    return;
+
+                }
+
+                timer = setInterval(() => {
+
+                    showSlide(currentSlide + 1);
+
+                }, 3000);
+
+            }
+
+
+            /* NEXT */
+
+            nextButton.addEventListener('click', () => {
+
+                showSlide(currentSlide + 1);
+
+                startCarousel();
+
+            });
+
+
+            /* PREVIOUS */
+
+            prevButton.addEventListener('click', () => {
+
+                showSlide(currentSlide - 1);
+
+                startCarousel();
+
+            });
+
+
+            /* PILIH SLIDE */
+
+            tabs.forEach(tab => {
+
+                tab.addEventListener('click', () => {
+
+                    const index =
+                        Number(tab.dataset.slide);
+
+                    showSlide(index);
+
+                    startCarousel();
+
+                });
+
+            });
+
+
+            /* PAUSE / PLAY */
+
+            function updatePauseButton() {
+
+                if (paused) {
+
+                    pauseButton.innerHTML =
+                        '<i class="bi bi-play-fill"></i>';
+
+                    pauseButton.setAttribute(
+                        'aria-label',
+                        'Putar carousel'
+                    );
+
+                } else {
+
+                    pauseButton.innerHTML =
+                        '<i class="bi bi-pause-fill"></i>';
+
+                    pauseButton.setAttribute(
+                        'aria-label',
+                        'Jeda carousel'
+                    );
+
+                }
+
+            }
+
+
+            pauseButton.addEventListener('click', () => {
+
+                paused = !paused;
+
+                updatePauseButton();
+
+                startCarousel();
+
+            });
+
+
+            /* PAUSE KETIKA TAB BROWSER TIDAK AKTIF */
+
+            document.addEventListener(
+                'visibilitychange',
+                startCarousel
+            );
+
+
+            /* INITIALIZE */
+
+            showSlide(0);
+
+            updatePauseButton();
+
+            startCarousel();
+
+
+            /* SEARCH BERANDA */
+
+            const searchForm = $('siteSearch');
+
+            const searchInput = $('searchInput');
+
+
+            searchForm.addEventListener('submit', event => {
+
+                event.preventDefault();
+
+                const keyword = searchInput.value
+                    .trim()
+                    .toLocaleLowerCase('id');
+
+                if (!keyword) return;
+
+
+                const sections = Array.from(
+                    document.querySelectorAll('main section')
+                );
+
+                const words = keyword.split(/\s+/);
+
+                const match = sections.find(section => {
+
+                    const content = section.textContent
+                        .replace(/\s+/g, ' ')
+                        .toLocaleLowerCase('id');
+
+                    return words.every(word =>
+                        content.includes(word)
+                    );
+
+                });
+
+
+                if (match) {
+
+                    match.scrollIntoView({
+
+                        behavior:
+                            reducedMotion ? 'auto' : 'smooth',
+
+                        block: 'start'
+
+                    });
+
+                } else {
+
+                    alert(
+                        'Informasi tidak ditemukan di Beranda. ' +
+                        'Coba kata kunci pendidikan, lingkungan, ' +
+                        'aspirasi, atau kabar.'
+                    );
+
+                }
+
+            });
+
+        });
+
+    </script>
+<!-- GLOBAL NAVBAR JAVASCRIPT -->
+
+<script src="assets/js/navbar.js"></script>
 
 </body>
+
 </html>
